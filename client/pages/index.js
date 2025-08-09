@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <main className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Historic Bainbridge Island</h1>
+      <h1 className="text-3xl font-bold mb-6">Pacific Northwest Heritage Explorer</h1>
       {error && <p className="text-red-600 mb-4">{error}</p>}
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
         {locations.map((loc) => (

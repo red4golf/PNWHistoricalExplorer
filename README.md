@@ -1,12 +1,12 @@
-# Historic Bainbridge Island App
+# Pacific Northwest Heritage Explorer
 
-This repository contains a full‑stack web application for exploring the people and places of Bainbridge Island, Washington.  
+This repository contains a full‑stack web application for exploring the people and places of the Pacific Northwest.
 It includes a lightweight **Express** back‑end for managing locations, books, images and authentication, as well as a **Next.js** front‑end built with **React** and **Tailwind CSS** for a polished user experience.
 
 ## Features
 
-* **Location Explorer** – browse historic locations on Bainbridge Island. Each location includes a title, description, optional photos and audio narration, a map position, and a curated list of related books.  
-* **Book Library** – view a curated collection of books about Bainbridge Island. Each entry contains an author, ISBN, a cover image from Open Library and a purchase/read link.  
+* **Location Explorer** – browse historic locations across the Pacific Northwest. Each location includes a title, description, optional photos and audio narration, a map position, and a curated list of related books.
+* **Book Library** – view a curated collection of books about the Pacific Northwest. Each entry contains an author, ISBN, a cover image from Open Library and a purchase/read link.
 * **Image Uploads** – administrators can upload photos for locations. Images are automatically resized into three sizes (full, card and thumb) and stored under `server/public/images/`.  
 * **Authentication** – simple JWT‑based login for administrators. Protects POST/PUT/DELETE routes on the API.  
 * **Environment‑driven configuration** – customize allowed CORS origins, admin credentials and secrets via `.env` files.  
@@ -65,7 +65,7 @@ It includes a lightweight **Express** back‑end for managing locations, books, 
 ## File structure
 
 ```
-historical-bainbridge-app/
+pnw-heritage-explorer/
 ├── package.json             # root scripts (dev, build, start)
 ├── server/                  # Express back‑end
 │   ├── index.js             # entry point
