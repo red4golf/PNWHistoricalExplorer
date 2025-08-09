@@ -1,0 +1,18 @@
+[
+  {
+    "id": "loc1",
+    "title": "Bainbridge Island Historical Museum",
+    "slug": "bainbridge-island-historical-museum",
+    "description": "Housed in a restored 1908 schoolhouse, the Bainbridge Island Historical Museum offers a well‑organized collection of artifacts, photographs and exhibits that trace the island's Native American roots, early settler life and subsequent development. Exhibits highlight significant events such as the World War II internment of Japanese‑American residents, and knowledgeable staff and volunteers share stories of the community's past【911329229674337†L198-L205】.",
+    "address": "215 Ericksen Ave NE, Bainbridge Island, WA 98110",
+    "lat": 47.626,
+    "lng": -122.522,
+    "images": {
+      "full": null,
+      "card": null,
+      "thumb": null
+    },
+    "audio": null,
+    "books": ["book1", "book2", "book4"]
+  }
+]

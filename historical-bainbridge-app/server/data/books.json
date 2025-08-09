@@ -1,0 +1,38 @@
+[
+  {
+    "id": "book1",
+    "title": "Picture Bainbridge: A Pictorial History of Bainbridge Island",
+    "author": "Jack Swanson",
+    "description": "This illustrated volume chronicles Bainbridge Island's history with more than 200 photographs, drawings and illustrations, offering readers a visual journey from the island's earliest settlers through modern times【121790847426728†L39-L50】.",
+    "link": "https://www.eagleharborbooks.com/product/picture-bainbridge-pictorial-history-bainbridge-island",
+    "cover": "https://covers.openlibrary.org/b/isbn/0971514704-L.jpg",
+    "isbn": "0971514704"
+  },
+  {
+    "id": "book2",
+    "title": "Bainbridge Island (Images of America)",
+    "author": "Donald R. Tjossem and the Bainbridge Island Historical Society",
+    "description": "This book, part of Arcadia Publishing's Images of America series, uses photographs and extended captions to recount Bainbridge Island's history from Native American settlement, through logging, farming, fishing and shipbuilding, to modern developments【82663020070886†L452-L462】.",
+    "link": "https://www.thriftbooks.com/w/bainbridge-island_images-of-america_donald-r-tjossem/511798/",
+    "cover": "https://covers.openlibrary.org/b/isbn/9780738599922-L.jpg",
+    "isbn": "9780738599922"
+  },
+  {
+    "id": "book3",
+    "title": "The Violets of March",
+    "author": "Sarah Jio",
+    "description": "After her life in New York falls apart, author Emily Watson retreats to her great-aunt's home on Bainbridge Island. There she discovers a red velvet diary from 1943 whose pages reveal a wartime love story and secrets that will change her life【736129418051730†L56-L68】.",
+    "link": "https://www.goodreads.com/en/book/show/9547718-the-violets-of-march",
+    "cover": "https://covers.openlibrary.org/b/isbn/0452297036-L.jpg",
+    "isbn": "0452297036"
+  },
+  {
+    "id": "book4",
+    "title": "Paper Wishes",
+    "author": "Lois Sepahban",
+    "description": "Ten‑year‑old Manami Tanaka and her family live peacefully on Bainbridge Island until 1942, when the U.S. government forces Japanese Americans to leave their homes. Separated from her beloved dog and sent to a desert prison camp, Manami longs to be reunited with her pet and to reclaim the life she once knew【258216565877031†L109-L120】.",
+    "link": "https://www.rif.org/literacy-central/book/paper-wishes",
+    "cover": "https://covers.openlibrary.org/b/isbn/1250104145-L.jpg",
+    "isbn": "9781250104144"
+  }
+]
