@@ -36,7 +36,7 @@ It includes a lightweight **Express** back‑end for managing locations, books, 
    Open `server/.env` and set at least the following variables:
 
    - `ADMIN_EMAIL` – email address used to log in.
-   - `ADMIN_PASSWORD` – password used to log in.  **In production you should hash and salt passwords; plaintext is used here only for demonstration.**
+   - `ADMIN_PASSWORD_HASH` – bcrypt hash of the admin password. Generate one with `node server/scripts/generate-password-hash.js <password>`.
    - `JWT_SECRET` – random string used to sign your JWTs.
    - `CORS_ALLOWED_ORIGINS` – comma‑separated list of origins allowed to call the API (e.g. `http://localhost:3000`).  Leave empty to allow all origins.
 
@@ -108,7 +108,7 @@ The original project blended front‑end, back‑end and media processing into a
 
 * A clean separation between server and client folders.  Each has its own `package.json`, making dependency management explicit.
 * JSON‑based persistence for ease of development.  You can later migrate to a relational database without changing the API surface.
-* A simple authentication mechanism to protect administrative actions.  In production, replace plaintext passwords with bcrypt‑hashed values and add refresh tokens as described in the earlier review.
+* A simple authentication mechanism to protect administrative actions. Passwords are stored as bcrypt hashes and you can add refresh tokens for additional security.
 * A dedicated books route and data file.  Book entries now include accurate links and cover images using the Open Library covers API.  This addresses the mismatches and missing images in the original version.
 * Tailwind CSS for rapid styling and responsive design out of the box.
 
