@@ -125,6 +125,16 @@ The current implementation is intentionally minimal to make it easy to host on p
 * Integrating map display (e.g. Leaflet or Google Maps) using the `lat`/`lng` coordinates on locations.
 * Caching responses and adding rate limiting for improved performance and security.
 
+## Future improvements
+
+The project is a solid starting point, but several enhancements can make it more robust:
+
+* **Require explicit JWT secret** – ensure deployments fail fast when `JWT_SECRET` is not provided instead of falling back to a default value.
+* **Use hashed admin credentials** – replace the plaintext `ADMIN_PASSWORD` with a bcrypt hash checked at login.
+* **Centralize JSON helpers** – move duplicate read/write logic in route files into a shared utility module.
+* **Validate location images** – enforce a shape for `images` objects so each location provides `full`, `card` and `thumb` URLs.
+* **Improve loading states** – add client‑side placeholders or server‑side rendering for a smoother initial page load.
+
 ## License
 
 This project is provided as‑is to illustrate how to structure a small full‑stack app.  You are free to modify and use it for your own purposes.
