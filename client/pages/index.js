@@ -9,8 +9,6 @@ export default function Home() {
   useEffect(() => {
     async function fetchLocations() {
       try {
-        const res = await fetch(`${apiBase}/api/locations`);
-        if (!res.ok) throw new Error('Network response was not ok');
         const data = await res.json();
         setLocations(data || []);
       } catch (err) {
