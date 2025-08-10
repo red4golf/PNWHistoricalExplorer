@@ -1,6 +1,6 @@
 const express = require('express');
-const fs = require('fs').promises;
 const path = require('path');
+const { readJson, writeJson } = require('../utils/jsonStore');
 const { z } = require('zod');
 const { requireAuth } = require('../middleware/auth');
 
@@ -8,14 +8,8 @@ const router = express.Router();
 
 const booksFile = path.join(__dirname, '../data/books.json');
 
-async function readBooks() {
-  const data = await fs.readFile(booksFile, 'utf-8');
-  return JSON.parse(data);
-}
-
-async function writeBooks(data) {
-  await fs.writeFile(booksFile, JSON.stringify(data, null, 2));
-}
+const readBooks = () => readJson(booksFile);
+const writeBooks = (data) => writeJson(booksFile, data);
 
 // List all books
 router.get('/', async (req, res) => {
