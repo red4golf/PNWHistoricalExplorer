@@ -4,12 +4,11 @@ import Link from 'next/link';
 export default function Home() {
   const [locations, setLocations] = useState([]);
   const [error, setError] = useState(null);
+  const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:4000';
 
   useEffect(() => {
     async function fetchLocations() {
       try {
-        const base = process.env.NEXT_PUBLIC_API_BASE_URL || '';
-        const res = await fetch(`${base}/api/locations`);
         const data = await res.json();
         setLocations(data || []);
       } catch (err) {
@@ -18,7 +17,7 @@ export default function Home() {
       }
     }
     fetchLocations();
-  }, []);
+  }, [apiBase]);
 
   return (
     <main className="container mx-auto px-4 py-8">
@@ -31,9 +30,7 @@ export default function Home() {
               {loc.images?.thumb || loc.images?.card ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={`${
-                    process.env.NEXT_PUBLIC_API_BASE_URL
-                  }/${loc.images.thumb || loc.images.card}`}
+                  src={`${apiBase}/${loc.images.thumb || loc.images.card}`}
                   alt={loc.title}
                   className="w-full h-48 object-cover"
                 />

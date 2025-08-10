@@ -16,6 +16,7 @@ export async function getServerSideProps({ params }) {
 
 export default function LocationPage({ location, books }) {
   if (!location) return <div className="p-8">Location not found</div>;
+  const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:4000';
   const imageSrc =
     location.images?.full || location.images?.card || location.images?.thumb;
   return (
@@ -28,7 +29,7 @@ export default function LocationPage({ location, books }) {
       {imageSrc ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={`${process.env.NEXT_PUBLIC_API_BASE_URL}/${imageSrc}`}
+          src={`${apiBase}/${imageSrc}`}
           alt={location.title}
           className="w-full max-h-[400px] object-cover rounded-2xl mb-6"
         />
@@ -41,7 +42,7 @@ export default function LocationPage({ location, books }) {
       {location.audio && (
         <div className="mb-6">
           <h2 className="text-xl font-semibold mb-2">Listen</h2>
-          <audio controls src={`${process.env.NEXT_PUBLIC_API_BASE_URL}/${location.audio}`} className="w-full" />
+          <audio controls src={`${apiBase}/${location.audio}`} className="w-full" />
         </div>
       )}
       {books && books.length > 0 && (
