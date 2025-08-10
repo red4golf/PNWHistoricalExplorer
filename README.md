@@ -1,12 +1,12 @@
-# Historic Bainbridge Island App
+# Pacific Northwest Heritage Explorer
 
-This repository contains a full‑stack web application for exploring the people and places of Bainbridge Island, Washington.  
+This repository contains a full‑stack web application for exploring the people and places of the Pacific Northwest.
 It includes a lightweight **Express** back‑end for managing locations, books, images and authentication, as well as a **Next.js** front‑end built with **React** and **Tailwind CSS** for a polished user experience.
 
 ## Features
 
-* **Location Explorer** – browse historic locations on Bainbridge Island. Each location includes a title, description, optional photos and audio narration, a map position, and a curated list of related books.  
-* **Book Library** – view a curated collection of books about Bainbridge Island. Each entry contains an author, ISBN, a cover image from Open Library and a purchase/read link.  
+* **Location Explorer** – browse historic locations across the Pacific Northwest. Each location includes a title, description, optional photos and audio narration, a map position, and a curated list of related books.
+* **Book Library** – view a curated collection of books about the Pacific Northwest. Each entry contains an author, ISBN, a cover image from Open Library and a purchase/read link.
 * **Image Uploads** – administrators can upload photos for locations. Images are automatically resized into three sizes (full, card and thumb) and stored under `server/public/images/`.  
 * **Authentication** – simple JWT‑based login for administrators. Protects POST/PUT/DELETE routes on the API.  
 * **Environment‑driven configuration** – customize allowed CORS origins, admin credentials and secrets via `.env` files.  
@@ -65,7 +65,7 @@ It includes a lightweight **Express** back‑end for managing locations, books, 
 ## File structure
 
 ```
-historical-bainbridge-app/
+pnw-heritage-explorer/
 ├── package.json             # root scripts (dev, build, start)
 ├── server/                  # Express back‑end
 │   ├── index.js             # entry point
@@ -124,6 +124,16 @@ The current implementation is intentionally minimal to make it easy to host on p
 * Adding admin pages in the Next.js client to manage locations, books and uploads.  Use the existing API endpoints and integrate JWT authentication via cookies.
 * Integrating map display (e.g. Leaflet or Google Maps) using the `lat`/`lng` coordinates on locations.
 * Caching responses and adding rate limiting for improved performance and security.
+
+## Future improvements
+
+The project is a solid starting point, but several enhancements can make it more robust:
+
+* **Require explicit JWT secret** – ensure deployments fail fast when `JWT_SECRET` is not provided instead of falling back to a default value.
+* **Use hashed admin credentials** – replace the plaintext `ADMIN_PASSWORD` with a bcrypt hash checked at login.
+* **Centralize JSON helpers** – move duplicate read/write logic in route files into a shared utility module.
+* **Validate location images** – enforce a shape for `images` objects so each location provides `full`, `card` and `thumb` URLs.
+* **Improve loading states** – add client‑side placeholders or server‑side rendering for a smoother initial page load.
 
 ## License
 

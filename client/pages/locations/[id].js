@@ -20,7 +20,7 @@ export default function LocationPage({ location, books }) {
   return (
     <main className="container mx-auto px-4 py-8">
       <Head>
-        <title>{location.title} | Historic Bainbridge Island</title>
+        <title>{location.title} | Pacific Northwest Heritage Explorer</title>
         <meta name="description" content={location.description?.slice(0, 150)} />
       </Head>
       <h1 className="text-3xl font-bold mb-4">{location.title}</h1>
