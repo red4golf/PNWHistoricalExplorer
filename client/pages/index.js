@@ -1,24 +1,25 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import axios from 'axios';
 
 export default function Home() {
   const [locations, setLocations] = useState([]);
   const [error, setError] = useState(null);
+  const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:4000';
 
   useEffect(() => {
     async function fetchLocations() {
       try {
-        const base = process.env.NEXT_PUBLIC_API_BASE_URL || '';
-        const res = await axios.get(`${base}/api/locations`);
-        setLocations(res.data || []);
+        const res = await fetch(`${apiBase}/api/locations`);
+        if (!res.ok) throw new Error('Network response was not ok');
+        const data = await res.json();
+        setLocations(data || []);
       } catch (err) {
         console.error(err);
         setError('Failed to load locations');
       }
     }
     fetchLocations();
-  }, []);
+  }, [apiBase]);
 
   return (
     <main className="container mx-auto px-4 py-8">
@@ -31,9 +32,7 @@ export default function Home() {
               {loc.images?.thumb || loc.images?.card ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={`${
-                    process.env.NEXT_PUBLIC_API_BASE_URL
-                  }/${loc.images.thumb || loc.images.card}`}
+                  src={`${apiBase}/${loc.images.thumb || loc.images.card}`}
                   alt={loc.title}
                   className="w-full h-48 object-cover"
                 />
