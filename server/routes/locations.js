@@ -50,7 +50,14 @@ router.post('/', requireAuth, async (req, res) => {
     address: z.string().optional().nullable(),
     lat: z.number().optional(),
     lng: z.number().optional(),
-    images: z.any().optional(),
+    images: z
+      .object({
+        full: z.string().nullable(),
+        card: z.string().nullable(),
+        thumb: z.string().nullable(),
+      })
+      .strict()
+      .optional(),
     audio: z.string().optional().nullable(),
     books: z.array(z.string()).optional(),
   });
@@ -79,7 +86,14 @@ router.put('/:id', requireAuth, async (req, res) => {
     address: z.string().optional().nullable(),
     lat: z.number().optional(),
     lng: z.number().optional(),
-    images: z.any().optional(),
+    images: z
+      .object({
+        full: z.string().nullable(),
+        card: z.string().nullable(),
+        thumb: z.string().nullable(),
+      })
+      .strict()
+      .optional(),
     audio: z.string().optional().nullable(),
     books: z.array(z.string()).optional(),
   });

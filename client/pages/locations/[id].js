@@ -17,6 +17,8 @@ export async function getServerSideProps({ params }) {
 
 export default function LocationPage({ location, books }) {
   if (!location) return <div className="p-8">Location not found</div>;
+  const imageSrc =
+    location.images?.full || location.images?.card || location.images?.thumb;
   return (
     <main className="container mx-auto px-4 py-8">
       <Head>
@@ -24,10 +26,10 @@ export default function LocationPage({ location, books }) {
         <meta name="description" content={location.description?.slice(0, 150)} />
       </Head>
       <h1 className="text-3xl font-bold mb-4">{location.title}</h1>
-      {location.images && location.images.full ? (
+      {imageSrc ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={`${process.env.NEXT_PUBLIC_API_BASE_URL}/${location.images.full}`}
+          src={`${process.env.NEXT_PUBLIC_API_BASE_URL}/${imageSrc}`}
           alt={location.title}
           className="w-full max-h-[400px] object-cover rounded-2xl mb-6"
         />
