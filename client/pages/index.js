@@ -28,10 +28,12 @@ export default function Home() {
         {locations.map((loc) => (
           <Link key={loc.id} href={`/locations/${loc.id}`} className="block">
             <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-              {loc.images && loc.images.card ? (
+              {loc.images?.thumb || loc.images?.card ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={`${process.env.NEXT_PUBLIC_API_BASE_URL}/${loc.images.card}`}
+                  src={`${
+                    process.env.NEXT_PUBLIC_API_BASE_URL
+                  }/${loc.images.thumb || loc.images.card}`}
                   alt={loc.title}
                   className="w-full h-48 object-cover"
                 />
