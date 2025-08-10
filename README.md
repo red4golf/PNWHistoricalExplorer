@@ -35,10 +35,10 @@ It includes a lightweight **Express** back‑end for managing locations, books, 
 
    Open `server/.env` and set at least the following variables:
 
-   - `ADMIN_EMAIL` – email address used to log in.
-   - `ADMIN_PASSWORD` – password used to log in.  **In production you should hash and salt passwords; plaintext is used here only for demonstration.**
-   - `JWT_SECRET` – random string used to sign your JWTs. **This is required; the server will not start without it.**
-   - `CORS_ALLOWED_ORIGINS` – comma‑separated list of origins allowed to call the API (e.g. `http://localhost:3000`).  Leave empty to allow all origins.
+  - `ADMIN_EMAIL` – email address used to log in.
+  - `ADMIN_PASSWORD_HASH` – bcrypt hash of the admin password. Generate one with `node -e "console.log(require('bcryptjs').hashSync('yourpassword', 10))"`.
+  - `JWT_SECRET` – random string used to sign your JWTs. **This is required; the server will not start without it.**
+  - `CORS_ALLOWED_ORIGINS` – comma‑separated list of origins allowed to call the API (e.g. `http://localhost:3000`).  Leave empty to allow all origins.
 
    For the client, open `client/.env.local` and set `NEXT_PUBLIC_API_BASE_URL` to the base URL of your back‑end (e.g. `http://localhost:4000`).
 
@@ -130,7 +130,6 @@ The current implementation is intentionally minimal to make it easy to host on p
 The project is a solid starting point, but several enhancements can make it more robust:
 
 * **Require explicit JWT secret** – ensure deployments fail fast when `JWT_SECRET` is not provided instead of falling back to a default value.
-* **Use hashed admin credentials** – replace the plaintext `ADMIN_PASSWORD` with a bcrypt hash checked at login.
 * **Centralize JSON helpers** – move duplicate read/write logic in route files into a shared utility module.
 * **Validate location images** – enforce a shape for `images` objects so each location provides `full`, `card` and `thumb` URLs.
 * **Improve loading states** – add client‑side placeholders or server‑side rendering for a smoother initial page load.
