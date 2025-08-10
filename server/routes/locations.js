@@ -1,6 +1,6 @@
 const express = require('express');
-const fs = require('fs').promises;
 const path = require('path');
+const { readJson, writeJson } = require('../utils/jsonStore');
 const { z } = require('zod');
 const { requireAuth } = require('../middleware/auth');
 
@@ -9,14 +9,8 @@ const router = express.Router();
 // Path to the JSON file storing location data
 const locationsFile = path.join(__dirname, '../data/locations.json');
 
-async function readLocations() {
-  const data = await fs.readFile(locationsFile, 'utf-8');
-  return JSON.parse(data);
-}
-
-async function writeLocations(data) {
-  await fs.writeFile(locationsFile, JSON.stringify(data, null, 2));
-}
+const readLocations = () => readJson(locationsFile);
+const writeLocations = (data) => writeJson(locationsFile, data);
 
 // GET all locations
 router.get('/', async (req, res) => {
