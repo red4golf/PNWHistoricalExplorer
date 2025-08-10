@@ -1,13 +1,12 @@
-import axios from 'axios';
 import Head from 'next/head';
 
 export async function getServerSideProps({ params }) {
   try {
     const base = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:4000';
-    const locRes = await axios.get(`${base}/api/locations/${params.id}`);
-    const location = locRes.data;
-    const booksRes = await axios.get(`${base}/api/books`);
-    const allBooks = booksRes.data || [];
+    const locRes = await fetch(`${base}/api/locations/${params.id}`);
+    const location = await locRes.json();
+    const booksRes = await fetch(`${base}/api/books`);
+    const allBooks = (await booksRes.json()) || [];
     const associated = (location.books || []).map((bid) => allBooks.find((b) => b.id === bid)).filter(Boolean);
     return { props: { location, books: associated } };
   } catch (err) {
