@@ -37,7 +37,7 @@ It includes a lightweight **Express** back‑end for managing locations, books, 
 
    - `ADMIN_EMAIL` – email address used to log in.
    - `ADMIN_PASSWORD` – password used to log in.  **In production you should hash and salt passwords; plaintext is used here only for demonstration.**
-   - `JWT_SECRET` – random string used to sign your JWTs.
+   - `JWT_SECRET` – random string used to sign your JWTs. **This is required; the server will not start without it.**
    - `CORS_ALLOWED_ORIGINS` – comma‑separated list of origins allowed to call the API (e.g. `http://localhost:3000`).  Leave empty to allow all origins.
 
    For the client, open `client/.env.local` and set `NEXT_PUBLIC_API_BASE_URL` to the base URL of your back‑end (e.g. `http://localhost:4000`).
