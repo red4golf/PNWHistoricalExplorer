@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import axios from 'axios';
 
 export default function Home() {
   const [locations, setLocations] = useState([]);
@@ -10,8 +9,9 @@ export default function Home() {
     async function fetchLocations() {
       try {
         const base = process.env.NEXT_PUBLIC_API_BASE_URL || '';
-        const res = await axios.get(`${base}/api/locations`);
-        setLocations(res.data || []);
+        const res = await fetch(`${base}/api/locations`);
+        const data = await res.json();
+        setLocations(data || []);
       } catch (err) {
         console.error(err);
         setError('Failed to load locations');
