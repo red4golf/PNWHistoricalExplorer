@@ -1,0 +1,65 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import LocationCard from '../components/LocationCard.astro';
+import { CATEGORIES } from '../lib/categories';
+
+const locations = await getCollection('locations');
+const total = locations.length;
+const audioCount = locations.filter((l) => l.data.audio).length;
+
+const counts = Object.fromEntries(
+  CATEGORIES.map((c) => [c.name, locations.filter((l) => l.data.category === c.name).length])
+);
+
+// Featured: locations with a real photo, audio first, alphabetical within
+const featured = locations
+  .filter((l) => l.data.heroImage)
+  .sort((a, b) => Number(Boolean(b.data.audio)) - Number(Boolean(a.data.audio)) || a.data.title.localeCompare(b.data.title))
+  .slice(0, 6);
+---
+
+<Base
+  title="PNW Historical Explorer — Historic Sites of the Pacific Northwest"
+  description={`Explore ${total} historical sites across the Pacific Northwest with in-depth stories, ${audioCount} audio narrations, and curated reading lists. Works offline in the field.`}
+>
+  <section class="hero">
+    <div class="container">
+      <h1>Discover the Pacific Northwest’s Past</h1>
+      <p>
+        {total} historic places — forts, lighthouses, ghost towns, and natural wonders — each with
+        the full story, {audioCount} audio narrations, and curated reading.
+      </p>
+      <div class="actions">
+        <a class="btn" href="/map">🗺️ Explore the map</a>
+        <a class="btn secondary" href="/categories">Browse by category</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Browse by category</h2>
+      <div class="category-grid">
+        {
+          CATEGORIES.map((c) => (
+            <a class="category-card" href={`/categories/${c.slug}`}>
+              <span class="icon">{c.icon}</span>
+              <h3>{c.name}</h3>
+              <span class="count">{counts[c.name]} locations</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--parchment);">
+    <div class="container">
+      <h2 class="section-title">Featured locations</h2>
+      <div class="location-grid">
+        {featured.map((l) => <LocationCard location={{ ...l.data }} />)}
+      </div>
+    </div>
+  </section>
+</Base>

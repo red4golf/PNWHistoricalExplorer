@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const locations = await getCollection('locations');
+const audioCount = locations.filter((l) => l.data.audio).length;
+const bookCount = locations.filter((l) => l.data.books.length > 0).length;
+---
+
+<Base title="About — PNW Historical Explorer" description="About the PNW Historical Explorer: a field guide to the historic places of the Pacific Northwest, built to work offline.">
+  <section class="section">
+    <div class="container" style="max-width:46rem;">
+      <h1>About this project</h1>
+      <p>
+        PNW Historical Explorer is a field guide to the historic places of the Pacific Northwest —
+        from the Olympic Peninsula to eastern Oregon, Puget Sound to the Columbia Gorge.
+      </p>
+      <p>
+        Every one of the {locations.length} locations has a researched narrative covering its full
+        history. {audioCount} include audio narrations you can listen to on site, and
+        {bookCount} include curated book recommendations for going deeper.
+      </p>
+      <h2>Built for the field</h2>
+      <p>
+        Historic sites are rarely places with good cell coverage. This site is built to work
+        offline: pages and maps you've visited are saved automatically, and audio narrations are
+        saved after the first play. Add it to your home screen and it behaves like an app —
+        on iPhone, open it in Safari and tap <strong>Share → Add to Home Screen</strong>; on
+        Android, Chrome will offer an <strong>Install</strong> prompt.
+      </p>
+      <h2>Sources and corrections</h2>
+      <p>
+        Narratives are compiled from public historical records, park service documentation, and
+        regional histories. Spot an error or have a story to add? We'd love to hear it.
+      </p>
+    </div>
+  </section>
+</Base>

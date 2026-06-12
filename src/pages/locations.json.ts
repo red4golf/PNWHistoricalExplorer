@@ -1,0 +1,25 @@
+import { getCollection } from 'astro:content';
+import { slugForCategory } from '../lib/categories';
+import type { APIRoute } from 'astro';
+
+export const GET: APIRoute = async () => {
+  const locations = await getCollection('locations');
+  const payload = locations
+    .map((l) => ({
+      slug: l.data.slug,
+      title: l.data.title,
+      category: l.data.category,
+      categorySlug: slugForCategory(l.data.category),
+      period: l.data.period ?? null,
+      lat: l.data.coordinates.lat,
+      lng: l.data.coordinates.lng,
+      description: l.data.description.slice(0, 180),
+      heroImage: l.data.heroImage,
+      hasAudio: Boolean(l.data.audio),
+    }))
+    .sort((a, b) => a.title.localeCompare(b.title));
+
+  return new Response(JSON.stringify(payload), {
+    headers: { 'Content-Type': 'application/json' },
+  });
+};

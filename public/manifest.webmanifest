@@ -1,0 +1,16 @@
+{
+  "name": "PNW Historical Explorer",
+  "short_name": "PNW Explorer",
+  "description": "Historic sites of the Pacific Northwest — stories, audio tours, and maps that work offline.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5efe2",
+  "theme_color": "#1f3d2b",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

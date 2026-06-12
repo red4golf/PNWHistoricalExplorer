@@ -1,0 +1,52 @@
+---
+import { categoryByName } from '../lib/categories';
+
+interface Props {
+  location: {
+    slug: string;
+    title: string;
+    category: string;
+    period?: string | null;
+    description: string;
+    heroImage: string | null;
+    audio: string | null;
+  };
+}
+
+const { location } = Astro.props;
+const cat = categoryByName(location.category);
+const cardImage = location.heroImage
+  ? location.heroImage.replace(/\.(jpe?g|png)$/i, '-card.webp')
+  : null;
+---
+
+<a class="location-card" href={`/locations/${location.slug}`}>
+  <div class="thumb">
+    {
+      location.heroImage ? (
+        <img
+          src={cardImage}
+          alt={location.title}
+          loading="lazy"
+          width="640"
+          height="360"
+          onerror={`this.onerror=null;this.src='${location.heroImage}'`}
+        />
+      ) : (
+        <div class="thumb-fallback" aria-hidden="true">
+          {cat?.icon ?? '🏛️'}
+          <span>{location.category}</span>
+        </div>
+      )
+    }
+  </div>
+  <div class="body">
+    <h3>{location.title}</h3>
+    <div class="meta">
+      <span class="badge">{cat?.icon} {location.category}</span>
+      {location.period && <span>{location.period}</span>}
+      {location.audio && <span class="badge audio">🎧 Audio</span>}
+    </div>
+    <p>{location.description}</p>
+  </div>
+</a>

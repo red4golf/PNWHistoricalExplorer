@@ -1,0 +1,122 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import AudioPlayer from '../../components/AudioPlayer.astro';
+import { categoryByName, slugForCategory } from '../../lib/categories';
+
+export async function getStaticPaths() {
+  const locations = await getCollection('locations');
+  return locations.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+const cat = categoryByName(d.category);
+const heroLarge = d.heroImage ? d.heroImage.replace(/\.(jpe?g|png)$/i, '-hero.webp') : null;
+const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${d.coordinates.lat},${d.coordinates.lng}`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristAttraction',
+  name: d.title,
+  description: d.description,
+  ...(d.address ? { address: d.address } : {}),
+  geo: { '@type': 'GeoCoordinates', latitude: d.coordinates.lat, longitude: d.coordinates.lng },
+  ...(d.heroImage ? { image: new URL(d.heroImage, Astro.site).href } : {}),
+};
+---
+
+<Base title={`${d.title} — PNW Historical Explorer`} description={d.description.slice(0, 158)} ogImage={d.heroImage} ogType="article">
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} slot="head" />
+
+  {
+    d.heroImage ? (
+      <div class="detail-hero">
+        <img
+          src={heroLarge}
+          alt={d.title}
+          width="1600"
+          height="900"
+          onerror={`this.onerror=null;this.src='${d.heroImage}'`}
+        />
+        <div class="overlay">
+          <div class="container">
+            <h1>{d.title}</h1>
+            <div class="meta">
+              <span>{cat?.icon} {d.category}</span>
+              {d.period && <span>📅 {d.period}</span>}
+              {d.address && <span>📍 {d.address}</span>}
+            </div>
+          </div>
+        </div>
+      </div>
+    ) : (
+      <div class="detail-hero no-image">
+        <div class="container">
+          <h1>{d.title}</h1>
+          <div class="meta">
+            <span>{cat?.icon} {d.category}</span>
+            {d.period && <span>📅 {d.period}</span>}
+            {d.address && <span>📍 {d.address}</span>}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  <section class="section">
+    <div class="container detail-layout">
+      <article>
+        {d.audio && <AudioPlayer src={d.audio} title={d.title} />}
+        <div class="prose">
+          <Content />
+        </div>
+      </article>
+
+      <aside>
+        <div class="sidebar-card">
+          <h3>Visit</h3>
+          <dl>
+            {d.address && (
+              <>
+                <dt>Address</dt>
+                <dd>{d.address}</dd>
+              </>
+            )}
+            <dt>Coordinates</dt>
+            <dd>{d.coordinates.lat.toFixed(4)}, {d.coordinates.lng.toFixed(4)}</dd>
+            {d.period && (
+              <>
+                <dt>Period</dt>
+                <dd>{d.period}</dd>
+              </>
+            )}
+            <dt>Category</dt>
+            <dd><a href={`/categories/${slugForCategory(d.category)}`}>{d.category}</a></dd>
+          </dl>
+          <p style="margin:1rem 0 0;">
+            <a class="btn" style="width:100%; justify-content:center;" href={mapsUrl} rel="noopener" target="_blank">🧭 Directions</a>
+          </p>
+          <p style="margin:0.6rem 0 0;">
+            <a href={`/map#${d.slug}`} style="font-size:0.88rem;">View on the explorer map →</a>
+          </p>
+        </div>
+
+        {d.books.length > 0 && (
+          <div class="sidebar-card">
+            <h3>📚 Further reading</h3>
+            <ul class="book-list">
+              {d.books.map((b) => (
+                <li>
+                  {b.url ? <a href={b.url} rel="noopener nofollow" target="_blank">{b.title}</a> : b.title}
+                  {b.author && <span class="author">{b.author}</span>}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </aside>
+    </div>
+  </section>
+</Base>

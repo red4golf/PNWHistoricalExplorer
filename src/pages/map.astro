@@ -1,0 +1,122 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { CATEGORIES } from '../lib/categories';
+
+const locations = await getCollection('locations');
+const counts = Object.fromEntries(
+  CATEGORIES.map((c) => [c.slug, locations.filter((l) => l.data.category === c.name).length])
+);
+---
+
+<Base
+  title="Explorer Map — PNW Historical Explorer"
+  description={`Interactive map of ${locations.length} Pacific Northwest historical sites, filterable by category.`}
+>
+  <section class="section" style="padding-top:1.5rem;">
+    <div class="container">
+      <h1 style="font-size:1.6rem;">Explorer map</h1>
+      <div class="filter-pills" id="filters" role="group" aria-label="Filter by category">
+        <button class="pill active" data-cat="all" aria-pressed="true">All ({locations.length})</button>
+        {
+          CATEGORIES.map((c) => (
+            <button class="pill" data-cat={c.slug} aria-pressed="false">
+              {c.icon} {c.name} ({counts[c.slug]})
+            </button>
+          ))
+        }
+      </div>
+      <div class="map-wrap">
+        <div id="map" data-locations-url="/locations.json"></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import L from 'leaflet';
+    import 'leaflet.markercluster';
+    import 'leaflet/dist/leaflet.css';
+    import 'leaflet.markercluster/dist/MarkerCluster.css';
+    import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
+
+    import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
+    import markerIcon from 'leaflet/dist/images/marker-icon.png';
+    import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+
+    // Fix Leaflet's default icon paths under bundlers
+    L.Icon.Default.mergeOptions({
+      iconRetinaUrl: markerIcon2x.src,
+      iconUrl: markerIcon.src,
+      shadowUrl: markerShadow.src,
+    });
+
+    const el = document.getElementById('map')!;
+    const map = L.map(el, { scrollWheelZoom: true }).setView([46.8, -121.5], 6);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    const cluster = (L as any).markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 46 });
+    map.addLayer(cluster);
+
+    type Loc = {
+      slug: string; title: string; category: string; categorySlug: string;
+      period: string | null; lat: number; lng: number; description: string;
+      heroImage: string | null; hasAudio: boolean;
+    };
+
+    let all: Loc[] = [];
+    let markers: Record<string, L.Marker> = {};
+
+    function popupHtml(l: Loc) {
+      const img = l.heroImage
+        ? `<img src="${l.heroImage.replace(/\.(jpe?g|png)$/i, '-card.webp')}" onerror="this.onerror=null;this.src='${l.heroImage}'" alt="" style="width:100%;height:110px;object-fit:cover;border-radius:6px;margin-bottom:6px;">`
+        : '';
+      return `${img}<strong style="font-size:1rem;">${l.title}</strong><br>
+        <span style="color:#5a5246;font-size:0.8rem;">${l.category}${l.period ? ' · ' + l.period : ''}${l.hasAudio ? ' · 🎧' : ''}</span>
+        <p style="margin:6px 0;font-size:0.85rem;">${l.description}…</p>
+        <a href="/locations/${l.slug}" style="font-weight:600;">Read the full story →</a>`;
+    }
+
+    function renderMarkers(catSlug: string) {
+      cluster.clearLayers();
+      markers = {};
+      const subset = catSlug === 'all' ? all : all.filter((l) => l.categorySlug === catSlug);
+      for (const l of subset) {
+        const m = L.marker([l.lat, l.lng]).bindPopup(popupHtml(l), { maxWidth: 280 });
+        markers[l.slug] = m;
+        cluster.addLayer(m);
+      }
+      if (subset.length) {
+        map.fitBounds(cluster.getBounds().pad(0.15));
+      }
+    }
+
+    fetch(el.dataset.locationsUrl!)
+      .then((r) => r.json())
+      .then((data: Loc[]) => {
+        all = data;
+        renderMarkers('all');
+
+        // Deep link: /map#slug zooms to that location
+        const target = location.hash.slice(1);
+        if (target && markers[target]) {
+          const m = markers[target];
+          map.setView(m.getLatLng(), 13);
+          setTimeout(() => m.openPopup(), 400);
+        }
+      });
+
+    document.getElementById('filters')!.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest('button.pill') as HTMLButtonElement | null;
+      if (!btn) return;
+      document.querySelectorAll('#filters .pill').forEach((p) => {
+        p.classList.toggle('active', p === btn);
+        p.setAttribute('aria-pressed', String(p === btn));
+      });
+      renderMarkers(btn.dataset.cat!);
+    });
+  </script>
+</Base>

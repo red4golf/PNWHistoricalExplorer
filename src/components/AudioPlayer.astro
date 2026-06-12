@@ -1,0 +1,50 @@
+---
+interface Props {
+  src: string;
+  title: string;
+}
+const { src, title } = Astro.props;
+---
+
+<div class="audio-box" data-audio-box>
+  <h3>🎧 Audio narration</h3>
+  <audio controls preload="none" src={src} data-audio-src={src}>
+    Your browser does not support audio playback.
+    <a href={src}>Download the narration</a>.
+  </audio>
+  <p class="offline-note" data-offline-note>Saves for offline listening after first play.</p>
+</div>
+
+<script>
+  // Cache-on-play: once the user starts a narration, store the full MP3 in the
+  // audio cache so it works offline in the field afterward.
+  document.querySelectorAll('[data-audio-box]').forEach((box) => {
+    const audio = box.querySelector('audio');
+    const note = box.querySelector('[data-offline-note]');
+    const src = audio?.dataset.audioSrc;
+    if (!audio || !src || !('caches' in window)) return;
+
+    caches.open('pnw-audio-v1').then(async (cache) => {
+      const hit = await cache.match(src);
+      if (hit && note) note.textContent = '✓ Saved for offline listening.';
+    });
+
+    audio.addEventListener(
+      'play',
+      async () => {
+        try {
+          const cache = await caches.open('pnw-audio-v1');
+          if (await cache.match(src)) return;
+          const res = await fetch(src, { cache: 'no-cache' });
+          if (res.ok) {
+            await cache.put(src, res);
+            if (note) note.textContent = '✓ Saved for offline listening.';
+          }
+        } catch {
+          /* offline or fetch failed — ignore */
+        }
+      },
+      { once: true }
+    );
+  });
+</script>

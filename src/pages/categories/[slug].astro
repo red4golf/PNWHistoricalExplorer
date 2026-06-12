@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import LocationCard from '../../components/LocationCard.astro';
+import { CATEGORIES } from '../../lib/categories';
+
+export async function getStaticPaths() {
+  return CATEGORIES.map((c) => ({ params: { slug: c.slug }, props: { category: c } }));
+}
+
+const { category } = Astro.props;
+const locations = (await getCollection('locations'))
+  .filter((l) => l.data.category === category.name)
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+
+<Base
+  title={`${category.name} — PNW Historical Explorer`}
+  description={`${locations.length} ${category.name.toLowerCase()} historical sites in the Pacific Northwest. ${category.blurb}`}
+>
+  <section class="section">
+    <div class="container">
+      <nav style="font-size:0.85rem; margin-bottom:0.75rem;">
+        <a href="/categories">← All categories</a>
+      </nav>
+      <h1>{category.icon} {category.name}</h1>
+      <p style="max-width:42rem; color:var(--ink-soft);">{category.blurb} {locations.length} locations.</p>
+      <div class="location-grid">
+        {locations.map((l) => <LocationCard location={{ ...l.data }} />)}
+      </div>
+    </div>
+  </section>
+</Base>

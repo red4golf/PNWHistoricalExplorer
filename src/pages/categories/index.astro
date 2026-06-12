@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { CATEGORIES } from '../../lib/categories';
+
+const locations = await getCollection('locations');
+const counts = Object.fromEntries(
+  CATEGORIES.map((c) => [c.name, locations.filter((l) => l.data.category === c.name).length])
+);
+---
+
+<Base title="Browse Categories — PNW Historical Explorer" description="Browse Pacific Northwest historical sites by category: maritime, indigenous heritage, military history, natural wonders, and more.">
+  <section class="section">
+    <div class="container">
+      <h1>Categories</h1>
+      <p style="max-width:42rem; color:var(--ink-soft);">
+        Every location belongs to one of nine categories. Pick a thread and follow it across the region.
+      </p>
+      <div class="category-grid">
+        {
+          CATEGORIES.map((c) => (
+            <a class="category-card" href={`/categories/${c.slug}`}>
+              <span class="icon">{c.icon}</span>
+              <h3>{c.name}</h3>
+              <span class="count">{counts[c.name]} locations</span>
+              <p style="font-size:0.85rem; color:var(--ink-soft); margin:0.4rem 0 0;">{c.blurb}</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>
