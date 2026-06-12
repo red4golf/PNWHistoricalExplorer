@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../lib/categories';
+import { href } from '../lib/url';
 
 const locations = await getCollection('locations');
 const counts = Object.fromEntries(
@@ -27,7 +28,7 @@ const counts = Object.fromEntries(
         }
       </div>
       <div class="map-wrap">
-        <div id="map" data-locations-url="/locations.json"></div>
+        <div id="map" data-locations-url={href('/locations.json')}></div>
       </div>
     </div>
   </section>
@@ -50,6 +51,7 @@ const counts = Object.fromEntries(
       shadowUrl: markerShadow.src,
     });
 
+    const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
     const el = document.getElementById('map')!;
     const map = L.map(el, { scrollWheelZoom: true }).setView([46.8, -121.5], 6);
 
@@ -77,7 +79,7 @@ const counts = Object.fromEntries(
       return `${img}<strong style="font-size:1rem;">${l.title}</strong><br>
         <span style="color:#5a5246;font-size:0.8rem;">${l.category}${l.period ? ' · ' + l.period : ''}${l.hasAudio ? ' · 🎧' : ''}</span>
         <p style="margin:6px 0;font-size:0.85rem;">${l.description}…</p>
-        <a href="/locations/${l.slug}" style="font-weight:600;">Read the full story →</a>`;
+        <a href="${BASE}/locations/${l.slug}" style="font-weight:600;">Read the full story →</a>`;
     }
 
     function renderMarkers(catSlug: string) {

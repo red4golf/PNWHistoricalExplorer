@@ -7,13 +7,16 @@
  *    play (cache-on-play). Handles Range requests from cached full files.
  */
 
-const VERSION = 'v1';
+const VERSION = 'v2';
+const BASE = '/PNWHistoricalExplorer'; // keep in sync with astro.config.mjs base
 const SHELL_CACHE = `pnw-shell-${VERSION}`;
 const RUNTIME_CACHE = `pnw-runtime-${VERSION}`;
 const AUDIO_CACHE = 'pnw-audio-v1';
 const TILE_CACHE = 'pnw-tiles-v1';
 
-const SHELL_URLS = ['/', '/map', '/categories', '/about', '/offline', '/locations.json', '/manifest.webmanifest'];
+const SHELL_URLS = ['/', '/map', '/categories', '/about', '/offline', '/locations.json', '/manifest.webmanifest'].map(
+  (p) => BASE + (p === '/' ? '/' : p)
+);
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -92,7 +95,7 @@ async function pageStrategy(request) {
     trimCache(RUNTIME_CACHE, 150);
     return res;
   } catch {
-    const cached = (await caches.match(request)) || (await caches.match('/offline'));
+    const cached = (await caches.match(request)) || (await caches.match(`${BASE}/offline`));
     return cached || Response.error();
   }
 }
@@ -104,7 +107,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
 
   // Audio — cache-on-play cache, with Range support
-  if (url.pathname.startsWith('/audio/') || (url.origin === location.origin && url.pathname.endsWith('.mp3'))) {
+  if (url.pathname.startsWith(`${BASE}/audio/`) || (url.origin === location.origin && url.pathname.endsWith('.mp3'))) {
     event.respondWith(audioResponse(request));
     return;
   }
@@ -124,7 +127,7 @@ self.addEventListener('fetch', (event) => {
   }
 
   // Static assets: images, JS, CSS, fonts, JSON
-  if (/\.(png|jpe?g|webp|svg|gif|ico|js|css|woff2?|json|webmanifest)$/.test(url.pathname) || url.pathname.startsWith('/_astro/')) {
+  if (/\.(png|jpe?g|webp|svg|gif|ico|js|css|woff2?|json|webmanifest)$/.test(url.pathname) || url.pathname.startsWith(`${BASE}/_astro/`)) {
     event.respondWith(staleWhileRevalidate(request, RUNTIME_CACHE, 300));
     return;
   }

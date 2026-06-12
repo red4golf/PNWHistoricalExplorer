@@ -1,5 +1,6 @@
 import { getCollection } from 'astro:content';
 import { slugForCategory } from '../lib/categories';
+import { href } from '../lib/url';
 import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = async () => {
@@ -14,7 +15,7 @@ export const GET: APIRoute = async () => {
       lat: l.data.coordinates.lat,
       lng: l.data.coordinates.lng,
       description: l.data.description.slice(0, 180),
-      heroImage: l.data.heroImage,
+      heroImage: l.data.heroImage ? href(l.data.heroImage) : null,
       hasAudio: Boolean(l.data.audio),
     }))
     .sort((a, b) => a.title.localeCompare(b.title));

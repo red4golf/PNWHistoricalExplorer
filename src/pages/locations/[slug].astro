@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import AudioPlayer from '../../components/AudioPlayer.astro';
 import { categoryByName, slugForCategory } from '../../lib/categories';
+import { href } from '../../lib/url';
 
 export async function getStaticPaths() {
   const locations = await getCollection('locations');
@@ -13,7 +14,8 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
 const cat = categoryByName(d.category);
-const heroLarge = d.heroImage ? d.heroImage.replace(/\.(jpe?g|png)$/i, '-hero.webp') : null;
+const heroLarge = d.heroImage ? href(d.heroImage.replace(/\.(jpe?g|png)$/i, '-hero.webp')) : null;
+const heroFallback = d.heroImage ? href(d.heroImage) : null;
 const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${d.coordinates.lat},${d.coordinates.lng}`;
 
 const jsonLd = {
@@ -23,7 +25,7 @@ const jsonLd = {
   description: d.description,
   ...(d.address ? { address: d.address } : {}),
   geo: { '@type': 'GeoCoordinates', latitude: d.coordinates.lat, longitude: d.coordinates.lng },
-  ...(d.heroImage ? { image: new URL(d.heroImage, Astro.site).href } : {}),
+  ...(d.heroImage ? { image: new URL(href(d.heroImage), Astro.site).href } : {}),
 };
 ---
 
@@ -38,7 +40,7 @@ const jsonLd = {
           alt={d.title}
           width="1600"
           height="900"
-          onerror={`this.onerror=null;this.src='${d.heroImage}'`}
+          onerror={`this.onerror=null;this.src='${heroFallback}'`}
         />
         <div class="overlay">
           <div class="container">
@@ -68,7 +70,7 @@ const jsonLd = {
   <section class="section">
     <div class="container detail-layout">
       <article>
-        {d.audio && <AudioPlayer src={d.audio} title={d.title} />}
+        {d.audio && <AudioPlayer src={href(d.audio)} title={d.title} />}
         <div class="prose">
           <Content />
         </div>
@@ -93,13 +95,13 @@ const jsonLd = {
               </>
             )}
             <dt>Category</dt>
-            <dd><a href={`/categories/${slugForCategory(d.category)}`}>{d.category}</a></dd>
+            <dd><a href={href(`/categories/${slugForCategory(d.category)}`)}>{d.category}</a></dd>
           </dl>
           <p style="margin:1rem 0 0;">
             <a class="btn" style="width:100%; justify-content:center;" href={mapsUrl} rel="noopener" target="_blank">🧭 Directions</a>
           </p>
           <p style="margin:0.6rem 0 0;">
-            <a href={`/map#${d.slug}`} style="font-size:0.88rem;">View on the explorer map →</a>
+            <a href={href(`/map#${d.slug}`)} style="font-size:0.88rem;">View on the explorer map →</a>
           </p>
         </div>
 

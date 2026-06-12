@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { href } from '../lib/url';
 ---
 
 <Base title="Offline — PNW Historical Explorer" description="You appear to be offline.">
@@ -11,7 +12,7 @@ import Base from '../layouts/Base.astro';
         This page isn't saved for offline use yet. Pages you've visited before — and any audio
         narrations you've played — are still available.
       </p>
-      <p><a class="btn" href="/">Go to saved home page</a></p>
+      <p><a class="btn" href={href('/')}>Go to saved home page</a></p>
     </div>
   </section>
 </Base>

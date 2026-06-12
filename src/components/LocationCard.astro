@@ -1,5 +1,6 @@
 ---
 import { categoryByName } from '../lib/categories';
+import { href } from '../lib/url';
 
 interface Props {
   location: {
@@ -16,11 +17,12 @@ interface Props {
 const { location } = Astro.props;
 const cat = categoryByName(location.category);
 const cardImage = location.heroImage
-  ? location.heroImage.replace(/\.(jpe?g|png)$/i, '-card.webp')
+  ? href(location.heroImage.replace(/\.(jpe?g|png)$/i, '-card.webp'))
   : null;
+const fallbackImage = location.heroImage ? href(location.heroImage) : null;
 ---
 
-<a class="location-card" href={`/locations/${location.slug}`}>
+<a class="location-card" href={href(`/locations/${location.slug}`)}>
   <div class="thumb">
     {
       location.heroImage ? (
@@ -30,7 +32,7 @@ const cardImage = location.heroImage
           loading="lazy"
           width="640"
           height="360"
-          onerror={`this.onerror=null;this.src='${location.heroImage}'`}
+          onerror={`this.onerror=null;this.src='${fallbackImage}'`}
         />
       ) : (
         <div class="thumb-fallback" aria-hidden="true">

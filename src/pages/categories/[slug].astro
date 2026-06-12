@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import LocationCard from '../../components/LocationCard.astro';
 import { CATEGORIES } from '../../lib/categories';
+import { href } from '../../lib/url';
 
 export async function getStaticPaths() {
   return CATEGORIES.map((c) => ({ params: { slug: c.slug }, props: { category: c } }));
@@ -21,7 +22,7 @@ const locations = (await getCollection('locations'))
   <section class="section">
     <div class="container">
       <nav style="font-size:0.85rem; margin-bottom:0.75rem;">
-        <a href="/categories">← All categories</a>
+        <a href={href('/categories')}>← All categories</a>
       </nav>
       <h1>{category.icon} {category.name}</h1>
       <p style="max-width:42rem; color:var(--ink-soft);">{category.blurb} {locations.length} locations.</p>

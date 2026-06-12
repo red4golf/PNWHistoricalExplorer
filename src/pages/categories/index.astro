@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { CATEGORIES } from '../../lib/categories';
+import { href } from '../../lib/url';
 
 const locations = await getCollection('locations');
 const counts = Object.fromEntries(
@@ -19,7 +20,7 @@ const counts = Object.fromEntries(
       <div class="category-grid">
         {
           CATEGORIES.map((c) => (
-            <a class="category-card" href={`/categories/${c.slug}`}>
+            <a class="category-card" href={href(`/categories/${c.slug}`)}>
               <span class="icon">{c.icon}</span>
               <h3>{c.name}</h3>
               <span class="count">{counts[c.name]} locations</span>

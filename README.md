@@ -6,7 +6,7 @@ Static Astro rebuild of the Pacific Northwest Historical Explorer — 93 histori
 
 ```bash
 npm install
-npm run dev       # local dev server at http://localhost:4321
+npm run dev       # local dev server at http://localhost:4321/PNWHistoricalExplorer
 npm run build     # static site → dist/
 npm run preview   # preview the built site
 ```
@@ -16,6 +16,7 @@ npm run preview   # preview the built site
 - `src/content/locations/` — 93 markdown files (one per location, YAML frontmatter)
 - `src/content.config.ts` — schema; the 9 categories are enforced as an enum
 - `src/lib/categories.ts` — category names, slugs, icons (edit here to change the taxonomy UI)
+- `src/lib/url.ts` — base-path-aware URL helper (`href('/map')`)
 - `src/pages/` — home, `/map`, `/categories`, `/locations/[slug]`, `/about`, `/offline`
 - `src/pages/locations.json.ts` — builds the JSON the map and service worker use
 - `public/sw.js` — service worker: precaches the shell, caches pages/images as you browse, saves audio for offline after first play
@@ -32,9 +33,12 @@ npm run preview   # preview the built site
 
 ## Deploying
 
-The site is fully static — any static host works.
+Deployed to **GitHub Pages** at `https://red4golf.github.io/PNWHistoricalExplorer` — every push to `main` triggers `.github/workflows/deploy.yml` (build + deploy automatically). One-time setup: repo Settings → Pages → Source: **GitHub Actions**.
 
-- **Cloudflare Pages / Netlify**: connect the repo, build command `npm run build`, output `dist`. Set env var `SITE_URL` to your real domain (used for canonical URLs, sitemap, and OG tags).
-- **Replit**: a Static Deployment pointed at `dist` works too (`SITE_URL` in Secrets).
+The site is served from the `/PNWHistoricalExplorer/` subpath. The base path lives in three places that must stay in sync:
 
-After first deploy, verify: favicon shows in the tab, Lighthouse reports the PWA installable, and `https://<domain>/sitemap-index.xml` resolves.
+1. `astro.config.mjs` — `base` (env `BASE_PATH` overrides)
+2. `public/sw.js` — `const BASE`
+3. `public/manifest.webmanifest` — `start_url`, `scope`, icon paths
+
+If you later attach a custom domain (which serves at the root), set `BASE_PATH=/` in the workflow, change `sw.js` BASE to `''`, and strip the prefix from the manifest.

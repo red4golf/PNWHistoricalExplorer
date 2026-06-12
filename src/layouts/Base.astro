@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { base, href } from '../lib/url';
 
 interface Props {
   title: string;
@@ -16,9 +17,15 @@ const {
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const ogImageUrl = ogImage ? new URL(ogImage, Astro.site).href : new URL('/icons/og-default.png', Astro.site).href;
-const path = Astro.url.pathname;
-const current = (href: string) => (href === '/' ? (path === '/' ? 'page' : undefined) : path.startsWith(href) ? 'page' : undefined);
+const ogImageUrl = ogImage
+  ? new URL(href(ogImage), Astro.site).href
+  : new URL(href('/icons/og-default.png'), Astro.site).href;
+
+// Path without the base prefix, for nav highlighting
+const path = Astro.url.pathname.startsWith(base)
+  ? Astro.url.pathname.slice(base.length) || '/'
+  : Astro.url.pathname;
+const current = (h: string) => (h === '/' ? (path === '/' ? 'page' : undefined) : path.startsWith(h) ? 'page' : undefined);
 ---
 
 <!doctype html>
@@ -30,10 +37,10 @@ const current = (href: string) => (href === '/' ? (path === '/' ? 'page' : undef
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
 
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href={href('/favicon.ico')} sizes="32x32" />
+    <link rel="icon" href={href('/icons/icon.svg')} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={href('/icons/apple-touch-icon.png')} />
+    <link rel="manifest" href={href('/manifest.webmanifest')} />
     <meta name="theme-color" content="#1f3d2b" />
 
     <meta property="og:title" content={title} />
@@ -43,13 +50,13 @@ const current = (href: string) => (href === '/' ? (path === '/' ? 'page' : undef
     <meta property="og:image" content={ogImageUrl} />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="sitemap" href={href('/sitemap-index.xml')} />
     <slot name="head" />
   </head>
   <body>
     <header class="site-header">
       <div class="container">
-        <a href="/" class="brand">
+        <a href={href('/')} class="brand">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M12 2 L4 20 H9 L12 13 L15 20 H20 Z" fill="#c9a227" />
             <path d="M12 7 L7.5 20 H16.5 Z" fill="#ece1cb" opacity="0.9" />
@@ -57,10 +64,10 @@ const current = (href: string) => (href === '/' ? (path === '/' ? 'page' : undef
           PNW Historical Explorer
         </a>
         <nav class="main-nav" aria-label="Primary">
-          <a href="/" aria-current={current('/')}>Home</a>
-          <a href="/map" aria-current={current('/map')}>Map</a>
-          <a href="/categories" aria-current={current('/categories')}>Categories</a>
-          <a href="/about" aria-current={current('/about')}>About</a>
+          <a href={href('/')} aria-current={current('/')}>Home</a>
+          <a href={href('/map')} aria-current={current('/map')}>Map</a>
+          <a href={href('/categories')} aria-current={current('/categories')}>Categories</a>
+          <a href={href('/about')} aria-current={current('/about')}>About</a>
         </nav>
       </div>
     </header>
@@ -76,24 +83,24 @@ const current = (href: string) => (href === '/' ? (path === '/' ? 'page' : undef
           Stories, audio tours, and reading guides for the Pacific Northwest’s historic places.
         </div>
         <div>
-          <a href="/map">Explore the map</a> ·
-          <a href="/categories">Browse categories</a> ·
-          <a href="/about">About</a>
+          <a href={href('/map')}>Explore the map</a> ·
+          <a href={href('/categories')}>Browse categories</a> ·
+          <a href={href('/about')}>About</a>
         </div>
       </div>
     </footer>
 
     <nav class="bottom-nav" aria-label="Mobile">
-      <a href="/" aria-current={current('/')}><span class="ico">🏠</span>Home</a>
-      <a href="/map" aria-current={current('/map')}><span class="ico">🗺️</span>Map</a>
-      <a href="/categories" aria-current={current('/categories')}><span class="ico">🏛️</span>Browse</a>
-      <a href="/about" aria-current={current('/about')}><span class="ico">ℹ️</span>About</a>
+      <a href={href('/')} aria-current={current('/')}><span class="ico">🏠</span>Home</a>
+      <a href={href('/map')} aria-current={current('/map')}><span class="ico">🗺️</span>Map</a>
+      <a href={href('/categories')} aria-current={current('/categories')}><span class="ico">🏛️</span>Browse</a>
+      <a href={href('/about')} aria-current={current('/about')}><span class="ico">ℹ️</span>About</a>
     </nav>
 
-    <script>
+    <script define:vars={{ swPath: href('/sw.js'), swScope: base + '/' }}>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js').catch(() => {});
+          navigator.serviceWorker.register(swPath, { scope: swScope }).catch(() => {});
         });
       }
     </script>

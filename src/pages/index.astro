@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import LocationCard from '../components/LocationCard.astro';
 import { CATEGORIES } from '../lib/categories';
+import { href } from '../lib/url';
 
 const locations = await getCollection('locations');
 const total = locations.length;
@@ -31,8 +32,8 @@ const featured = locations
         the full story, {audioCount} audio narrations, and curated reading.
       </p>
       <div class="actions">
-        <a class="btn" href="/map">🗺️ Explore the map</a>
-        <a class="btn secondary" href="/categories">Browse by category</a>
+        <a class="btn" href={href('/map')}>🗺️ Explore the map</a>
+        <a class="btn secondary" href={href('/categories')}>Browse by category</a>
       </div>
     </div>
   </section>
@@ -43,7 +44,7 @@ const featured = locations
       <div class="category-grid">
         {
           CATEGORIES.map((c) => (
-            <a class="category-card" href={`/categories/${c.slug}`}>
+            <a class="category-card" href={href(`/categories/${c.slug}`)}>
               <span class="icon">{c.icon}</span>
               <h3>{c.name}</h3>
               <span class="count">{counts[c.name]} locations</span>

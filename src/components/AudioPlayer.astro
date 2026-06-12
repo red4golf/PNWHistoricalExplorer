@@ -21,7 +21,7 @@ const { src, title } = Astro.props;
   document.querySelectorAll('[data-audio-box]').forEach((box) => {
     const audio = box.querySelector('audio');
     const note = box.querySelector('[data-offline-note]');
-    const src = audio?.dataset.audioSrc;
+    const src = (audio as HTMLAudioElement | null)?.dataset.audioSrc;
     if (!audio || !src || !('caches' in window)) return;
 
     caches.open('pnw-audio-v1').then(async (cache) => {
