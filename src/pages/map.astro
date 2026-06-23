@@ -27,8 +27,16 @@ const counts = Object.fromEntries(
           ))
         }
       </div>
+      <div class="map-tools">
+        <button id="locate" class="locate-btn" type="button">📍 Find sites near me</button>
+        <span id="locate-status" class="locate-status" role="status" aria-live="polite"></span>
+      </div>
       <div class="map-wrap">
         <div id="map" data-locations-url={href('/locations.json')}></div>
+      </div>
+      <div id="nearby" class="nearby" hidden>
+        <h2 class="nearby-title">Nearest sites to you</h2>
+        <ol id="nearby-list" class="nearby-list"></ol>
       </div>
     </div>
   </section>
@@ -120,5 +128,110 @@ const counts = Object.fromEntries(
       });
       renderMarkers(btn.dataset.cat!);
     });
+
+    // ---- GPS: locate me + nearest sites ----------------------------------
+    const locateBtn = document.getElementById('locate') as HTMLButtonElement;
+    const locateStatus = document.getElementById('locate-status')!;
+    const nearbyPanel = document.getElementById('nearby')!;
+    const nearbyList = document.getElementById('nearby-list')!;
+    let userLayer: L.LayerGroup | null = null;
+
+    function distMiles(aLat: number, aLng: number, bLat: number, bLng: number) {
+      const R = 3958.8;
+      const toRad = (d: number) => (d * Math.PI) / 180;
+      const dLat = toRad(bLat - aLat);
+      const dLng = toRad(bLng - aLng);
+      const s =
+        Math.sin(dLat / 2) ** 2 +
+        Math.cos(toRad(aLat)) * Math.cos(toRad(bLat)) * Math.sin(dLng / 2) ** 2;
+      return 2 * R * Math.asin(Math.sqrt(s));
+    }
+
+    locateBtn?.addEventListener('click', () => {
+      if (!('geolocation' in navigator)) {
+        locateStatus.textContent = 'Geolocation isn’t supported on this device.';
+        return;
+      }
+      locateBtn.disabled = true;
+      locateStatus.textContent = 'Locating…';
+      navigator.geolocation.getCurrentPosition(onPos, onErr, {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 30000,
+      });
+    });
+
+    function onPos(pos: GeolocationPosition) {
+      locateBtn.disabled = false;
+      const { latitude: lat, longitude: lng, accuracy } = pos.coords;
+
+      if (userLayer) map.removeLayer(userLayer);
+      userLayer = L.layerGroup([
+        L.circle([lat, lng], { radius: accuracy, color: '#2b6cff', weight: 1, fillColor: '#2b6cff', fillOpacity: 0.12 }),
+        L.circleMarker([lat, lng], { radius: 7, color: '#fff', weight: 2, fillColor: '#2b6cff', fillOpacity: 1 }).bindPopup('You are here'),
+      ]).addTo(map);
+
+      const ranked = all
+        .map((l) => ({ l, d: distMiles(lat, lng, l.lat, l.lng) }))
+        .sort((a, b) => a.d - b.d)
+        .slice(0, 8);
+
+      nearbyList.innerHTML = ranked
+        .map(
+          ({ l, d }) =>
+            `<li><a href="#" data-slug="${l.slug}" data-lat="${l.lat}" data-lng="${l.lng}"><span class="n-title">${l.title}</span><span class="n-dist">${d.toFixed(1)} mi</span></a><span class="n-cat">${l.category}</span></li>`
+        )
+        .join('');
+      nearbyPanel.hidden = false;
+      locateStatus.textContent = `Found you · accuracy ±${Math.round(accuracy)} m`;
+
+      const bounds = L.latLngBounds([[lat, lng]]);
+      ranked.slice(0, 3).forEach(({ l }) => bounds.extend([l.lat, l.lng]));
+      map.fitBounds(bounds.pad(0.3));
+    }
+
+    function onErr(err: GeolocationPositionError) {
+      locateBtn.disabled = false;
+      locateStatus.textContent =
+        err.code === 1 ? 'Location permission denied.' : 'Couldn’t get your location.';
+    }
+
+    nearbyList.addEventListener('click', (e) => {
+      const a = (e.target as HTMLElement).closest('a[data-slug]') as HTMLElement | null;
+      if (!a) return;
+      e.preventDefault();
+      const slug = a.dataset.slug!;
+      const lat = parseFloat(a.dataset.lat!);
+      const lng = parseFloat(a.dataset.lng!);
+
+      // Make sure the marker exists (reset to "All" if a filter is hiding it).
+      if (!markers[slug]) {
+        document.querySelectorAll('#filters .pill').forEach((p) => {
+          const isAll = (p as HTMLElement).dataset.cat === 'all';
+          p.classList.toggle('active', isAll);
+          p.setAttribute('aria-pressed', String(isAll));
+        });
+        renderMarkers('all');
+      }
+      map.setView([lat, lng], 13);
+      const m = markers[slug];
+      if (m) setTimeout(() => m.openPopup(), 300);
+    });
   </script>
+
+  <style>
+    .map-tools { display: flex; align-items: center; gap: .75rem; margin: .75rem 0; flex-wrap: wrap; }
+    .locate-btn { background: #1f3d2b; color: #fff; border: 0; border-radius: 999px; padding: .55rem 1rem; font-weight: 600; cursor: pointer; }
+    .locate-btn:hover { background: #2a5139; }
+    .locate-btn:disabled { opacity: .6; cursor: default; }
+    .locate-status { font-size: .85rem; color: #5a6b5f; }
+    .nearby { margin: 1.25rem 0 0; }
+    .nearby-title { font-size: 1.1rem; margin: 0 0 .5rem; }
+    .nearby-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .5rem; }
+    .nearby-list li { background: #fff; border: 1px solid #e1e7e2; border-radius: 10px; padding: .6rem .8rem; }
+    .nearby-list a { display: flex; justify-content: space-between; gap: .5rem; align-items: baseline; text-decoration: none; color: inherit; font-weight: 600; }
+    .nearby-list a:hover .n-title { text-decoration: underline; }
+    .n-dist { color: #1f3d2b; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .n-cat { display: block; font-size: .78rem; color: #5a6b5f; margin-top: .15rem; }
+  </style>
 </Base>

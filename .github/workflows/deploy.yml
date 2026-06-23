@@ -22,6 +22,12 @@ jobs:
           # Used for canonical URLs, sitemap, and OG tags.
           # Change this if you attach a custom domain later.
           SITE_URL: https://red4golf.github.io
+          # Amazon Associates tag — set as a repo *variable* (Settings →
+          # Secrets and variables → Actions → Variables). Falls back to the
+          # value in src/data/site.json if unset.
+          PUBLIC_AMAZON_TAG: ${{ vars.PUBLIC_AMAZON_TAG }}
+          # GoatCounter site code (the subdomain of your goatcounter.com URL).
+          PUBLIC_GOATCOUNTER_CODE: ${{ vars.PUBLIC_GOATCOUNTER_CODE }}
 
   deploy:
     needs: build

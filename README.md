@@ -17,7 +17,11 @@ npm run preview   # preview the built site
 - `src/content.config.ts` — schema; the 9 categories are enforced as an enum
 - `src/lib/categories.ts` — category names, slugs, icons (edit here to change the taxonomy UI)
 - `src/lib/url.ts` — base-path-aware URL helper (`href('/map')`)
-- `src/pages/` — home, `/map`, `/categories`, `/locations/[slug]`, `/about`, `/offline`
+- `src/pages/` — home, `/map` (interactive map + GPS "find sites near me"), `/categories`, `/locations/[slug]`, `/about`, `/offline`, `/admin`
+- `src/config.ts` — central config (Amazon tag, GoatCounter code) with env overrides
+- `src/data/site.json` — editable site settings (name, tagline, affiliate tag, featured)
+- `src/lib/amazon.ts` — appends the affiliate tag to Amazon links at build time
+- `.pages.yml` — Pages CMS config (browser content editor)
 - `src/pages/locations.json.ts` — builds the JSON the map and service worker use
 - `public/sw.js` — service worker: precaches the shell, caches pages/images as you browse, saves audio for offline after first play
 - `public/manifest.webmanifest` + `public/icons/` — PWA install support
@@ -30,6 +34,38 @@ npm run preview   # preview the built site
 1. Add a markdown file to `src/content/locations/` matching the existing frontmatter (category must be one of the 9).
 2. Drop a hero JPG in `public/images/locations/` named `<slug>-hero.jpg`, then run `npm run images`.
 3. Optional audio MP3 in `public/audio/<slug>.mp3`, referenced in frontmatter.
+
+## Admin, analytics & content editing
+
+There is no server behind this site (GitHub Pages is static), so "admin" is split across three pieces, all free:
+
+### Admin dashboard — `/admin`
+
+Visit `https://red4golf.github.io/PNWHistoricalExplorer/admin`. It's a build-time snapshot of content health (location counts by category, missing hero images / audio / book links, affiliate status) plus quick links to the CMS, analytics, and the repo. It's `noindex` and excluded from the sitemap and `robots.txt`, but **it is publicly reachable by URL** — it contains no secrets, only counts and links.
+
+### Editing content — Pages CMS
+
+Browser-based editor at **[app.pagescms.org](https://app.pagescms.org)** — sign in with GitHub, choose this repo. Config lives in `.pages.yml`. You can add/edit locations (every frontmatter field, including the books list and the article body) and edit **Site settings**. Saving commits to GitHub, which triggers the deploy workflow and rebuilds the site. No install or server required.
+
+### Analytics — GoatCounter
+
+Free, privacy-friendly, no cookie banner. One-time setup:
+
+1. Create a free site at [goatcounter.com](https://www.goatcounter.com) (e.g. `pnwhistory.goatcounter.com`).
+2. In the repo: Settings → Secrets and variables → Actions → **Variables** → add `PUBLIC_GOATCOUNTER_CODE` = `pnwhistory` (just the subdomain).
+3. Push (or re-run the workflow). The tracking script only loads on the production build, never in `npm run dev`.
+
+The `/admin` page shows live stats **in-page** (total pageviews + most-viewed locations) by reading GoatCounter's public counter endpoint — no API token, nothing secret in the page. For this to work you must enable **Settings → "Allow adding visitor counts on your website"** in GoatCounter. Full referrer/timeline data is one click away on the GoatCounter dashboard.
+
+### Amazon affiliate links (no hardcoded ID)
+
+Book links in content stay as plain Amazon URLs. `src/lib/amazon.ts` appends your `tag=` to every Amazon link at build time, so the ID lives in exactly one place. Precedence: `PUBLIC_AMAZON_TAG` env/repo-variable → `src/data/site.json` → empty.
+
+- **Recommended:** set `PUBLIC_AMAZON_TAG` as a repo *Variable* (same place as the GoatCounter one) so it's separate from content.
+- Or edit `amazonAssociatesTag` in **Site settings** via the CMS.
+- Locally, copy `.env.example` to `.env` and fill it in.
+
+The affiliate tag is **not secret** (it appears in the final public links); env/config is purely so it isn't copy-pasted across 90+ files. Tagged links also carry `rel="nofollow sponsored"` per Amazon/FTC guidance.
 
 ## Deploying
 

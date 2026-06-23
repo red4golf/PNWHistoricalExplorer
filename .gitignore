@@ -3,3 +3,6 @@ dist/
 .astro/
 _archive/
 migrate.log
+.env
+.env.*
+!.env.example

@@ -1,6 +1,12 @@
 ---
 import '../styles/global.css';
 import { base, href } from '../lib/url';
+import { GOATCOUNTER_CODE } from '../config';
+
+// Only emit analytics on the real production build (not dev/preview), and only
+// when a GoatCounter code is configured. import.meta.env.PROD is true in builds.
+const analyticsEnabled = import.meta.env.PROD && !!GOATCOUNTER_CODE;
+const goatCounterEndpoint = `https://${GOATCOUNTER_CODE}.goatcounter.com/count`;
 
 interface Props {
   title: string;
@@ -52,6 +58,14 @@ const current = (h: string) => (h === '/' ? (path === '/' ? 'page' : undefined) 
 
     <link rel="sitemap" href={href('/sitemap-index.xml')} />
     <slot name="head" />
+
+    {analyticsEnabled && (
+      <script
+        is:inline
+        data-goatcounter={goatCounterEndpoint}
+        async
+        src="//gc.zgo.at/count.js"></script>
+    )}
   </head>
   <body>
     <header class="site-header">

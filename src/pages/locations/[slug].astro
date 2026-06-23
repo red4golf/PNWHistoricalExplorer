@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import AudioPlayer from '../../components/AudioPlayer.astro';
 import { categoryByName, slugForCategory } from '../../lib/categories';
 import { href } from '../../lib/url';
+import { withAffiliateTag } from '../../lib/amazon';
 
 export async function getStaticPaths() {
   const locations = await getCollection('locations');
@@ -111,7 +112,7 @@ const jsonLd = {
             <ul class="book-list">
               {d.books.map((b) => (
                 <li>
-                  {b.url ? <a href={b.url} rel="noopener nofollow" target="_blank">{b.title}</a> : b.title}
+                  {b.url ? <a href={withAffiliateTag(b.url)} rel="noopener nofollow sponsored" target="_blank">{b.title}</a> : b.title}
                   {b.author && <span class="author">{b.author}</span>}
                 </li>
               ))}

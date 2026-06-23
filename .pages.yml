@@ -1,0 +1,90 @@
+# Pages CMS configuration — https://pagescms.org
+# Edit content in the browser at https://app.pagescms.org (sign in with GitHub,
+# pick this repo). Saving commits to GitHub, which triggers the deploy workflow.
+#
+# IMPORTANT: every frontmatter field in the location schema is listed here so
+# that nothing is silently dropped when you save an entry.
+
+media:
+  - name: location-images
+    label: Location images
+    input: public/images/locations
+    output: /images/locations
+    extensions: [jpg, jpeg, png, webp]
+  - name: audio
+    label: Audio narrations
+    input: public/audio
+    output: /audio
+    extensions: [mp3, m4a, ogg]
+
+content:
+  - name: locations
+    label: Locations
+    type: collection
+    path: src/content/locations
+    filename: '{fields.slug}.md'
+    view:
+      fields: [title, category, period]
+      primary: title
+      sort: [title, category]
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: slug, label: Slug (URL + filename), type: string, required: true, pattern: '^[a-z0-9-]+$' }
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values:
+            - Aviation and Transportation
+            - Culture and Community
+            - Indigenous Heritage
+            - Industry and Agriculture
+            - Landmarks and Memorials
+            - Maritime
+            - Military and Conflict
+            - Natural Wonders
+            - Towns and Settlements
+      - { name: legacyCategory, label: Legacy category, type: string }
+      - { name: period, label: Period (e.g. 1926), type: string }
+      - { name: address, label: Address, type: string }
+      - name: coordinates
+        label: Coordinates
+        type: object
+        fields:
+          - { name: lat, label: Latitude, type: number, required: true }
+          - { name: lng, label: Longitude, type: number, required: true }
+      - { name: description, label: Short description (meta + cards), type: text, required: true }
+      - { name: heroImage, label: Hero image, type: image, options: { media: location-images } }
+      - { name: audio, label: Audio narration, type: file, options: { media: audio } }
+      - name: books
+        label: Further reading (Amazon links)
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Book title, type: string, required: true }
+          - { name: author, label: Author, type: string }
+          - { name: url, label: Amazon URL (affiliate tag added automatically), type: string }
+      - { name: sourceId, label: Source ID (do not edit), type: number }
+      - name: mergedFrom
+        label: Merged-from entries (do not edit)
+        type: object
+        list: true
+        fields:
+          - { name: id, label: ID, type: number }
+          - { name: name, label: Name, type: string }
+          - { name: legacyCategory, label: Legacy category, type: string }
+      - { name: body, label: Article (Markdown), type: rich-text }
+
+  - name: settings
+    label: Site settings
+    type: file
+    path: src/data/site.json
+    fields:
+      - { name: siteName, label: Site name, type: string }
+      - { name: tagline, label: Tagline / default description, type: text }
+      - { name: amazonAssociatesTag, label: Amazon Associates tag (e.g. red4golf-20), type: string }
+      - name: featured
+        label: Featured location slugs
+        type: string
+        list: true

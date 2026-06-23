@@ -1,0 +1,242 @@
+---
+import Base from '../../layouts/Base.astro';
+import { href } from '../../lib/url';
+import { isAmazonUrl, withAffiliateTag } from '../../lib/amazon';
+import { AMAZON_TAG, GOATCOUNTER_CODE, site } from '../../config';
+import { getCollection } from 'astro:content';
+
+// ---- Content health (computed at build time) -------------------------------
+const locations = await getCollection('locations');
+const total = locations.length;
+
+const byCategory = new Map<string, number>();
+for (const l of locations) byCategory.set(l.data.category, (byCategory.get(l.data.category) ?? 0) + 1);
+const categories = [...byCategory.entries()].sort((a, b) => b[1] - a[1]);
+
+const missingHero = locations.filter((l) => !l.data.heroImage);
+const missingAudio = locations.filter((l) => !l.data.audio);
+const noBooks = locations.filter((l) => (l.data.books?.length ?? 0) === 0);
+
+const allBooks = locations.flatMap((l) => l.data.books ?? []);
+const totalBooks = allBooks.length;
+const amazonBooks = allBooks.filter((b) => isAmazonUrl(b.url));
+const booksMissingUrl = allBooks.filter((b) => !b.url);
+
+const pct = (n: number) => (total ? Math.round((n / total) * 100) : 0);
+
+// ---- External links ---------------------------------------------------------
+const cmsUrl = 'https://app.pagescms.org/';
+const repoUrl = 'https://github.com/red4golf/PNWHistoricalExplorer';
+const goatCounterDash = GOATCOUNTER_CODE ? `https://${GOATCOUNTER_CODE}.goatcounter.com` : null;
+
+const tagConfigured = AMAZON_TAG && AMAZON_TAG !== 'yourtag-20';
+const sampleAmazon = amazonBooks[0]?.url ?? null;
+
+// Location paths for the live (client-side) GoatCounter lookups.
+const locStats = locations.map((l) => ({ title: l.data.title, path: href(`/locations/${l.data.slug}`) }));
+---
+
+<Base title="Admin · PNW Historical Explorer" description="Site admin dashboard">
+  <meta slot="head" name="robots" content="noindex, nofollow" />
+
+  <section class="admin container">
+    <header class="admin-head">
+      <h1>Admin dashboard</h1>
+      <p class="muted">Build-time snapshot of site health, plus quick links to editing and analytics. Visible to anyone with the URL — contains no secrets.</p>
+    </header>
+
+    <!-- Quick actions -->
+    <div class="actions">
+      <a class="card action" href={cmsUrl} target="_blank" rel="noopener">
+        <span class="ico">✏️</span>
+        <strong>Edit content</strong>
+        <span class="muted">Add / edit locations, books &amp; settings in Pages CMS</span>
+      </a>
+      <a class="card action" href={goatCounterDash ?? '#analytics'} target={goatCounterDash ? '_blank' : '_self'} rel="noopener">
+        <span class="ico">📊</span>
+        <strong>Analytics</strong>
+        <span class="muted">{goatCounterDash ? 'Open your GoatCounter dashboard' : 'Not configured yet — see below'}</span>
+      </a>
+      <a class="card action" href={repoUrl} target="_blank" rel="noopener">
+        <span class="ico">🗂️</span>
+        <strong>Repository</strong>
+        <span class="muted">Source, deploy logs &amp; settings on GitHub</span>
+      </a>
+    </div>
+
+    <!-- Stat cards -->
+    <h2>Content health</h2>
+    <div class="stats">
+      <div class="card stat"><div class="num">{total}</div><div class="lbl">Locations</div></div>
+      <div class="card stat"><div class="num">{totalBooks}</div><div class="lbl">Book links</div></div>
+      <div class={`card stat ${missingHero.length ? 'warn' : 'ok'}`}><div class="num">{missingHero.length}</div><div class="lbl">Missing hero image ({pct(missingHero.length)}%)</div></div>
+      <div class={`card stat ${missingAudio.length ? 'warn' : 'ok'}`}><div class="num">{missingAudio.length}</div><div class="lbl">No audio narration</div></div>
+      <div class={`card stat ${noBooks.length ? 'warn' : 'ok'}`}><div class="num">{noBooks.length}</div><div class="lbl">No further reading</div></div>
+      <div class={`card stat ${booksMissingUrl.length ? 'warn' : 'ok'}`}><div class="num">{booksMissingUrl.length}</div><div class="lbl">Book links missing URL</div></div>
+    </div>
+
+    <div class="grid2">
+      <!-- Category breakdown -->
+      <div class="card">
+        <h3>By category</h3>
+        <ul class="bars">
+          {categories.map(([name, n]) => (
+            <li>
+              <span class="bar-label">{name}</span>
+              <span class="bar-track"><span class="bar-fill" style={`width:${pct(n)}%`}></span></span>
+              <span class="bar-num">{n}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Affiliate status -->
+      <div class="card" id="affiliate">
+        <h3>Amazon affiliate</h3>
+        <p>
+          Tag in use:
+          <code>{tagConfigured ? AMAZON_TAG : 'not set (placeholder)'}</code>
+          {tagConfigured ? <span class="pill ok">active</span> : <span class="pill warn">placeholder</span>}
+        </p>
+        <p class="muted">{amazonBooks.length} of {totalBooks} book links point to Amazon and get the tag appended automatically at build.</p>
+        {sampleAmazon && (
+          <p class="muted small">Example output:<br /><code class="break">{withAffiliateTag(sampleAmazon)}</code></p>
+        )}
+        {!tagConfigured && (
+          <p class="muted small">Set your real tag in <strong>Site settings</strong> (via the CMS) or as the <code>PUBLIC_AMAZON_TAG</code> repo variable. The env var wins.</p>
+        )}
+      </div>
+    </div>
+
+    <!-- Analytics (live, in-page) -->
+    <h2 id="analytics">Analytics</h2>
+    {GOATCOUNTER_CODE ? (
+      <div class="grid2">
+        <div class="card">
+          <h3>Traffic</h3>
+          <div class="num" id="gc-total">—</div>
+          <div class="lbl muted">total pageviews · all time</div>
+          <p class="muted small" id="gc-status">Loading live from GoatCounter…</p>
+          <p class="small"><a href={goatCounterDash} target="_blank" rel="noopener">Full dashboard (referrers, timeline, etc.) →</a></p>
+        </div>
+        <div class="card">
+          <h3>Most viewed locations</h3>
+          <ol class="ranklist" id="gc-top"><li class="muted">Loading…</li></ol>
+        </div>
+      </div>
+    ) : (
+      <div class="card">
+        <p class="muted">
+          Not yet connected. Create a free site at <a href="https://www.goatcounter.com" target="_blank" rel="noopener">goatcounter.com</a>,
+          then set <code>PUBLIC_GOATCOUNTER_CODE</code> (your subdomain) as a repo variable and redeploy.
+          Stats will then appear right here. Tracking only runs on the production build.
+        </p>
+      </div>
+    )}
+
+    <!-- Worklists -->
+    {missingHero.length > 0 && (
+      <details class="card">
+        <summary>Locations missing a hero image ({missingHero.length})</summary>
+        <ul class="links">
+          {missingHero.map((l) => (
+            <li><a href={href(`/locations/${l.data.slug}`)}>{l.data.title}</a></li>
+          ))}
+        </ul>
+      </details>
+    )}
+    {noBooks.length > 0 && (
+      <details class="card">
+        <summary>Locations with no further reading ({noBooks.length})</summary>
+        <ul class="links">
+          {noBooks.map((l) => (
+            <li><a href={href(`/locations/${l.data.slug}`)}>{l.data.title}</a></li>
+          ))}
+        </ul>
+      </details>
+    )}
+  </section>
+
+  <script define:vars={{ code: GOATCOUNTER_CODE, locStats }}>
+    if (code) {
+      const api = (p) => `https://${code}.goatcounter.com/counter/${encodeURIComponent(p)}.json`;
+      const num = (j) => parseInt(String((j && j.count) || '0').replace(/[^0-9]/g, ''), 10) || 0;
+
+      // Site total
+      fetch(api('TOTAL'))
+        .then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
+        .then((j) => {
+          document.getElementById('gc-total').textContent = num(j).toLocaleString();
+          document.getElementById('gc-status').textContent = 'Live from GoatCounter · all time';
+        })
+        .catch(() => {
+          const s = document.getElementById('gc-status');
+          if (s) s.innerHTML =
+            "Couldn't load counts. In GoatCounter, go to Settings and enable <em>“Allow adding visitor counts on your website.”</em>";
+          const t = document.getElementById('gc-top');
+          if (t) t.innerHTML = '<li class="muted">Unavailable until counts are enabled.</li>';
+        });
+
+      // Per-location counts, fetched with limited concurrency, then ranked.
+      (async () => {
+        const out = [];
+        const queue = locStats.slice();
+        const worker = async () => {
+          while (queue.length) {
+            const item = queue.shift();
+            try {
+              const r = await fetch(api(item.path));
+              if (r.ok) out.push({ ...item, n: num(await r.json()) });
+            } catch (e) { /* ignore individual failures */ }
+          }
+        };
+        await Promise.all(Array.from({ length: 6 }, worker));
+        const top = out.filter((x) => x.n > 0).sort((a, b) => b.n - a.n).slice(0, 15);
+        const el = document.getElementById('gc-top');
+        if (!el) return;
+        if (!top.length) { el.innerHTML = '<li class="muted">No location views recorded yet.</li>'; return; }
+        el.innerHTML = top
+          .map((x) => `<li><a href="${x.path}">${x.title}</a><span class="rcount">${x.n.toLocaleString()}</span></li>`)
+          .join('');
+      })();
+    }
+  </script>
+</Base>
+
+<style>
+  .admin { padding: 2rem 1rem 4rem; max-width: 980px; }
+  .admin-head h1 { margin: 0 0 .25rem; }
+  .muted { color: #5a6b5f; }
+  .small { font-size: .85rem; }
+  .break { word-break: break-all; }
+  h2 { margin: 2rem 0 .75rem; }
+  .card { background: #fff; border: 1px solid #e1e7e2; border-radius: 12px; padding: 1rem 1.25rem; }
+  .actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
+  .action { display: flex; flex-direction: column; gap: .25rem; text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+  .action:hover { border-color: #1f3d2b; transform: translateY(-2px); }
+  .action .ico { font-size: 1.5rem; }
+  .action strong { font-size: 1.05rem; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
+  .stat .num { font-size: 2rem; font-weight: 700; line-height: 1; }
+  .stat .lbl { color: #5a6b5f; font-size: .85rem; margin-top: .35rem; }
+  .stat.warn { border-color: #e7b500; background: #fffbe9; }
+  .stat.ok { border-color: #cfe6d6; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+  @media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } }
+  .bars { list-style: none; margin: 0; padding: 0; }
+  .bars li { display: grid; grid-template-columns: 1fr 100px 2rem; align-items: center; gap: .5rem; padding: .25rem 0; font-size: .9rem; }
+  .bar-track { background: #eef3ef; border-radius: 6px; height: 10px; overflow: hidden; }
+  .bar-fill { display: block; height: 100%; background: #1f3d2b; }
+  .bar-num { text-align: right; font-variant-numeric: tabular-nums; }
+  code { background: #f1f5f2; padding: .1rem .35rem; border-radius: 5px; font-size: .85em; }
+  .pill { font-size: .72rem; padding: .1rem .5rem; border-radius: 999px; margin-left: .4rem; }
+  .pill.ok { background: #d6f0dd; color: #1f3d2b; }
+  .pill.warn { background: #ffe8a3; color: #6b5300; }
+  .ranklist { margin: 0; padding-left: 1.25rem; }
+  .ranklist li { padding: .25rem 0; display: flex; justify-content: space-between; gap: .75rem; align-items: baseline; }
+  .ranklist .rcount { font-variant-numeric: tabular-nums; font-weight: 700; color: #1f3d2b; }
+  details.card { margin-top: 1rem; }
+  details summary { cursor: pointer; font-weight: 600; }
+  .links { columns: 2; margin: .75rem 0 0; }
+  @media (max-width: 600px) { .links { columns: 1; } }
+</style>
