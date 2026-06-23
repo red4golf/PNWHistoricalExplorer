@@ -17,16 +17,22 @@ const counts = Object.fromEntries(
   <section class="section" style="padding-top:1.5rem;">
     <div class="container">
       <h1 style="font-size:1.6rem;">Explorer map</h1>
-      <div class="filter-pills" id="filters" role="group" aria-label="Filter by category">
-        <button class="pill active" data-cat="all" aria-pressed="true">All ({locations.length})</button>
-        {
-          CATEGORIES.map((c) => (
-            <button class="pill" data-cat={c.slug} aria-pressed="false">
-              {c.icon} {c.name} ({counts[c.slug]})
-            </button>
-          ))
-        }
-      </div>
+      <details class="filter-disclosure">
+        <summary class="filter-summary">
+          <span class="filter-summary-label">Filter by category: <strong id="filter-current">All</strong></span>
+          <span class="chev" aria-hidden="true">▸</span>
+        </summary>
+        <div class="filter-pills" id="filters" role="group" aria-label="Filter by category">
+          <button class="pill active" data-cat="all" data-label="All" aria-pressed="true">All ({locations.length})</button>
+          {
+            CATEGORIES.map((c) => (
+              <button class="pill" data-cat={c.slug} data-label={c.name} aria-pressed="false">
+                {c.icon} {c.name} ({counts[c.slug]})
+              </button>
+            ))
+          }
+        </div>
+      </details>
       <div class="map-tools">
         <button id="locate" class="locate-btn" type="button">📍 Find sites near me</button>
         <span id="locate-status" class="locate-status" role="status" aria-live="polite"></span>
@@ -126,6 +132,8 @@ const counts = Object.fromEntries(
         p.classList.toggle('active', p === btn);
         p.setAttribute('aria-pressed', String(p === btn));
       });
+      const cur = document.getElementById('filter-current');
+      if (cur) cur.textContent = btn.dataset.label!;
       renderMarkers(btn.dataset.cat!);
     });
 
@@ -220,6 +228,12 @@ const counts = Object.fromEntries(
   </script>
 
   <style>
+    .filter-disclosure { border: 1px solid #e1e7e2; border-radius: 10px; background: #fff; margin: .5rem 0 0; }
+    .filter-summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: .5rem; padding: .6rem .9rem; font-size: .95rem; }
+    .filter-summary::-webkit-details-marker { display: none; }
+    .filter-summary .chev { transition: transform .15s ease; color: #5a6b5f; }
+    .filter-disclosure[open] .filter-summary .chev { transform: rotate(90deg); }
+    .filter-disclosure .filter-pills { padding: 0 .9rem .8rem; }
     .map-tools { display: flex; align-items: center; gap: .75rem; margin: .75rem 0; flex-wrap: wrap; }
     .locate-btn { background: #1f3d2b; color: #fff; border: 0; border-radius: 999px; padding: .55rem 1rem; font-weight: 600; cursor: pointer; }
     .locate-btn:hover { background: #2a5139; }
