@@ -16,4 +16,17 @@ export const AMAZON_TAG: string =
 export const GOATCOUNTER_CODE: string =
   import.meta.env.PUBLIC_GOATCOUNTER_CODE || '';
 
+/**
+ * Secret-token URL for embedding the full GoatCounter dashboard in an iframe on
+ * /admin. The token grants ONLY read-only viewing of the dashboard; it lives in
+ * the (public) page source on purpose so the embed renders without a login.
+ * Rotate it any time in GoatCounter → Settings → "Generate random secret".
+ * Override the token at build time with PUBLIC_GOATCOUNTER_TOKEN if you prefer.
+ */
+export const GOATCOUNTER_EMBED_URL: string = GOATCOUNTER_CODE
+  ? `https://${GOATCOUNTER_CODE}.goatcounter.com?access-token=${
+      import.meta.env.PUBLIC_GOATCOUNTER_TOKEN || 'k7p2m9x4q1w8z3n6b5v0r7t2y4h1j8s3'
+    }`
+  : '';
+
 export { site };
