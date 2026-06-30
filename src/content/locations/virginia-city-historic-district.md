@@ -43,9 +43,9 @@ The presence of territorial government brought stability and legitimacy to what 
 
 ## Vigilante Justice and Law Enforcement
 
-Virginia City's early years were marked by the same lawlessness that plagued many mining boom towns, but the community's response became legendary in the annals of frontier justice. The activities of road agents led by Henry Plummer, who operated between Virginia City and Bannack, created a reign of terror that claimed over 100 victims during 1863 and 1864.
+Virginia City's early years were marked by the same lawlessness that plagued many mining boom towns, but the community's response became legendary in the annals of frontier justice. The activities of road agents led by Henry Plummer, who operated between Virginia City and Bannack, were blamed for a reign of terror said to have claimed over 100 victims during 1863 and 1864, though that figure traces to vigilante chronicler Thomas Dimsdale and is disputed by modern historians.
 
-The formation of the Montana Vigilantes in December 1863 represented one of the most dramatic episodes in American frontier history. Led by prominent citizens including Paris Pfouts and Wilbur Sanders, the vigilantes organized secret trials and executions that eliminated the road agent threat within months. Between December 1863 and February 1864, the vigilantes executed 21 suspected criminals, including Sheriff Henry Plummer himself.
+The formation of the Montana Vigilantes in December 1863 represented one of the most dramatic episodes in American frontier history. Led by prominent citizens including Paris Pfouts and Wilbur Sanders, the vigilantes organized secret trials and executions that eliminated the road agent threat within months. Between December 1863 and February 1864, the vigilantes hanged an estimated 21 suspected criminals, including Sheriff Henry Plummer himself.
 
 The vigilante episode became a defining moment in Montana history, demonstrating both the challenges of maintaining order on the frontier and the determination of citizens to create stable communities. The vigilantes' actions, while legally questionable, were widely supported by residents who had despaired of obtaining justice through normal legal channels. Their distinctive symbol, "3-7-77", became a lasting symbol of frontier justice.
 

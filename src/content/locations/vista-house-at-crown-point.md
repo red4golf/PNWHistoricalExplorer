@@ -61,7 +61,7 @@ Vista House's popularity also reflected the democratization of travel made possi
 
 Vista House survived the Great Depression, World War II, and changing travel patterns to emerge as a beloved Oregon landmark. The building was added to the National Register of Historic Places in 1974, recognizing its architectural and historical significance. Careful restoration work in the 1980s and 2000s has maintained the structure's original appearance while updating mechanical systems for continued public use.
 
-Today, Vista House continues to serve its original function as a scenic viewpoint and visitor information center while also housing exhibits about the Columbia River Gorge's natural and cultural history. The building attracts over 2 million visitors annually, making it one of Oregon's most photographed landmarks.
+Today, Vista House continues to serve its original function as a scenic viewpoint and visitor information center while also housing exhibits about the Columbia River Gorge's natural and cultural history. The building attracts over 1 million visitors annually, making it one of Oregon's most photographed landmarks.
 
 The preservation of Vista House demonstrates the enduring appeal of Progressive Era ideals about scenic beauty and public access to natural wonders. Its story illustrates how architectural monuments can successfully combine practical functions with symbolic meaning, creating places that serve both immediate needs and lasting commemorative purposes.
 

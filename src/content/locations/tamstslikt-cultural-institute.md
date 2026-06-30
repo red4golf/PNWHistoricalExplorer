@@ -39,7 +39,7 @@ The Columbia River Plateau served as a major crossroads for trade networks that 
 
 The Cayuse, Umatilla, and Walla Walla peoples played central roles in these trade networks, serving as intermediaries between coastal peoples and inland communities. Their strategic location along major travel routes and their diplomatic skills made them essential partners for traders and travelers crossing the plateau region.
 
-The introduction of horses in the early 18th century revolutionized plateau life, enabling greater mobility and transforming hunting, trading, and warfare patterns. The plateau peoples became renowned horse breeders and traders, developing the distinctive Appaloosa breed that remains associated with the region today. This equestrian culture connected them to Great Plains traditions while maintaining their distinctive plateau identities.
+The introduction of horses in the early 18th century revolutionized plateau life, enabling greater mobility and transforming hunting, trading, and warfare patterns. The plateau peoples became renowned horse breeders and traders. The distinctive Appaloosa breed that remains associated with the region today is historically tied to the neighboring Nez Perce. This equestrian culture connected them to Great Plains traditions while maintaining their distinctive plateau identities.
 
 ## Treaty Era and Cultural Survival
 

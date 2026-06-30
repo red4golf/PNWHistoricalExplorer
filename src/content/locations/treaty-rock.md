@@ -51,7 +51,7 @@ The treaty process was conducted primarily in Chinook Jargon, a trade language t
 
 ## Terms of the Treaty
 
-The Point No Point Treaty ceded over 438,000 acres of tribal territory to the United States in exchange for three small reservations totaling about 7,200 acres. The tribes retained fishing, hunting, and gathering rights in their traditional territories, though these provisions would later be subject to decades of legal battles and government restrictions.
+The Point No Point Treaty ceded about 750,000 acres of tribal territory to the United States in exchange for a single reservation of about 3,840 acres at the head of Hood Canal. The tribes retained fishing, hunting, and gathering rights in their traditional territories, though these provisions would later be subject to decades of legal battles and government restrictions.
 
 The treaty promised annual payments, education, and agricultural assistance to help tribes transition to "civilized" life. However, these promises were consistently underfunded and poorly implemented, leaving many Native Americans in poverty while their former lands were distributed to white settlers.
 

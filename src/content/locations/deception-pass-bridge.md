@@ -8,7 +8,7 @@ address: "Deception Pass Bridge, WA 98277"
 coordinates:
   lat: 48.4047
   lng: -122.6469
-description: "This iconic 1935 bridge connects Whidbey and Fidalgo Islands, built by the Civilian Conservation Corps during the Great Depression. Named for the deceptively treacherous tidal currents below, it spans one of the most scenic and historically significant waterways in the Pacific Northwest."
+description: "This iconic 1935 bridge connects Whidbey and Fidalgo Islands, built by the Puget Construction Company with funding from the federal Public Works Administration during the Great Depression. Named for the deceptively treacherous tidal currents below, it spans one of the most scenic and historically significant waterways in the Pacific Northwest."
 heroImage: "/images/locations/deception-pass-bridge-hero.jpg"
 audio: null
 books:
@@ -27,7 +27,7 @@ Soaring 180 feet above the churning waters of Deception Pass, this graceful stee
 
 ## The Pass That Deceived
 
-Deception Pass earned its ominous name in 1792 when British explorer Captain George Vancouver initially mistook the narrow channel for a bay. Only after careful navigation did Vancouver realize the "bay" was actually a treacherous passage connecting the Strait of Juan de Fuca with Skagit Bay, featuring swift tidal currents, submerged rocks, and unpredictable weather patterns that could trap unwary vessels.
+Deception Pass earned its name in 1792 when the narrow, easily overlooked passage initially deceived British explorer Captain George Vancouver's expedition into believing Whidbey Island was a peninsula. Only after careful navigation did the explorers realize the apparent peninsula was in fact an island, separated by a treacherous passage connecting Rosario Strait with Skagit Bay, featuring swift tidal currents, submerged rocks, and unpredictable weather patterns that could trap unwary vessels.
 
 For over a century, these dangerous waters separated the communities of Whidbey and Fidalgo Islands. Residents relied on small boats and ferries to cross the passage, a journey that could take hours in rough weather and proved impossible during winter storms. The isolation stunted economic development and made emergency services nearly impossible to coordinate between the islands.
 
@@ -35,11 +35,11 @@ Coast Salish peoples had navigated these waters for millennia, understanding the
 
 ## New Deal Engineering Marvel
 
-The Great Depression brought unexpected opportunity to the Pacific Northwest through President Franklin Roosevelt's New Deal programs. The Civilian Conservation Corps (CCC), established to provide employment for young men while undertaking conservation and infrastructure projects, identified Deception Pass as a priority for improving regional transportation.
+The Great Depression brought unexpected opportunity to the Pacific Northwest through President Franklin Roosevelt's New Deal programs. The federal Public Works Administration (PWA) provided funding that made the long-sought crossing possible, and the Puget Construction Company was contracted to build the bridge. The nearby Civilian Conservation Corps (CCC), established to provide employment for young men while undertaking conservation and infrastructure projects, built park facilities and approaches in the surrounding area rather than the bridge itself.
 
-Construction began in 1934 under the direction of skilled engineers who had to overcome extraordinary challenges. The bridge required two spans, a longer cantilever bridge connecting Whidbey Island to Pass Island, and a shorter span from Pass Island to Fidalgo Island. The complex engineering required precise calculations to account for strong tidal currents, high winds, and seismic activity.
+Construction began in 1934 under the direction of skilled engineers who had to overcome extraordinary challenges. The bridge required two spans: a 511-foot steel arch over Canoe Pass connecting Fidalgo Island to Pass Island, and a 976-foot cantilever truss over Deception Pass connecting Pass Island to Whidbey Island. The complex engineering required precise calculations to account for strong tidal currents, high winds, and seismic activity.
 
-CCC workers quarried stone from nearby areas and transported materials by barge through the very waters the bridge would span. The construction employed innovative techniques for the era, including the use of reinforced concrete foundations anchored deep into bedrock beneath the passage. Work continued year-round, with crews battling winter storms and fog that often reduced visibility to mere feet.
+Workers transported materials by barge through the very waters the bridge would span. The construction employed innovative techniques for the era, including the use of reinforced concrete foundations anchored deep into bedrock beneath the passage. Work continued year-round, with crews battling winter storms and fog that often reduced visibility to mere feet.
 
 ## Symbol of Connection and Progress
 

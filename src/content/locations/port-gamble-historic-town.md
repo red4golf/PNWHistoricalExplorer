@@ -133,9 +133,9 @@ Port Gamble was a self-contained world.
 
 Not all of Port Gamble's history is peaceful.
 
-In **1856**, during the broader Indian Wars in Puget Sound, a party of **northern Tlingit raiders** from Alaska attacked a S'Klallam village near Port Gamble.
+In **1856**, during the broader Indian Wars in Puget Sound, a party of **northern Natives** from Alaska, variously identified as Tlingit and Haida, had encamped near Port Gamble.
 
-The USS *Massachusetts*, a Navy sloop-of-war, was anchored nearby. Sailors engaged the raiders in a firefight. **Gustave Englebrecht**, a sailor aboard the *Massachusetts*, was killed, becoming the **first U.S. Navy casualty in Pacific waters**.
+The USS *Massachusetts*, a Navy sloop-of-war, was anchored nearby. When the northern Natives refused demands to leave, the *Massachusetts* opened fire and shelled their encampment. In the fighting that followed, **Gustave Englebrecht**, a sailor aboard the *Massachusetts*, was killed, becoming the **first U.S. Navy casualty in Pacific waters**.
 
 Englebrecht is buried in the **Buena Vista Cemetery** on the bluff above Port Gamble. His grave is marked and maintained to this day.
 

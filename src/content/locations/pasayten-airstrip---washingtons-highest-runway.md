@@ -8,7 +8,7 @@ address: "West Fork Pasayten River, Pasayten Wilderness, WA 98801"
 coordinates:
   lat: 48.917
   lng: -120.631
-description: "At 4,200 feet elevation deep in the North Cascades wilderness, this remote 3,200-foot dirt runway served as a USFS fire suppression and supply base from 1931 to 1968. Built by WPA workers and first landed on in 1932, Pasayten Airstrip was Washington State's highest and most remote airfield, accessed only by Curtis Robins and determined bush pilots. When Congress designated the Pasayten Wilderness in October 1968, the runway closed forever. Today it lies overgrown and deliberately sabotaged with holes, a ghost strip visible from the air but reachable only by a 14-mile wilderness hike."
+description: "At 4,200 feet elevation deep in the North Cascades wilderness, this remote 3,200-foot dirt runway served as a USFS fire suppression and supply base from 1931 to 1968. Built with Depression-era labor and first landed on in 1932, Pasayten Airstrip was one of Washington's highest and most remote airfields, accessed only by Curtis Robins and determined bush pilots. When Congress designated the Pasayten Wilderness in October 1968, the runway closed forever. Today it lies overgrown and deliberately sabotaged with holes, a ghost strip visible from the air but reachable only by a 14-mile wilderness hike."
 heroImage: "/images/locations/pasayten-airstrip---washingtons-highest-runway-hero.jpg"
 audio: "/audio/pasayten-airstrip---washingtons-highest-runway.mp3"
 books:
@@ -23,9 +23,9 @@ sourceId: 143
 
 In 1931, the U.S. Forest Service faced a problem: how to fight fires and manage resources in the remote Pasayten backcountry, one of the most inaccessible regions in Washington State.
 
-The solution was audacious: build an airstrip at **over 4,200 feet elevation** along the West Fork of the Pasayten River, deep in what is now the Pasayten Wilderness. This would become **Washington State's highest airfield**.
+The solution was audacious: build an airstrip at **over 4,200 feet elevation** along the West Fork of the Pasayten River, deep in what is now the Pasayten Wilderness. This would become **one of Washington's highest airfields**.
 
-Using **Works Progress Administration (WPA) labor**, crews carved a **3,000 to 3,200-foot north-south runway** from the wilderness. The work was grueling, clearing trees, leveling terrain, and creating a landing surface in one of the most remote locations in the Pacific Northwest.
+Using **Depression-era labor**, crews carved a **3,000 to 3,200-foot north-south runway** from the wilderness. The work was grueling, clearing trees, leveling terrain, and creating a landing surface in one of the most remote locations in the Pacific Northwest.
 
 On the ground, the construction seemed impossible. From the air, it would prove invaluable.
 

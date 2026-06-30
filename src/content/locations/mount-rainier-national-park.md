@@ -23,7 +23,7 @@ sourceId: 31
 
 # Mount Rainier: The Mountain That Is God
 
-Rising 14,410 feet above sea level, Mount Rainier dominates the skyline of the Pacific Northwest as the most heavily glaciated peak in the lower 48 states. Known to indigenous peoples as "Tahoma" or "Takhoma", meaning "mother of waters", this massive stratovolcano has inspired reverence, challenged climbers, and served as a cornerstone of American conservation for over a century.
+Rising 14,410 feet above sea level, Mount Rainier dominates the skyline of the Pacific Northwest as the most heavily glaciated peak in the lower 48 states. Known to indigenous peoples as "Tahoma" or "Takhoma", a Puyallup/Lushootseed name with several translations (one of which is "mother of waters"), this massive stratovolcano has inspired reverence, challenged climbers, and served as a cornerstone of American conservation for over a century.
 
 ## Sacred Mountain of Many Nations
 
@@ -43,7 +43,7 @@ Congress dedicated the park "for the benefit and enjoyment of the people" and "f
 
 ## Mountaineering History and Tragedy
 
-Mount Rainier's climbing history began with the first documented ascent on August 17, 1870, by Hazard Stevens and Philemon Beecher Van Trump, guided by Sluiskin, a Yakama leader. Sluiskin was so convinced they would die that he promised to wait two days before reporting their deaths, making their successful return to Olympia's streets a hero's welcome.
+Mount Rainier's climbing history began with the first documented ascent on August 17, 1870, by Hazard Stevens and Philemon Beecher Van Trump, guided by Sluiskin, a Yakama guide. Sluiskin was so convinced they would die that he promised to wait two days before reporting their deaths, making their successful return to Olympia's streets a hero's welcome.
 
 Early climbing milestones include the first female ascent by Fay Fuller in 1890, the first winter ascent in 1922, and the legendary first ascent of Liberty Ridge in 1935, now considered the mountain's most iconic and dangerous route.
 

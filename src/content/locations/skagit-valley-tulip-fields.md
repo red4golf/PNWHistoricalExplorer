@@ -23,7 +23,7 @@ sourceId: 42
 
 # Skagit Valley Tulip Fields: Holland in the Pacific Northwest
 
-Each April, the Skagit Valley transforms into a brilliant mix of color that rivals the famous tulip fields of Holland, as millions of tulips bloom across 250 acres of farmland in what has become Washington's largest tulip festival and the biggest in the United States. This spectacular display, stretching from Mount Vernon to La Conner, represents not just natural beauty but a remarkable story of Dutch immigrant determination, agricultural innovation, and the creation of an economic engine that now supports an entire region.
+Each April, the Skagit Valley transforms into a brilliant mix of color that rivals the famous tulip fields of Holland, as millions of tulips bloom across hundreds of acres of farmland in what has become Washington's largest tulip festival and the largest in North America. This spectacular display, stretching from Mount Vernon to La Conner, represents not just natural beauty but a remarkable story of Dutch immigrant determination, agricultural innovation, and the creation of an economic engine that now supports an entire region.
 
 ## Dutch Dreams in American Soil
 

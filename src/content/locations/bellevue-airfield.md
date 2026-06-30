@@ -21,7 +21,7 @@ sourceId: 138
 
 ## The Beginning (1945)
 
-Bellevue Airfield opened in 1945, founded by Arthur Nordhoff, a World War I Army aviator who saw the potential for general aviation on the rapidly developing Eastside. Though he had purchased the land in 1941, wartime restrictions delayed the airfield's opening. His daughter, Nancy Dunnam, flew with the Women's Air Corps (WASP) during World War II, bringing the family's aviation legacy full circle.
+Bellevue Airfield opened in 1945, founded by Arthur Nordhoff, a World War I Army aviator who saw the potential for general aviation on the rapidly developing Eastside. Though he had purchased the land in 1941, wartime restrictions delayed the airfield's opening. His daughter, Nancy Dunnam, flew with the Women Airforce Service Pilots (WASP) during World War II, bringing the family's aviation legacy full circle.
 
 The 160-acre property in Eastgate, east of what is now 156th Avenue SE and north of Interstate 90, was surrounded by a gun club, turkey ranch, mink farm, and garbage dump. It was rural Washington at its finest, far from the tech corridors and office parks that would eventually replace it.
 

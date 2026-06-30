@@ -55,7 +55,7 @@ The Northwest Straits Foundation is now working to restore Clayton Beach's natur
 
 Beyond its industrial heritage, Clayton Beach offers a window into deep geological time. The distinctive sandstone formations that line the beach are part of the Chuckanut Formation, laid down 54 to 34 million years ago when this region was a subtropical lowland with meandering rivers, swamps, and palm forests.
 
-The fine-grained sandstone preserves fossils of ancient plants, palm fronds, ferns, and sycamore leaves, along with animal tracks from birds, mammals, and even crocodiles. One remarkable find in the formation was the footprint of a seven-foot-tall flightless bird called Diatryma, a predator that roamed this landscape when Washington looked more like modern-day Louisiana than the evergreen forests we know today.
+The fine-grained sandstone preserves fossils of ancient plants, palm fronds, ferns, and sycamore leaves, along with animal tracks from birds, mammals, and even crocodiles. One remarkable find in the formation was the footprint of a roughly 6.5-foot-tall flightless bird called Diatryma, whose diet is now widely thought to have been plant-based, that roamed this landscape when Washington looked more like modern-day Louisiana than the evergreen forests we know today.
 
 The beach's rare blonde sand comes from eroded Chuckanut sandstone, giving Clayton Beach a distinctive golden color unusual in the Pacific Northwest. Tide pools among the sandstone ledges support colorful communities of anemones, sea stars, and crabs, while seals often haul out on offshore rocks.
 

@@ -23,7 +23,7 @@ sourceId: 70
 
 # Olympic Hot Springs: Sacred Waters and Mountain Refuge
 
-Deep in the temperate rainforest of the Olympic Peninsula, where the Sol Duc River winds through ancient cedars and towering ferns, Olympic Hot Springs has served as a place of healing and renewal for thousands of years. These naturally heated mineral waters represent the intersection of geological wonder, Native American spiritual tradition, and the evolving relationship between wilderness preservation and public access in the Pacific Northwest.
+Deep in the temperate rainforest of the Olympic Peninsula, where Boulder Creek winds through ancient cedars and towering ferns within the Elwha River drainage, Olympic Hot Springs has served as a place of healing and renewal for thousands of years. These naturally heated mineral waters represent the intersection of geological wonder, Native American spiritual tradition, and the evolving relationship between wilderness preservation and public access in the Pacific Northwest.
 
 ## Geological Origins
 
@@ -45,7 +45,7 @@ Word of the springs spread through newspaper accounts and personal testimonials 
 
 ## Resort Development
 
-In 1907, Michael Earles acquired land around the hot springs and began developing a rustic resort that would operate for over 60 years. The Olympic Hot Springs Resort featured cabins, a lodge, dining facilities, and developed pools that harnessed the natural hot water for visitor use.
+In 1907, Billy Everett and his partners acquired land around the hot springs and began developing a rustic resort that would operate for over 60 years. The Olympic Hot Springs Resort featured cabins, a lodge, dining facilities, and developed pools that harnessed the natural hot water for visitor use.
 
 The resort attracted visitors from throughout the Pacific Northwest who sought relief from various ailments or simply wanted to experience the unique combination of wilderness setting and therapeutic waters. The facility represented early recreational development in what would later become Olympic National Park.
 

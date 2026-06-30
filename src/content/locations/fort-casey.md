@@ -62,7 +62,7 @@ mergedFrom:
 
   The lighthouse standing at Fort Casey is the second structure built on this location. The original Admiralty Head Lighthouse was built in 1861 and guided ships through the inlet for decades. When the fort was constructed, the military demolished the original light and built the current structure in 1903 to serve both as a navigation aid and as a fire control observation post.
 
-  The lighthouse was decommissioned in 1927 when a lightship anchored in the shipping lane made it redundant. For decades it stood empty. Today, restored to its Victorian appearance, you can climb the spiral staircase to the lantern room and look out across the same waters that keepers watched through all weather for more than sixty years.
+  The lighthouse was decommissioned in 1922 when a lightship anchored in the shipping lane made it redundant (the lantern room was later removed in 1927). For decades it stood empty. Today, restored to its Victorian appearance, you can climb the spiral staircase to the lantern room and look out across the same waters that keepers watched through all weather for more than sixty years.
 
   ## World War II and After
 
@@ -295,7 +295,7 @@ The lighthouse keeper's family became part of the broader Fort Casey community, 
 
 The rapid advancement of navigation technology during the early 20th century gradually reduced the lighthouse's operational importance. Radio beacons, improved charts, and electronic navigation aids provided mariners with more reliable guidance than traditional lighthouses could offer. Additionally, changes in shipping patterns as larger vessels increasingly used deeper-water channels reduced traffic through Admiralty Inlet.
 
-In 1923, the Lighthouse Service decommissioned Admiralty Head Lighthouse after only 20 years of operation. The relatively brief service life reflected the rapid technological changes that were transforming maritime navigation throughout the world. The Fresnel lens was removed and relocated to other lighthouse stations where it continued serving mariners for many more years.
+In 1922, the Lighthouse Service decommissioned Admiralty Head Lighthouse after only 20 years of operation. The relatively brief service life reflected the rapid technological changes that were transforming maritime navigation throughout the world. The Fresnel lens was removed and relocated to other lighthouse stations where it continued serving mariners for many more years.
 
 The lighthouse's decommissioning marked the end of an era when lighthouses represented the most advanced navigation technology available. However, the building's solid construction and architectural merit ensured its survival as military housing and later as a historical monument that would interpret lighthouse heritage for future generations.
 
@@ -309,7 +309,7 @@ The museum's exhibits focus on lighthouse technology, Puget Sound navigation his
 
 ### Preservation and Public Access
 
-Today, Admiralty Head Lighthouse serves as both a beloved historical landmark and an active educational facility that welcomes thousands of visitors annually. The lighthouse's location within Deception Pass State Park provides easy public access while protecting the structure within a preserved historical landscape that includes the original fort installations.
+Today, Admiralty Head Lighthouse serves as both a beloved historical landmark and an active educational facility that welcomes thousands of visitors annually. The lighthouse's location within Fort Casey State Park provides easy public access while protecting the structure within a preserved historical landscape that includes the original fort installations.
 
 The lighthouse's museum functions are supported by volunteer docents who share their knowledge of lighthouse history and maritime heritage with visitors from around the world. Educational programs bring school groups to the lighthouse for hands-on learning experiences about navigation technology, coastal geography, and the maritime industries that shaped Pacific Northwest development.
 

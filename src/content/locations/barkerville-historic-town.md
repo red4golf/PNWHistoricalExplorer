@@ -39,7 +39,7 @@ The 400-mile road, completed in 1865, transformed access to the goldfields while
 
 ## Boomtown Development
 
-Barkerville exploded from wilderness to major settlement in just a few years, reaching a peak population of over 10,000 people during the height of the gold rush. The town developed the complete infrastructure of a major 19th-century community: hotels, saloons, stores, restaurants, churches, schools, a hospital, and even an opera house that attracted touring companies from around the world.
+Barkerville exploded from wilderness to major settlement in just a few years, reaching a peak population that by some accounts climbed to as many as 10,000 people during the height of the gold rush. The town developed the complete infrastructure of a major 19th-century community: hotels, saloons, stores, restaurants, churches, schools, a hospital, and even an opera house that attracted touring companies from around the world.
 
 The town's main street stretched for over a mile along Williams Creek, lined with businesses that served the needs of miners and provided entertainment and services for people far from home. Barkerville became famous throughout North America for its sophistication and cultural amenities, earning the nickname "the largest city west of Chicago and north of San Francisco."
 
@@ -99,7 +99,7 @@ The construction of the Canadian Pacific Railway, which bypassed the Cariboo reg
 
 ## Preservation Efforts
 
-In the 1950s, the British Columbia government recognized Barkerville's historical significance and began preservation efforts that would transform the deteriorating town into a major heritage site. The restoration project reconstructed over 125 buildings and restored the town to its 1870s appearance.
+In the 1950s, the British Columbia government recognized Barkerville's historical significance and began preservation efforts that would transform the deteriorating town into a major heritage site. The restoration project reconstructed and restored about 107 heritage buildings, returning the town to its 1870s appearance.
 
 The preservation of Barkerville created one of Canada's most important historical sites while pioneering heritage conservation techniques that would be applied to other historic communities. The project demonstrated how abandoned mining towns could be given new life as educational and tourism destinations.
 

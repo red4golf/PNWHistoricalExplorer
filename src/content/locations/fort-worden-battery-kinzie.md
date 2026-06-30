@@ -33,7 +33,7 @@ mergedFrom:
 
 ## The Northwest Guardian
 
-At the northwestern tip of the Olympic Peninsula, Fort Worden stands as the command center of what military historians call the "Triangle of Fire" - the three-fort coastal defense system that protected Puget Sound from 1897 to 1953. Built on the bluffs of Port Townsend, this massive installation represented the pinnacle of American coastal defense technology.
+At the northeastern tip of the Quimper Peninsula, at Port Townsend, Fort Worden stands as the command center of what military historians call the "Triangle of Fire" - the three-fort coastal defense system that protected Puget Sound from 1897 to 1953. Built on the bluffs of Port Townsend, this massive installation represented the pinnacle of American coastal defense technology.
 
 ## Battery Kinzie: Engineering Marvel
 
@@ -53,7 +53,7 @@ The installation protected critical targets: the Puget Sound Naval Shipyard at B
 
 ## Triangle of Fire Partnership
 
-Working in coordination with Fort Casey on Whidbey Island and Fort Flagler on Marrowstone Island, Fort Worden formed the most complete coastal defense system on the Pacific Coast. The three forts created overlapping fields of fire that no enemy fleet could penetrate without facing devastating crossfire from multiple directions.
+Working in coordination with Fort Casey on Whidbey Island and Fort Flagler on Marrowstone Island, Fort Worden formed part of the "Triangle of Fire" defending the entrance to Puget Sound. The three forts created overlapping fields of fire that no enemy fleet could penetrate without facing devastating crossfire from multiple directions.
 
 ## Hollywood Fame
 
@@ -73,7 +73,7 @@ The fort's transformation from fortress to cultural center mirrors the Pacific N
 
 ## Point Wilson Lighthouse: Guardian of the Strait
 
-Standing sentinel at the northeastern tip of the Olympic Peninsula, Point Wilson Lighthouse has guided vessels safely through the strategic waters of Admiralty Inlet for over a century. Built in 1914 as part of the comprehensive coastal defense system at Fort Worden, this lighthouse represents the integration of maritime safety and military security that characterized early 20th-century Pacific Northwest development.
+Standing sentinel at the northeastern tip of the Olympic Peninsula, Point Wilson Lighthouse has guided vessels safely through the strategic waters of Admiralty Inlet for over a century. A light has marked this point since 1879; the current concrete tower was built in 1914 as part of the comprehensive coastal defense system at Fort Worden. This lighthouse represents the integration of maritime safety and military security that characterized early 20th-century Pacific Northwest development.
 
 ### Strategic Maritime Location
 
@@ -95,7 +95,7 @@ During World War I, the lighthouse took on additional strategic importance as na
 
 Construction of Point Wilson Lighthouse began in 1913 using the latest lighthouse technology and construction techniques available. The 46-foot concrete tower was designed to withstand the severe weather conditions that regularly affected the exposed point while providing optimal visibility for the lighthouse's beacon.
 
-The lighthouse was equipped with a third-order Fresnel lens that created a powerful beam visible for 17 nautical miles in clear weather. This sophisticated optical system, manufactured in Paris by Barbier, Benard & Turenne, focused light from a central lamp into a concentrated beam that could penetrate the fog and darkness that frequently reduced visibility in the Strait of Juan de Fuca.
+The lighthouse was equipped with a fourth-order Fresnel lens that created a powerful beam visible for 17 nautical miles in clear weather. This sophisticated optical system, manufactured in Paris by Barbier, Benard & Turenne, focused light from a central lamp into a concentrated beam that could penetrate the fog and darkness that frequently reduced visibility in the Strait of Juan de Fuca.
 
 The lighthouse's automated systems represented advanced technology for the era, including electric lighting that provided more reliable illumination than the oil-burning lamps used in older lighthouses. This electrical system required the lighthouse to be connected to Fort Worden's power generation facilities, creating an early example of shared infrastructure between civilian and military installations.
 

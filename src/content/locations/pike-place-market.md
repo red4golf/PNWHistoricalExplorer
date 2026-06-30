@@ -23,7 +23,7 @@ sourceId: 32
 
 # Pike Place Market: The Soul of Seattle
 
-Since 1907, Pike Place Market has served as the beating heart of Seattle, where the ritual of commerce becomes a celebration of community, culture, and the bounty of the Pacific Northwest. From the famous fish-throwing vendors to the original Starbucks, from the underground shops to the flower stalls bursting with color, this nine-acre historic district represents far more than a marketplace, it embodies the spirit of a city that values authenticity, creativity, and human connection.
+Since 1907, Pike Place Market has served as the beating heart of Seattle, where the ritual of commerce becomes a celebration of community, culture, and the bounty of the Pacific Northwest. From the famous fish-throwing vendors to the original Starbucks, from the underground shops to the flower stalls bursting with color, this seven-acre historic district represents far more than a marketplace, it embodies the spirit of a city that values authenticity, creativity, and human connection.
 
 ## Birth of a Market
 

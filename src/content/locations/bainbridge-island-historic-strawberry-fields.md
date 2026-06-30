@@ -43,7 +43,7 @@ The crown jewel of this agricultural empire was the **Marshall variety strawberr
 
 **Notable Farming Families:**
 
-The **Suyematsu family** purchased their 13-acre farm in 1928 for $1,600, establishing what would become the oldest continuously farmed land on Bainbridge Island. Their farm represented the achievements possible for Japanese American families despite discriminatory laws.
+The **Suyematsu family** purchased their 40-acre farm in 1928 for $1,600, establishing what would become the oldest continuously farmed land on Bainbridge Island. Their farm represented the achievements possible for Japanese American families despite discriminatory laws.
 
 The **Sakuma Brothers** started growing berries in 1915, eventually establishing one of the region's most successful operations. After the war, they would relocate to Burlington, Washington, where their operation became the largest strawberry farm in Skagit Valley, proving the agricultural expertise that Japanese American farmers brought to the Pacific Northwest.
 

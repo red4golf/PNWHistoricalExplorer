@@ -27,7 +27,7 @@ In the remote high desert of northeastern California, where ancient volcanic for
 
 ## Volcanic Origins
 
-Lava Beds National Monument sits within the Medicine Lake Volcano complex, one of the largest shield volcanoes in the Cascade Range. Over the past 500,000 years, repeated volcanic eruptions created the complex landscape of lava flows, spatter cones, and underground cave systems that characterize the monument today.
+Lava Beds National Monument sits within the Medicine Lake Volcano complex, the largest volcano by volume in the Cascade Range. Over the past 500,000 years, repeated volcanic eruptions created the complex landscape of lava flows, spatter cones, and underground cave systems that characterize the monument today.
 
 The most recent major eruptions occurred between 8,000 and 1,000 years ago, creating the extensive lava tube systems that make Lava Beds famous. These tubes formed when flowing lava cooled and hardened on the surface while molten rock continued to flow underneath, eventually draining away to leave hollow underground passages.
 
@@ -47,7 +47,7 @@ Many Modoc, led by Chief Kintpuash (called "Captain Jack" by Americans), refused
 
 In November 1872, the U.S. Army attempted to force the return of Kintpuash's band to the Klamath Reservation, triggering armed resistance that would become known as the Modoc War. When fighting broke out during the attempted arrest, the Modoc retreated to the lava beds, which they knew intimately and which provided natural defensive advantages.
 
-The lava beds' complex terrain of trenches, caves, and natural fortifications allowed a small band of perhaps 60 Modoc warriors to hold off much larger U.S. Army forces for months. The Modoc's knowledge of the volcanic landscape gave them tactical advantages that compensated for their numerical inferiority.
+The lava beds' complex terrain of trenches, caves, and natural fortifications allowed a small band of about 52 to 53 Modoc warriors to hold off much larger U.S. Army forces for months. The Modoc's knowledge of the volcanic landscape gave them tactical advantages that compensated for their numerical inferiority.
 
 ## Natural Fortress
 

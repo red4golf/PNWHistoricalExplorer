@@ -25,11 +25,11 @@ sourceId: 65
 
 Beneath the modern streets of Pioneer Square lies a hidden world, the remnants of Seattle's original street level, abandoned when the entire downtown area was raised 8 to 35 feet in one of the most ambitious urban engineering projects in American history. This underground city tells the story of a young metropolis that literally reinvented itself, rising from mud and tides to become the commercial heart of the Pacific Northwest.
 
-## The Great Regrade
+## Raising the Streets
 
 In the 1890s, downtown Seattle faced a chronic problem: the original city had been built too close to sea level on Puget Sound's mudflats. The streets regularly flooded during high tides, creating unsanitary conditions as the primitive sewer system backed up into basements and streets. The situation became untenable as the city grew rapidly during the Alaska Gold Rush boom.
 
-City leaders devised an audacious solution: raise the entire downtown area by building new streets and sidewalks one to two stories above the original ground level. This massive undertaking, known as the Great Regrade, transformed Seattle's topography and created the underground city that exists today.
+City leaders devised an audacious solution: raise the entire downtown area by building new streets and sidewalks one to two stories above the original ground level. This massive undertaking, which followed the Great Seattle Fire of 1889 and is distinct from the later Denny Regrade, transformed Seattle's topography and created the underground city that exists today.
 
 ## Engineering Marvel
 
@@ -65,7 +65,7 @@ The abandonment was gradual but thorough. Many underground spaces were filled wi
 
 In the 1960s, local historian Bill Speidel began exploring the abandoned underground spaces and recognized their potential as both historical attraction and tourist destination. His research revealed the extent and complexity of the underground city, sparking new interest in this hidden aspect of Seattle's history.
 
-Speidel founded the Underground Tour, which began offering guided tours of selected underground areas in 1965. The tours revealed the forgotten commercial spaces, explained the engineering feat of the regrade, and told the colorful stories of underground life during Seattle's early boom years.
+Speidel founded the Underground Tour, which began offering guided tours of selected underground areas in 1964. The tours revealed the forgotten commercial spaces, explained the engineering feat of the regrade, and told the colorful stories of underground life during Seattle's early boom years.
 
 ## Historical Preservation
 

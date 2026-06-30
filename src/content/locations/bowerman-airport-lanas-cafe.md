@@ -8,7 +8,7 @@ address: "Bowerman Airport, 2 miles west of Hoquiam, WA 98550"
 coordinates:
   lat: 46.9712
   lng: -123.937
-description: "The only jet-capable airport on the Washington coast, Bowerman Field became famous among Pacific Northwest pilots for Lana's Cafe, the beloved on-field restaurant where Sunday morning fly-in breakfasts created lifelong friendships and \"$100 hamburger\" stories. Though the cafe closed in 2015, the memories of coastal flights, strong coffee, and hangar talk live on in the hearts of pilots across Oregon and Washington."
+description: "A jet-capable airport on the Washington coast, Bowerman Field became famous among Pacific Northwest pilots for Lana's Cafe, the beloved on-field restaurant where Sunday morning fly-in breakfasts created lifelong friendships and \"$100 hamburger\" stories. Though the cafe closed in 2015, the memories of coastal flights, strong coffee, and hangar talk live on in the hearts of pilots across Oregon and Washington."
 heroImage: "/images/locations/bowerman-airport-lanas-cafe-hero.jpg"
 audio: "/audio/bowerman-airport-lanas-cafe.mp3"
 books:
@@ -21,7 +21,7 @@ sourceId: 139
 
 ## The Airport: Gateway to the Washington Coast
 
-Bowerman Airport (KHQM) sits just two miles west of Hoquiam, Washington, serving as the **only jet-capable airport on the Washington coast**. With its 5,000-foot asphalt runway and full ILS capability on Runway 24, Bowerman has served as a critical transportation hub for Grays Harbor County since the 1940s.
+Bowerman Airport (KHQM) sits just two miles west of Hoquiam, Washington, serving as **a jet-capable airport on the Washington coast**. With its 5,000-foot asphalt runway and full ILS capability on Runway 24, Bowerman has served as a critical transportation hub for Grays Harbor County since the 1940s.
 
 Owned and operated by the Port of Grays Harbor, the airport has maintained a unique place in Pacific Northwest aviation, too small for major commercial service, but perfectly suited for general aviation, corporate jets, and the occasional military operation.
 

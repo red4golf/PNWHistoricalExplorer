@@ -29,7 +29,7 @@ While the famous "Triangle of Fire" protected Puget Sound's entrance, Fort Ward 
 
 ## Coastal Defense Origins
 
-Construction began on February 1, 1900, with the fort officially named on June 12, 1903, after Colonel George H. Ward of the 15th Massachusetts Volunteer Infantry, who died from wounds received at Gettysburg. The 150th Company of the Coast Artillery Corps arrived that same year, establishing the garrison that would protect the Puget Sound Naval Shipyard.
+Construction began on February 1, 1900, with the fort officially named on June 12, 1903, after Brigadier General George H. Ward of the 15th Massachusetts Volunteer Infantry, who was mortally wounded at Gettysburg. The 150th Company of the Coast Artillery Corps arrived that same year, establishing the garrison that would protect the Puget Sound Naval Shipyard.
 
 ## Artillery Batteries
 
@@ -63,7 +63,7 @@ Fort Ward served as Net Control for the West Coast High Frequency Direction Net,
 
 ### Cold War Transition
 
-After Japan's surrender in 1945, Station S shifted focus to monitoring Korean and Soviet communications during the emerging Cold War. The listening post continued operations until 1956, when it returned to Army control before final abandonment in 1958.
+After Japan's surrender in 1945, Station S shifted focus to monitoring Korean and Soviet communications during the emerging Cold War. The listening post continued operations until December 1953, when it returned to Army control; the Navy left Bainbridge in 1958.
 
 ## Modern Transformation
 

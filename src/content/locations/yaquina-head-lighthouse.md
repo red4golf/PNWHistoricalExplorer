@@ -8,7 +8,7 @@ address: "750 NW Lighthouse Dr, Newport, OR 97365"
 coordinates:
   lat: 44.6761
   lng: -124.0767
-description: "Standing 93 feet tall on Oregon's central coast, this is Oregon's tallest lighthouse. Built in 1872 with 370,000 bricks, it remains operational and features an outstanding seabird nesting area. The lighthouse provides dramatic coastal views and maritime heritage interpretation."
+description: "Standing 93 feet tall on Oregon's central coast, this is Oregon's tallest lighthouse. Built 1871-1872 with 370,000 bricks and first lit August 20, 1873, it remains operational and features an outstanding seabird nesting area. The lighthouse provides dramatic coastal views and maritime heritage interpretation."
 heroImage: null
 audio: null
 books:
@@ -23,7 +23,7 @@ sourceId: 128
 
 # Yaquina Head Lighthouse: Sentinel of the Oregon Coast
 
-Rising majestically 93 feet above the turbulent waters of the Pacific Ocean, Yaquina Head Lighthouse stands as Oregon's tallest beacon and one of the most prominent landmarks on the state's dramatic coastline. Built in 1872 with over 370,000 handmade bricks, this engineering marvel has guided mariners safely along one of America's most treacherous coasts for more than 150 years while serving as a symbol of human determination to master the challenges of maritime navigation.
+Rising majestically 93 feet above the turbulent waters of the Pacific Ocean, Yaquina Head Lighthouse stands as Oregon's tallest beacon and one of the most prominent landmarks on the state's dramatic coastline. Built between 1871 and 1872 with over 370,000 handmade bricks and first lit on August 20, 1873, this engineering marvel has guided mariners safely along one of America's most treacherous coasts for more than 150 years while serving as a symbol of human determination to master the challenges of maritime navigation.
 
 ## Strategic Coastal Defense
 
@@ -43,7 +43,7 @@ The tower's construction required innovative masonry techniques to ensure struct
 
 ## First-Order Fresnel Lens Technology
 
-Yaquina Head Lighthouse was equipped with a first-order Fresnel lens, the largest and most powerful type available when the lighthouse was constructed. This sophisticated optical system, manufactured in Paris by the renowned firm of Barbier, Benard & Turenne, represented the pinnacle of 19th-century lighthouse technology.
+Yaquina Head Lighthouse was equipped with a first-order Fresnel lens, the largest and most powerful type available when the lighthouse was constructed. This sophisticated optical system, manufactured in Paris by the renowned firm of Barbier & Fenestre, represented the pinnacle of 19th-century lighthouse technology.
 
 The massive lens assembly stood over 12 feet tall and consisted of hundreds of precisely cut glass prisms arranged in a beehive pattern that captured light from a central lamp and focused it into a powerful beam. The lens rotated on a clockwork mechanism powered by descending weights, creating the distinctive flashing pattern that allowed mariners to identify Yaquina Head from other coastal lighthouses.
 

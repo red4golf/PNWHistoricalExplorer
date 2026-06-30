@@ -33,7 +33,7 @@ The site gained its first scientific attention when researchers documented compa
 
 ## The House of Mystery
 
-In 1930, a wooden building was constructed on the site to serve as both research facility and visitor attraction. The structure, built deliberately off-level to enhance the site's disorienting effects, became known as the "House of Mystery" and served as the focal point for demonstrating the vortex's strange properties.
+The site's centerpiece is a wooden building that began as a gold-mining assay office built around 1904, which later slid from its foundation in a landslide and came to rest at an angle. The tilted structure became known as the "House of Mystery," and the site opened to the public as a roadside attraction in 1930, serving as both research facility and visitor attraction and the focal point for demonstrating the vortex's strange properties.
 
 The building's tilted construction amplifies the site's natural phenomena, creating an environment where visitors experience dramatic shifts in perception and balance. The combination of natural anomalies and intentional architectural effects creates a unique sensory experience that challenges visitors' understanding of spatial relationships.
 
@@ -57,7 +57,7 @@ The site's success helped establish the model for mystery spots and gravity hill
 
 ## Local Legend and Folklore
 
-Native American tribes in the region had long regarded this area with caution, referring to it as a place where spirits gathered or where the natural world behaved differently. These traditional stories provided cultural context for the site's unusual properties and helped establish its reputation as a place of mystery and power.
+According to the attraction's lore, Native American tribes in the region reportedly regarded this area with caution, describing it as a place where spirits gathered or where the natural world behaved differently. These promotional stories, presented by the attraction, provided cultural context for the site's claimed properties and helped establish its reputation as a place of mystery and power.
 
 Local folklore includes stories of animals avoiding the area, compasses spinning wildly, and early settlers experiencing disorientation when passing through. These tales, whether factual or legendary, contributed to the site's mystique and helped attract the scientific attention that led to its development as a tourist destination.
 

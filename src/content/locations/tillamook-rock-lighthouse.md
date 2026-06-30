@@ -23,7 +23,7 @@ sourceId: 71
 
 # Tillamook Rock Lighthouse: Triumph Over the Terrible Tilly
 
-Rising from a barren rock nearly two miles offshore from the Oregon coast, Tillamook Rock Lighthouse stands as one of the most remarkable engineering achievements in American maritime history. Known to lighthouse keepers as "Terrible Tilly," this isolated beacon operated for 77 years under some of the most challenging conditions faced by any lighthouse in the world, protecting ships navigating the treacherous Columbia River entrance.
+Rising from a barren rock nearly two miles offshore from the Oregon coast, Tillamook Rock Lighthouse stands as one of the most remarkable engineering achievements in American maritime history. Known to lighthouse keepers as "Terrible Tilly," this isolated beacon operated for 76 years under some of the most challenging conditions faced by any lighthouse in the world, protecting ships navigating the treacherous Columbia River entrance.
 
 ## The Graveyard of the Pacific
 
@@ -39,7 +39,7 @@ The selection of such a challenging site reflected the desperate need for a ligh
 
 ## Construction Nightmare
 
-Construction began in 1878 under master mason John Trewavas, who led a crew of Cornish stoneworkers experienced in building lighthouses under extreme conditions. The workers had to be lowered by rope onto the rock during brief calm periods, then hauled up again when waves threatened to sweep them into the sea.
+Construction began in 1878, but master mason John Trewavas drowned during the 1879 survey landing on the rock. The work was subsequently directed by Charles Ballantyne, overseeing a crew of Cornish stoneworkers experienced in building lighthouses under extreme conditions. The workers had to be lowered by rope onto the rock during brief calm periods, then hauled up again when waves threatened to sweep them into the sea.
 
 The crew lived in crude shelters blasted into the rock face, enduring constant dampness, limited fresh water, and the psychological stress of isolation on a tiny rock surrounded by violent seas. Work could only proceed during rare calm periods, making progress agonizingly slow and dangerous.
 
@@ -69,7 +69,7 @@ Repair work had to be completed between storms using materials and supplies that
 
 ## Technological Improvements
 
-Over its 77-year operational period, Tillamook Rock Lighthouse received numerous technological upgrades that improved its effectiveness and reduced the physical demands on lighthouse keepers. These included improved oil-burning systems, better weather protection for the lens, and eventually conversion to electric operation.
+Over its 76-year operational period, Tillamook Rock Lighthouse received numerous technological upgrades that improved its effectiveness and reduced the physical demands on lighthouse keepers. These included improved oil-burning systems, better weather protection for the lens, and eventually conversion to electric operation.
 
 Radio equipment installed in the 1930s provided improved communication with shore stations, reducing the isolation that had been one of the most challenging aspects of serving on the lighthouse. These improvements made the assignment more bearable while maintaining the lighthouse's effectiveness as a navigation aid.
 
@@ -81,7 +81,7 @@ The abandonment of Tillamook Rock reflected broader changes in maritime navigati
 
 ## Private Ownership
 
-After decommissioning, Tillamook Rock Lighthouse was sold to private owners who converted it into a columbarium (repository for cremated remains), taking advantage of its isolation and permanence. This unusual use preserved the structure while providing income for maintenance of the historic building.
+After decommissioning, Tillamook Rock Lighthouse was sold to private owners, and in 1980 it was converted into a columbarium (repository for cremated remains), taking advantage of its isolation and permanence. This unusual use preserved the structure while providing income for maintenance of the historic building.
 
 The private ownership has maintained the lighthouse's structural integrity while limiting public access due to the extreme difficulty and danger of reaching the rock. The building remains one of the best-preserved examples of 19th-century lighthouse construction.
 

@@ -8,7 +8,7 @@ address: "342 Ulm Vaughn Rd, Ulm, MT 59485"
 coordinates:
   lat: 47.4167
   lng: -111.1833
-description: "One of the largest and best-preserved buffalo jumps in North America, this site was used by Plains Indian tribes for over 2,000 years. Known to the Blackfeet as \"Pishkun\" (deep blood kettle), it demonstrates sophisticated hunting techniques that sustained Native communities for millennia."
+description: "One of the largest and best-preserved buffalo jumps in North America, this site saw its documented main use by Plains Indian tribes from roughly 900 to 1500 CE. Known to the Blackfeet as \"Pishkun\" (deep blood kettle), it demonstrates sophisticated hunting techniques that sustained Native communities for centuries."
 heroImage: null
 audio: null
 books:
@@ -23,11 +23,11 @@ sourceId: 122
 
 # First Peoples Buffalo Jump: Ancient Hunting Grounds of the Great Plains
 
-Rising dramatically from the Montana prairie, the mile-long cliff of First Peoples Buffalo Jump State Park preserves one of North America's most significant archaeological sites and evidence of the sophisticated hunting practices that sustained Plains Indian peoples for over two millennia. Known to the Blackfeet as "Pishkun", meaning "deep blood kettle", this massive buffalo jump represents the largest and best-preserved site of its kind, offering extraordinary insights into the complex societies that thrived on the Great Plains long before European contact.
+Rising dramatically from the Montana prairie, the mile-long cliff of First Peoples Buffalo Jump State Park preserves one of North America's most significant archaeological sites and evidence of the sophisticated hunting practices that sustained Plains Indian peoples for centuries. Known to the Blackfeet as "Pishkun", meaning "deep blood kettle", this massive buffalo jump represents the largest and best-preserved site of its kind, offering extraordinary insights into the complex societies that thrived on the Great Plains long before European contact.
 
 ## Ancient Hunting Traditions
 
-For over 2,000 years, from approximately 500 to 1500 CE, various Plains Indian tribes used this mile-long sandstone cliff to harvest buffalo through communal hunting techniques that required extraordinary skill, coordination, and intimate knowledge of animal behavior. The buffalo jump method, known as "pishkun" to the Blackfeet, represented one of the most sophisticated hunting strategies ever developed, allowing small human groups to obtain massive quantities of meat, hides, and other essential materials from enormous buffalo herds.
+For roughly 600 years, with documented main use from approximately 900 to 1500 CE, various Plains Indian tribes used this mile-long sandstone cliff to harvest buffalo through communal hunting techniques that required extraordinary skill, coordination, and intimate knowledge of animal behavior. The buffalo jump method, known as "pishkun" to the Blackfeet, represented one of the most sophisticated hunting strategies ever developed, allowing small human groups to obtain massive quantities of meat, hides, and other essential materials from enormous buffalo herds.
 
 The hunting process required months of careful preparation and precise timing. Skilled hunters studied buffalo migration patterns, weather conditions, and seasonal behaviors to identify optimal opportunities for drives. Stone alignments called "drive lines" were constructed to funnel herds toward the cliff, while hunting parties positioned themselves at strategic locations to guide the animals' movement.
 
@@ -35,7 +35,7 @@ The actual drive required perfect coordination among dozens of hunters working t
 
 ## The Blackfeet and Pishkun
 
-The Blackfeet Nation holds the deepest historical connections to this site, with oral traditions describing countless hunts that took place at "Ulm Pishkun" over many generations. Blackfeet elders explain that the name "deep blood kettle" refers to the pools of blood that would collect at the cliff base after successful drives, reflecting the immense scale of these communal hunting events.
+The site's name, "First Peoples," reflects its use by many tribes over the centuries, and a number of Plains nations maintain connections to it. Among them, the Blackfeet hold particularly strong historical ties, with oral traditions describing countless hunts that took place at "Ulm Pishkun" over many generations. Blackfeet elders explain that the name "deep blood kettle" refers to the pools of blood that would collect at the cliff base after successful drives, reflecting the immense scale of these communal hunting events.
 
 Blackfeet hunting parties would arrive at the pishkun during late fall when buffalo were fat from summer feeding and their hides were prime for winter use. The timing required careful calculation, too early, and the animals would not provide adequate fat reserves; too late, and harsh weather might prevent the complex logistics required for successful drives.
 
@@ -59,7 +59,7 @@ The site's bone beds, containing the remains of thousands of buffalo accumulated
 
 ## Archaeological Significance
 
-First Peoples Buffalo Jump represents a globally significant archaeological site that has provided crucial insights into prehistoric Plains Indian cultures and the complex ecosystems that supported them. Scientific excavations have revealed evidence of continuous use spanning two millennia, making it one of the longest-used buffalo jumps ever documented.
+First Peoples Buffalo Jump represents a globally significant archaeological site that has provided crucial insights into prehistoric Plains Indian cultures and the complex ecosystems that supported them. Scientific excavations have revealed evidence of long-term, repeated use over several centuries, making it one of the most extensively used buffalo jumps ever documented.
 
 The site's stratigraphy, layers of bone, stone tools, and other artifacts deposited over centuries, provides a unique record of technological change, cultural adaptation, and environmental conditions on the Great Plains during the late prehistoric period. Researchers have identified different cultural phases represented in the deposits, tracking how hunting techniques and tool technologies evolved over time.
 

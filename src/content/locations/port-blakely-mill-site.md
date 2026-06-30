@@ -23,11 +23,11 @@ sourceId: 24
 
 # Port Blakely Mill Site: Empire of Wood
 
-On the shores of Bainbridge Island's Blakely Harbor, the remnants of concrete foundations and a solitary generator building mark the site of what was once the world's largest sawmill under one roof. From 1863 to 1922, the Port Blakely Mill Company transformed this quiet inlet into a global lumber empire that shipped Pacific Northwest timber to rebuild San Francisco after the 1906 earthquake, construct the Panama Canal, and build docks from Tokyo Bay to Honolulu Harbor.
+On the shores of Bainbridge Island's Blakely Harbor, the remnants of concrete foundations and a solitary generator building mark the site of what was once the world's largest sawmill under one roof. From 1864 to 1922, the Port Blakely Mill Company transformed this quiet inlet into a global lumber empire that shipped Pacific Northwest timber to rebuild San Francisco after the 1906 earthquake, construct the Panama Canal, and build docks from Tokyo Bay to Honolulu Harbor.
 
 ## Captain Renton's Vision
 
-The mill's story began with William Renton, a Nova Scotia sea captain who recognized the extraordinary potential of Puget Sound's seemingly endless forests of Douglas fir, western red cedar, and giant redwoods. In 1863, Renton established the Port Blakely Mill Company on Bainbridge Island's protected harbor, choosing a location that offered deep water for loading ships, abundant timber resources, and shelter from Puget Sound's worst storms.
+The mill's story began with William Renton, a Nova Scotia sea captain who recognized the extraordinary potential of Puget Sound's seemingly endless forests of Douglas fir, western red cedar, and hemlock. In 1864, Renton established the Port Blakely Mill Company on Bainbridge Island's protected harbor, choosing a location that offered deep water for loading ships, abundant timber resources, and shelter from Puget Sound's worst storms.
 
 Within its first year, the mill was producing 50,000 board feet daily, an impressive output that would grow exponentially as Renton expanded operations and refined production techniques. By 1876, when the company incorporated in San Francisco with partner Charles S. Holmes, Port Blakely had become the foundation of a lumber empire that stretched across the Pacific Rim.
 
@@ -39,7 +39,7 @@ At its peak, the Port Blakely Mill produced between 200,000 and 400,000 board fe
 
 The company built the Blakely Line railroad to haul logs from Mason County forests across the Puget Sound region. This network enabled the mill to access timber resources far beyond Bainbridge Island while providing efficient transportation that kept production costs competitive with other lumber regions.
 
-The Hall Brothers Shipyard operated alongside the mill from 1880 to 1903, launching 77 vessels that carried Port Blakely lumber throughout the Pacific. These ships, many built specifically for the lumber trade, enabled the company to control shipping costs while ensuring reliable delivery to distant markets in an era when transportation challenges often determined business success or failure.
+The Hall Brothers Shipyard operated alongside the mill from about 1881 to 1904, launching 77 vessels that carried Port Blakely lumber throughout the Pacific. These ships, many built specifically for the lumber trade, enabled the company to control shipping costs while ensuring reliable delivery to distant markets in an era when transportation challenges often determined business success or failure.
 
 ## Global Reach
 

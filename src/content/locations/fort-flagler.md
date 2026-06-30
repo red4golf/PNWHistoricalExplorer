@@ -33,9 +33,9 @@ Fort Flagler's location on Marrowstone Point provided commanding views of Admira
 
 ## Engineering Achievement
 
-The fort's construction between 1897-1899 demonstrated remarkable military engineering. Battery Rawlins, the fort's most powerful installation, housed two 12-inch barbette guns capable of hurling massive shells over 10 miles. These fixed-mount guns, while lacking the "disappearing" feature of later installations, provided reliable, heavy firepower against armored warships.
+The fort's construction between 1897-1899 demonstrated remarkable military engineering. Battery Rawlins, the fort's most powerful installation, housed two 10-inch barbette guns capable of hurling massive shells over 10 miles. These fixed-mount guns, while lacking the "disappearing" feature of later installations, provided reliable, heavy firepower against armored warships.
 
-Battery Revere added four 10-inch barbette guns to the fort's arsenal, while Battery Wilhelm contributed six 6-inch disappearing guns for rapid-fire defense against smaller vessels. The fort's mortar battery, containing eight 12-inch mortars, provided high-angle fire capability to attack enemy ships attempting to use the island's terrain for cover.
+Battery Revere added two 10-inch barbette guns to the fort's arsenal, while Battery Wilhelm contributed two 12-inch barbette guns for rapid-fire defense against smaller vessels. The fort's mortar battery, containing eight 12-inch mortars, provided high-angle fire capability to attack enemy ships attempting to use the island's terrain for cover.
 
 ## Military Innovation
 

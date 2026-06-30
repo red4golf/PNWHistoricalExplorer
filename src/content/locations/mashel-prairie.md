@@ -38,19 +38,19 @@ The **Squally-Absch people** (upper Nisqually Indians) stewarded this land for m
 ## The Mashel Band
 The region was home to a distinct band of upper Nisqually Indians known as the **Mashel Band**. These indigenous residents maintained strong familial ties with Sahaptin-speaking peoples on the eastern slopes of the Cascade Mountains, enabling them to successfully incorporate horses into their traditional lifestyle as these animals became available in the Pacific Northwest.
 
-## The Mashel Massacre (March 31, 1856)
+## The Mashel Massacre (late March 1856)
 During the **Puget Sound War** (1855-1856), Mashel Prairie became the site of one of the most tragic episodes in Washington Territory's history. Captain Hamilton J.G. Maxon led Washington Territorial Volunteers in an attack on a band of Indigenous families camped near the confluence of the Mashel and Nisqually Rivers.
 
 ### The Attack
 Official reports claimed only eight "hostiles" were killed, but virtually all historical accounts agree that Maxon's Raiders massacred defenseless elderly people, women, children, and infants who were fleeing the broader conflict. This became known as the **Mashel Massacre**, serving as the final episode of the Puget Sound Indian War.
 
 ### Historical Cover-Up
-The incident was deliberately obscured from many early regional histories, reflecting the territorial government's desire to downplay civilian casualties. The massacre remains controversial, with some accounts documenting soldiers' callous attitudes toward killing children with the infamous justification "nits make lice."
+The incident was deliberately obscured from many early regional histories, reflecting the territorial government's desire to downplay civilian casualties. The massacre remains controversial. According to some later accounts, soldiers reportedly justified the killing of children with the phrase "nits make lice," though historians question this claim, as the quote is most famously tied to the 1864 Sand Creek Massacre and its attribution here is considered unreliable.
 
 ## Indian Henry (Soo-Too-Lick): Bridge Between Worlds (1864-1895)
 
 ### Early Life and Heritage
-Born around 1825, **Soo-Too-Lick** (whose name meant "Goes to the Mountains") had roots among the Klickitat and Yakama Nations of eastern Washington. Around 1864, he settled on Mashel Prairie among other Native Americans, primarily of Nisqually and Klickitat descent, rising to a leadership position in the community.
+Born around 1825, **Soo-Too-Lick** had roots among the Klickitat and Yakama Nations of eastern Washington. He became widely known as "Indian Henry," a nickname commonly attributed to a mail carrier, Henry Winsor, who found his given name difficult to pronounce; the often-repeated translation of his name as "Goes to the Mountains" is unverified. Around 1864, he settled on Mashel Prairie among other Native Americans, primarily of Nisqually and Klickitat descent, rising to a leadership position in the community.
 
 ### Cultural Adaptation and Success
 Indian Henry became a remarkable example of successful cultural bridging:

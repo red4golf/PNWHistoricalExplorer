@@ -8,7 +8,7 @@ address: "Georgetown, Seattle, WA"
 coordinates:
   lat: 47.5419
   lng: -122.3249
-description: "Historic marker commemorating the original site of Boeing's first manufacturing facility, the famous Red Barn where William Boeing built his first aircraft in 1910. The actual barn was relocated to the Museum of Flight in 1975, but this Georgetown location remains the birthplace of the Pacific Northwest aerospace industry."
+description: "Historic marker commemorating the original site of Boeing's first manufacturing facility, the famous Red Barn where William Boeing built his first aircraft in 1916. The actual barn was relocated to the Museum of Flight in 1975, but this Georgetown location remains the birthplace of the Pacific Northwest aerospace industry."
 heroImage: null
 audio: "/audio/boeing-red-barn-historic-site-former-location.mp3"
 books:
@@ -23,13 +23,13 @@ sourceId: 110
 
 # Boeing Red Barn Historic Site: Birthplace of Aviation Giants
 
-On this quiet corner in Georgetown, where industrial buildings and urban development now dominate the landscape, stands an invisible monument to one of the most transformative industries in Pacific Northwest history. Here, in 1910, William Boeing established his first aircraft manufacturing facility in a simple red barn that would become the humble birthplace of what would grow into the world's largest aerospace company. Though the actual Red Barn was relocated to the Museum of Flight in 1975, this Georgetown location remains sacred ground in aviation history, the spot where the Pacific Northwest's aerospace industry took its first tentative flight.
+On this quiet corner in Georgetown, where industrial buildings and urban development now dominate the landscape, stands an invisible monument to one of the most transformative industries in Pacific Northwest history. Boeing acquired the building in 1910 (initially in connection with a yacht), and by 1916 he had established his first aircraft manufacturing facility in this simple red barn, which would become the humble birthplace of what would grow into the world's largest aerospace company. Though the actual Red Barn was relocated to the Museum of Flight in 1975, this Georgetown location remains sacred ground in aviation history, the spot where the Pacific Northwest's aerospace industry took its first tentative flight.
 
 ## The Visionary and His Barn
 
 William Edward Boeing arrived in Seattle in 1903 as a young timber magnate, but his life changed forever when he witnessed his first airplane flight at the Alaska-Yukon-Pacific Exposition in 1909. Frustrated by the poor quality of available aircraft and convinced he could build better machines, Boeing partnered with naval engineer George Conrad Westervelt to establish the Pacific Aero Products Company in 1916.
 
-The original Red Barn, a modest wooden structure measuring just 50 by 60 feet, became Boeing's first manufacturing facility. Located on the banks of the Duwamish River in Georgetown, the barn provided both workspace and waterfront access essential for testing the company's early seaplanes. This strategic location, with its proximity to Seattle's industrial infrastructure and transportation networks, would prove crucial to Boeing's early success.
+The original Red Barn, a wooden structure measuring about 150 by 65 feet, became Boeing's first manufacturing facility. Located on the banks of the Duwamish River in Georgetown, the barn provided both workspace and waterfront access essential for testing the company's early seaplanes. This strategic location, with its proximity to Seattle's industrial infrastructure and transportation networks, would prove crucial to Boeing's early success.
 
 The barn's humble appearance belied its revolutionary purpose. Within its wooden walls, Boeing and his small team of craftsmen hand-built their first aircraft, the B&W Seaplane (Boeing & Westervelt), using techniques that combined traditional woodworking with emerging aviation technology. Every component was crafted by hand, from the wooden framework to the fabric covering, representing the personal touch that would distinguish Boeing's early aircraft from mass-produced competitors.
 
@@ -99,7 +99,7 @@ The Red Barn's legacy lives on in every Boeing aircraft that takes flight, conne
 
 ## A Sacred Site
 
-Though the physical Red Barn has been moved, the Georgetown location remains a sacred site in aviation history. Here, in 1910, William Boeing took the first steps toward building what would become the world's largest aerospace company, establishing the Pacific Northwest as a global center of aviation innovation.
+Though the physical Red Barn has been moved, the Georgetown location remains a sacred site in aviation history. Here, in 1916, William Boeing took the first steps toward building what would become the world's largest aerospace company, establishing the Pacific Northwest as a global center of aviation innovation.
 
 The site reminds us that great achievements often begin with simple tools, modest facilities, and ambitious dreams. Boeing's success story, which began in this Georgetown barn, demonstrates how individual vision combined with regional advantages can create industries that transform the world.
 

@@ -8,7 +8,7 @@ address: "608 Front St, Mukilteo, WA 98275"
 coordinates:
   lat: 47.9461
   lng: -122.3047
-description: "Built in 1906, this charming lighthouse served as the beacon for the Mukilteo-Whidbey Island ferry route and Possession Sound navigation. Now a beloved community landmark, it houses maritime artifacts and offers panoramic views of Puget Sound and the Olympic Mountains."
+description: "Built in 1906 for general navigation, this charming lighthouse became a beacon for the Mukilteo-Whidbey Island ferry route and Possession Sound navigation. Now a beloved community landmark, it houses maritime artifacts and offers panoramic views of Puget Sound and the Olympic Mountains."
 heroImage: null
 audio: null
 books:
@@ -23,7 +23,7 @@ sourceId: 129
 
 # Mukilteo Lighthouse: Guardian of Possession Sound
 
-Perched on a bluff overlooking the scenic waters of Possession Sound, Mukilteo Lighthouse has served as a beloved beacon and community landmark for over a century. Built in 1906 to guide ferry traffic between Mukilteo and Whidbey Island, this charming lighthouse represents the evolution of Puget Sound maritime transportation and the close relationship between lighthouse keeping and community life that characterized smaller coastal communities throughout the Pacific Northwest.
+Perched on a bluff overlooking the scenic waters of Possession Sound, Mukilteo Lighthouse has served as a beloved beacon and community landmark for over a century. Built in 1906 for general navigation in Possession Sound, this charming lighthouse represents the evolution of Puget Sound maritime transportation and the close relationship between lighthouse keeping and community life that characterized smaller coastal communities throughout the Pacific Northwest.
 
 ## Ferry Route Development
 
@@ -67,7 +67,7 @@ Modern ferry terminals and improved communication systems reduced the lighthouse
 
 ## Historic Preservation and Community Stewardship
 
-The automation of Mukilteo Lighthouse in the 1960s marked the end of resident lighthouse keeping, but community advocacy ensured the structure's preservation as a historical landmark and interpretive center. Local residents organized to maintain the lighthouse building and grounds while developing educational programs that would share maritime heritage with visitors and future generations.
+The automation of Mukilteo Lighthouse in 1979 began the transition away from resident lighthouse keeping, though keepers remained on site through 1990, and community advocacy ensured the structure's preservation as a historical landmark and interpretive center. Local residents organized to maintain the lighthouse building and grounds while developing educational programs that would share maritime heritage with visitors and future generations.
 
 The lighthouse's preservation required extensive restoration work to return the building to its historical appearance while adapting interior spaces for museum purposes. Community volunteers contributed thousands of hours to restoration efforts while organizing fundraising activities that demonstrated extraordinary civic commitment to preserving local maritime heritage.
 

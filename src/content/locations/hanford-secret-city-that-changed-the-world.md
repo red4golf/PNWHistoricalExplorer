@@ -35,7 +35,7 @@ In early 1943, the U.S. Army Corps of Engineers selected this sparsely populated
 
 Construction began immediately, transforming the quiet agricultural communities of Hanford, White Bluffs, and Richland into a massive industrial complex. Approximately 1,500 residents were given 30 days to vacate their homes, farms, and businesses as the government claimed the land through eminent domain. Many families had lived here for generations, building orchards and farms in the desert through innovative irrigation systems.
 
-The official story: war production. The truth: the **Manhattan Project**, the secret program to build the atomic bomb. The **Hanford Engineer Works** would produce **plutonium-239**, the fissile material for the world's first nuclear weapons. At its peak, more than **51,000 workers** labored at the site, most unaware of what they were building.
+The official story: war production. The truth: the **Manhattan Project**, the secret program to build the atomic bomb. The **Hanford Engineer Works** would produce **plutonium-239**, the fissile material for the world's first nuclear weapons. About **51,000 workers** passed through the site over the course of the war, with the peak simultaneous workforce reaching roughly **45,000**, most unaware of what they were building.
 
 ## The B Reactor: Birthplace of the Atomic Age
 

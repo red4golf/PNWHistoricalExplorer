@@ -67,11 +67,11 @@ His duties included:
 - Overseeing construction of military roads
 - Running **potato farms** to supplement his income (a common practice for underpaid officers)
 
-Grant struggled with the isolation of frontier life. His wife Julia and their two sons were back east, he couldn't afford to bring them west on his meager Army salary. He tried business ventures to earn extra money, including shipping ice from the Columbia River to San Francisco. All failed.
+Grant struggled with the isolation of frontier life. His wife Julia and their young son Frederick were back east, he couldn't afford to bring them west on his meager Army salary. A second son was born around the time he left for the Pacific Northwest, a child Grant had not yet met. He tried business ventures to earn extra money, including shipping ice from the Columbia River to San Francisco. All failed.
 
 He spent long hours riding his horse along the Columbia River to Portland, exploring the wilderness, and drinking to cope with loneliness.
 
-In **January 1853**, Grant became the **first person to walk across the frozen Columbia River**, a feat that earned him local fame.
+A persistent local story holds that during a hard freeze Grant walked across the frozen Columbia River, though the claim is unverified.
 
 In early 1854, Grant was transferred to **Fort Humboldt, California**. Within months, he resigned from the Army, citing financial pressures and separation from his family. For the next seven years, he struggled as a farmer and clerk, drifting toward obscurity.
 

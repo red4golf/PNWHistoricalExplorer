@@ -23,7 +23,7 @@ sourceId: 81
 
 # Sun Valley Resort: Birthplace of the American Ski Industry
 
-Nestled in the Sawtooth Mountains of central Idaho, Sun Valley Resort represents a revolutionary moment in American recreation history, the transformation of skiing from European Alpine tradition to American leisure industry. Created in 1936 by railroad magnate Averell Harriman, Sun Valley became the world's first destination ski resort and established the template for mountain recreation that would reshape the American West.
+Nestled in the Wood River Valley of central Idaho, where the ski slopes rise into the Smoky Mountains, Sun Valley Resort represents a revolutionary moment in American recreation history, the transformation of skiing from European Alpine tradition to American leisure industry. Created in 1936 by railroad magnate Averell Harriman, Sun Valley became the world's first destination ski resort and established the template for mountain recreation that would reshape the American West.
 
 ## Vision of a Railroad Baron
 
@@ -39,7 +39,7 @@ The Sun Valley Lodge, completed in 1936, featured luxurious accommodations and a
 
 ## Ski Lift Innovation
 
-Sun Valley pioneered the use of chairlifts for ski transportation, adapting technology that Harriman's engineers had developed for loading bananas onto ships. The resort's first chairlift, installed on Dollar Mountain in 1936, revolutionized skiing by making slopes accessible to recreational skiers rather than just experts capable of climbing mountains.
+Sun Valley pioneered the use of chairlifts for ski transportation, adapting technology that Harriman's engineers had developed for loading bananas onto ships. The resort's first chairlifts, installed on Proctor and Dollar mountains in 1936, revolutionized skiing by making slopes accessible to recreational skiers rather than just experts capable of climbing mountains.
 
 The chairlift innovation transformed skiing from an endurance sport requiring significant athletic ability to a recreational activity accessible to much broader populations. This technological breakthrough enabled the development of the modern ski industry while making mountain recreation available to middle-class Americans for the first time.
 

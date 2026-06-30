@@ -37,13 +37,13 @@ His remarkable ability to navigate between indigenous and European-American worl
 
 Si'ahl's most significant historical role came during the treaty negotiations of 1855, when Washington Territorial Governor Isaac Stevens sought to secure Native American land cessions throughout Puget Sound. The Treaty of Point Elliott, signed on January 22, 1855, represented both the end of an era and Si'ahl's greatest challenge as a leader seeking to protect his people's future.
 
-The treaty negotiations revealed Si'ahl's pragmatic approach to an impossible situation. Recognizing that American expansion could not be stopped, he worked to secure the best possible terms for his people while acknowledging the fundamental changes that European-American settlement would bring to traditional ways of life. His famous speech during the negotiations, though its exact words remain disputed, captured both the tragedy of cultural loss and hope for peaceful coexistence.
+The treaty negotiations revealed Si'ahl's pragmatic approach to an impossible situation. Recognizing that American expansion could not be stopped, he worked to secure the best possible terms for his people while acknowledging the fundamental changes that European-American settlement would bring to traditional ways of life. His famous speech, traditionally dated to 1854 and delivered separately from the January 22, 1855 treaty signing, though its exact words remain disputed, captured both the tragedy of cultural loss and hope for peaceful coexistence.
 
 Under the treaty terms, the Suquamish and other tribes ceded most of their traditional territories while retaining specific rights to fish, hunt, and gather at traditional locations. Si'ahl understood that these reserved rights would be crucial for his people's survival, providing both economic sustenance and cultural continuity during the difficult transition to reservation life.
 
 ## Conversion and Cultural Bridge-Building
 
-Si'ahl's conversion to Christianity in the 1830s reflected his broader strategy of selective adaptation to changing circumstances. His baptism as "Noah Seattle" by Catholic missionaries represented both personal spiritual conviction and recognition that Christian adoption might help protect his people from more aggressive American policies toward "heathen" tribes.
+Si'ahl's conversion to Christianity around 1848 reflected his broader strategy of selective adaptation to changing circumstances. His baptism as "Noah Seattle" by Catholic missionaries represented both personal spiritual conviction and recognition that Christian adoption might help protect his people from more aggressive American policies toward "heathen" tribes.
 
 However, Si'ahl's Christianity did not require abandoning all traditional beliefs and practices. Like many Native American converts, he found ways to incorporate Christian teachings into existing spiritual frameworks while maintaining cultural elements that remained essential for community identity and cohesion.
 

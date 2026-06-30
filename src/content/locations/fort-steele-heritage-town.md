@@ -3,7 +3,7 @@ title: "Fort Steele Heritage Town"
 slug: "fort-steele-heritage-town"
 category: "Towns and Settlements"
 legacyCategory: "Historical"
-period: "1873-Present"
+period: "1864-Present"
 address: "Fort Steele, BC"
 coordinates:
   lat: 49.6153
@@ -23,11 +23,11 @@ sourceId: 75
 
 # Fort Steele Heritage Town: Law and Order in the Kootenays
 
-Nestled in the Columbia River valley of southeastern British Columbia, Fort Steele represents the dramatic transformation of the Canadian frontier from wilderness to civilization through the establishment of law enforcement, mining development, and permanent settlement. This preserved heritage town tells the story of the North West Mounted Police, mineral wealth, and the communities that flourished and declined in the shadow of the Canadian Rockies.
+Nestled in the Kootenay River valley of southeastern British Columbia, Fort Steele represents the dramatic transformation of the Canadian frontier from wilderness to civilization through the establishment of law enforcement, mining development, and permanent settlement. This preserved heritage town tells the story of the North West Mounted Police, mineral wealth, and the communities that flourished and declined in the shadow of the Canadian Rockies.
 
 ## Pre-Contact Indigenous Heritage
 
-The Ktunaxa (Kootenay) people had lived in the Columbia River valley for thousands of years before European contact, developing sophisticated seasonal rounds that took advantage of the region's diverse ecosystems. They traveled established trails through mountain passes to hunt buffalo on the plains and trade with coastal peoples.
+The Ktunaxa (Kootenay) people had lived in the Kootenay River valley for thousands of years before European contact, developing sophisticated seasonal rounds that took advantage of the region's diverse ecosystems. They traveled established trails through mountain passes to hunt buffalo on the plains and trade with coastal peoples.
 
 The valley's location at the intersection of major trade routes made it a meeting place for different tribal groups, fostering cultural exchange and economic relationships that spanned the continent. The Ktunaxa developed detailed knowledge of the region's geography, resources, and seasonal patterns that would later prove valuable to European explorers and settlers.
 
@@ -45,7 +45,7 @@ The lawless nature of early mining camps created dangerous conditions for both m
 
 ## North West Mounted Police Arrival
 
-In 1873, Inspector James Morrow Wylde of the North West Mounted Police established a post at the confluence of Wild Horse Creek and the Kootenay River to bring law and order to the chaotic mining region. The post was named Fort Steele in honor of Major General Sam Steele, the legendary Mountie commander.
+The settlement began as Galbraith's Ferry in 1864, a crossing point on the Kootenay River that served prospectors heading to the goldfields. In 1887, Superintendent Sam Steele of the North-West Mounted Police established a post here, known as Kootenay Post, to bring law and order to the region. In 1888, after Steele's departure, the settlement was renamed Fort Steele in his honor.
 
 The Mounted Police presence immediately transformed the region from a lawless frontier to a place where disputes could be resolved peacefully and property rights protected. The red serge uniforms and disciplined approach of the Mounties became symbols of Canadian authority and justice in the wilderness.
 
@@ -65,7 +65,7 @@ The development of transportation infrastructure reinforced Fort Steele's import
 
 While mining provided the initial economic foundation, Fort Steele's economy diversified to include ranching, logging, and various service industries that supported the region's growing population. The town's merchants and entrepreneurs adapted to changing economic conditions and opportunities.
 
-Ranching proved particularly successful in the Columbia River valley's grasslands, providing beef for mining camps and export markets. The combination of mining, ranching, and forestry created a more stable economic base than communities dependent solely on mineral extraction.
+Ranching proved particularly successful in the Kootenay River valley's grasslands, providing beef for mining camps and export markets. The combination of mining, ranching, and forestry created a more stable economic base than communities dependent solely on mineral extraction.
 
 ## The Railway Bypass
 

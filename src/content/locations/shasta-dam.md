@@ -63,7 +63,7 @@ The reservoir flooded thousands of acres of riparian forest and agricultural lan
 
 ## Indigenous Impacts
 
-The flooding of Shasta Lake inundated sacred sites and traditional territories of the Wintu and other indigenous peoples who had lived in the area for thousands of years. Tribal communities lost access to traditional fishing sites, gathering areas, and cultural landscapes that had sustained their societies since time immemorial.
+The flooding of Shasta Lake inundated sacred sites and traditional territories of the Winnemem Wintu, whose McCloud River homeland lay at the heart of the flooded area, along with other indigenous peoples who had lived in the area for thousands of years. Tribal communities lost access to traditional fishing sites, gathering areas, and cultural landscapes that had sustained their societies since time immemorial.
 
 The project displaced indigenous families and communities while destroying archaeological sites and cultural resources that held deep spiritual and historical significance. These impacts reflected broader patterns of water development that prioritized economic development over indigenous rights and cultural preservation.
 

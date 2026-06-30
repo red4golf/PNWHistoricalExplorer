@@ -41,7 +41,7 @@ Thomas Dambo, known as the world's leading recycle artist, has left his mark acr
 
 Pia the Peacekeeper is more than just a sculpture; she's a storyteller. Woven into her form is the narrative of environmental harmony, resonating with the Park District's commitment to stewardship. Through Pia, we celebrate the interplay of art and nature, reinforcing our dedication to nurturing a community that values, protects, and celebrates our parks, open spaces, and cultural heritage.
 
-This initiative emphasizes our shared values in preserving the environment, particularly in safeguarding watersheds, restoring ecosystems, and upholding riparian habitats. Pia's presence on traditional Coast Salish territories also highlights the collaboration with the [Muckleshoot](https://www.muckleshoot.nsn.us/) and [Snoqualmie](https://www.snoqualmietribe.us/) tribes, evidence of the importance of honoring our indigenous roots.
+This initiative emphasizes our shared values in preserving the environment, particularly in safeguarding watersheds, restoring ecosystems, and upholding riparian habitats. Pia's presence on traditional Coast Salish territories also highlights the importance of honoring our indigenous roots, including the [Suquamish](https://suquamish.nsn.us/) people, whose ancestral lands include Bainbridge Island.
 
 ## A Playful Guardian
 

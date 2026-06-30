@@ -51,7 +51,7 @@ Early tourism required visitors to navigate rough mountain roads and primitive t
 
 ## Guided Tour Operations
 
-Walter Burch began offering guided cave tours in 1922, establishing the foundation for modern cave tourism operations. Burch installed basic lighting systems and safety equipment while training guides who could lead visitors safely through the cave's most spectacular chambers and formations.
+Walter Burch began offering guided cave tours in the 1880s, establishing the foundation for modern cave tourism operations. Burch installed basic lighting systems and safety equipment while training guides who could lead visitors safely through the cave's most spectacular chambers and formations. The access road to the caves was completed in 1922, greatly improving the journey for visitors.
 
 The guided tours made the caves accessible to a broader range of visitors while maintaining safety standards and protecting the delicate cave environment. Professional guides provided interpretation that helped visitors understand and appreciate the geological processes that created this underground wonderland.
 
@@ -63,7 +63,7 @@ The National Monument status attracted increased federal investment in visitor f
 
 ## Chateau Construction
 
-The Oregon Caves Chateau, built in 1934 by the Civilian Conservation Corps, provided overnight accommodations for visitors in a rustic lodge that harmonized with the surrounding forest environment. The chateau's construction used local materials and traditional craftsmanship to create a building that complemented rather than competed with the natural setting.
+The Oregon Caves Chateau, built in 1934 by contractor Gust Lium, provided overnight accommodations for visitors in a rustic lodge that harmonized with the surrounding forest environment. The chateau's construction used local materials and traditional craftsmanship to create a building that complemented rather than competed with the natural setting.
 
 The chateau represented the National Park Service's philosophy of providing visitor amenities that enhanced appreciation for natural areas while maintaining rustic character. The building became an attraction in its own right, demonstrating how architecture could serve tourism while respecting wilderness values.
 

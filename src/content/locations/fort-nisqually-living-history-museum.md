@@ -8,7 +8,7 @@ address: "5519 Sheridan Ave E, Tacoma, WA 98404"
 coordinates:
   lat: 47.2047
   lng: -122.5144
-description: "The first European settlement in Washington State, this reconstructed Hudson's Bay Company trading post from 1833 offers immersive living history experiences with costumed interpreters demonstrating 19th-century frontier life."
+description: "The first European settlement on Puget Sound, this reconstructed Hudson's Bay Company trading post from 1833 offers immersive living history experiences with costumed interpreters demonstrating 19th-century frontier life."
 heroImage: null
 audio: null
 books:
@@ -21,13 +21,13 @@ sourceId: 112
 
 # Fort Nisqually: Gateway to the Pacific Northwest
 
-Standing as a faithful reconstruction of the Pacific Northwest's first European settlement, Fort Nisqually Living History Museum transports visitors to 1833, when the Hudson's Bay Company established this crucial trading post on the shores of Puget Sound. This living museum preserves the story of cultural exchange, frontier commerce, and the complex relationships that shaped early Washington Territory.
+Standing as a faithful reconstruction of the first European settlement on Puget Sound, Fort Nisqually Living History Museum transports visitors to the 1850s, when the Hudson's Bay Company operated this crucial trading post on the shores of Puget Sound, established in 1833. This living museum preserves the story of cultural exchange, frontier commerce, and the complex relationships that shaped early Washington Territory.
 
 ## Hudson's Bay Company Expansion
 
 In 1833, the Hudson's Bay Company, Britain's powerful fur trading monopoly, recognized the strategic importance of Puget Sound's protected waters and abundant resources. Company officials selected a bluff overlooking the sound to establish Fort Nisqually, named after the local Nisqually Tribe who had lived in the region for thousands of years.
 
-Dr. William Fraser Tolmie, a Scottish physician and naturalist, became the fort's first chief trader. Tolmie's leadership established Fort Nisqually as more than just a trading post, it became the administrative center for all Hudson's Bay Company operations south of the Columbia River, including the massive Puget Sound Agricultural Company farms that would reshape the region's landscape.
+Archibald McDonald established Fort Nisqually and served as its first leader in 1833. Dr. William Fraser Tolmie, a Scottish physician and naturalist, took charge of the post in 1843. Tolmie's leadership established Fort Nisqually as more than just a trading post, it became the administrative center for all Hudson's Bay Company operations south of the Columbia River, including the massive Puget Sound Agricultural Company farms that would reshape the region's landscape.
 
 ## Cultural Crossroads
 

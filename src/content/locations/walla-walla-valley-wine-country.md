@@ -27,7 +27,7 @@ Standing in the rolling hills of the Walla Walla Valley, you're witnessing one o
 
 ## Native American Heritage
 
-The Walla Walla Valley has been home to the Walla Walla, Umatilla, and Cayuse peoples for thousands of years. The name "Walla Walla" derives from a Nez Perce phrase meaning "many waters," reflecting the valley's numerous streams and springs that made it ideal for seasonal camps and permanent villages.
+The Walla Walla Valley has been home to the Walla Walla, Umatilla, and Cayuse peoples for thousands of years. The name "Walla Walla" derives from a Sahaptin phrase meaning "many waters," reflecting the valley's numerous streams and springs that made it ideal for seasonal camps and permanent villages.
 
 Native peoples developed sophisticated seasonal rounds that took advantage of the valley's diverse resources: salmon runs in nearby rivers, camas and other root vegetables in meadows, and abundant game in surrounding hills. The valley served as a major trading center where different tribes gathered to exchange goods, conduct ceremonies, and maintain social relationships.
 
@@ -45,7 +45,7 @@ The modern wine industry began in the 1970s when a few pioneering families recog
 
 ## Pioneering Wineries
 
-Leonetti Cellar, established in 1977 by Gary Figgins, became the valley's first commercial winery and proved that Walla Walla could produce world-class wines. Figgins's early success with Cabernet Sauvignon and Merlot attracted attention from wine critics and demonstrated the region's potential for premium wine production.
+Leonetti Cellar, established in 1977 by Gary and Nancy Figgins, became the valley's first commercial winery and proved that Walla Walla could produce world-class wines. Figgins's early success with Cabernet Sauvignon and Merlot attracted attention from wine critics and demonstrated the region's potential for premium wine production.
 
 Woodward Canyon Winery, founded in 1981 by Rick Small, further established the valley's reputation for exceptional wines. These early pioneers faced skepticism from the wine industry but persisted in developing viticulture techniques suited to the unique conditions of eastern Washington.
 

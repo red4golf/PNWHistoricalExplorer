@@ -27,13 +27,13 @@ In the spirit of boosterism that built Fort Lawton and the battleship USS Nebras
 
 Despite opposition from Tacoma supporters of an Army airfield near Camp Lewis, King County pushed forward. On **October 8, 1921**, Army Major Henry Kress Muhlenberg flew a Curtiss JN-4H "Jenny" biplane from Camp Lewis to Sand Point, making the **first military landing** on a 500-foot dirt strip.
 
-King County spent $500,000 acquiring and developing the property before deeding **413 acres** to the Navy on **March 4, 1926**, a public gift that established one of only five naval air stations in the nation.
+King County spent $500,000 acquiring and developing the property before deeding **413 acres** to the Navy on **March 8, 1926**, a public gift that established one of only five naval air stations in the nation.
 
 ## Around the World in 175 Days (1924)
 
 Sand Point's first serious mission came in **1924** when it was chosen as the launch point for the **first circumnavigation of the globe by air**.
 
-On **April 6, 1924**, four Douglas World Cruiser biplanes departed Sand Point for Alaska and around the world. The crew consisted of eight Army Air Service pilots. Two planes completed the **26,345-mile journey** on **September 28, 1924**, 175 days total, 66 days airborne.
+On **April 6, 1924**, four Douglas World Cruiser biplanes departed Sand Point for Alaska and around the world. The crew consisted of eight Army Air Service airmen: four pilots and four mechanics. Two planes completed the **26,345-mile journey** on **September 28, 1924**, 175 days total, 66 days airborne.
 
 **Fifty thousand people** came to Sand Point to greet the returning aviators. The flight made 76 separate stops across 22 countries and achieved several firsts:
 - First to cross the Pacific Ocean by air
@@ -49,8 +49,6 @@ A **15-foot granite World Flight Monument** was dedicated at Sand Point, sculpte
 On **September 13, 1927**, Charles Lindbergh landed the **Spirit of St. Louis** at Sand Point at 1:57 PM. Just four months earlier, on May 20-21, 1927, Lindbergh had completed his famous **solo transatlantic flight** from New York to Paris, 33.5 hours, 3,600 miles, winning him a $25,000 prize and international fame.
 
 His Sand Point visit was part of a three-month, 80-city U.S. tour promoting aviation and airport development. A crowd of 3,000-5,000 people gathered despite light rain. Lindbergh flew over downtown Seattle, Queen Anne Hill, and the University of Washington Stadium before landing to a 21-gun salute from naval boats.
-
-A point of local pride: The **Spirit of St. Louis was built almost entirely from Western Washington spruce trees**.
 
 Lindbergh departed the next morning, September 14, around 9:15 AM for Portland.
 

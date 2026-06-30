@@ -8,7 +8,7 @@ address: "7571 NE Dolphin Dr, Bainbridge Island, WA 98110"
 coordinates:
   lat: 47.6519
   lng: -122.5547
-description: "In 1951, timber baron Prentice Bloedel, son of Julius Bloedel who built one of the world's largest forest-products companies, bought 140 acres of second-growth forest on Bainbridge Island and spent 37 years transforming logged timberland into a masterpiece garden. Working with legendary landscape architects Thomas Church, Fujitaro Kubota, and Richard Haag, he created a Japanese Garden ranked among America's top ten, a moss garden with 40+ species, and a reflection pool framed by yew hedges in a forest clearing. Opened to the public in 1988, the Reserve represents redemption: a timber magnate healing the scars his industry left behind."
+description: "In 1951, timber baron Prentice Bloedel, son of Julius Bloedel who built one of the world's largest forest-products companies, bought 67 acres of second-growth forest on Bainbridge Island (the property later grew to roughly 140 acres) and spent 37 years transforming logged timberland into a masterpiece garden. Working with legendary landscape architects Thomas Church, Fujitaro Kubota, and Richard Haag, he created a Japanese Garden ranked among America's top ten, a moss garden with 40+ species, and a reflection pool framed by yew hedges in a forest clearing. Opened to the public in 1988, the Reserve represents redemption: a timber magnate healing the scars his industry left behind."
 heroImage: null
 audio: null
 books:
@@ -23,7 +23,7 @@ sourceId: 145
 
 ## 1951: A Magnate Retires to an Island
 
-When **Prentice Bloedel** bought 140 acres of logged forest on the north end of Bainbridge Island in 1951, he was one of the wealthiest men in the Pacific Northwest. His father, **Julius Bloedel**, had built **MacMillan Bloedel Ltd.**, one of the world's largest forest-products companies, controlling vast timber holdings across British Columbia and Washington.
+When **Prentice Bloedel** bought 67 acres of logged forest on the north end of Bainbridge Island in 1951, he was one of the wealthiest men in the Pacific Northwest. His father, **Julius Bloedel**, had built **MacMillan Bloedel Ltd.**, one of the world's largest forest-products companies, controlling vast timber holdings across British Columbia and Washington.
 
 For decades, Prentice had run the family business. He oversaw the cutting of old-growth forests, the operation of massive sawmills, the shipping of lumber worldwide. The Bloedel name meant timber, wealth, and power.
 
@@ -31,7 +31,7 @@ But Prentice was different from other timber barons. He called himself a **"relu
 
 In 1951, at age 51, he merged the family company with H.R. MacMillan Export Co., creating MacMillan Bloedel Ltd. Then he did something unusual: he retired.
 
-He moved to Bainbridge Island with his wife **Virginia Merrill Bloedel**, bought 140 acres of cutover land, and began the work that would define the rest of his life.
+He moved to Bainbridge Island with his wife **Virginia Merrill Bloedel**, bought 67 acres of cutover land (the property would later expand to roughly 140 acres), and began the work that would define the rest of his life.
 
 ## The Paradox: A Timber Baron Planting Trees
 

@@ -23,7 +23,7 @@ sourceId: 72
 
 # Neah Bay and Cape Flattery: Where Land Meets Sea
 
-Standing at Cape Flattery, the northwestern-most point of the contiguous United States, you're on land that has been home to the Makah people for over 3,800 years. This dramatic meeting place of the Pacific Ocean and Strait of Juan de Fuca represents one of the most significant centers of maritime culture in North America, where the Makah developed sophisticated whaling traditions that sustained their society for millennia.
+Standing at Cape Flattery, the northwestern-most point of the contiguous United States, you're on land that has been home to the Makah people for over 2,000 years. This dramatic meeting place of the Pacific Ocean and Strait of Juan de Fuca represents one of the most significant centers of maritime culture in North America, where the Makah developed sophisticated whaling traditions that sustained their society for millennia.
 
 ## Ancient Maritime Culture
 

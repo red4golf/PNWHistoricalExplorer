@@ -57,7 +57,7 @@ Captain Clark documented the Gorge's "high mountains on each side, containing sc
 
 ## Modern Transformation
 
-The Columbia River Gorge's strategic importance continued into the modern era. The completion of Bonneville Dam in 1938 forever changed the river's character, flooding the thundering Celilo Falls and forcing the relocation of Native American communities. Later dams transformed the once-wild Columbia into a series of lakes, enabling navigation and hydroelectric power generation but fundamentally altering the ecosystem that had sustained indigenous peoples for millennia.
+The Columbia River Gorge's strategic importance continued into the modern era. The completion of Bonneville Dam in 1938 forever changed the river's character, flooding the Cascades Rapids and forcing the relocation of Native American communities. Decades later, The Dalles Dam inundated the thundering Celilo Falls in 1957. Later dams transformed the once-wild Columbia into a series of lakes, enabling navigation and hydroelectric power generation but fundamentally altering the ecosystem that had sustained indigenous peoples for millennia.
 
 Today, the Columbia River Gorge National Scenic Area protects this remarkable landscape's natural beauty while honoring its complex cultural heritage. With over 90 waterfalls on the Oregon side alone, including the iconic Multnomah Falls, the Gorge continues to inspire visitors with its raw power and timeless beauty, evidence of the geological forces that shaped the Pacific Northwest.
 

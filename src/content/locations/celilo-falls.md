@@ -23,7 +23,7 @@ sourceId: 36
 
 # Celilo Falls: The Drowned Symphony
 
-At 10 a.m. on March 10, 1957, the steel gates of The Dalles Dam closed, and within 4.5 hours, the rising waters of Lake Celilo silenced forever what Lewis and Clark had called "the great emporium" of the Pacific Northwest. Celilo Falls, known as "Wyam" in several Native languages, meaning "echo of falling water" or "sound of water upon the rocks", disappeared beneath the reservoir, taking with it 15,000 years of continuous Native American civilization and one of the continent's most significant cultural and economic centers.
+At 10 a.m. on March 10, 1957, the steel gates of The Dalles Dam closed, and within 4.5 hours, the rising waters of Lake Celilo silenced forever what fur trader Alexander Ross had called "the great emporium" of the Pacific Northwest. Celilo Falls, known as "Wyam" in several Native languages, meaning "echo of falling water" or "sound of water upon the rocks", disappeared beneath the reservoir, taking with it 15,000 years of continuous Native American civilization and one of the continent's most significant cultural and economic centers.
 
 ## The Ancient Falls
 
@@ -35,7 +35,7 @@ The falls' acoustic properties were as remarkable as their visual impact. The so
 
 ## The Wall Street of the West
 
-Lewis and Clark, arriving in 1805, described Celilo as a "great emporium" with unprecedented population density for the region. Historians later called it the "Wall Street of the West" due to its role as the continent's most important inland trading center west of the Rocky Mountains.
+The fur trader Alexander Ross, who visited around 1811, described Celilo as a "great emporium" with unprecedented population density for the region. Historians later called it the "Wall Street of the West" due to its role as the continent's most important inland trading center west of the Rocky Mountains.
 
 During fishing season from April through October, up to 5,000 Native Americans from various reservations would gather at Celilo. Representatives from the Yakama, Warm Springs, Umatilla, and Nez Perce tribes, along with dozens of other groups, converged to trade not only salmon but goods from across the continent, shells from the Pacific Coast, buffalo hides from the Great Plains, copper from the Great Lakes, and countless other items.
 

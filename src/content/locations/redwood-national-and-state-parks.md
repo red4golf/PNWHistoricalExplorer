@@ -23,7 +23,7 @@ sourceId: 79
 
 # Redwood National and State Parks: Cathedral of the Ancient Giants
 
-Along the fog-shrouded coast of Northern California, where the Pacific Ocean meets towering forests that have stood for over 2,000 years, Redwood National and State Parks preserve the last remaining stands of old-growth coast redwoods, the tallest trees on Earth. These ancient groves represent not only remarkable biological achievement but also thousands of years of indigenous stewardship and the ongoing struggle to balance conservation with economic development in the Pacific Northwest.
+Along the fog-shrouded coast of Northern California, where the Pacific Ocean meets towering forests that have stood for over 2,000 years, Redwood National and State Parks preserve the last remaining stands of old-growth coast redwoods, the tallest trees on Earth. These ancient groves represent not only remarkable biological achievement but also thousands of years of indigenous stewardship and the ongoing struggle to balance conservation with economic development along the Northern California coast.
 
 ## Ancient Forest Ecosystem
 

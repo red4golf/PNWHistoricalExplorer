@@ -27,7 +27,7 @@ Standing at Ebey's Landing, you're witnessing one of the most complete and well-
 
 ## The First Settlement
 
-In 1850, Colonel Ebey became the first permanent settler on central Whidbey Island, establishing a claim that would become the heart of this historic reserve. The rich, fertile prairie soil convinced him this was the perfect place to build a new life, writing to his family that he had found "the paradise of the Pacific."
+In 1850, Colonel Ebey became the first permanent settler on central Whidbey Island, establishing a claim that would become the heart of this historic reserve. The rich, fertile prairie soil convinced him this was the perfect place to build a new life, writing to his family that he had found "almost a paradise of nature."
 
 ## A Working History
 

@@ -23,7 +23,7 @@ sourceId: 119
 
 # Columbia River Maritime Museum: Guardians of the Graveyard of the Pacific
 
-Standing watch over the Columbia River's entrance to the Pacific Ocean, the Columbia River Maritime Museum in Astoria preserves the dramatic stories of maritime adventure, tragedy, and heroism that have unfolded along one of the world's most dangerous river mouths. Since 1962, this internationally recognized museum has safeguarded the maritime heritage of the Pacific Northwest while honoring the courage of those who challenged the treacherous waters known as the "Graveyard of the Pacific."
+Standing watch over the Columbia River's entrance to the Pacific Ocean, the Columbia River Maritime Museum in Astoria preserves the dramatic stories of maritime adventure, tragedy, and heroism that have unfolded along one of the world's most dangerous river mouths. Founded in 1962 and opened to the public in 1963 (its current building dates to 1982), this internationally recognized museum has safeguarded the maritime heritage of the Pacific Northwest while honoring the courage of those who challenged the treacherous waters known as the "Graveyard of the Pacific."
 
 ## The Columbia River Bar Challenge
 
@@ -35,7 +35,7 @@ Despite these hazards, the Columbia River provided the only practical access to 
 
 ## Lighthouse and Lifesaving Heritage
 
-The museum's crown jewel, the Lightship Columbia, represents a crucial chapter in maritime safety innovation. From 1951 to 1979, this 128-foot vessel served as a floating lighthouse stationed eight miles offshore from the Columbia River mouth, warning approaching ships of the bar's dangers and providing navigation assistance during good weather and rescue services during storms.
+The museum's crown jewel, the Lightship Columbia, represents a crucial chapter in maritime safety innovation. From 1951 to 1979, this 128-foot vessel served as a floating lighthouse stationed about five miles offshore from the Columbia River mouth, warning approaching ships of the bar's dangers and providing navigation assistance during good weather and rescue services during storms.
 
 Lightships like the Columbia were floating symbols of federal commitment to maritime safety. The United States Lighthouse Service, and later the Coast Guard, positioned these vessels at locations too dangerous or impractical for traditional lighthouse construction. Crews lived aboard for months at a time, enduring isolation, severe weather, and constant danger to maintain their life-saving mission.
 

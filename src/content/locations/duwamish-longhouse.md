@@ -51,7 +51,7 @@ The formation of the Duwamish Tribal Council in the 1970s marked the beginning o
 
 ## Building the Longhouse
 
-The construction of the Duwamish Longhouse in the 1990s represented a crucial step in reasserting Duwamish presence in their ancestral homeland. The building's design incorporates traditional architectural elements with modern construction techniques, creating a space that honors the past while serving contemporary community needs.
+The opening of the Duwamish Longhouse in January 2009, following years of planning and fundraising, represented a crucial step in reasserting Duwamish presence in their ancestral homeland. The building's design incorporates traditional architectural elements with modern construction techniques, creating a space that honors the past while serving contemporary community needs.
 
 The longhouse's location on the Duwamish River was carefully chosen to reconnect the community with their ancestral waterway, despite the river's industrial transformation. The building serves as a visible reminder that the Duwamish people remain in their traditional territory despite efforts to erase their presence.
 

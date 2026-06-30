@@ -29,7 +29,7 @@ Rising from the high desert east of Boise, the Old Idaho Penitentiary stands as 
 
 When Idaho Territory was established in 1863, the region faced enormous challenges in maintaining law and order across vast distances with minimal government infrastructure. Mining camps, cattle towns, and isolated settlements often resorted to vigilante justice when formal legal systems proved inadequate. The territorial government recognized that establishing a proper penitentiary was essential for demonstrating that organized justice could replace frontier mob law.
 
-Construction of the territorial prison began in 1869 on a remote site east of Boise, chosen for its isolation and security advantages. The facility's thick sandstone walls, quarried from nearby deposits, created a formidable barrier against escape attempts while providing employment for territorial residents who quarried stone, hauled materials, and constructed buildings.
+Commissioned in 1868, construction of the territorial prison began in 1870 on a remote site east of Boise, chosen for its isolation and security advantages. The facility's thick sandstone walls, quarried from nearby deposits, created a formidable barrier against escape attempts while providing employment for territorial residents who quarried stone, hauled materials, and constructed buildings.
 
 The prison's early years reflected the rough frontier conditions of territorial Idaho. Guards were often poorly trained political appointees, living conditions were harsh, and discipline relied heavily on physical punishment. However, the facility's mere existence represented progress toward establishing the rule of law in a region where justice had often been arbitrary and violent.
 
@@ -45,9 +45,9 @@ Educational programs expanded throughout the early 20th century to include basic
 
 The Idaho Penitentiary housed numerous notorious criminals whose stories reflect the broader social conflicts of the American West. Labor organizer Harry Orchard, convicted of assassinating former Idaho governor Frank Steunenberg in 1905, became one of the prison's most famous inmates. Orchard's case highlighted tensions between labor unions and mining companies that shaped Idaho politics for generations.
 
-The facility's most spectacular escape attempt occurred in 1971 when several inmates took hostages and demanded improvements in prison conditions. The dramatic standoff, which lasted several days and attracted national media attention, exposed overcrowding and substandard conditions that had persisted despite periodic reform efforts. The incident helped accelerate plans to construct a modern replacement facility.
+The facility's most spectacular disturbance was a riot in 1971 when several inmates took hostages and demanded improvements in poor prison conditions. The dramatic standoff, which lasted several days and attracted national media attention, exposed overcrowding and substandard conditions that had persisted despite periodic reform efforts. The incident helped accelerate plans to construct a modern replacement facility.
 
-Throughout its operation, the penitentiary's death row and execution chamber carried out Idaho's capital punishment sentences. The gallows, later replaced by electric chair and then lethal injection, served as grim reminders of the ultimate penalty for the most serious crimes. These facilities reflect changing attitudes toward capital punishment and the state's role in imposing the ultimate sanction.
+Throughout its operation, the penitentiary's death row and execution chamber carried out Idaho's capital punishment sentences. The gallows, used for executions by hanging and later supplanted by lethal injection, served as grim reminders of the ultimate penalty for the most serious crimes. These facilities reflect changing attitudes toward capital punishment and the state's role in imposing the ultimate sanction.
 
 ## Daily Life Behind Bars
 

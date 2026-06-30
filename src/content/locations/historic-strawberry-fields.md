@@ -8,7 +8,7 @@ address: "Downtown Bellevue, WA"
 coordinates:
   lat: 47.6104
   lng: -122.2007
-description: "Once the heart of the island's agricultural economy, these fields tell the story of immigrant farmers who helped build Bainbridge Island's prosperity. Japanese American families were particularly prominent in strawberry farming before World War II."
+description: "Once the heart of the Eastside's agricultural economy, these fields tell the story of immigrant farmers who helped build Bellevue's prosperity. Japanese American families were particularly prominent in strawberry farming before World War II."
 heroImage: null
 audio: null
 books:
@@ -39,7 +39,7 @@ Japanese farmers revolutionized Pacific Northwest agriculture through superior k
 
 The Takeshita family, who purchased 13 acres near the railroad tracks and Lake Bellevue in 1919, exemplified the community's approach to intensive agriculture. They diversified beyond strawberries to grow pole beans, peas, tomatoes, cabbages, cucumbers, celery, and lettuce, maximizing income from limited acreage while maintaining soil health through crop rotation and organic fertilization methods.
 
-Sixty-five Japanese American families cultivated the Eastside prior to World War II, with 32 Issei (first-generation immigrants) becoming landowners between 1905-1938. These families included the Matsuokas, Tsushimas, Itos, and Suguros, who collectively managed 472 acres of strawberry farmland while building social institutions that strengthened their community.
+About 55 Japanese American families cultivated the Eastside prior to World War II, with 32 Issei (first-generation immigrants) becoming landowners between 1905-1938. These families included the Matsuokas, Tsushimas, Itos, and Suguros, and collectively Bellevue's roughly 55 Japanese American families farmed about 472 acres of strawberry farmland while building social institutions that strengthened their community.
 
 ## The Strawberry Festival
 

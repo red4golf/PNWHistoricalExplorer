@@ -8,7 +8,7 @@ address: "Water Street, Port Townsend, WA 98368"
 coordinates:
   lat: 48.117
   lng: -122.7603
-description: "In the 1880s, Port Townsend bet everything on becoming the West Coast's greatest railroad terminus. Speculators built a city for 20,000 people: grand Victorian mansions on the bluff, stone-and-brick commercial buildings on Water Street, hotels for railroad magnates, and enough saloons to rival San Francisco. Then the railroad went bankrupt in 1890, choosing Seattle instead. The economy collapsed overnight, and froze Victorian Port Townsend in time. Today it's one of only three Victorian seaports on the National Register of Historic Places, with 70+ preserved 1880s buildings that never had reason to be torn down."
+description: "In the 1880s, Port Townsend bet everything on becoming the West Coast's greatest railroad terminus. Speculators built a city for 20,000 people: grand Victorian mansions on the bluff, stone-and-brick commercial buildings on Water Street, hotels for railroad magnates, and enough saloons to rival San Francisco. Then the railroad went bankrupt in 1890, choosing Seattle instead. The economy collapsed overnight, and froze Victorian Port Townsend in time. Today it's one of the best-preserved Victorian seaports on the National Register of Historic Places, with 70+ preserved 1880s buildings that never had reason to be torn down."
 heroImage: "/images/locations/historic-port-townsend---victorian-seaport-hero.jpg"
 audio: null
 books:
@@ -25,7 +25,7 @@ sourceId: 146
 
 When Lieutenant Charles Wilkes surveyed Puget Sound for the U.S. Navy in 1841, he noted a deep-water harbor at the northeastern tip of the Olympic Peninsula, where the Strait of Juan de Fuca met Admiralty Inlet.
 
-A decade later, in **1851**, settlers arrived and founded **Port Townsend**, naming it after the Marquis of Townshend, a British naval officer.
+The harbor itself had been named in **1792** by Captain George Vancouver, who called it Port Townshend after George Townshend, the Marquess Townshend, a British Army officer and field marshal. A decade after Wilkes's survey, in **1851**, settlers arrived and founded the town of **Port Townsend** on its shore.
 
 The location was perfect: sheltered waters, a natural deep-water port, proximity to the Pacific Ocean, and a customs gateway for all ships entering Puget Sound. Port Townsend became Washington Territory's **official Port of Entry** in 1854.
 
@@ -93,7 +93,7 @@ By the 1960s and 1970s, historians realized what had happened: Port Townsend had
 
 In **1976**, the downtown and uptown districts were added to the **National Register of Historic Places**.
 
-In **1977**, Port Townsend was designated a **National Historic Landmark**, one of only three Victorian seaports in the United States to receive that honor.
+In **1977**, Port Townsend was designated a **National Historic Landmark**, recognized as one of the finest preserved Victorian seaports in the United States.
 
 ## The Architecture: A Walking Tour Through the 1880s
 

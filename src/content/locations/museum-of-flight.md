@@ -23,11 +23,11 @@ sourceId: 111
 
 # Museum of Flight: Preserving Aviation Heritage
 
-Perched on the edge of Boeing Field in Tukwila, the Museum of Flight stands as the world's largest independent, non-profit air and space museum, housing over 175 aircraft and spacecraft that tell the complete story of human flight. From the Wright Brothers' first powered flight to modern space exploration, this remarkable institution preserves aviation history while inspiring future generations of pilots, engineers, and dreamers. The museum's collection includes everything from World War I biplanes to supersonic jets, commercial airliners to spacecraft, creating an unparalleled journey through the evolution of flight.
+Perched on the edge of Boeing Field in Tukwila, the Museum of Flight stands as the world's largest independent, non-profit air and space museum, housing more than 130 aircraft and spacecraft that tell the complete story of human flight. From the Wright Brothers' first powered flight to modern space exploration, this remarkable institution preserves aviation history while inspiring future generations of pilots, engineers, and dreamers. The museum's collection includes everything from World War I biplanes to supersonic jets, commercial airliners to spacecraft, creating an unparalleled journey through the evolution of flight.
 
 ## Origins and Vision
 
-The Museum of Flight was founded in 1965 by a group of aviation enthusiasts led by William M. Allen, then chairman of Boeing, who recognized the need to preserve the Pacific Northwest's rich aviation heritage. The museum began modestly in a rented hangar at Boeing Field, displaying a small collection of historic aircraft that were in danger of being scrapped or forgotten.
+The Museum of Flight traces its origins to the Pacific Northwest Aviation Historical Foundation, founded in 1965 by a group of aviation enthusiasts who recognized the need to preserve the Pacific Northwest's rich aviation heritage. The museum began modestly in a rented hangar at Boeing Field, displaying a small collection of historic aircraft that were in danger of being scrapped or forgotten.
 
 The founders' vision extended beyond simply collecting old airplanes, they sought to create an educational institution that would inspire young people to pursue careers in aviation and aerospace while preserving the stories of innovation, courage, and determination that defined the history of flight. This educational mission would become the museum's driving force, shaping its approach to exhibits, programs, and community engagement.
 

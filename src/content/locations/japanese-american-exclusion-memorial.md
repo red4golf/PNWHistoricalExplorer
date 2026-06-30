@@ -27,7 +27,7 @@ On the quiet shores of Eagle Harbor, where the ferry once carried Bainbridge Isl
 
 ## The First Exclusion
 
-Bainbridge Island holds the tragic distinction of being the first community targeted under Executive Order 9066, signed by President Franklin Roosevelt on February 19, 1942. Civilian Exclusion Order No. 1, posted on May 7, 1942, gave Japanese American residents just six days' notice to report for "evacuation." They could bring only what they could carry in their hands, forcing families to abandon homes, businesses, farms, and possessions accumulated over decades of hard work.
+Bainbridge Island holds the tragic distinction of being the first community targeted under Executive Order 9066, signed by President Franklin Roosevelt on February 19, 1942. Civilian Exclusion Order No. 1, posted on March 24, 1942, gave Japanese American residents just six days' notice to report for "evacuation." They could bring only what they could carry in their hands, forcing families to abandon homes, businesses, farms, and possessions accumulated over decades of hard work.
 
 The choice of Bainbridge Island as the first target was strategic, its small size and island geography made it easier to control, while its proximity to the Bremerton Naval Shipyard provided military justification for the exclusion. However, the real reason had nothing to do with military necessity and everything to do with testing whether the American public would accept the mass incarceration of their neighbors.
 

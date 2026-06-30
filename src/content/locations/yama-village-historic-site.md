@@ -39,7 +39,7 @@ sourceId: 52
 
   ## The Asahi Baseball Club
 
-  Perhaps no symbol captures the spirit of Yama Village better than baseball. The community fielded the Asahi Baseball Club, a team that competed across the Puget Sound region and became a source of enormous local pride. That Japanese immigrants, working long hours in a demanding mill and navigating a foreign culture, would build a baseball diamond and field a competitive team says something profound about human resilience and the drive to belong.
+  Perhaps no symbol captures the spirit of Yama Village better than baseball. The community reportedly fielded a team known as the Asahi Baseball Club, said to have competed across the Puget Sound region and to have been a source of enormous local pride. That Japanese immigrants, working long hours in a demanding mill and navigating a foreign culture, would build a baseball diamond and field a competitive team says something profound about human resilience and the drive to belong.
 
   ## A Cultural Center for the Sound
 

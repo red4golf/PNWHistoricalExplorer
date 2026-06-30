@@ -63,9 +63,9 @@ The city's maritime heritage includes shipbuilding, fishing, and Coast Guard ope
 
 ## The Column's Construction
 
-The Astoria Column was built in 1926 as a joint project between the Great Northern Railway and the city of Astoria to commemorate the region's history and attract tourists. Designed by architect Electus Litchfield, the column was inspired by Roman victory columns and decorated with a continuous spiral frieze depicting key events in Pacific Northwest history.
+The Astoria Column was built in 1926, funded by the Great Northern Railway and Vincent Astor (great-grandson of John Jacob Astor), to commemorate the region's history and attract tourists. Designed by architect Electus Litchfield, the column was inspired by Roman victory columns and decorated with a continuous spiral frieze depicting key events in Pacific Northwest history.
 
-The column's construction required innovative engineering techniques to build a stable structure on the hilltop site. Local artisans created the detailed friezes that tell the story of Native American life, European exploration, and American settlement in artistic panels that spiral up the column's exterior.
+The column's construction required innovative engineering techniques to build a stable structure on the hilltop site. Italian-born artist Attilio Pusterla painted the detailed spiral frieze that tells the story of Native American life, European exploration, and American settlement in scenes that spiral up the column's exterior.
 
 ## Historical Narrative
 

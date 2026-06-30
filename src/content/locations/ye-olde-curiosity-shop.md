@@ -25,7 +25,7 @@ Seattle's timing couldn't have been better. The city was booming with prospector
 
 By 1904, Standley had relocated to the Colman Ferry Dock on the waterfront, a strategic move that would define the shop's identity. Here, he could intercept goods arriving by boat from Alaska and across the Pacific Rim. Sailors, whalers, and traders became his primary suppliers, bringing tusks, artifacts, and curiosities from their voyages.
 
-In 1907, he adopted the name "Ye Olde Curiosity Shop" as a playful reference to Charles Dickens' novel *The Old Curiosity Shop*, adding the tagline "Beats the Dickens." The shop moved to its current location on Pier 54 in 1963, where it has remained a Seattle landmark for over six decades.
+In 1907, he adopted the name "Ye Olde Curiosity Shop" as a playful reference to Charles Dickens' novel *The Old Curiosity Shop*, adding the tagline "We beat the Dickens." The shop moved to its current location on Pier 54 in 1963, where it has remained a Seattle landmark for over six decades.
 
 ## The Famous Oddities
 

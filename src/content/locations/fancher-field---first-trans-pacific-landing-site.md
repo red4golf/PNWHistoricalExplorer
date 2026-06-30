@@ -41,7 +41,7 @@ For **41 hours**, the two pilots flew through darkness, storms, and exhaustion. 
 
 As dawn broke on **October 5, 1931**, they spotted the Columbia River and followed it to Wenatchee. Low on fuel and flying a plane with no landing gear, they circled Fancher Field and prepared for a belly landing.
 
-At **7:12 AM**, Pangborn brought Miss Veedol down in a perfect skid across the dirt runway. The plane slid to a stop, intact. **The Pacific Ocean had been crossed by air for the first time in history**.
+At about **7:14 AM**, Pangborn brought Miss Veedol down in a perfect skid across the dirt runway. The plane slid to a stop, intact. **The Pacific Ocean had been crossed by air for the first time in history**.
 
 The flight covered **5,500 miles in 41 hours and 13 minutes**, an average speed of 133 mph. It shattered existing distance records and proved that trans-Pacific aviation was possible.
 

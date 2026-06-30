@@ -43,7 +43,7 @@ Governor Sidney Edgerton established his residence in Bannack and attempted to o
 
 ## The Plummer Gang and Vigilante Justice
 
-Bannack's early years were dominated by one of the most notorious criminal organizations in American frontier history. Henry Plummer, who served as both the local sheriff and the secret leader of a gang of road agents, orchestrated a reign of terror that claimed over 100 victims throughout the Montana goldfields.
+Bannack's early years were dominated by one of the most notorious criminal organizations in American frontier history. Henry Plummer, who served as both the local sheriff and the secret leader of a gang of road agents, allegedly orchestrated a reign of terror that, according to Thomas Dimsdale's 1860s vigilante account, claimed over 100 victims throughout the Montana goldfields. That figure is disputed, however, and modern historians put the toll far lower while questioning Plummer's guilt altogether.
 
 Plummer's dual role as law enforcement officer and criminal mastermind allowed his gang to operate with impunity for nearly two years. The sheriff's position provided inside information about gold shipments, wealthy travelers, and the movements of potential victims. Gang members used their knowledge of local geography and their legitimate positions in the community to plan and execute robberies with shocking efficiency.
 

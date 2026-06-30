@@ -8,7 +8,7 @@ address: "Craters of the Moon National Monument, ID"
 coordinates:
   lat: 43.2081
   lng: -113.5163
-description: "A vast ocean of lava flows with scattered islands of cinder cones and sagebrush. This unique volcanic landscape was formed by eruptions along the Great Rift between 15,000 and 2,000 years ago, creating one of the best-preserved flood basalt areas in the continental United States."
+description: "A vast ocean of lava flows with scattered islands of cinder cones and sagebrush. This unique volcanic landscape was formed by Hawaiian-style fissure eruptions along the Great Rift between 15,000 and 2,000 years ago, creating one of the best-preserved basaltic lava fields in the continental United States."
 heroImage: null
 audio: null
 books:

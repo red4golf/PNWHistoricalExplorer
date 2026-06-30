@@ -65,7 +65,7 @@ Sun Tours, operated by the Blackfeet, offers interpretive tours of Glacier Natio
 
 ## Contemporary Challenges
 
-Today, Glacier National Park faces new challenges that echo historical themes of balancing preservation with access. Climate change threatens the park's remaining glaciers, down from an estimated 80 in 1850 to about 26 today. Increased visitation strains infrastructure and wildlife habitat. The COVID-19 pandemic highlighted the park's dependence on tourism while revealing the vulnerability of gateway communities.
+Today, Glacier National Park faces new challenges that echo historical themes of balancing preservation with access. Climate change threatens the park's remaining glaciers, down from about 150 in 1850 to about 25 today. Increased visitation strains infrastructure and wildlife habitat. The COVID-19 pandemic highlighted the park's dependence on tourism while revealing the vulnerability of gateway communities.
 
 ## A Complex Legacy
 

@@ -25,7 +25,7 @@ sourceId: 56
 
 The mountain gave fair warning. For two months before May 18, 1980, it shook with small earthquakes and vented steam from a growing bulge on its north flank. Scientists set up observation posts. Roads were closed. Most people left.
 
-Harry Truman did not leave. The 83-year-old innkeeper had run Spirit Lake Lodge at the foot of the mountain for fifty years and refused every evacuation order. "That mountain is a part of Truman and Truman is a part of that mountain," he told reporters. On May 18, a wall of debris buried him and his lodge under 150 feet of rock and ash. His body was never recovered.
+Harry Truman did not leave. The 83-year-old innkeeper had run Mount St. Helens Lodge at the foot of the mountain for fifty years and refused every evacuation order. "The mountain's part of Truman and Truman's part of that mountain," he told reporters. On May 18, a wall of debris buried him and his lodge under 150 feet of rock and ash. His body was never recovered.
 
 At 8:32 a.m., a magnitude 5.1 earthquake destabilized the north flank. What followed was not a conventional eruption. The entire bulging face of the mountain collapsed at once, releasing pressure that had been building for weeks. The result was a lateral blast, a horizontal explosion moving northward at speeds between 300 and 670 miles per hour. In the next few minutes, that blast incinerated and flattened 230 square miles of old-growth forest. Trees 60 feet tall snapped like pencils, their trunks pointing away from the mountain in concentric arcs that are still visible from the air today.
 

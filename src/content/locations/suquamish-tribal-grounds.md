@@ -35,7 +35,7 @@ The best-known winter village was Old Man House, stretching more than 600 feet a
 
 ## The Making of a Leader
 
-Seattle (Si'ahl) was born around 1790, the son of a Suquamish father and a Duwamish mother, a lineage that allowed him to gain influence in both tribes. His early life was marked by challenges, including the stigma of having a grandmother who had been enslaved by northern raiders, which initially made him an outcast in a society that considered enslavement a permanent mark of dishonor.
+Seattle (Si'ahl) was born around 1786, the son of a Suquamish father and a Duwamish mother, a lineage that allowed him to gain influence in both tribes. His early life was marked by challenges, including the stigma of having a grandmother who had been enslaved by northern raiders, which initially made him an outcast in a society that considered enslavement a permanent mark of dishonor.
 
 Despite these obstacles, Seattle proved himself through military prowess and diplomatic skill. By age 20, he was part of a confederation organized by his kinsman Kitsap, a Suquamish war leader who united tribes spanning central Puget Sound to the Cowlitz River in an effort to halt devastating raids from northern tribes. Through courage in battle and wisdom in counsel, Seattle gradually overcame the disadvantages of his birth to become a respected leader.
 
@@ -67,7 +67,7 @@ Cultural practices adapted to new circumstances while maintaining essential elem
 
 ## Death and Legacy
 
-Chief Seattle died on June 7, 1866, at the Fort Madison Reservation, mourned by both Native and non-Native communities throughout the region. His death marked the end of an era when individual leaders could significantly influence relationships between cultures through personal diplomacy and character.
+Chief Seattle died on June 7, 1866, at the Port Madison Reservation, mourned by both Native and non-Native communities throughout the region. His death marked the end of an era when individual leaders could significantly influence relationships between cultures through personal diplomacy and character.
 
 In 1890, a group of Seattle pioneers led by Arthur Denny erected a monument over his grave with the inscription: "SEATTLE Chief of the Suqampsh and Allied Tribes, Died June 7, 1866. The Firm Friend of the Whites, and for Him the City of Seattle was Named by Its Founders." This monument reflected genuine affection and respect that transcended cultural boundaries.
 

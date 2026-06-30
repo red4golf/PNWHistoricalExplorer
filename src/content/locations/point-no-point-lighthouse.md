@@ -31,7 +31,7 @@ The lighthouse emerged from growing concerns about maritime safety as commerce e
 
 Point No Point represented a particularly hazardous location where all vessels traveling to or from Seattle, Tacoma, and the Bremerton Naval Shipyard must pass. The dangerous shoal extending from the point, combined with strong currents and frequent fog, created conditions that claimed ships and lives with tragic regularity.
 
-In 1872, the Lighthouse Board recommended construction of a lighthouse at this critical navigation point, and Congress appropriated $25,000 in 1873. Construction began in April 1879, with the first light operational by year's end, creating a beacon that would serve mariners for nearly 150 years.
+In 1872, the Lighthouse Board recommended construction of a lighthouse at this critical navigation point, and Congress appropriated $25,000 in 1873. Construction began in April 1879, with the light first lit on January 1, 1880, and fully operational by February 1, 1880, creating a beacon that would serve mariners for nearly 150 years.
 
 ## Engineering Excellence
 
@@ -47,7 +47,7 @@ The lighthouse's unusual name comes from Captain Charles Wilkes, who surveyed Pu
 
 However, the site held much deeper significance for local Native American peoples, who called it "Hahd-skus," meaning "long nose," in reference to the spit's distinctive shape. This indigenous name reflected thousands of years of intimate knowledge of these waters and their navigational challenges.
 
-The location became nationally significant on January 22, 1855, when Territorial Governor Isaac Stevens and leaders of the S'Klallam, Skokomish, and Chimacum tribes signed the Point No Point Treaty on the beach near the future lighthouse site. This treaty, like many others signed during this period, would have lasting and often devastating consequences for indigenous peoples of the region.
+The location became nationally significant on January 26, 1855, when Territorial Governor Isaac Stevens and leaders of the S'Klallam, Skokomish, and Chimacum tribes signed the Point No Point Treaty on the beach near the future lighthouse site. This treaty, like many others signed during this period, would have lasting and often devastating consequences for indigenous peoples of the region.
 
 ## Serving Maritime Commerce
 

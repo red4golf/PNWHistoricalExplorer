@@ -23,19 +23,19 @@ sourceId: 115
 
 # Shasta State Historic Park: Queen City of the Northern Mines
 
-In the shadow of towering Mount Shasta, the ruins of a once-mighty Gold Rush metropolis tell the story of California's northern mining frontier. Shasta State Historic Park preserves the remains of what was once called the "Queen City" of California's northern mining district, a booming town that served as the commercial heart of the region's gold fields from 1849 through the 1880s.
+About six miles west of present-day Redding, the ruins of a once-mighty Gold Rush metropolis tell the story of California's northern mining frontier. Shasta State Historic Park preserves the remains of what was once called the "Queen City" of California's northern mining district, a booming town that served as the commercial heart of the region's gold fields from 1849 through the 1880s.
 
 ## The Rush Begins
 
 When James Marshall discovered gold at Sutter's Mill in 1848, prospectors spread throughout California's Sierra Nevada foothills seeking new strikes. By 1849, miners following the Siskiyou Trail northward from Sacramento discovered rich placers in the streams around present-day Shasta. Word of the strikes spread quickly, and within months, thousands of Forty-Niners converged on the area.
 
-Shasta's strategic location made it the natural supply center for the northern mines. Situated at the head of navigation on the Sacramento River and at the junction of trails leading to gold fields throughout Northern California and southern Oregon, the town became an essential stop for miners, merchants, and freight haulers. Pack trains loaded with supplies departed daily for remote mining camps scattered throughout the rugged mountains.
+Shasta's strategic location made it the natural supply center for the northern mines. Situated as the terminus of the wagon roads from the Sacramento Valley and at the junction of pack trails leading to gold fields throughout Northern California and southern Oregon, the town became an essential stop for miners, merchants, and freight haulers. Pack trains loaded with supplies departed daily for remote mining camps scattered throughout the rugged mountains.
 
 The discovery of gold near Shasta in 1849 brought a flood of prospectors up the Siskiyou Trail, and most used Shasta as their base of operations. The town quickly grew from a handful of tents and crude cabins into a substantial community with brick buildings, hotels, saloons, and all the businesses needed to support a thriving mining economy.
 
 ## Commercial Powerhouse
 
-During its heyday in the 1850s and 1860s, Shasta rivaled Sacramento and San Francisco in commercial importance. The town's merchants supplied not only local miners but also camps throughout the northern Sierra Nevada, the Cascade Range, and even into Oregon and Idaho Territory. Freight wagons and pack trains departed Shasta loaded with tools, food, clothing, and mining equipment essential for frontier life.
+During its heyday in the 1850s and 1860s, Shasta was the commercial hub, the "Queen City," of the northern mines. The town's merchants supplied not only local miners but also camps throughout the northern Sierra Nevada, the Cascade Range, and even into Oregon and Idaho Territory. Freight wagons and pack trains departed Shasta loaded with tools, food, clothing, and mining equipment essential for frontier life.
 
 The town's Litsch General Store, now restored, exemplified the comprehensive businesses that made Shasta indispensable to the mining economy. Such establishments stocked everything from pickaxes and gold pans to fine china and imported wines, catering to both hard-working miners and the merchants who grew wealthy serving them. Credit extended by Shasta merchants often meant the difference between success and failure for prospectors working distant claims.
 
@@ -43,7 +43,7 @@ Shasta's importance as a transportation hub led to the construction of the Calif
 
 ## Center of Justice and Government
 
-As the largest settlement in Northern California outside of Sacramento, Shasta became the seat of justice for a vast region. The Shasta County Courthouse, constructed in 1855 and now the park's centerpiece, served as the administrative center for a county that originally stretched from the Oregon border to the San Francisco Bay Area. This massive jurisdiction included most of Northern California's mining districts.
+As the largest settlement in Northern California outside of Sacramento, Shasta became the seat of justice for a vast region. The building that became the Shasta County Courthouse, constructed in 1855 as a commercial building and converted to the county courthouse in 1861, is now the park's centerpiece and served as the administrative center for a county that originally stretched from the Oregon border to the San Francisco Bay Area. This massive jurisdiction included most of Northern California's mining districts.
 
 The courthouse witnessed countless legal proceedings related to mining claims, as disputes over gold-bearing ground generated constant litigation. The California Gold Rush created complex legal questions about mineral rights, claim boundaries, and water usage that required new laws and precedents. Shasta's courts helped establish the legal framework that would govern western mining for generations.
 

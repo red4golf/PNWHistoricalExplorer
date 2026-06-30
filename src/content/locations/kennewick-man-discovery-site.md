@@ -8,7 +8,7 @@ address: "Columbia Park, Kennewick, WA"
 coordinates:
   lat: 46.2112
   lng: -119.1372
-description: "Archaeological site where the 9,000-year-old Kennewick Man was discovered, sparking major debates about early American prehistory"
+description: "Archaeological site where the roughly 8,500-year-old Kennewick Man was discovered, sparking major debates about early American prehistory"
 heroImage: null
 audio: "/audio/kennewick-man-discovery-site.mp3"
 books:
@@ -23,13 +23,13 @@ sourceId: 57
 
 # Kennewick Man Discovery Site: Rewriting American Prehistory
 
-Standing along the Columbia River where one of North America's most significant archaeological discoveries was made, you're at the site that fundamentally changed our understanding of early human migration and settlement in the Americas. The 1996 discovery of "Kennewick Man", a 9,000-year-old skeleton, sparked intense scientific, legal, and cultural debates that continue to influence archaeology, Native American rights, and our understanding of ancient America.
+Standing along the Columbia River where one of North America's most significant archaeological discoveries was made, you're at the site that fundamentally changed our understanding of early human migration and settlement in the Americas. The 1996 discovery of "Kennewick Man", a skeleton about 8,500 years old, sparked intense scientific, legal, and cultural debates that continue to influence archaeology, Native American rights, and our understanding of ancient America.
 
 ## The Discovery
 
 On July 28, 1996, college students Will Thomas and Dave Deacy were watching hydroplane races on the Columbia River when they discovered a human skull in the shallow water near Kennewick's Columbia Park. What initially appeared to be a modern drowning victim quickly revealed itself as something far more extraordinary when forensic anthropologist James Chatters examined the remains.
 
-The skeleton's unusual characteristics, including what appeared to be a stone spear point embedded in the hip bone, suggested great antiquity. Radiocarbon dating soon confirmed that the remains were approximately 9,000 years old, making them among the oldest and most complete early American skeletons ever discovered.
+The skeleton's unusual characteristics, including what appeared to be a stone spear point embedded in the pelvis (the ilium), suggested great antiquity. Radiocarbon dating soon confirmed that the remains were about 8,500 years old, making them among the oldest and most complete early American skeletons ever discovered.
 
 ## Scientific Significance
 
@@ -57,7 +57,7 @@ In 2015, DNA analysis finally resolved key questions about Kennewick Man's ances
 
 ## Repatriation and Reconciliation
 
-In 2016, after decades of legal battles, DNA evidence supported tribal claims that Kennewick Man was their ancestor. The remains were repatriated to a coalition of Columbia River tribes and reburied in a private ceremony in 2017, finally resolving the long-standing dispute.
+In 2016, after decades of legal battles, DNA evidence supported tribal claims that Kennewick Man was their ancestor. The remains were repatriated to a coalition of Columbia River tribes and reburied in a private ceremony in February 2017, finally resolving the long-standing dispute.
 
 The repatriation marked a significant moment in American archaeology, demonstrating how advancing scientific techniques could bridge the gap between scientific inquiry and Native American cultural rights. The case established important precedents for how future discoveries might be handled more collaboratively.
 
