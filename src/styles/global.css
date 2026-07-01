@@ -96,6 +96,12 @@ img { max-width: 100%; height: auto; display: block; }
   align-items: center;
 }
 
+.nav-search-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
 .main-nav a:hover,
 .main-nav a[aria-current='page'] {
   background: var(--pine);

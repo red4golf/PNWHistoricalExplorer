@@ -5,19 +5,23 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && pagefind --site dist --base-url /PNWHistoricalExplorer",
     "preview": "astro preview",
     "migrate": "node scripts/migrate.mjs",
     "icons": "node scripts/generate-icons.mjs",
     "images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
+    "@astrojs/compiler": "^2.13.1",
     "@astrojs/sitemap": "^3.2.1",
     "astro": "^5.7.0",
     "leaflet": "^1.9.4",
-    "leaflet.markercluster": "^1.5.3"
+    "leaflet.markercluster": "^1.5.3",
+    "shiki": "^4.3.0",
+    "unstorage": "^1.17.4"
   },
   "devDependencies": {
+    "pagefind": "^1.5.2",
     "sharp": "^0.33.5"
   }
 }
