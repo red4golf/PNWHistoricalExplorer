@@ -17,7 +17,7 @@ sourceId: 154
 
 # Lake View Cemetery: Where Seattle Says Goodbye to Bruce and Brandon Lee
 
-The cemetery sits on a quiet hill above Capitol Hill's rooftops, its paths winding through Douglas firs and cedars that have stood here since the 1870s. Lake View Cemetery holds many of Seattle's founding families — pioneers, civic leaders, early settlers whose names appear on street signs and neighborhoods throughout the city. But for the past half-century, most visitors have come looking for a specific pair of black granite headstones near the eastern edge of the grounds.
+The cemetery sits on a quiet hill above Capitol Hill's rooftops, its paths winding through Douglas firs and cedars that have stood here since the 1870s. Lake View Cemetery holds many of Seattle's founding families — pioneers, civic leaders, early settlers whose names appear on street signs and neighborhoods throughout the city. But for the past half-century, most visitors have come looking for a specific pair of polished granite headstones near the eastern edge of the grounds.
 
 ## Bruce Lee's Seattle
 

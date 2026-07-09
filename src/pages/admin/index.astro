@@ -4,10 +4,17 @@ import { href } from '../../lib/url';
 import { isAmazonUrl, withAffiliateTag } from '../../lib/amazon';
 import { AMAZON_TAG, GOATCOUNTER_CODE, GOATCOUNTER_EMBED_URL, site } from '../../config';
 import { getCollection } from 'astro:content';
+import { deriveQuality, entryContentHash } from '../../lib/quality';
 
 // ---- Content health (computed at build time) -------------------------------
 const locations = await getCollection('locations');
 const total = locations.length;
+
+// ---- Verification snapshot -------------------------------------------------
+const quality = locations.map((l) => deriveQuality(l.data.factcheck, entryContentHash(l)));
+const verifiedCount = quality.filter((q) => q.status === 'verified' || q.status === 'corrected').length;
+const needsAttention = quality.filter((q) => q.status === 'flagged' || q.status === 'stale').length;
+const unverifiedCount = quality.filter((q) => q.status === 'unverified').length;
 
 const byCategory = new Map<string, number>();
 for (const l of locations) byCategory.set(l.data.category, (byCategory.get(l.data.category) ?? 0) + 1);
@@ -62,6 +69,11 @@ const locStats = locations.map((l) => ({ title: l.data.title, path: href(`/locat
         <strong>Repository</strong>
         <span class="muted">Source, deploy logs &amp; settings on GitHub</span>
       </a>
+      <a class="card action" href={href('/admin/quality')}>
+        <span class="ico">✅</span>
+        <strong>Verification &amp; quality</strong>
+        <span class="muted">Per-entry fact-check status, grades &amp; traffic-weighted coverage</span>
+      </a>
     </div>
 
     <!-- Stat cards -->
@@ -73,6 +85,9 @@ const locStats = locations.map((l) => ({ title: l.data.title, path: href(`/locat
       <div class={`card stat ${missingAudio.length ? 'warn' : 'ok'}`}><div class="num">{missingAudio.length}</div><div class="lbl">No audio narration</div></div>
       <div class={`card stat ${noBooks.length ? 'warn' : 'ok'}`}><div class="num">{noBooks.length}</div><div class="lbl">No further reading</div></div>
       <div class={`card stat ${booksMissingUrl.length ? 'warn' : 'ok'}`}><div class="num">{booksMissingUrl.length}</div><div class="lbl">Book links missing URL</div></div>
+      <a class={`card stat ${verifiedCount ? 'ok' : ''}`} href={href('/admin/quality')} style="text-decoration:none;color:inherit"><div class="num">{verifiedCount}</div><div class="lbl">Fact-check verified ({pct(verifiedCount)}%)</div></a>
+      <a class={`card stat ${needsAttention ? 'warn' : 'ok'}`} href={href('/admin/quality')} style="text-decoration:none;color:inherit"><div class="num">{needsAttention}</div><div class="lbl">Flagged / stale</div></a>
+      <a class="card stat" href={href('/admin/quality')} style="text-decoration:none;color:inherit"><div class="num">{unverifiedCount}</div><div class="lbl">Unverified ({pct(unverifiedCount)}%)</div></a>
     </div>
 
     <div class="grid2">

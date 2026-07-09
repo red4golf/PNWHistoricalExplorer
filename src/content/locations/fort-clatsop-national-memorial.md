@@ -13,12 +13,23 @@ heroImage: null
 audio: "/audio/fort-clatsop-national-memorial.mp3"
 books:
   - title: "The Definitive Journals of Lewis and Clark"
-    author: "Gary E. Mouton (Editor)"
+    author: "Gary E. Moulton (Editor)"
     url: "https://www.amazon.com/Definitive-Journals-Lewis-Clark-Vols/dp/0803229399"
   - title: "Undaunted Courage"
     author: "Stephen E. Ambrose"
     url: "https://www.amazon.com/Undaunted-Courage-Meriwether-Jefferson-American/dp/0684826976"
 sourceId: 33
+factcheck:
+  status: "corrected"
+  lastChecked: "2026-07-09"
+  reviewer: "Cowork verification pass (primary/secondary sourced)"
+  sourceTier: "primary"
+  claimsTotal: 14
+  claimsCited: 11
+  openFlags: 0
+  neutrality: "pass"
+  checkedHash: "1977uhr"
+  notes: "Hard errors fixed (1958 designation per PL 85-435; editor Moulton). 'First military structure west of the Rockies' attributed to the Oregon Encyclopedia. Three journal-level details (fort dimensions, rain days, elk tally) not yet confirmed to Moulton's edition."
 ---
 
 # Fort Clatsop: Where Lewis and Clark Faced the Pacific Winter
@@ -33,7 +44,7 @@ Every person had a voice, including Sacagawea and York, Clark's enslaved compani
 
 ## Building in the Wilderness
 
-Construction began on December 7, 1805, just five miles southwest of present-day Astoria along the Lewis and Clark River (then called the Netul River). Working in constant rain and challenging conditions, the men completed their fort in just 18 days, moving into the finished structure on Christmas Day 1805.
+The Corps reached the site — five miles southwest of present-day Astoria along the Lewis and Clark River (then called the Netul River) — in early December 1805, and construction began about December 8–9. Working in constant rain, the men moved into the shelters around December 24, and the fort was completed by roughly the start of January.
 
 The fort consisted of two parallel rows of log cabins facing each other across a parade ground, with gates at each end. The enlisted men's side contained three rooms for soldiers, while the officers' side included four rooms: the captains' quarters, a family room for Toussaint Charbonneau, Sacagawea, and baby Jean Baptiste, an orderly room, and a storeroom.
 
@@ -57,12 +68,12 @@ These interactions provided valuable ethnographic information while helping the 
 
 ## The First American Presence
 
-Fort Clatsop holds the distinction of being the first American military structure built west of the Rocky Mountains, establishing a tangible U.S. presence in the Oregon Territory. This symbolic importance extended far beyond the fort's modest appearance, strengthening American claims to the Pacific Northwest in future territorial negotiations with Britain.
+The Oregon Encyclopedia describes Fort Clatsop as the first American military structure built west of the Rocky Mountains, establishing a tangible U.S. presence in the lower Columbia region. This symbolic importance extended far beyond the fort's modest appearance, strengthening American claims to the Pacific Northwest in future territorial negotiations with Britain.
 
 ## Legacy of Exploration
 
 When the expedition departed on March 23, 1806, they left behind a physical structure that quickly decayed in the coastal climate, but their legacy endured. The detailed documentation produced during the Fort Clatsop winter provided crucial scientific and geographical knowledge that guided future exploration and settlement.
 
-The site was designated Fort Clatsop National Memorial in 1956 and later became part of Lewis and Clark National Historical Park in 2004. Today, a reconstruction of the original fort allows visitors to experience the challenging conditions the Corps of Discovery faced during their Pacific coast winter.
+The site was established as Fort Clatsop National Memorial by an act of Congress on May 29, 1958, and became part of the expanded Lewis and Clark National Historical Park in 2004. The fort visitors see today is a reconstruction based on William Clark's sketch; a 1955 replica built for the expedition's sesquicentennial was destroyed by fire in October 2005, and the current replica was completed in 2006 on the same site.
 
 Fort Clatsop is evidence of American perseverance, scientific curiosity, and the power of democratic decision-making, even in the wilderness. It represents not just the end of a journey, but the beginning of America's lasting presence in the Pacific Northwest, a legacy that began with 33 people huddled in log cabins, determined to complete their mission despite rain, illness, and isolation at the edge of a continent.

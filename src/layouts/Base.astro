@@ -68,7 +68,7 @@ const current = (h: string) => (h === '/' ? (path === '/' ? 'page' : undefined) 
     )}
   </head>
   <body>
-    <header class="site-header">
+    <header class="site-header" data-pagefind-ignore>
       <div class="container">
         <a href={href('/')} class="brand">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -82,15 +82,21 @@ const current = (h: string) => (h === '/' ? (path === '/' ? 'page' : undefined) 
           <a href={href('/map')} aria-current={current('/map')}>Map</a>
           <a href={href('/categories')} aria-current={current('/categories')}>Categories</a>
           <a href={href('/about')} aria-current={current('/about')}>About</a>
+          <a href={href('/search')} aria-current={current('/search')} class="nav-search-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            Search
+          </a>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main data-pagefind-body>
       <slot />
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" data-pagefind-ignore>
       <div class="container">
         <div>
           <strong>PNW Historical Explorer</strong><br />
@@ -104,10 +110,11 @@ const current = (h: string) => (h === '/' ? (path === '/' ? 'page' : undefined) 
       </div>
     </footer>
 
-    <nav class="bottom-nav" aria-label="Mobile">
+    <nav class="bottom-nav" aria-label="Mobile" data-pagefind-ignore>
       <a href={href('/')} aria-current={current('/')}><span class="ico">🏠</span>Home</a>
       <a href={href('/map')} aria-current={current('/map')}><span class="ico">🗺️</span>Map</a>
       <a href={href('/categories')} aria-current={current('/categories')}><span class="ico">🏛️</span>Browse</a>
+      <a href={href('/search')} aria-current={current('/search')}><span class="ico">🔍</span>Search</a>
       <a href={href('/about')} aria-current={current('/about')}><span class="ico">ℹ️</span>About</a>
     </nav>
 

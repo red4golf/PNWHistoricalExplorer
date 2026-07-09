@@ -74,6 +74,32 @@ content:
           - { name: id, label: ID, type: number }
           - { name: name, label: Name, type: string }
           - { name: legacyCategory, label: Legacy category, type: string }
+      - name: factcheck
+        label: Fact-check / verification
+        type: object
+        fields:
+          - name: status
+            label: Status
+            type: select
+            options:
+              values: [unverified, in-review, verified, corrected, flagged]
+          - { name: lastChecked, label: Last checked (YYYY-MM-DD), type: string }
+          - { name: reviewer, label: Reviewer, type: string }
+          - name: sourceTier
+            label: Best source tier
+            type: select
+            options:
+              values: [primary, peer-reviewed, secondary, none]
+          - { name: claimsTotal, label: Key claims (total), type: number }
+          - { name: claimsCited, label: Key claims cited, type: number }
+          - { name: openFlags, label: Open flags, type: number }
+          - name: neutrality
+            label: Neutrality
+            type: select
+            options:
+              values: [pass, fail, n/a]
+          - { name: checkedHash, label: Checked hash (auto — do not edit), type: string }
+          - { name: notes, label: Notes, type: text }
       - { name: body, label: Article (Markdown), type: rich-text }
 
   - name: settings

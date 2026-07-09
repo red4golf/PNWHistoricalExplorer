@@ -1,0 +1,212 @@
+---
+import Base from '../../layouts/Base.astro';
+import { href } from '../../lib/url';
+import { GOATCOUNTER_CODE } from '../../config';
+import { getCollection } from 'astro:content';
+import { deriveQuality, entryContentHash } from '../../lib/quality';
+
+const locations = await getCollection('locations');
+
+const rows = locations
+  .map((l) => {
+    const q = deriveQuality(l.data.factcheck, entryContentHash(l));
+    const fc = l.data.factcheck ?? {};
+    return {
+      title: l.data.title,
+      category: l.data.category,
+      path: href(`/locations/${l.data.slug}`),
+      status: q.status,
+      label: q.label,
+      grade: q.grade,
+      color: q.color,
+      verifiedPublic: q.verifiedPublic,
+      attentionRank: q.attentionRank,
+      tier: fc.sourceTier ?? 'none',
+      cited: fc.claimsCited ?? 0,
+      claims: fc.claimsTotal ?? 0,
+      flags: fc.openFlags ?? 0,
+      neutrality: fc.neutrality ?? 'n/a',
+      lastChecked: fc.lastChecked ?? null,
+    };
+  })
+  .sort((a, b) => b.attentionRank - a.attentionRank || a.title.localeCompare(b.title));
+
+const total = rows.length;
+const countBy = (s: string) => rows.filter((r) => r.status === s).length;
+const summary = {
+  verified: countBy('verified') + countBy('corrected'),
+  inReview: countBy('in-review'),
+  flagged: countBy('flagged'),
+  stale: countBy('stale'),
+  unverified: countBy('unverified'),
+};
+const pct = (n: number) => (total ? Math.round((n / total) * 100) : 0);
+const goat = GOATCOUNTER_CODE || '';
+---
+
+<Base title="Quality · Admin · PNW Historical Explorer" description="Per-entry verification status">
+  <meta slot="head" name="robots" content="noindex, nofollow" />
+
+  <section class="q container">
+    <header class="q-head">
+      <p class="crumb"><a href={href('/admin')}>← Admin</a></p>
+      <h1>Verification &amp; quality</h1>
+      <p class="muted">
+        How well-sourced each entry is — <strong>not</strong> a claim that every fact is true.
+        Grades derive from the fact-check fields in each entry. Entries needing attention are listed first.
+        <a href={href('/locations')}>Public pages</a> show a "Sources verified" badge only for entries that pass.
+      </p>
+    </header>
+
+    <!-- Summary tiles -->
+    <div class="tiles">
+      <div class="tile"><span class="big">{total}</span><span class="lbl">Entries</span></div>
+      <div class="tile ok"><span class="big">{summary.verified}</span><span class="lbl">Verified ({pct(summary.verified)}%)</span></div>
+      <div class="tile warn"><span class="big">{summary.flagged}</span><span class="lbl">Flagged</span></div>
+      <div class="tile stale"><span class="big">{summary.stale}</span><span class="lbl">Stale / re-review</span></div>
+      <div class="tile"><span class="big">{summary.inReview}</span><span class="lbl">In review</span></div>
+      <div class="tile gray"><span class="big">{summary.unverified}</span><span class="lbl">Unverified</span></div>
+      <div class="tile hero" id="twc-tile" title="Share of total pageviews that land on a verified entry — the number that matters when you can't check everything.">
+        <span class="big" id="twc">—</span><span class="lbl">Traffic-weighted verified</span>
+      </div>
+    </div>
+
+    <p class="muted small" id="views-note">
+      {goat
+        ? 'Fetching live pageviews from GoatCounter to rank by traffic… high-traffic unverified entries are your best spend.'
+        : 'Set PUBLIC_GOATCOUNTER_CODE to rank entries by live traffic.'}
+    </p>
+
+    <div class="table-wrap">
+      <table id="q-table">
+        <thead>
+          <tr>
+            <th>Entry</th>
+            <th>Status</th>
+            <th class="c">Grade</th>
+            <th>Source tier</th>
+            <th class="c">Claims</th>
+            <th class="c">Flags</th>
+            <th class="c sortable" data-sort="views">Views ▾</th>
+            <th>Last checked</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr data-path={r.path} data-status={r.status}>
+              <td class="ent"><a href={r.path}>{r.title}</a><span class="cat">{r.category}</span></td>
+              <td><span class="badge" style={`background:${r.color}`}>{r.label}</span></td>
+              <td class="c"><span class={`grade g-${r.grade === '—' ? 'none' : r.grade}`}>{r.grade}</span></td>
+              <td class="tier">{r.tier}</td>
+              <td class="c">{r.claims ? `${r.cited}/${r.claims}` : '—'}</td>
+              <td class="c">{r.flags || '—'}</td>
+              <td class="c views" data-views="">—</td>
+              <td class="dt">{r.lastChecked ?? '—'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <style>
+    .q { padding: 24px 0 64px; }
+    .q-head h1 { margin: 4px 0; }
+    .crumb a { color: var(--muted, #5b6b7a); text-decoration: none; font-size: 14px; }
+    .muted { color: #5b6b7a; }
+    .small { font-size: 13px; }
+    .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin: 16px 0; }
+    .tile { background: #fff; border: 1px solid #e3e8ee; border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
+    .tile .big { font-size: 24px; font-weight: 800; line-height: 1.1; }
+    .tile .lbl { font-size: 12px; color: #5b6b7a; }
+    .tile.ok { border-left: 4px solid #1a7f5a; }
+    .tile.warn { border-left: 4px solid #b0392f; }
+    .tile.stale { border-left: 4px solid #8a5cd0; }
+    .tile.gray { border-left: 4px solid #8391a0; }
+    .tile.hero { border-left: 4px solid #3a9bdc; }
+    .table-wrap { overflow-x: auto; border: 1px solid #e3e8ee; border-radius: 10px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid #eef2f6; }
+    th { background: #f6f8fa; font-size: 12px; text-transform: uppercase; letter-spacing: .03em; color: #5b6b7a; position: sticky; top: 0; }
+    th.c, td.c { text-align: center; }
+    th.sortable { cursor: pointer; }
+    tr[data-priority="1"] td.ent::after { content: "⚠ priority"; display: inline-block; margin-left: 8px; font-size: 11px; font-weight: 700; color: #b0710e; }
+    .ent a { font-weight: 600; color: #16202a; text-decoration: none; }
+    .ent .cat { display: block; font-size: 11px; color: #8391a0; }
+    .badge { color: #fff; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; white-space: nowrap; }
+    .grade { font-weight: 800; font-size: 15px; }
+    .g-A { color: #1a7f5a; } .g-B { color: #3a8f4f; } .g-C { color: #e0a52e; } .g-D { color: #d9682e; } .g-none { color: #b8c2cc; }
+    .tier { text-transform: capitalize; }
+    .dt { color: #5b6b7a; white-space: nowrap; }
+  </style>
+
+  <script define:vars={{ goat }}>
+    (function () {
+      if (!goat) return;
+      const rows = Array.from(document.querySelectorAll('#q-table tbody tr'));
+      const base = `https://${goat}.goatcounter.com/counter`;
+      const num = (v) => (typeof v === 'string' ? parseInt(v.replace(/[^0-9]/g, ''), 10) || 0 : v || 0);
+
+      async function count(path) {
+        try {
+          const r = await fetch(`${base}${path}.json`);
+          if (!r.ok) return 0;
+          const j = await r.json();
+          return num(j.count);
+        } catch { return 0; }
+      }
+
+      async function run() {
+        let totalViews = 0, verifiedViews = 0;
+        // Throttle to ~6 concurrent requests.
+        let i = 0;
+        async function worker() {
+          while (i < rows.length) {
+            const row = rows[i++];
+            const path = row.getAttribute('data-path');
+            const c = await count(path);
+            const cell = row.querySelector('.views');
+            cell.textContent = c.toLocaleString();
+            cell.setAttribute('data-views', String(c));
+            totalViews += c;
+            const st = row.getAttribute('data-status');
+            if (st === 'verified' || st === 'corrected') verifiedViews += c;
+          }
+        }
+        await Promise.all(Array.from({ length: 6 }, worker));
+
+        // Traffic-weighted verified coverage.
+        const twc = totalViews ? Math.round((verifiedViews / totalViews) * 100) : 0;
+        const el = document.getElementById('twc');
+        if (el) el.textContent = totalViews ? `${twc}%` : 'n/a';
+        const note = document.getElementById('views-note');
+        if (note && totalViews) {
+          note.textContent = `${verifiedViews.toLocaleString()} of ${totalViews.toLocaleString()} pageviews land on a verified entry (${twc}%). Prioritize the high-traffic rows still marked unverified/flagged.`;
+        }
+
+        // Flag priority rows: needs-attention status AND above-median views.
+        const views = rows.map((r) => num(r.querySelector('.views').getAttribute('data-views'))).sort((a, b) => a - b);
+        const median = views.length ? views[Math.floor(views.length / 2)] : 0;
+        rows.forEach((r) => {
+          const v = num(r.querySelector('.views').getAttribute('data-views'));
+          const st = r.getAttribute('data-status');
+          const needs = st === 'unverified' || st === 'flagged' || st === 'stale';
+          if (needs && v > median && v > 0) r.setAttribute('data-priority', '1');
+        });
+      }
+
+      // Sort by views on header click.
+      const th = document.querySelector('th[data-sort="views"]');
+      if (th) th.addEventListener('click', () => {
+        const tbody = document.querySelector('#q-table tbody');
+        const sorted = Array.from(tbody.querySelectorAll('tr')).sort((a, b) =>
+          num(b.querySelector('.views').getAttribute('data-views')) -
+          num(a.querySelector('.views').getAttribute('data-views'))
+        );
+        sorted.forEach((r) => tbody.appendChild(r));
+      });
+
+      run();
+    })();
+  </script>
+</Base>
