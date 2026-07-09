@@ -6,8 +6,8 @@ legacyCategory: "Transportation Hub"
 period: "1920s-1960s"
 address: "Fancher Heights, East Wenatchee, WA 98802"
 coordinates:
-  lat: 47.415
-  lng: -120.2628
+  lat: 47.44306
+  lng: -120.28
 description: "On October 5, 1931, pilots Clyde Pangborn and Hugh Herndon Jr. completed aviation history when they belly-landed \"Miss Veedol\" at Fancher Field after the first non-stop trans-Pacific flight, 41 hours and 5,500 miles from Japan with no landing gear. Named for WWI pilot Major John T. Fancher who died here in 1928, this East Wenatchee airfield served civilian aviation through the 1960s before becoming the Fancher Heights subdivision. A 14-foot monument still marks the spot where two aviators changed the world."
 heroImage: null
 audio: "/audio/fancher-field---first-trans-pacific-landing-site.mp3"

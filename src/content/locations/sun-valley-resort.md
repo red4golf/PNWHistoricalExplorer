@@ -6,8 +6,8 @@ legacyCategory: "Recreation"
 period: "1936-Present"
 address: "Sun Valley, ID"
 coordinates:
-  lat: 43.6969
-  lng: -114.3544
+  lat: 43.6955502
+  lng: -114.3550525
 description: "Americas first destination ski resort that pioneered the modern ski industry and became a playground for Hollywood celebrities"
 heroImage: null
 audio: null

@@ -6,8 +6,8 @@ legacyCategory: "Maritime Heritage"
 period: "1962-Present (Maritime Heritage)"
 address: "1792 Marine Dr, Astoria, OR 97103"
 coordinates:
-  lat: 46.1878
-  lng: -123.8307
+  lat: 46.19
+  lng: -123.8239
 description: "Located in Astoria, this museum preserves the maritime heritage of the Columbia River and Pacific Northwest coast. Featuring the historic Lightship Columbia and extensive exhibits on the treacherous Columbia River Bar, known as the \"Graveyard of the Pacific.\""
 heroImage: null
 audio: null

@@ -6,8 +6,8 @@ legacyCategory: "International Diplomacy"
 period: "1859-1872"
 address: "San Juan Island, WA 98250"
 coordinates:
-  lat: 48.5355
-  lng: -123.0585
+  lat: 48.45583
+  lng: -122.98556
 description: "In 1859, an American farmer shot a British-owned pig on San Juan Island and nearly ignited a war between two nations. For the next 13 years, American soldiers and British Royal Marines maintained armed camps at opposite ends of the island while diplomats worked to resolve a border dispute that had simmered since the Oregon Treaty of 1846. The peaceful resolution set a precedent for international arbitration still cited today."
 heroImage: null
 audio: "/audio/san-juan-island---the-pig-war.mp3"

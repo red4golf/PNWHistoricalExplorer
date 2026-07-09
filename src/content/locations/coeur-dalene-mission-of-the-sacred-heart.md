@@ -6,8 +6,8 @@ legacyCategory: "Cultural Site"
 period: "Built 1850-1853"
 address: "Old Mission State Park, Cataldo, ID"
 coordinates:
-  lat: 47.5428
-  lng: -116.3567
+  lat: 47.5487
+  lng: -116.3582
 description: "Built in 1853, this is Idaho's oldest building and a National Historic Landmark. The mission served as a center for Catholic evangelization among the Coeur d'Alene tribe and represents the complex cultural exchanges between European missionaries and Native peoples."
 heroImage: null
 audio: null

@@ -6,8 +6,8 @@ legacyCategory: "Natural"
 period: "1930s"
 address: "4303 Sardine Creek Left Fork Rd, Gold Hill, OR"
 coordinates:
-  lat: 42.4919
-  lng: -123.0794
+  lat: 42.4931
+  lng: -123.0851
 description: "Mysterious natural phenomenon and roadside attraction that has puzzled visitors since the 1930s, representing Pacific Northwest geological oddities and tourist culture"
 heroImage: null
 audio: null

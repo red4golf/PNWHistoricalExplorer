@@ -6,8 +6,8 @@ legacyCategory: "Historic Landmark"
 period: "1943-Present"
 address: "Manhattan Project National Historical Park, Richland, WA 99354"
 coordinates:
-  lat: 46.6289
-  lng: -119.6408
+  lat: 46.63028
+  lng: -119.64722
 description: "The birthplace of the atomic age: a 586-square-mile secret city where 51,000 workers produced plutonium for the bombs that ended World War II, most never knowing what they were building. Home to the world's first full-scale nuclear reactor, a ghost airfield that never appeared on any map, and the B-17 bomber \"Day's Pay\" funded by workers' donated wages. Now a National Historical Park and the world's largest environmental cleanup project."
 heroImage: "/images/locations/hanford-secret-city-that-changed-the-world-hero.jpg"
 audio: "/audio/hanford-secret-city-that-changed-the-world.mp3"

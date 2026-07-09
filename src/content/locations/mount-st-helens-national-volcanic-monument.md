@@ -6,8 +6,8 @@ legacyCategory: "Natural Disaster"
 period: "1980-Present"
 address: "Mount St. Helens, WA 98616"
 coordinates:
-  lat: 46.2766
-  lng: -122.21695
+  lat: 46.1912
+  lng: -122.1944
 description: "At 8:32 a.m. on May 18, 1980, this mountain removed 1,300 feet of its own summit in the largest landslide ever recorded. Fifty-seven people died. Two hundred and thirty square miles of old-growth forest were leveled in minutes. What grew back is just as remarkable as what was destroyed."
 heroImage: "/images/locations/mount-st-helens-national-volcanic-monument-hero.jpg"
 audio: "/audio/mount-st-helens-national-volcanic-monument.mp3"

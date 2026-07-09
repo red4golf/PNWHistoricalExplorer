@@ -6,8 +6,8 @@ legacyCategory: "Indigenous Heritage"
 period: "Traditional-Present (Umatilla, Cayuse, Walla Walla)"
 address: "47106 Wildhorse Blvd, Pendleton, OR 97801"
 coordinates:
-  lat: 45.6678
-  lng: -118.7928
+  lat: 45.650953
+  lng: -118.670951
 description: "Located in Pendleton, Oregon, this world-class museum tells the story of the Confederated Tribes of Umatilla Indian Reservation through 10,000 years of history. The institute features immersive exhibits including the famous Treaty Council recreation and seasonal round displays."
 heroImage: null
 audio: null

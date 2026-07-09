@@ -6,8 +6,8 @@ legacyCategory: "Religious"
 period: "1980s"
 address: "Antelope, OR"
 coordinates:
-  lat: 44.9167
-  lng: -120.7333
+  lat: 44.842
+  lng: -120.482
 description: "Site of the controversial 1980s commune led by Bhagwan Shree Rajneesh, representing one of the most significant religious and social experiments in Pacific Northwest history"
 heroImage: null
 audio: null

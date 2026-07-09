@@ -6,8 +6,8 @@ legacyCategory: "Agricultural Heritage"
 period: "1940s - Present"
 address: "Skagit Valley, WA"
 coordinates:
-  lat: 48.4228
-  lng: -122.3374
+  lat: 48.4154
+  lng: -122.4009
 description: "Beginning in the 1940s, Dutch immigrants transformed the fertile Skagit Valley into one of North America's premier tulip growing regions. This agricultural heritage represents the successful adaptation of Old World farming traditions to Pacific Northwest conditions."
 heroImage: null
 audio: null

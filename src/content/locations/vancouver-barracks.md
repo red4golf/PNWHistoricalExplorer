@@ -6,8 +6,8 @@ legacyCategory: "Military Installation"
 period: "1849-Present"
 address: "1001 E Evergreen Blvd, Vancouver, WA 98661"
 coordinates:
-  lat: 45.6227
-  lng: -122.6615
+  lat: 45.6269508
+  lng: -122.6630711
 description: "For 162 years (1849-2011), Vancouver Barracks served as the first and most enduring U.S. Army post in the Pacific Northwest. Ulysses S. Grant managed supplies here as a captain in 1852, decades before leading Union armies to victory. George C. Marshall commanded here in the 1930s, years before authoring the Marshall Plan that rebuilt Europe. From this bluff above the Columbia River, the Army directed all military operations in Oregon, Washington, and Alaska, the Indian Wars, World War I's Spruce Production Division, WWII mobilization, and Cold War readiness. Today the 5.74-acre National Cemetery holds 1,500+ graves including four Medal of Honor recipients and Buffalo Soldiers, while Officers Row's Victorian homes stand as monuments to the generals who shaped American history."
 heroImage: null
 audio: "/audio/vancouver-barracks.mp3"

@@ -6,8 +6,8 @@ legacyCategory: "Industrial Heritage"
 period: "20th Century"
 address: "Georgetown, Seattle, WA"
 coordinates:
-  lat: 47.5419
-  lng: -122.3249
+  lat: 47.5410314
+  lng: -122.3376578
 description: "Historic marker commemorating the original site of Boeing's first manufacturing facility, the famous Red Barn where William Boeing built his first aircraft in 1916. The actual barn was relocated to the Museum of Flight in 1975, but this Georgetown location remains the birthplace of the Pacific Northwest aerospace industry."
 heroImage: null
 audio: "/audio/boeing-red-barn-historic-site-former-location.mp3"

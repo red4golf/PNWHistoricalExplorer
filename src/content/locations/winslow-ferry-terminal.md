@@ -6,8 +6,8 @@ legacyCategory: "Transportation Hub"
 period: "Established 1951"
 address: "Winslow Way NE, Bainbridge Island, WA"
 coordinates:
-  lat: 47.6262
-  lng: -122.5194
+  lat: 47.622339
+  lng: -122.509617
 description: "The historic gateway to Bainbridge Island, serving as the primary connection to Seattle since 1951. This terminal has witnessed countless arrivals and departures, connecting island residents to the mainland for over 70 years."
 heroImage: "/images/locations/winslow-ferry-terminal-hero.jpg"
 audio: "/audio/winslow-ferry-terminal.mp3"

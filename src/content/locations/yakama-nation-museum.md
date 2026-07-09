@@ -4,10 +4,10 @@ slug: "yakama-nation-museum"
 category: "Indigenous Heritage"
 legacyCategory: "Indigenous Heritage"
 period: "Traditional-Present (Yakama Nation)"
-address: "280 Buster Rd, Toppenish, WA 98948"
+address: "100 Spiel-yi Loop, Toppenish, WA 98948"
 coordinates:
-  lat: 46.3734
-  lng: -120.3089
+  lat: 46.3798652
+  lng: -120.342476
 description: "Located in Toppenish, this 12,000-square-foot museum preserves and interprets the history and culture of the Yakama Nation's various tribes. The cultural center includes a heritage theater, library, and winter lodge, offering comprehensive insights into Pacific Northwest Native American heritage."
 heroImage: null
 audio: null

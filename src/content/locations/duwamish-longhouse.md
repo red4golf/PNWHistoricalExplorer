@@ -6,8 +6,8 @@ legacyCategory: "Cultural"
 period: "Contemporary"
 address: "4705 W Marginal Way SW, Seattle, WA"
 coordinates:
-  lat: 47.5338
-  lng: -122.3531
+  lat: 47.5609
+  lng: -122.352
 description: "Cultural center representing the resilience and continuing presence of Seattle's original inhabitants, the Duwamish people, in their ancestral homeland"
 heroImage: null
 audio: null

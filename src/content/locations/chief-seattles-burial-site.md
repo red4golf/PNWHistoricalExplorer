@@ -4,10 +4,10 @@ slug: "chief-seattles-burial-site"
 category: "Indigenous Heritage"
 legacyCategory: "Indigenous Heritage"
 period: "1866-Present (Chief Seattle Era)"
-address: "18730 Division Ave NE, Suquamish, WA 98392"
+address: "7066 NE South Street, Suquamish, WA 98392"
 coordinates:
-  lat: 47.7324
-  lng: -122.5644
+  lat: 47.73034
+  lng: -122.55483
 description: "Located in Suquamish on the Kitsap Peninsula, this sacred site honors Chief Seattle (1786-1866), the Suquamish and Duwamish leader for whom Seattle was named. Behind St. Peter's Catholic Mission, the gravesite is honored annually during Chief Seattle Days and represents Native American legacy in the Pacific Northwest."
 heroImage: null
 audio: null

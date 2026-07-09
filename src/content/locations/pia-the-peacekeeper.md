@@ -6,8 +6,8 @@ legacyCategory: "Public Art"
 period: "2023-Present"
 address: "Sakai Park, Bainbridge Island, WA 98110"
 coordinates:
-  lat: 47.6307
-  lng: -122.5151
+  lat: 47.63675
+  lng: -122.521761
 description: "An 18-foot-tall troll sculpture created by Copenhagen artist Thomas Dambo from recycled wood, standing in the enchanting woods of Sakai Park. Part of the Northwest Trolls: Way of the Bird King project, Pia represents community collaboration, environmental stewardship, and the power of public art."
 heroImage: "/images/locations/pia-the-peacekeeper-hero.jpg"
 audio: "/audio/pia-the-peacekeeper.mp3"

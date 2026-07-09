@@ -6,8 +6,8 @@ legacyCategory: "Military History"
 period: "1833-Present (Hudson's Bay Era)"
 address: "5519 Sheridan Ave E, Tacoma, WA 98404"
 coordinates:
-  lat: 47.2047
-  lng: -122.5144
+  lat: 47.303396
+  lng: -122.533052
 description: "The first European settlement on Puget Sound, this reconstructed Hudson's Bay Company trading post from 1833 offers immersive living history experiences with costumed interpreters demonstrating 19th-century frontier life."
 heroImage: null
 audio: null

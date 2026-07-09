@@ -6,8 +6,8 @@ legacyCategory: "Maritime Heritage"
 period: "1906-Present (Ferry Era)"
 address: "608 Front St, Mukilteo, WA 98275"
 coordinates:
-  lat: 47.9461
-  lng: -122.3047
+  lat: 47.94861
+  lng: -122.30444
 description: "Built in 1906 for general navigation, this charming lighthouse became a beacon for the Mukilteo-Whidbey Island ferry route and Possession Sound navigation. Now a beloved community landmark, it houses maritime artifacts and offers panoramic views of Puget Sound and the Olympic Mountains."
 heroImage: null
 audio: null

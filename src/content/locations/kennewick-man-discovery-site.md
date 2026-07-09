@@ -6,8 +6,8 @@ legacyCategory: "Archaeological"
 period: "Prehistoric"
 address: "Columbia Park, Kennewick, WA"
 coordinates:
-  lat: 46.2112
-  lng: -119.1372
+  lat: 46.2280097
+  lng: -119.1825974
 description: "Archaeological site where the roughly 8,500-year-old Kennewick Man was discovered, sparking major debates about early American prehistory"
 heroImage: null
 audio: "/audio/kennewick-man-discovery-site.mp3"

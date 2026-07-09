@@ -6,8 +6,8 @@ legacyCategory: "Indigenous Heritage"
 period: "Traditional-Present (Warm Springs Confederated Tribes)"
 address: "2189 Hwy 26, Warm Springs, OR 97761"
 coordinates:
-  lat: 44.7589
-  lng: -121.257
+  lat: 44.7630638
+  lng: -121.2505094
 description: "This award-winning tribal museum demonstrates 10,000 years of history from the Confederated Tribes of Warm Springs. Featuring traditional songs, languages, and crafts, it preserves the heritage of the Wasco, Warm Springs, and Paiute peoples of central Oregon."
 heroImage: null
 audio: null

@@ -6,8 +6,8 @@ legacyCategory: "Pioneer History"
 period: "1854-1893"
 address: "Port Madison, Bainbridge Island, WA 98110"
 coordinates:
-  lat: 47.7043
-  lng: -122.5218
+  lat: 47.72521
+  lng: -122.525797
 description: "Vanished 19th-century mill town on north Bainbridge Island where George Meigs ran one of Puget Sound's great sawmills, and where settlers renamed Slaughter County to Kitsap County in 1857."
 heroImage: null
 audio: null

@@ -6,8 +6,8 @@ legacyCategory: "Natural"
 period: "Ancient-Present"
 address: "Cave Junction, OR"
 coordinates:
-  lat: 42.0983
-  lng: -123.4058
+  lat: 42.09556
+  lng: -123.40583
 description: "Ancient limestone cave system known as the \"Marble Halls of Oregon,\" representing millions of years of geological processes and early tourism development"
 heroImage: null
 audio: null

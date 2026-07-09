@@ -6,8 +6,8 @@ legacyCategory: "Natural"
 period: "Ancient-Present"
 address: "Olympic National Park, WA"
 coordinates:
-  lat: 47.9703
-  lng: -123.6736
+  lat: 47.9765393
+  lng: -123.6893553
 description: "Historic natural hot springs and resort destination in Olympic National Park, representing the evolution from Native American sacred sites to commercial tourism"
 heroImage: null
 audio: null

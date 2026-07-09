@@ -6,8 +6,8 @@ legacyCategory: "Cultural"
 period: "1890s-1900s"
 address: "1001 Alaskan Way, Pier 54, Seattle, WA 98104"
 coordinates:
-  lat: 47.6055
-  lng: -122.34
+  lat: 47.60417
+  lng: -122.33944
 description: "Since 1899, this iconic Seattle waterfront institution has been a cabinet of wonders, museum, trading post, and gateway to Pacific Northwest culture. Founded by J.E. \"Daddy\" Standley, it became one of Seattle's \"Seven Wonders\" and helped establish the city's identity as the Gateway to Alaska."
 heroImage: "/images/locations/ye-olde-curiosity-shop-hero.jpg"
 audio: "/audio/ye-olde-curiosity-shop.mp3"

@@ -6,8 +6,8 @@ legacyCategory: "Transportation Hub"
 period: "1945-1983"
 address: "2997 160th Ave SE, Bellevue, WA 98008 (Eastgate)"
 coordinates:
-  lat: 47.576
-  lng: -122.138
+  lat: 47.583
+  lng: -122.131
 description: "A beloved general aviation airport that served the Eastside community from 1945 to 1983, where weekend pilots gathered for the joy of flying and stories of \"$100 hamburger\" runs to coastal cafes. Home to Seattle Flight, the Pacific Northwest's largest flight school with over 40 aircraft, this folksy airfield embodied the golden age of accessible aviation before urban sprawl closed its runways forever."
 heroImage: null
 audio: "/audio/bellevue-airfield.mp3"

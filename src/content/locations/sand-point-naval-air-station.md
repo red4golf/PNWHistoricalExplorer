@@ -6,8 +6,8 @@ legacyCategory: "Transportation Hub"
 period: "1920-1970"
 address: "7400 Sand Point Way NE, Seattle, WA 98115 (Magnuson Park)"
 coordinates:
-  lat: 47.6815
-  lng: -122.2574
+  lat: 47.6808
+  lng: -122.2481
 description: "Seattle's legendary naval aviation hub served nearly 50 years (1920-1970), hosting the first around-the-world flight in 1924, training thousands during WWII as a major Pacific Theater headquarters, and welcoming Charles Lindbergh in his Spirit of St. Louis. With over 5,600 personnel at its WWII peak, this lakeside base became one of only three West Coast naval air stations. Today its Art Deco hangars stand preserved in Magnuson Park, silent witnesses to an era when Seattle skies filled with patrol boats and flying boats defending the Pacific."
 heroImage: null
 audio: null

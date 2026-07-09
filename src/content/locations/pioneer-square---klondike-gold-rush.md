@@ -6,8 +6,8 @@ legacyCategory: "Economic History"
 period: "1897-1900"
 address: "Pioneer Square, Seattle, WA 98104"
 coordinates:
-  lat: 47.6046
-  lng: -122.332
+  lat: 47.5998
+  lng: -122.3324
 description: "The heart of Seattle's transformation during the Klondike Gold Rush. When the steamship Portland arrived on July 17, 1897, with its \"ton of gold,\" Seattle positioned itself as the Gateway to the Klondike and became a major city virtually overnight."
 heroImage: "/images/locations/pioneer-square---klondike-gold-rush-hero.png"
 audio: "/audio/pioneer-square---klondike-gold-rush.mp3"

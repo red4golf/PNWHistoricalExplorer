@@ -6,8 +6,8 @@ legacyCategory: "Historical"
 period: "1872-1973 (Territorial/Statehood Era)"
 address: "2445 Old Idaho Pen Rd, Boise, ID 83712"
 coordinates:
-  lat: 43.5584
-  lng: -116.2037
+  lat: 43.6027
+  lng: -116.162
 description: "This former territorial and state prison operated from 1872-1973, housing some of the American West's most notorious criminals. The preserved cellblocks, gallows, and prison facilities offer unique insights into frontier justice and the evolution of America's penal system."
 heroImage: null
 audio: null

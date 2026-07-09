@@ -6,8 +6,8 @@ legacyCategory: "Natural Heritage"
 period: "Ancient - Present"
 address: "Snoqualmie, WA"
 coordinates:
-  lat: 47.5437
-  lng: -121.837
+  lat: 47.5415
+  lng: -121.8373
 description: "This 268-foot waterfall has been sacred to the Snoqualmie people since time immemorial. Known as the place where the first salmon was created, it later became the site of the world's first underground power plant in 1898, pioneering hydroelectric power in the Pacific Northwest."
 heroImage: null
 audio: null

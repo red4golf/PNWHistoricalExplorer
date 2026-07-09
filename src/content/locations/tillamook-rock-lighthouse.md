@@ -6,8 +6,8 @@ legacyCategory: "Maritime"
 period: "1881"
 address: "Tillamook Rock, OR"
 coordinates:
-  lat: 45.9342
-  lng: -123.9675
+  lat: 45.9375
+  lng: -124.019
 description: "Remote lighthouse built on an isolated Pacific Ocean rock, representing the extreme engineering challenges and maritime safety efforts of the Oregon coast"
 heroImage: null
 audio: "/audio/tillamook-rock-lighthouse.mp3"

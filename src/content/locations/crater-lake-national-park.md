@@ -6,8 +6,8 @@ legacyCategory: "Natural Heritage"
 period: "Formed ~7,700 years ago"
 address: "Crater Lake National Park, OR"
 coordinates:
-  lat: 42.944
-  lng: -122.11
+  lat: 42.91183
+  lng: -122.14807
 description: "Formed by the collapse of Mount Mazama around 7,700 years ago, Crater Lake is one of the most pristine and deepest lakes in the world. The lake sits within the caldera of the ancient volcano and is renowned for its deep blue color and crystal-clear water."
 heroImage: "/images/locations/crater-lake-national-park-hero.jpg"
 audio: "/audio/crater-lake-national-park.mp3"

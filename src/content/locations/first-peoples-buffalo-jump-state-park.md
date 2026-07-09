@@ -6,8 +6,8 @@ legacyCategory: "Indigenous Heritage"
 period: "500-1500 CE (Ancient/Traditional)"
 address: "342 Ulm Vaughn Rd, Ulm, MT 59485"
 coordinates:
-  lat: 47.4167
-  lng: -111.1833
+  lat: 47.48972
+  lng: -111.52917
 description: "One of the largest and best-preserved buffalo jumps in North America, this site saw its documented main use by Plains Indian tribes from roughly 900 to 1500 CE. Known to the Blackfeet as \"Pishkun\" (deep blood kettle), it demonstrates sophisticated hunting techniques that sustained Native communities for centuries."
 heroImage: null
 audio: null

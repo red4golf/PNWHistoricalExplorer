@@ -6,8 +6,8 @@ legacyCategory: "Natural Landmark"
 period: "1951-Present"
 address: "7571 NE Dolphin Dr, Bainbridge Island, WA 98110"
 coordinates:
-  lat: 47.6519
-  lng: -122.5547
+  lat: 47.70833
+  lng: -122.54778
 description: "In 1951, timber baron Prentice Bloedel, son of Julius Bloedel who built one of the world's largest forest-products companies, bought 67 acres of second-growth forest on Bainbridge Island (the property later grew to roughly 140 acres) and spent 37 years transforming logged timberland into a masterpiece garden. Working with legendary landscape architects Thomas Church, Fujitaro Kubota, and Richard Haag, he created a Japanese Garden ranked among America's top ten, a moss garden with 40+ species, and a reflection pool framed by yew hedges in a forest clearing. Opened to the public in 1988, the Reserve represents redemption: a timber magnate healing the scars his industry left behind."
 heroImage: null
 audio: null

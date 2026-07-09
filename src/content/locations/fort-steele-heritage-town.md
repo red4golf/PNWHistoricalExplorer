@@ -6,8 +6,8 @@ legacyCategory: "Historical"
 period: "1864-Present"
 address: "Fort Steele, BC"
 coordinates:
-  lat: 49.6153
-  lng: -115.6464
+  lat: 49.62704
+  lng: -115.63317
 description: "Former North West Mounted Police post and boom town that became a preserved heritage site representing law enforcement and settlement in the Canadian Rockies"
 heroImage: null
 audio: null

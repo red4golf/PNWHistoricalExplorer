@@ -6,8 +6,8 @@ legacyCategory: "Cultural Heritage"
 period: "1883-1922"
 address: "Port Blakely, Bainbridge Island, WA 98110"
 coordinates:
-  lat: 47.5951
-  lng: -122.5234
+  lat: 47.5931649
+  lng: -122.5241539
 description: "From 1883 to 1922, Yama Village was home to one of the largest Japanese communities in the Pacific Northwest. Over 300 Japanese mill workers and their families built a vibrant, self-contained world of gardens, temples, and baseball fields on this hillside above Port Blakely, a community whose story is inseparable from the larger arc of Japanese American history in the region."
 heroImage: null
 audio: "/audio/yama-village-historic-site.mp3"

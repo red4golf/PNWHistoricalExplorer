@@ -6,8 +6,8 @@ legacyCategory: "Cultural Heritage"
 period: "1884-1886 (Victorian Era)"
 address: "143 M St, Eureka, CA 95501"
 coordinates:
-  lat: 40.8021
-  lng: -124.1637
+  lat: 40.80562
+  lng: -124.15848
 description: "Regarded as one of the premier examples of Queen Anne Victorian architecture in America, this ornate lumber baron mansion in Eureka was built between 1884-1886. Called \"the most grand Victorian home in America,\" it shows the wealth of California's timber industry."
 heroImage: null
 audio: null

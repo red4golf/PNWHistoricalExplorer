@@ -6,8 +6,8 @@ legacyCategory: "Industrial Heritage"
 period: "1864-1922"
 address: "Port Blakely area, Bainbridge Island, WA"
 coordinates:
-  lat: 47.59
-  lng: -122.5017
+  lat: 47.5963696
+  lng: -122.5180413
 description: "Once the world's largest lumber mill, this site was the economic engine of early Bainbridge Island. The mill employed hundreds of workers and produced lumber that helped build cities across the Pacific Northwest and beyond."
 heroImage: null
 audio: null

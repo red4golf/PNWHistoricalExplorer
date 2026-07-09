@@ -6,8 +6,8 @@ legacyCategory: "Historical"
 period: "1849-1880s (Gold Rush Era)"
 address: "15312 CA-299, Shasta, CA 96087"
 coordinates:
-  lat: 40.5991
-  lng: -122.4881
+  lat: 40.599433
+  lng: -122.492355
 description: "Once known as the \"Queen City\" of California's northern mining district, this preserved Gold Rush town was a major supply center for miners and mountain communities from 1849-1880s. The restored courthouse and historic buildings tell the story of California's northern gold fields."
 heroImage: null
 audio: null
