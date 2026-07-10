@@ -1,14 +1,15 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import AudioPlayer from '../../components/AudioPlayer.astro';
 import { categoryByName, slugForCategory } from '../../lib/categories';
 import { href } from '../../lib/url';
 import { withAffiliateTag } from '../../lib/amazon';
 import { deriveQuality, entryContentHash } from '../../lib/quality';
+import { publishedLocations } from '../../lib/publish';
 
 export async function getStaticPaths() {
-  const locations = await getCollection('locations');
+  const locations = await publishedLocations();
   return locations.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
 }
 
@@ -130,7 +131,7 @@ const jsonLd = {
             <ul class="book-list">
               {d.books.map((b) => (
                 <li>
-                  {b.url ? <a href={withAffiliateTag(b.url)} rel="noopener nofollow sponsored" target="_blank">{b.title}</a> : b.title}
+                  {b.url ? <a href={withAffiliateTag(b.url)} rel="noopener nofollow sponsored" target="_blank" data-affiliate>{b.title}</a> : b.title}
                   {b.author && <span class="author">{b.author}</span>}
                 </li>
               ))}
@@ -140,4 +141,17 @@ const jsonLd = {
       </aside>
     </div>
   </section>
+
+  <script is:inline>
+    // Engagement: count clicks on "Further reading" (affiliate) links.
+    document.addEventListener(
+      'click',
+      function (e) {
+        var t = e.target;
+        var a = t && t.closest ? t.closest('a[data-affiliate]') : null;
+        if (a && window.pnwTrack) window.pnwTrack('affiliate-click');
+      },
+      { passive: true }
+    );
+  </script>
 </Base>

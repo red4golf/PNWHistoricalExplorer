@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import { base, href } from '../lib/url';
-import { GOATCOUNTER_CODE } from '../config';
+import { GOATCOUNTER_CODE, GOOGLE_SITE_VERIFICATION } from '../config';
 
 // Only emit analytics on the real production build (not dev/preview), and only
 // when a GoatCounter code is configured. import.meta.env.PROD is true in builds.
@@ -49,6 +49,10 @@ const current = (h: string) => (h === '/' ? (path === '/' ? 'page' : undefined) 
     <link rel="manifest" href={href('/manifest.webmanifest')} />
     <meta name="theme-color" content="#1f3d2b" />
 
+    {GOOGLE_SITE_VERIFICATION && (
+      <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
+    )}
+
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={ogType} />
@@ -66,6 +70,20 @@ const current = (h: string) => (h === '/' ? (path === '/' ? 'page' : undefined) 
         async
         src="//gc.zgo.at/count.js"></script>
     )}
+
+    {/* Lightweight engagement tracking. Records in-app actions (audio plays,
+        affiliate clicks, "near me", searches, 404s) as GoatCounter events.
+        Safe no-op when analytics is off or the counter script hasn't loaded. */}
+    <script is:inline>
+      window.pnwTrack = function (name) {
+        try {
+          var gc = window.goatcounter;
+          if (gc && typeof gc.count === 'function') {
+            gc.count({ path: 'evt-' + name, title: 'event: ' + name, event: true });
+          }
+        } catch (e) {}
+      };
+    </script>
   </head>
   <body>
     <header class="site-header" data-pagefind-ignore>

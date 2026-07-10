@@ -1,11 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import LocationCard from '../components/LocationCard.astro';
 import { CATEGORIES } from '../lib/categories';
 import { href } from '../lib/url';
+import { publishedLocations } from '../lib/publish';
 
-const locations = await getCollection('locations');
+const locations = await publishedLocations();
 const total = locations.length;
 const audioCount = locations.filter((l) => l.data.audio).length;
 

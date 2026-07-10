@@ -1,0 +1,197 @@
+---
+import Base from '../../layouts/Base.astro';
+import { href } from '../../lib/url';
+import { publishedLocations } from '../../lib/publish';
+import { auditSite, type IssueLevel } from '../../lib/audit';
+import { GOOGLE_SITE_VERIFICATION } from '../../config';
+
+const locations = await publishedLocations();
+const audit = auditSite(locations);
+const total = locations.length;
+
+// Live URLs for the "test in PageSpeed" links (real, current pages).
+const liveHome = new URL(href('/'), Astro.site).href;
+const liveMap = new URL(href('/map'), Astro.site).href;
+const sample = locations.find((l) => l.data.heroImage) ?? locations[0];
+const liveSample = sample ? new URL(href(`/locations/${sample.data.slug}`), Astro.site).href : liveHome;
+const psi = (u: string) => `https://pagespeed.web.dev/analysis?url=${encodeURIComponent(u)}`;
+
+const ogPct = total ? Math.round((audit.ogImageCount / total) * 100) : 0;
+const cleanPct = total ? Math.round((audit.totals.clean / total) * 100) : 0;
+
+const levelColor: Record<IssueLevel, string> = {
+  error: '#b0392f',
+  warn: '#e0a52e',
+  info: '#3a9bdc',
+};
+const worstColor = (w: string) =>
+  w === 'error' ? '#b0392f' : w === 'warn' ? '#e0a52e' : w === 'info' ? '#3a9bdc' : '#1a7f5a';
+
+const withIssues = audit.entries.filter((e) => e.worst !== 'ok');
+---
+
+<Base title="SEO health · Admin · PNW Historical Explorer" description="Build-time SEO and integrity audit">
+  <meta slot="head" name="robots" content="noindex, nofollow" />
+
+  <section class="seo container">
+    <header class="head">
+      <p class="crumb"><a href={href('/admin')}>← Admin</a></p>
+      <h1>SEO &amp; discoverability health</h1>
+      <p class="muted">
+        A build-time audit of every published page: meta descriptions, titles, social images,
+        structured data, and internal-link / asset integrity. Regenerated on each deploy.
+      </p>
+    </header>
+
+    <!-- Summary tiles -->
+    <div class="tiles">
+      <div class="tile err"><span class="big">{audit.totals.errors}</span><span class="lbl">Errors</span></div>
+      <div class="tile warn"><span class="big">{audit.totals.warnings}</span><span class="lbl">Warnings</span></div>
+      <div class="tile info"><span class="big">{audit.totals.infos}</span><span class="lbl">Suggestions</span></div>
+      <div class="tile ok"><span class="big">{cleanPct}%</span><span class="lbl">No warnings ({audit.totals.clean}/{total})</span></div>
+      <div class="tile"><span class="big">{ogPct}%</span><span class="lbl">Have a social image</span></div>
+    </div>
+
+    <div class="grid2">
+      <!-- Issues by type -->
+      <div class="card">
+        <h3>Issues by type</h3>
+        {audit.byCode.length === 0 ? (
+          <p class="muted">No issues found — every page passes the audit. 🎉</p>
+        ) : (
+          <table class="mini">
+            <tbody>
+              {audit.byCode.map((c) => (
+                <tr>
+                  <td><span class="dot" style={`background:${levelColor[c.level]}`}></span>{c.level}</td>
+                  <td class="c num">{c.count}</td>
+                  <td class="msg">{c.msg}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </div>
+
+      <!-- Search Console -->
+      <div class="card">
+        <h3>Google Search Console {GOOGLE_SITE_VERIFICATION ? <span class="pill ok">verified tag set</span> : <span class="pill warn">not set up</span>}</h3>
+        <p class="muted small">
+          Search Console is the only source of what Google actually shows for your site —
+          impressions, clicks, average position, and indexing errors. Free.
+        </p>
+        {GOOGLE_SITE_VERIFICATION ? (
+          <p class="small">The <code>google-site-verification</code> tag is present on every page. If Search Console still shows “unverified,” re-check the token matches.</p>
+        ) : (
+          <ol class="steps small">
+            <li>Open <a href="https://search.google.com/search-console" target="_blank" rel="noopener">Search Console</a> → add a <strong>URL-prefix</strong> property for <code>{new URL(href('/'), Astro.site).href}</code>.</li>
+            <li>Choose the <strong>HTML tag</strong> method and copy the <code>content</code> value.</li>
+            <li>Set it as the repo variable <code>PUBLIC_GOOGLE_SITE_VERIFICATION</code> and redeploy — the tag then appears site-wide.</li>
+            <li>Back in Search Console, click <strong>Verify</strong>, then submit <code>{new URL(href('/sitemap-index.xml'), Astro.site).href}</code> under Sitemaps.</li>
+          </ol>
+        )}
+      </div>
+    </div>
+
+    <!-- Core Web Vitals -->
+    <div class="card">
+      <h3>Performance &amp; Core Web Vitals</h3>
+      <p class="muted small">
+        Lighthouse / CWV must be measured against the live site, so this links straight into
+        Google PageSpeed Insights for representative pages. Aim for LCP &lt; 2.5s, CLS &lt; 0.1, INP &lt; 200ms.
+      </p>
+      <div class="psi">
+        <a class="psi-btn" href={psi(liveHome)} target="_blank" rel="noopener">Test the homepage →</a>
+        <a class="psi-btn" href={psi(liveMap)} target="_blank" rel="noopener">Test the map →</a>
+        <a class="psi-btn" href={psi(liveSample)} target="_blank" rel="noopener">Test a location page →</a>
+      </div>
+    </div>
+
+    <!-- Site-wide configuration -->
+    <div class="card">
+      <h3>Site-wide configuration</h3>
+      <ul class="checks">
+        <li><span class="ok-i">✓</span> Canonical URL + Open Graph / Twitter card tags on every page.</li>
+        <li><span class="ok-i">✓</span> XML sitemap generated at <code>/sitemap-index.xml</code> (admin pages excluded).</li>
+        <li><span class="ok-i">✓</span> <code>robots.txt</code> present; <code>/admin</code> disallowed &amp; noindexed.</li>
+        <li><span class="ok-i">✓</span> Location pages emit <code>TouristAttraction</code> JSON-LD structured data.</li>
+        <li><span class="info-i">•</span> Every page title carries the “ — PNW Historical Explorer” suffix. Good for branding; it does push most titles past ~60 chars, so the site name may be clipped in results. Fine as a deliberate choice.</li>
+      </ul>
+    </div>
+
+    <!-- Per-entry issues -->
+    <h2>Pages needing attention <span class="muted">({withIssues.length})</span></h2>
+    {withIssues.length === 0 ? (
+      <p class="muted">Nothing outstanding — every published page is clean.</p>
+    ) : (
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Page</th><th>Level</th><th>Issues</th></tr>
+          </thead>
+          <tbody>
+            {withIssues.map((e) => (
+              <tr>
+                <td class="ent"><a href={href(`/locations/${e.slug}`)}>{e.title}</a><span class="cat">{e.category}</span></td>
+                <td><span class="badge" style={`background:${worstColor(e.worst)}`}>{e.worst}</span></td>
+                <td>
+                  <ul class="ilist">
+                    {e.issues.map((i) => (
+                      <li><span class="dot" style={`background:${levelColor[i.level]}`}></span>{i.msg}</li>
+                    ))}
+                  </ul>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
+  </section>
+
+  <style>
+    .seo { padding: 24px 0 64px; }
+    .head h1 { margin: 4px 0; }
+    .crumb a { color: #5b6b7a; text-decoration: none; font-size: 14px; }
+    .muted { color: #5b6b7a; }
+    .small { font-size: 13px; }
+    h2 { margin: 28px 0 10px; }
+    .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin: 16px 0; }
+    .tile { background: #fff; border: 1px solid #e3e8ee; border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
+    .tile .big { font-size: 24px; font-weight: 800; line-height: 1.1; }
+    .tile .lbl { font-size: 12px; color: #5b6b7a; }
+    .tile.err { border-left: 4px solid #b0392f; }
+    .tile.warn { border-left: 4px solid #e0a52e; }
+    .tile.info { border-left: 4px solid #3a9bdc; }
+    .tile.ok { border-left: 4px solid #1a7f5a; }
+    .card { background: #fff; border: 1px solid #e3e8ee; border-radius: 12px; padding: 14px 16px; margin-top: 14px; }
+    .card h3 { margin: 0 0 8px; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 760px) { .grid2 { grid-template-columns: 1fr; } }
+    .pill { font-size: 11px; padding: 2px 8px; border-radius: 999px; margin-left: 6px; vertical-align: middle; }
+    .pill.ok { background: #d6f0dd; color: #1a5e40; }
+    .pill.warn { background: #ffe8a3; color: #6b5300; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .mini td { padding: 6px 8px; border-bottom: 1px solid #eef2f6; vertical-align: top; }
+    .mini .num { font-weight: 700; font-variant-numeric: tabular-nums; }
+    .table-wrap { overflow-x: auto; border: 1px solid #e3e8ee; border-radius: 10px; margin-top: 4px; }
+    th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid #eef2f6; vertical-align: top; }
+    th { background: #f6f8fa; font-size: 12px; text-transform: uppercase; letter-spacing: .03em; color: #5b6b7a; }
+    td.c { text-align: center; }
+    .ent a { font-weight: 600; color: #16202a; text-decoration: none; }
+    .ent .cat { display: block; font-size: 11px; color: #8391a0; }
+    .badge { color: #fff; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; text-transform: capitalize; }
+    .ilist, .checks, .steps { margin: 0; padding-left: 0; list-style: none; }
+    .ilist li, .checks li { padding: 3px 0; font-size: 13.5px; }
+    .steps { padding-left: 18px; list-style: decimal; }
+    .steps li { padding: 3px 0; }
+    .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 7px; vertical-align: middle; }
+    .msg { color: #445; }
+    .ok-i { color: #1a7f5a; font-weight: 800; margin-right: 6px; }
+    .info-i { color: #3a9bdc; font-weight: 800; margin-right: 6px; }
+    .psi { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+    .psi-btn { background: #16202a; color: #fff; text-decoration: none; padding: 8px 14px; border-radius: 8px; font-size: 13.5px; font-weight: 600; }
+    .psi-btn:hover { background: #2b3947; }
+    code { background: #f1f5f2; padding: .1rem .35rem; border-radius: 5px; font-size: .85em; }
+  </style>
+</Base>

@@ -1,0 +1,227 @@
+---
+import Base from '../../layouts/Base.astro';
+import { href } from '../../lib/url';
+import { allLocations } from '../../lib/publish';
+import { deriveQuality, entryContentHash } from '../../lib/quality';
+
+const locations = await allLocations();
+const now = new Date();
+
+type Row = {
+  title: string;
+  category: string;
+  path: string;
+  tokens: string[];
+  needsImage: boolean;
+  needsAudio: boolean;
+  needsVerify: boolean;
+  needsBooks: boolean;
+  draft: boolean;
+  scheduled: boolean;
+  ready: boolean;
+  grade: string;
+  gradeColor: string;
+  statusLabel: string;
+  statusColor: string;
+  lastChecked: string | null;
+};
+
+const rows: Row[] = locations
+  .map((l) => {
+    const d = l.data;
+    const q = deriveQuality(d.factcheck, entryContentHash(l));
+
+    const needsImage = !d.heroImage;
+    const needsAudio = !d.audio; // optional enrichment, not a publish blocker
+    const needsVerify = q.status !== 'verified' && q.status !== 'corrected';
+    const needsBooks = (d.books?.length ?? 0) === 0;
+    const draft = Boolean(d.draft);
+    const scheduled = Boolean(d.publishDate && new Date(d.publishDate) > now);
+    // "Ready" = live-worthy: has an image, sources verified, has further reading,
+    // and not held back as a draft. Audio is optional, so it doesn't gate this.
+    const ready = !needsImage && !needsVerify && !needsBooks && !draft;
+
+    const tokens: string[] = [];
+    if (needsImage) tokens.push('image');
+    if (needsAudio) tokens.push('audio');
+    if (needsVerify) tokens.push('verify');
+    if (needsBooks) tokens.push('books');
+    if (draft) tokens.push('draft');
+    if (scheduled) tokens.push('scheduled');
+    if (ready) tokens.push('ready');
+
+    const statusLabel = draft ? 'Draft' : scheduled ? 'Scheduled' : 'Live';
+    const statusColor = draft ? '#8391a0' : scheduled ? '#8a5cd0' : '#1a7f5a';
+
+    return {
+      title: d.title,
+      category: d.category,
+      path: href(`/locations/${d.slug}`),
+      tokens,
+      needsImage,
+      needsAudio,
+      needsVerify,
+      needsBooks,
+      draft,
+      scheduled,
+      ready,
+      grade: q.grade,
+      gradeColor: q.color,
+      statusLabel,
+      statusColor,
+      lastChecked: d.factcheck?.lastChecked ?? null,
+    };
+  })
+  .sort((a, b) => Number(a.ready) - Number(b.ready) || b.tokens.length - a.tokens.length || a.title.localeCompare(b.title));
+
+const total = rows.length;
+const count = (fn: (r: Row) => boolean) => rows.filter(fn).length;
+const stats = {
+  image: count((r) => r.needsImage),
+  audio: count((r) => r.needsAudio),
+  verify: count((r) => r.needsVerify),
+  books: count((r) => r.needsBooks),
+  draft: count((r) => r.draft),
+  scheduled: count((r) => r.scheduled),
+  ready: count((r) => r.ready),
+};
+
+const chips = [
+  { key: 'all', label: `All (${total})` },
+  { key: 'image', label: `Needs image (${stats.image})` },
+  { key: 'audio', label: `No audio (${stats.audio})` },
+  { key: 'verify', label: `Needs verification (${stats.verify})` },
+  { key: 'books', label: `Needs reading (${stats.books})` },
+  { key: 'draft', label: `Draft (${stats.draft})` },
+  { key: 'scheduled', label: `Scheduled (${stats.scheduled})` },
+  { key: 'ready', label: `Ready (${stats.ready})` },
+];
+---
+
+<Base title="Content pipeline · Admin · PNW Historical Explorer" description="Editorial pipeline board">
+  <meta slot="head" name="robots" content="noindex, nofollow" />
+
+  <section class="pipe container">
+    <header class="head">
+      <p class="crumb"><a href={href('/admin')}>← Admin</a></p>
+      <h1>Content pipeline</h1>
+      <p class="muted">
+        Every entry and what it still needs before it’s fully polished. Filter by a gap to get a worklist.
+        <strong>Draft</strong> entries are held out of the public build; <strong>Scheduled</strong> is a go-live
+        label only (a static site refreshes on deploy, so it won’t auto-publish without a rebuild).
+      </p>
+    </header>
+
+    <!-- Summary tiles -->
+    <div class="tiles">
+      <div class="tile ready"><span class="big">{stats.ready}</span><span class="lbl">Ready ({total ? Math.round((stats.ready / total) * 100) : 0}%)</span></div>
+      <div class="tile img"><span class="big">{stats.image}</span><span class="lbl">Need an image</span></div>
+      <div class="tile ver"><span class="big">{stats.verify}</span><span class="lbl">Need verification</span></div>
+      <div class="tile bk"><span class="big">{stats.books}</span><span class="lbl">Need reading list</span></div>
+      <div class="tile aud"><span class="big">{stats.audio}</span><span class="lbl">No audio (optional)</span></div>
+      <div class="tile dr"><span class="big">{stats.draft}</span><span class="lbl">Drafts</span></div>
+      <div class="tile sc"><span class="big">{stats.scheduled}</span><span class="lbl">Scheduled</span></div>
+    </div>
+
+    <!-- Filter chips -->
+    <div class="chips" id="chips">
+      {chips.map((c, i) => (
+        <button class={`chip ${i === 0 ? 'active' : ''}`} data-filter={c.key} aria-pressed={i === 0 ? 'true' : 'false'}>{c.label}</button>
+      ))}
+    </div>
+
+    <div class="table-wrap">
+      <table id="pipe-table">
+        <thead>
+          <tr>
+            <th>Entry</th>
+            <th>Status</th>
+            <th>Outstanding</th>
+            <th class="c">Grade</th>
+            <th>Last checked</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr data-tokens={r.tokens.join(' ')}>
+              <td class="ent"><a href={r.path}>{r.title}</a><span class="cat">{r.category}</span></td>
+              <td><span class="badge" style={`background:${r.statusColor}`}>{r.statusLabel}</span></td>
+              <td class="needs">
+                {r.ready && <span class="tag ok">✓ ready</span>}
+                {r.needsImage && <span class="tag">image</span>}
+                {r.needsVerify && <span class="tag">verify</span>}
+                {r.needsBooks && <span class="tag">reading</span>}
+                {r.needsAudio && <span class="tag soft">audio</span>}
+              </td>
+              <td class="c"><span class="grade" style={`color:${r.gradeColor}`}>{r.grade}</span></td>
+              <td class="dt">{r.lastChecked ?? '—'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="muted small" id="empty-note" hidden>No entries match this filter.</p>
+  </section>
+
+  <style>
+    .pipe { padding: 24px 0 64px; }
+    .head h1 { margin: 4px 0; }
+    .crumb a { color: #5b6b7a; text-decoration: none; font-size: 14px; }
+    .muted { color: #5b6b7a; }
+    .small { font-size: 13px; }
+    .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin: 16px 0; }
+    .tile { background: #fff; border: 1px solid #e3e8ee; border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
+    .tile .big { font-size: 24px; font-weight: 800; line-height: 1.1; }
+    .tile .lbl { font-size: 12px; color: #5b6b7a; }
+    .tile.ready { border-left: 4px solid #1a7f5a; }
+    .tile.img { border-left: 4px solid #d9682e; }
+    .tile.ver { border-left: 4px solid #b0392f; }
+    .tile.bk { border-left: 4px solid #e0a52e; }
+    .tile.aud { border-left: 4px solid #8391a0; }
+    .tile.dr { border-left: 4px solid #8391a0; }
+    .tile.sc { border-left: 4px solid #8a5cd0; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 14px; }
+    .chip { background: #fff; border: 1px solid #d7dee6; border-radius: 999px; padding: 6px 12px; font-size: 13px; cursor: pointer; color: #33414f; }
+    .chip:hover { border-color: #16202a; }
+    .chip.active { background: #16202a; color: #fff; border-color: #16202a; }
+    .table-wrap { overflow-x: auto; border: 1px solid #e3e8ee; border-radius: 10px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid #eef2f6; }
+    th { background: #f6f8fa; font-size: 12px; text-transform: uppercase; letter-spacing: .03em; color: #5b6b7a; position: sticky; top: 0; }
+    th.c, td.c { text-align: center; }
+    .ent a { font-weight: 600; color: #16202a; text-decoration: none; }
+    .ent .cat { display: block; font-size: 11px; color: #8391a0; }
+    .badge { color: #fff; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+    .needs { display: flex; flex-wrap: wrap; gap: 5px; }
+    .tag { background: #fbeae2; color: #a2481f; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 6px; }
+    .tag.soft { background: #eef1f4; color: #66727e; }
+    .tag.ok { background: #d6f0dd; color: #1a5e40; }
+    .grade { font-weight: 800; font-size: 15px; }
+    .dt { color: #5b6b7a; white-space: nowrap; }
+  </style>
+
+  <script>
+    const chips = document.getElementById('chips');
+    const rows = Array.from(document.querySelectorAll('#pipe-table tbody tr'));
+    const emptyNote = document.getElementById('empty-note');
+
+    chips?.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest('button.chip') as HTMLButtonElement | null;
+      if (!btn) return;
+      const filter = btn.dataset.filter!;
+      chips.querySelectorAll('.chip').forEach((c) => {
+        const on = c === btn;
+        c.classList.toggle('active', on);
+        c.setAttribute('aria-pressed', String(on));
+      });
+      let shown = 0;
+      rows.forEach((r) => {
+        const tokens = (r.getAttribute('data-tokens') || '').split(' ');
+        const show = filter === 'all' || tokens.includes(filter);
+        (r as HTMLElement).hidden = !show;
+        if (show) shown++;
+      });
+      if (emptyNote) (emptyNote as HTMLElement).hidden = shown !== 0;
+    });
+  </script>
+</Base>

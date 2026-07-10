@@ -1,16 +1,16 @@
 ---
-import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import LocationCard from '../../components/LocationCard.astro';
 import { CATEGORIES } from '../../lib/categories';
 import { href } from '../../lib/url';
+import { publishedLocations } from '../../lib/publish';
 
 export async function getStaticPaths() {
   return CATEGORIES.map((c) => ({ params: { slug: c.slug }, props: { category: c } }));
 }
 
 const { category } = Astro.props;
-const locations = (await getCollection('locations'))
+const locations = (await publishedLocations())
   .filter((l) => l.data.category === category.name)
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---

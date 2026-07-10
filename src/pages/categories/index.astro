@@ -1,10 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { CATEGORIES } from '../../lib/categories';
 import { href } from '../../lib/url';
+import { publishedLocations } from '../../lib/publish';
 
-const locations = await getCollection('locations');
+const locations = await publishedLocations();
 const counts = Object.fromEntries(
   CATEGORIES.map((c) => [c.name, locations.filter((l) => l.data.category === c.name).length])
 );

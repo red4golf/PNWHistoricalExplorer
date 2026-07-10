@@ -27,6 +27,13 @@ const locations = defineCollection({
     description: z.string(),
     heroImage: z.string().nullable(),
     audio: z.string().nullable(),
+    // Editorial pipeline. Absent == published now.
+    //  draft: true      → excluded from the public site build (still visible in /admin).
+    //  publishDate      → informational "go-live" date; shows as "scheduled" in the
+    //                     pipeline board when in the future. Does NOT auto-hide the
+    //                     entry (a static build only refreshes on deploy).
+    draft: z.boolean().default(false),
+    publishDate: z.string().nullable().optional(),
     books: z
       .array(
         z.object({

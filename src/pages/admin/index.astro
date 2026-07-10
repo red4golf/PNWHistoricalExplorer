@@ -2,13 +2,16 @@
 import Base from '../../layouts/Base.astro';
 import { href } from '../../lib/url';
 import { isAmazonUrl, withAffiliateTag } from '../../lib/amazon';
-import { AMAZON_TAG, GOATCOUNTER_CODE, GOATCOUNTER_EMBED_URL, site } from '../../config';
+import { AMAZON_TAG, GOATCOUNTER_CODE, GOATCOUNTER_EMBED_URL, GITHUB_REPO, GITHUB_BRANCH, site } from '../../config';
 import { getCollection } from 'astro:content';
 import { deriveQuality, entryContentHash } from '../../lib/quality';
 
 // ---- Content health (computed at build time) -------------------------------
 const locations = await getCollection('locations');
 const total = locations.length;
+const now = new Date();
+const draftCount = locations.filter((l) => l.data.draft).length;
+const scheduledCount = locations.filter((l) => l.data.publishDate && new Date(l.data.publishDate) > now).length;
 
 // ---- Verification snapshot -------------------------------------------------
 const quality = locations.map((l) => deriveQuality(l.data.factcheck, entryContentHash(l)));
@@ -73,6 +76,16 @@ const locStats = locations.map((l) => ({ title: l.data.title, path: href(`/locat
         <span class="ico">✅</span>
         <strong>Verification &amp; quality</strong>
         <span class="muted">Per-entry fact-check status, grades &amp; traffic-weighted coverage</span>
+      </a>
+      <a class="card action" href={href('/admin/seo')}>
+        <span class="ico">🔍</span>
+        <strong>SEO health</strong>
+        <span class="muted">Meta, structured data, social images &amp; broken-link / asset audit</span>
+      </a>
+      <a class="card action" href={href('/admin/pipeline')}>
+        <span class="ico">🗂️</span>
+        <strong>Content pipeline</strong>
+        <span class="muted">What each entry still needs: image, audio, verification, reading{draftCount ? ` · ${draftCount} draft(s)` : ''}{scheduledCount ? ` · ${scheduledCount} scheduled` : ''}</span>
       </a>
     </div>
 
@@ -164,6 +177,32 @@ const locStats = locations.map((l) => ({ title: l.data.title, path: href(`/locat
       </div>
     )}
 
+    <!-- Engagement (live, in-page) -->
+    <h2 id="engagement">Engagement</h2>
+    {GOATCOUNTER_CODE ? (
+      <>
+      <p class="muted small">In-app actions, counted live as GoatCounter events. These populate once visitors start interacting — expect dashes until then.</p>
+      <div class="stats">
+        <div class="card stat"><div class="num" data-evt="audio-play">—</div><div class="lbl">Audio plays</div></div>
+        <div class="card stat"><div class="num" data-evt="affiliate-click">—</div><div class="lbl">Affiliate clicks</div></div>
+        <div class="card stat"><div class="num" data-evt="find-near-me">—</div><div class="lbl">“Find near me” uses</div></div>
+        <div class="card stat"><div class="num" data-evt="search">—</div><div class="lbl">Searches</div></div>
+        <div class={`card stat`}><div class="num" data-evt="not-found">—</div><div class="lbl">404 hits</div></div>
+      </div>
+      <p class="muted small">Searches that return nothing are your content roadmap — check the full dashboard’s event list for the exact terms.</p>
+      </>
+    ) : (
+      <div class="card"><p class="muted">Connect GoatCounter (above) to record engagement events.</p></div>
+    )}
+
+    <!-- Deploy & build health -->
+    <h2 id="deploy">Deploy &amp; build health</h2>
+    <div class="card">
+      <div id="deploy-latest" class="muted">Checking the latest GitHub Actions run…</div>
+      <ol class="ranklist" id="deploy-list"></ol>
+      <p class="small"><a href={`${repoUrl}/actions`} target="_blank" rel="noopener">All workflow runs on GitHub →</a></p>
+    </div>
+
     <!-- Worklists -->
     {missingHero.length > 0 && (
       <details class="card">
@@ -231,6 +270,50 @@ const locStats = locations.map((l) => ({ title: l.data.title, path: href(`/locat
       })();
     }
   </script>
+
+  <script define:vars={{ code: GOATCOUNTER_CODE, repo: GITHUB_REPO }}>
+    // ---- Engagement event counts (GoatCounter events) ----------------------
+    if (code) {
+      const evtApi = (name) => `https://${code}.goatcounter.com/counter/${encodeURIComponent('evt-' + name)}.json`;
+      const toNum = (j) => parseInt(String((j && j.count) || '0').replace(/[^0-9]/g, ''), 10) || 0;
+      document.querySelectorAll('[data-evt]').forEach(async (el) => {
+        try {
+          const r = await fetch(evtApi(el.getAttribute('data-evt')));
+          el.textContent = r.ok ? toNum(await r.json()).toLocaleString() : '0';
+        } catch (e) { el.textContent = '0'; }
+      });
+    }
+
+    // ---- Deploy / build health (public GitHub Actions API, no token) --------
+    (async () => {
+      const latest = document.getElementById('deploy-latest');
+      const list = document.getElementById('deploy-list');
+      if (!latest) return;
+      const esc = (s) => String(s == null ? '' : s).replace(/[<>&]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;' }[c]));
+      const fmt = (s) => { try { return new Date(s).toLocaleString(); } catch (e) { return s; } };
+      const icon = (run) => run.status !== 'completed' ? '⏳' : run.conclusion === 'success' ? '✅' : run.conclusion === 'failure' ? '❌' : run.conclusion === 'cancelled' ? '🚫' : '⚠️';
+      try {
+        const r = await fetch(`https://api.github.com/repos/${repo}/actions/runs?per_page=8`, { headers: { Accept: 'application/vnd.github+json' } });
+        if (!r.ok) throw new Error(String(r.status));
+        const data = await r.json();
+        const runs = data.workflow_runs || [];
+        if (!runs.length) { latest.textContent = 'No workflow runs found yet.'; return; }
+        const top = runs[0];
+        const state = top.status !== 'completed' ? top.status : top.conclusion;
+        const cls = state === 'success' ? 'ok' : (top.status !== 'completed' ? 'run' : 'bad');
+        latest.innerHTML =
+          `<span class="deploy-state ${cls}">${icon(top)} Latest deploy: ${esc(state)}</span> · ` +
+          `<a href="${top.html_url}" target="_blank" rel="noopener">${esc(top.display_title || top.name || 'run')}</a> · ` +
+          `${fmt(top.created_at)} · <code>${esc(top.head_branch)}</code>`;
+        if (list) list.innerHTML = runs.slice(1, 6).map((run) =>
+          `<li><a href="${run.html_url}" target="_blank" rel="noopener">${icon(run)} ${esc(run.display_title || run.name || 'run')}</a>` +
+          `<span class="rcount">${fmt(run.created_at)}</span></li>`).join('');
+      } catch (e) {
+        latest.innerHTML = 'Could not reach the GitHub API (rate-limited or offline). ' +
+          `<a href="https://github.com/${repo}/actions" target="_blank" rel="noopener">Open Actions on GitHub →</a>`;
+      }
+    })();
+  </script>
 </Base>
 
 <style>
@@ -265,6 +348,13 @@ const locStats = locations.map((l) => ({ title: l.data.title, path: href(`/locat
   .ranklist { margin: 0; padding-left: 1.25rem; }
   .ranklist li { padding: .25rem 0; display: flex; justify-content: space-between; gap: .75rem; align-items: baseline; }
   .ranklist .rcount { font-variant-numeric: tabular-nums; font-weight: 700; color: #1f3d2b; }
+  .ranklist li a { text-decoration: none; color: inherit; }
+  .ranklist li a:hover { text-decoration: underline; }
+  .deploy-state { font-weight: 700; }
+  .deploy-state.ok { color: #1a7f5a; }
+  .deploy-state.bad { color: #b0392f; }
+  .deploy-state.run { color: #8a5cd0; }
+  #deploy-list { margin-top: .5rem; }
   .gc-frame { width: 100%; height: 900px; border: 1px solid #e1e7e2; border-radius: 8px; margin-top: .5rem; background: #fff; }
   @media (max-width: 600px) { .gc-frame { height: 1100px; } }
   details.card { margin-top: 1rem; }

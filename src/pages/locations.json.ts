@@ -1,10 +1,10 @@
-import { getCollection } from 'astro:content';
 import { slugForCategory } from '../lib/categories';
 import { href } from '../lib/url';
+import { publishedLocations } from '../lib/publish';
 import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = async () => {
-  const locations = await getCollection('locations');
+  const locations = await publishedLocations();
   const payload = locations
     .map((l) => ({
       slug: l.data.slug,

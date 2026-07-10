@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import { href } from '../lib/url';
+---
+
+<Base
+  title="Page not found — PNW Historical Explorer"
+  description="That page could not be found. Explore the map or browse historical sites by category instead."
+>
+  <meta slot="head" name="robots" content="noindex, follow" />
+
+  <section class="section">
+    <div class="container notfound">
+      <p class="code">404</p>
+      <h1>We couldn’t find that page</h1>
+      <p class="lead">
+        The trail went cold. The page may have moved, or the link may be off by a
+        character. Here’s the way back:
+      </p>
+      <div class="actions">
+        <a class="btn" href={href('/map')}>🗺️ Explore the map</a>
+        <a class="btn secondary" href={href('/categories')}>Browse by category</a>
+        <a class="btn secondary" href={href('/search')}>🔍 Search sites</a>
+      </div>
+      <p class="home"><a href={href('/')}>← Back to the homepage</a></p>
+    </div>
+  </section>
+
+  <script is:inline>
+    // Count 404s as an event so they surface in the admin dashboard.
+    if (window.pnwTrack) window.pnwTrack('not-found');
+  </script>
+
+  <style>
+    .notfound { max-width: 40rem; padding: 2.5rem 0 4rem; }
+    .notfound .code { font-size: 3rem; font-weight: 800; color: #c9a227; margin: 0; line-height: 1; }
+    .notfound h1 { margin: 0.25rem 0 0.75rem; }
+    .notfound .lead { color: var(--ink-soft, #5a6b5f); }
+    .notfound .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.25rem 0; }
+    .notfound .home { margin-top: 0.5rem; font-size: 0.9rem; }
+  </style>
+</Base>

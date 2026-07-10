@@ -63,6 +63,22 @@ const bundlePath    = href('/pagefind/');
         excerptLength: 20,
         resetStyles: false,
       });
+
+      // Engagement: count searches once the query settles (debounced so we log
+      // one event per search, not one per keystroke).
+      setTimeout(function () {
+        var input = document.querySelector('.pagefind-ui__search-input');
+        if (!input) return;
+        var timer;
+        input.addEventListener('input', function () {
+          clearTimeout(timer);
+          timer = setTimeout(function () {
+            if (input.value.trim().length >= 3 && window.pnwTrack) {
+              window.pnwTrack('search');
+            }
+          }, 1200);
+        });
+      }, 800);
     }
 
     var script = document.createElement('script');

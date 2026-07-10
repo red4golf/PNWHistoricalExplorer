@@ -32,6 +32,8 @@ const { src, title } = Astro.props;
     audio.addEventListener(
       'play',
       async () => {
+        // Engagement: count the first play of this narration per page load.
+        (window as any).pnwTrack?.('audio-play');
         try {
           const cache = await caches.open('pnw-audio-v1');
           if (await cache.match(src)) return;

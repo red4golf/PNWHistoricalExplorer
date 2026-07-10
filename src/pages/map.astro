@@ -1,10 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
-import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../lib/categories';
 import { href } from '../lib/url';
+import { publishedLocations } from '../lib/publish';
 
-const locations = await getCollection('locations');
+const locations = await publishedLocations();
 const counts = Object.fromEntries(
   CATEGORIES.map((c) => [c.slug, locations.filter((l) => l.data.category === c.name).length])
 );
@@ -162,6 +162,7 @@ const counts = Object.fromEntries(
       }
       locateBtn.disabled = true;
       locateStatus.textContent = 'Locating…';
+      (window as any).pnwTrack?.('find-near-me');
       navigator.geolocation.getCurrentPosition(onPos, onErr, {
         enableHighAccuracy: true,
         timeout: 10000,

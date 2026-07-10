@@ -29,4 +29,25 @@ export const GOATCOUNTER_EMBED_URL: string = GOATCOUNTER_CODE
     }`
   : '';
 
+/**
+ * GitHub repository as "owner/name". Used by the /admin build-health panel to
+ * read the latest GitHub Actions run via the public REST API (no token — public
+ * repos allow unauthenticated reads at 60 req/hr per IP, ample for admin use).
+ */
+export const GITHUB_REPO: string =
+  import.meta.env.PUBLIC_GITHUB_REPO || 'red4golf/PNWHistoricalExplorer';
+
+/** Default branch the deploy workflow runs on (for filtering the runs list). */
+export const GITHUB_BRANCH: string =
+  import.meta.env.PUBLIC_GITHUB_BRANCH || 'main';
+
+/**
+ * Google Search Console verification token — the value of the
+ * <meta name="google-site-verification"> tag Google gives you under the
+ * "HTML tag" verification method. Set PUBLIC_GOOGLE_SITE_VERIFICATION as a repo
+ * variable; Base.astro then emits the tag on every page. Not secret.
+ */
+export const GOOGLE_SITE_VERIFICATION: string =
+  import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION || '';
+
 export { site };

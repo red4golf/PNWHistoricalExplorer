@@ -57,6 +57,8 @@ content:
       - { name: description, label: Short description (meta + cards), type: text, required: true }
       - { name: heroImage, label: Hero image, type: image, options: { media: location-images } }
       - { name: audio, label: Audio narration, type: file, options: { media: audio } }
+      - { name: draft, label: Draft (hidden from the public site until unchecked), type: boolean }
+      - { name: publishDate, label: Go-live date (label only — YYYY-MM-DD), type: string }
       - name: books
         label: Further reading (Amazon links)
         type: object

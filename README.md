@@ -43,6 +43,15 @@ There is no server behind this site (GitHub Pages is static), so "admin" is spli
 
 Visit `https://red4golf.github.io/PNWHistoricalExplorer/admin`. It's a build-time snapshot of content health (location counts by category, missing hero images / audio / book links, affiliate status) plus quick links to the CMS, analytics, and the repo. It's `noindex` and excluded from the sitemap and `robots.txt`, but **it is publicly reachable by URL** — it contains no secrets, only counts and links.
 
+The dashboard links to four deeper views:
+
+- **`/admin/quality`** — per-entry fact-check status, grades, and traffic-weighted verified coverage.
+- **`/admin/seo`** — build-time SEO audit: meta descriptions, titles, social images, structured data, and internal-link / asset integrity, with Google Search Console setup and PageSpeed links.
+- **`/admin/pipeline`** — editorial board showing what each entry still needs (image, audio, verification, reading) plus draft / scheduled status.
+- The hub itself also shows live **Engagement** events (audio plays, affiliate clicks, "find near me", searches, 404s) and **Deploy & build health** (latest GitHub Actions run, read live from the public API).
+
+Two editorial frontmatter fields drive the pipeline: `draft: true` holds an entry out of the public build (still visible in `/admin`), and `publishDate` is an informational go-live label (a static build only refreshes on deploy, so it does **not** auto-publish). Both are editable in the CMS.
+
 ### Editing content — Pages CMS
 
 Browser-based editor at **[app.pagescms.org](https://app.pagescms.org)** — sign in with GitHub, choose this repo. Config lives in `.pages.yml`. You can add/edit locations (every frontmatter field, including the books list and the article body) and edit **Site settings**. Saving commits to GitHub, which triggers the deploy workflow and rebuilds the site. No install or server required.
