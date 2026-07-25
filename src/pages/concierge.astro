@@ -1,0 +1,76 @@
+---
+import Base from '../layouts/Base.astro';
+import { href } from '../lib/url';
+import site from '../data/site.json';
+
+const concierge = site.concierge;
+const callHref = concierge.phone ? `tel:${concierge.phone.replace(/[^+\d]/g, '')}` : null;
+---
+
+<Base
+  title="Bainbridge Concierge — PNW Historical Explorer"
+  description="Personalized Bainbridge Island trip help by phone, with text-message follow-up containing destination photos, directions, and useful links."
+>
+  <section class="concierge-hero">
+    <div class="container concierge-hero-grid">
+      <div>
+        <p class="eyebrow">Your local trip assistant</p>
+        <h1>{concierge.name}</h1>
+        <p class="lead">{concierge.description}</p>
+        <div class="actions">
+          {callHref ? (
+            <a class="btn" href={callHref}>☎ Call the concierge</a>
+          ) : (
+            <span class="btn disabled" aria-disabled="true">Phone number ready to connect</span>
+          )}
+          <a class="btn secondary" href={href('/map')}>Explore the island map</a>
+        </div>
+      </div>
+      <div class="phone-card" aria-label="How the concierge works">
+        <span class="phone-icon" aria-hidden="true">☎</span>
+        <h2>Call. Talk. Get the links.</h2>
+        <ol>
+          <li>Tell the assistant what you enjoy, how much time you have, and where you are.</li>
+          <li>Receive tailored ideas for historic places, parks, restaurants, and local businesses.</li>
+          <li>Get a text with photos, destination pages, and turn-by-turn direction links.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container concierge-grid">
+      <article class="concierge-panel">
+        <p class="eyebrow">Good questions to ask</p>
+        <h2>Plan around the day you actually have</h2>
+        <div class="prompt-grid">
+          <blockquote>“I have two hours before the ferry. What should I see?”</blockquote>
+          <blockquote>“Find a quiet lunch near Winslow with outdoor seating.”</blockquote>
+          <blockquote>“What historic place is nearby and easy to walk?”</blockquote>
+          <blockquote>“Build a rainy-day plan for two adults and a child.”</blockquote>
+        </div>
+      </article>
+
+      <aside class="concierge-panel current-info">
+        <p class="eyebrow">Current information</p>
+        <h2>Useful, with a clear freshness limit</h2>
+        <p>{concierge.serviceNote}</p>
+        <ul class="check-list">
+          <li>Business hours reviewed monthly</li>
+          <li>SMS links to images, directions, and destination pages</li>
+          <li>Personalized suggestions based on time and interests</li>
+          <li>Live restaurant calls only when the visitor requests them</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section island-callout">
+    <div class="container">
+      <p class="eyebrow">Explore independently</p>
+      <h2>Prefer to browse first?</h2>
+      <p>Open the map, choose a destination, and use the visitor guide on each location page. The concierge is there when you want help narrowing the choices or adapting the day.</p>
+      <a class="btn" href={href('/map')}>Find a place to visit</a>
+    </div>
+  </section>
+</Base>
