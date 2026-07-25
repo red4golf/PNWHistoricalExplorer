@@ -24,7 +24,8 @@ const cat = categoryByName(d.category);
 const heroLarge = d.heroImage ? href(d.heroImage.replace(/\.(jpe?g|png)$/i, '-hero.webp')) : null;
 const heroFallback = d.heroImage ? href(d.heroImage) : null;
 const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${d.coordinates.lat},${d.coordinates.lng}`;
-const isBainbridge = /bainbridge island/i.test(d.address ?? '');
+const inBainbridgeBounds = d.coordinates.lat >= 47.58 && d.coordinates.lat <= 47.74 && d.coordinates.lng >= -122.62 && d.coordinates.lng <= -122.44;
+const isBainbridge = inBainbridgeBounds || /bainbridge island/i.test(`${d.address ?? ''} ${d.description ?? ''}`);
 const callHref = site.concierge.phone ? `tel:${site.concierge.phone.replace(/[^+\d]/g, '')}` : href('/concierge');
 
 const noticeByCategory: Record<string, string[]> = {
@@ -41,12 +42,12 @@ const noticeByCategory: Record<string, string[]> = {
 const noticePrompts = noticeByCategory[d.category] ?? ['Look for the surviving physical details described in the story.', 'Compare the present landscape with the period described in the article.'];
 
 const statusText = verified
-  ? `Reviewed against listed sources${verifiedDate ? ` on ${verifiedDate}` : ''}.`
+  ? `Researched and compared with the listed sources${verifiedDate ? `; last reviewed ${verifiedDate}` : ''}.`
   : quality.status === 'stale'
-    ? 'Previously reviewed, but later edits require another source check.'
+    ? 'This guide has changed since its last source review. The supporting material is being checked again.'
     : quality.status === 'flagged'
-      ? 'Contains one or more claims requiring editorial attention.'
-      : 'Research review is still in progress; use the article as an introduction rather than a final authority.';
+      ? 'Some details remain disputed or need stronger documentation. They should be treated with appropriate caution.'
+      : 'Research is still in progress. This guide is a useful introduction, but some details may change as better sources are added.';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -66,7 +67,7 @@ const jsonLd = {
     <div class="detail-hero">
       <img src={heroLarge} alt={`View of ${d.title}`} width="1600" height="900" onerror={`this.onerror=null;this.src='${heroFallback}'`} />
       <div class="overlay"><div class="container">
-        <p class="eyebrow light">Visitor guide and historical story</p>
+        <p class="eyebrow light">Visit, listen, and explore</p>
         <h1>{d.title}</h1>
         <div class="meta">
           <span>{cat?.icon} {d.category}</span>
@@ -77,7 +78,7 @@ const jsonLd = {
     </div>
   ) : (
     <div class="detail-hero no-image"><div class="container">
-      <p class="eyebrow light">Visitor guide and historical story</p>
+      <p class="eyebrow light">Visit, listen, and explore</p>
       <h1>{d.title}</h1>
       <div class="meta"><span>{cat?.icon} {d.category}</span>{d.period && <span>📅 {d.period}</span>}{d.address && <span>📍 {d.address}</span>}</div>
     </div></div>
@@ -95,9 +96,9 @@ const jsonLd = {
         </div>
       </div>
       <aside class="fact-status" data-status={quality.status}>
-        <strong>{verified ? '✓ Source review complete' : 'Research status'}</strong>
+        <strong>{verified ? '✓ Researched and sourced' : 'About this history'}</strong>
         <p>{statusText}</p>
-        <a href="#deeper-history">Read the full history and context</a>
+        <a href="#deeper-history">Read the full story and sources</a>
       </aside>
     </div>
   </section>
@@ -127,7 +128,7 @@ const jsonLd = {
   {d.audio && (
     <section class="section listen-section" id="listen">
       <div class="container listen-grid">
-        <div><p class="eyebrow light">The short tour</p><h2>Hear the story before or during your visit</h2><p>Use headphones on site, or listen in the car before you arrive. The longer documented history remains below.</p></div>
+        <div><p class="eyebrow light">The short tour</p><h2>Hear the story before or during your visit</h2><p>Use headphones on site, or listen in the car before you arrive. The longer history and sources remain below.</p></div>
         <AudioPlayer src={href(d.audio)} title={d.title} />
       </div>
     </section>
@@ -136,8 +137,8 @@ const jsonLd = {
   {isBainbridge && site.concierge.enabled && (
     <section class="island-assist">
       <div class="container island-assist-grid">
-        <div><p class="eyebrow light">Need help with the rest of the day?</p><h2>Call the Bainbridge Concierge</h2><p>The virtual assistant can suggest nearby places, restaurants, and businesses, then text you photos, location pages, and direction links.</p></div>
-        <div><a class="btn" href={callHref}>☎ {site.concierge.phone ? 'Call now' : 'See how it works'}</a><small>Published business hours are reviewed monthly. Live availability is confirmed only when requested.</small></div>
+        <div><p class="eyebrow light">Need help with the rest of the day?</p><h2>Call the Bainbridge Concierge</h2><p>Get suggestions for nearby places, restaurants, and businesses, followed by a text with photos, location pages, and direction links.</p></div>
+        <div><a class="btn" href={callHref}>☎ {site.concierge.phone ? 'Call now' : 'See how it works'}</a><small>Published business hours are reviewed monthly. Restaurant calls and reservation requests are planned additions.</small></div>
       </div>
     </section>
   )}
@@ -145,7 +146,7 @@ const jsonLd = {
   <section class="section" id="deeper-history">
     <div class="container detail-layout">
       <article>
-        <div class="article-heading"><p class="eyebrow">The deeper history</p><h2>Context, evidence, and the full story</h2><p>This section is the historical resource layer. Interpretive or disputed material should be identified in the article rather than presented as settled fact.</p></div>
+        <div class="article-heading"><p class="eyebrow">Learn more</p><h2>The full story</h2><p>Continue with the longer history, context, sources, and reading recommendations.</p></div>
         <div class="prose"><Content /></div>
       </article>
       <aside>
@@ -156,11 +157,8 @@ const jsonLd = {
           <a class="sidebar-link" href={href(`/categories/${slugForCategory(d.category)}`)}>More {d.category.toLowerCase()} →</a>
         </div>
         <div class="sidebar-card source-card">
-          <h3>Editorial status</h3>
-          <p><strong>{quality.label}</strong></p>
+          <h3>About this history</h3>
           <p>{statusText}</p>
-          {d.factcheck?.sourceTier && <p>Highest source tier: <strong>{d.factcheck.sourceTier}</strong></p>}
-          {d.factcheck?.claimsTotal ? <p>Claims tracked: <strong>{d.factcheck.claimsCited}/{d.factcheck.claimsTotal}</strong></p> : null}
         </div>
         {d.books.length > 0 && (
           <div class="sidebar-card"><h3>📚 Continue the story</h3><ul class="book-list">{d.books.map((b) => <li>{b.url ? <a href={withAffiliateTag(b.url)} rel="noopener nofollow sponsored" target="_blank" data-affiliate>{b.title}</a> : b.title}{b.author && <span class="author">{b.author}</span>}</li>)}</ul></div>
