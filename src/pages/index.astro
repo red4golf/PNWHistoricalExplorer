@@ -21,7 +21,6 @@ const featured = locations
   .slice(0, 6);
 
 const quickStarts = [
-  { icon: '📍', title: 'Near me', text: 'Find worthwhile stops close to your current location.', url: '/map?mode=nearby' },
   { icon: '⏱️', title: 'I have an hour', text: 'Choose a focused stop instead of losing time comparing dozens.', url: '/map?visit=short' },
   { icon: '🎧', title: 'Hear a story', text: `Browse ${audioCount} places with narration for the road or the site.`, url: '/search?q=audio' },
   { icon: '☎', title: 'Visiting Bainbridge', text: 'Call the concierge and receive personalized links by text.', url: '/concierge' },
@@ -41,9 +40,10 @@ const quickStarts = [
           Discover historic places, natural landmarks, old towns, military sites, and cultural landscapes—then learn what matters before you arrive and what to notice when you get there.
         </p>
         <div class="actions">
-          <a class="btn" href={href('/map')}>🗺️ Find places near me</a>
+          <button class="btn" id="home-locate" type="button">📍 Find places near me</button>
           <a class="btn secondary" href={href('/categories')}>Browse every location</a>
         </div>
+        <p id="home-locate-status" class="home-locate-status" role="status" aria-live="polite"></p>
         <div class="trust-line" aria-label="Site coverage">
           <span><strong>{total}</strong> places</span>
           <span><strong>{audioCount}</strong> audio stories</span>
@@ -63,6 +63,19 @@ const quickStarts = [
           ))}
         </div>
       </aside>
+    </div>
+  </section>
+
+  <section class="section home-nearby" id="nearby-places" hidden>
+    <div class="container">
+      <div class="section-heading-row">
+        <div>
+          <p class="eyebrow">Based on your location</p>
+          <h2 class="section-title">Closest places worth exploring</h2>
+        </div>
+        <a href={href('/map?mode=nearby')}>Open the full map →</a>
+      </div>
+      <div id="home-nearby-grid" class="home-nearby-grid"></div>
     </div>
   </section>
 
@@ -134,4 +147,105 @@ const quickStarts = [
       </div>
     </div>
   </section>
+
+  <script define:vars={{ locationsUrl: href('/locations.json'), basePath: href(''), conciergePhone: site.concierge.phone }}>
+    (function () {
+      const button = document.getElementById('home-locate');
+      const status = document.getElementById('home-locate-status');
+      const section = document.getElementById('nearby-places');
+      const grid = document.getElementById('home-nearby-grid');
+      let locations = null;
+
+      function escapeHtml(value) {
+        return String(value ?? '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
+
+      function distMiles(aLat, aLng, bLat, bLng) {
+        const R = 3958.8;
+        const toRad = (d) => (d * Math.PI) / 180;
+        const dLat = toRad(bLat - aLat);
+        const dLng = toRad(bLng - aLng);
+        const s = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(aLat)) * Math.cos(toRad(bLat)) * Math.sin(dLng / 2) ** 2;
+        return 2 * R * Math.asin(Math.sqrt(s));
+      }
+
+      async function loadLocations() {
+        if (locations) return locations;
+        const response = await fetch(locationsUrl);
+        if (!response.ok) throw new Error('location data unavailable');
+        locations = await response.json();
+        return locations;
+      }
+
+      function cardHtml(item) {
+        const l = item.location;
+        const image = l.heroImage
+          ? `<img src="${escapeHtml(l.heroImage.replace(/\.(jpe?g|png)$/i, '-card.webp'))}" onerror="this.onerror=null;this.src='${escapeHtml(l.heroImage)}'" alt="${escapeHtml(l.title)}">`
+          : `<div class="nearby-image-fallback" aria-hidden="true">📍</div>`;
+        const directions = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(l.lat + ',' + l.lng)}`;
+        const storyUrl = `${basePath}/locations/${encodeURIComponent(l.slug)}`;
+        const bainbridge = /bainbridge island/i.test(`${l.description || ''} ${l.title || ''}`);
+        const concierge = bainbridge && conciergePhone
+          ? `<a class="nearby-action" href="tel:${escapeHtml(conciergePhone)}">☎ Concierge</a>`
+          : '';
+        return `<article class="nearby-place-card">
+          <a class="nearby-place-image" href="${storyUrl}">${image}</a>
+          <div class="nearby-place-body">
+            <div class="nearby-place-meta"><span>${item.distance.toFixed(1)} mi away</span><span>${escapeHtml(l.category)}</span></div>
+            <h3><a href="${storyUrl}">${escapeHtml(l.title)}</a></h3>
+            <p>${escapeHtml(l.description)}</p>
+            <div class="nearby-place-actions">
+              <a class="nearby-action primary" href="${directions}" target="_blank" rel="noopener">🧭 Directions</a>
+              <a class="nearby-action" href="${storyUrl}">${l.hasAudio ? '🎧 Hear the story' : '📖 Read the story'}</a>
+              ${concierge}
+            </div>
+          </div>
+        </article>`;
+      }
+
+      async function locate() {
+        if (!('geolocation' in navigator)) {
+          status.textContent = 'Location is not supported by this device.';
+          return;
+        }
+        button.disabled = true;
+        status.textContent = 'Finding your location…';
+        if (window.pnwTrack) window.pnwTrack('home-find-near-me');
+        try {
+          await loadLocations();
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              const { latitude, longitude, accuracy } = position.coords;
+              const nearest = locations
+                .map((location) => ({ location, distance: distMiles(latitude, longitude, location.lat, location.lng) }))
+                .sort((a, b) => a.distance - b.distance)
+                .slice(0, 5);
+              grid.innerHTML = nearest.map(cardHtml).join('');
+              section.hidden = false;
+              status.textContent = `Showing the five closest places · location accuracy ±${Math.round(accuracy)} m`;
+              section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              button.disabled = false;
+            },
+            (error) => {
+              status.textContent = error.code === 1
+                ? 'Location permission was denied. You can still browse the map manually.'
+                : 'Your location could not be determined. Try again or open the map.';
+              button.disabled = false;
+            },
+            { enableHighAccuracy: true, timeout: 10000, maximumAge: 30000 }
+          );
+        } catch (error) {
+          status.textContent = 'Nearby places could not be loaded. Please open the map and try again.';
+          button.disabled = false;
+        }
+      }
+
+      button?.addEventListener('click', locate);
+    })();
+  </script>
 </Base>
