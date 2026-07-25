@@ -1,10 +1,9 @@
 ---
 import '../styles/global.css';
+import '../styles/guide.css';
 import { base, href } from '../lib/url';
 import { GOATCOUNTER_CODE, GOOGLE_SITE_VERIFICATION } from '../config';
 
-// Only emit analytics on the real production build (not dev/preview), and only
-// when a GoatCounter code is configured. import.meta.env.PROD is true in builds.
 const analyticsEnabled = import.meta.env.PROD && !!GOATCOUNTER_CODE;
 const goatCounterEndpoint = `https://${GOATCOUNTER_CODE}.goatcounter.com/count`;
 
@@ -17,7 +16,7 @@ interface Props {
 
 const {
   title,
-  description = 'Explore 90+ historical sites across the Pacific Northwest — with in-depth stories, audio narrations, and curated reading for every location.',
+  description = 'Find historic places worth visiting across the Pacific Northwest, hear their stories, and explore with practical visitor guidance.',
   ogImage = null,
   ogType = 'website',
 } = Astro.props;
@@ -26,8 +25,6 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImageUrl = ogImage
   ? new URL(href(ogImage), Astro.site).href
   : new URL(href('/icons/og-default.png'), Astro.site).href;
-
-// Path without the base prefix, for nav highlighting
 const path = Astro.url.pathname.startsWith(base)
   ? Astro.url.pathname.slice(base.length) || '/'
   : Astro.url.pathname;
@@ -42,50 +39,32 @@ const current = (h: string) => (h === '/' ? (path === '/' ? 'page' : undefined) 
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-
     <link rel="icon" href={href('/favicon.ico')} sizes="32x32" />
     <link rel="icon" href={href('/icons/icon.svg')} type="image/svg+xml" />
     <link rel="apple-touch-icon" href={href('/icons/apple-touch-icon.png')} />
     <link rel="manifest" href={href('/manifest.webmanifest')} />
     <meta name="theme-color" content="#1f3d2b" />
-
-    {GOOGLE_SITE_VERIFICATION && (
-      <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
-    )}
-
+    {GOOGLE_SITE_VERIFICATION && <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImageUrl} />
     <meta name="twitter:card" content="summary_large_image" />
-
     <link rel="sitemap" href={href('/sitemap-index.xml')} />
     <slot name="head" />
-
-    {analyticsEnabled && (
-      <script
-        is:inline
-        data-goatcounter={goatCounterEndpoint}
-        async
-        src="//gc.zgo.at/count.js"></script>
-    )}
-
-    {/* Lightweight engagement tracking. Records in-app actions (audio plays,
-        affiliate clicks, "near me", searches, 404s) as GoatCounter events.
-        Safe no-op when analytics is off or the counter script hasn't loaded. */}
+    {analyticsEnabled && <script is:inline data-goatcounter={goatCounterEndpoint} async src="//gc.zgo.at/count.js"></script>}
     <script is:inline>
       window.pnwTrack = function (name) {
         try {
           var gc = window.goatcounter;
-          if (gc && typeof gc.count === 'function') {
-            gc.count({ path: 'evt-' + name, title: 'event: ' + name, event: true });
-          }
+          if (gc && typeof gc.count === 'function') gc.count({ path: 'evt-' + name, title: 'event: ' + name, event: true });
         } catch (e) {}
       };
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header" data-pagefind-ignore>
       <div class="container">
         <a href={href('/')} class="brand">
@@ -99,48 +78,38 @@ const current = (h: string) => (h === '/' ? (path === '/' ? 'page' : undefined) 
           <a href={href('/')} aria-current={current('/')}>Home</a>
           <a href={href('/map')} aria-current={current('/map')}>Map</a>
           <a href={href('/categories')} aria-current={current('/categories')}>Categories</a>
+          <a href={href('/concierge')} aria-current={current('/concierge')} class="concierge-nav">Concierge</a>
           <a href={href('/about')} aria-current={current('/about')}>About</a>
           <a href={href('/search')} aria-current={current('/search')} class="nav-search-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            </svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             Search
           </a>
         </nav>
       </div>
     </header>
 
-    <main data-pagefind-body>
-      <slot />
-    </main>
+    <main id="main-content" data-pagefind-body><slot /></main>
 
     <footer class="site-footer" data-pagefind-ignore>
       <div class="container">
-        <div>
-          <strong>PNW Historical Explorer</strong><br />
-          Stories, audio tours, and reading guides for the Pacific Northwest’s historic places.
-        </div>
-        <div>
-          <a href={href('/map')}>Explore the map</a> ·
-          <a href={href('/categories')}>Browse categories</a> ·
-          <a href={href('/about')}>About</a>
-        </div>
+        <div><strong>PNW Historical Explorer</strong><br />Visitor guides, audio stories, and sourced history for the Pacific Northwest’s remarkable places.</div>
+        <div><a href={href('/map')}>Explore the map</a> · <a href={href('/concierge')}>Bainbridge Concierge</a> · <a href={href('/about')}>About</a></div>
       </div>
     </footer>
 
     <nav class="bottom-nav" aria-label="Mobile" data-pagefind-ignore>
-      <a href={href('/')} aria-current={current('/')}><span class="ico">🏠</span>Home</a>
-      <a href={href('/map')} aria-current={current('/map')}><span class="ico">🗺️</span>Map</a>
-      <a href={href('/categories')} aria-current={current('/categories')}><span class="ico">🏛️</span>Browse</a>
-      <a href={href('/search')} aria-current={current('/search')}><span class="ico">🔍</span>Search</a>
-      <a href={href('/about')} aria-current={current('/about')}><span class="ico">ℹ️</span>About</a>
+      <a href={href('/')} aria-current={current('/')}><span class="ico" aria-hidden="true">🏠</span>Home</a>
+      <a href={href('/map')} aria-current={current('/map')}><span class="ico" aria-hidden="true">🗺️</span>Map</a>
+      <a href={href('/categories')} aria-current={current('/categories')}><span class="ico" aria-hidden="true">🏛️</span>Browse</a>
+      <a href={href('/concierge')} aria-current={current('/concierge')}><span class="ico" aria-hidden="true">☎</span>Concierge</a>
+      <a href={href('/search')} aria-current={current('/search')}><span class="ico" aria-hidden="true">🔍</span>Search</a>
     </nav>
 
     <script define:vars={{ swPath: href('/sw.js'), swScope: base + '/' }}>
       if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register(swPath, { scope: swScope }).catch(() => {});
-        });
+        window.addEventListener('load', () => navigator.serviceWorker.register(swPath, { scope: swScope }).catch((error) => {
+          if (location.hostname === 'localhost') console.warn('Service worker registration failed', error);
+        }));
       }
     </script>
   </body>
