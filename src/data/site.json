@@ -1,6 +1,13 @@
 {
   "siteName": "PNW Historical Explorer",
-  "tagline": "Explore 90+ historical sites across the Pacific Northwest — with in-depth stories, audio narrations, and curated reading for every location.",
+  "tagline": "Find a place worth visiting, hear its story, and explore the Pacific Northwest with confidence.",
   "amazonAssociatesTag": "",
-  "featured": []
+  "featured": [],
+  "concierge": {
+    "enabled": true,
+    "name": "Bainbridge Concierge",
+    "phone": "",
+    "description": "Call for personalized Bainbridge Island suggestions. The virtual concierge can text destination photos, location pages, directions, and current business information.",
+    "serviceNote": "Restaurant availability checks and reservation requests are being added. Published business hours are reviewed monthly; time-sensitive plans should still be confirmed directly."
+  }
 }
