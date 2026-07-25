@@ -4,62 +4,133 @@ import LocationCard from '../components/LocationCard.astro';
 import { CATEGORIES } from '../lib/categories';
 import { href } from '../lib/url';
 import { publishedLocations } from '../lib/publish';
+import site from '../data/site.json';
 
 const locations = await publishedLocations();
 const total = locations.length;
 const audioCount = locations.filter((l) => l.data.audio).length;
+const verifiedCount = locations.filter((l) => ['verified', 'corrected'].includes(l.data.factcheck?.status ?? '')).length;
 
 const counts = Object.fromEntries(
   CATEGORIES.map((c) => [c.name, locations.filter((l) => l.data.category === c.name).length])
 );
 
-// Featured: locations with a real photo, audio first, alphabetical within
 const featured = locations
   .filter((l) => l.data.heroImage)
   .sort((a, b) => Number(Boolean(b.data.audio)) - Number(Boolean(a.data.audio)) || a.data.title.localeCompare(b.data.title))
   .slice(0, 6);
+
+const quickStarts = [
+  { icon: '📍', title: 'Near me', text: 'Find worthwhile stops close to your current location.', url: '/map?mode=nearby' },
+  { icon: '⏱️', title: 'I have an hour', text: 'Choose a focused stop instead of losing time comparing dozens.', url: '/map?visit=short' },
+  { icon: '🎧', title: 'Hear a story', text: `Browse ${audioCount} places with narration for the road or the site.`, url: '/search?q=audio' },
+  { icon: '☎', title: 'Visiting Bainbridge', text: 'Call the concierge and receive personalized links by text.', url: '/concierge' },
+];
 ---
 
 <Base
-  title="PNW Historical Explorer — Historic Sites of the Pacific Northwest"
-  description={`Explore ${total} historical sites across the Pacific Northwest with in-depth stories, ${audioCount} audio narrations, and curated reading lists. Works offline in the field.`}
+  title="PNW Historical Explorer — Find the Place, Hear the Story"
+  description={`Find ${total} historic places worth visiting across the Pacific Northwest. Get directions, practical visit guidance, compelling stories, audio tours, and transparent source status.`}
 >
-  <section class="hero">
-    <div class="container">
-      <h1>Discover the Pacific Northwest’s Past</h1>
-      <p>
-        {total} historic places — forts, lighthouses, ghost towns, and natural wonders — each with
-        the full story, {audioCount} audio narrations, and curated reading.
-      </p>
-      <div class="actions">
-        <a class="btn" href={href('/map')}>🗺️ Explore the map</a>
-        <a class="btn secondary" href={href('/categories')}>Browse by category</a>
+  <section class="hero guide-hero">
+    <div class="container guide-hero-grid">
+      <div class="guide-hero-copy">
+        <p class="eyebrow light">A field guide for curious travelers</p>
+        <h1>Find the place. Hear the story.</h1>
+        <p>
+          Discover historic places, natural landmarks, old towns, military sites, and cultural landscapes—then learn what matters before you arrive and what to notice when you get there.
+        </p>
+        <div class="actions">
+          <a class="btn" href={href('/map')}>🗺️ Find places near me</a>
+          <a class="btn secondary" href={href('/categories')}>Browse every location</a>
+        </div>
+        <div class="trust-line" aria-label="Site coverage">
+          <span><strong>{total}</strong> places</span>
+          <span><strong>{audioCount}</strong> audio stories</span>
+          <span><strong>{verifiedCount}</strong> reviewed entries</span>
+          <span>Works offline in the field</span>
+        </div>
       </div>
+      <aside class="guide-card">
+        <p class="eyebrow">Start with the trip, not the database</p>
+        <h2>What kind of day are you having?</h2>
+        <div class="guide-card-links">
+          {quickStarts.map((item) => (
+            <a href={href(item.url)}>
+              <span class="guide-icon" aria-hidden="true">{item.icon}</span>
+              <span><strong>{item.title}</strong><small>{item.text}</small></span>
+            </a>
+          ))}
+        </div>
+      </aside>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section visit-flow">
     <div class="container">
-      <h2 class="section-title">Browse by category</h2>
-      <div class="category-grid">
-        {
-          CATEGORIES.map((c) => (
-            <a class="category-card" href={href(`/categories/${c.slug}`)}>
-              <span class="icon">{c.icon}</span>
-              <h3>{c.name}</h3>
-              <span class="count">{counts[c.name]} locations</span>
-            </a>
-          ))
-        }
+      <p class="eyebrow">Built for an actual visit</p>
+      <h2 class="section-title">Three layers, depending on how deep you want to go</h2>
+      <div class="three-up">
+        <article>
+          <span aria-hidden="true">1</span>
+          <h3>Decide</h3>
+          <p>See why the stop is worthwhile, how long it may take, and how to get there.</p>
+        </article>
+        <article>
+          <span aria-hidden="true">2</span>
+          <h3>Experience</h3>
+          <p>Use a short narrated story and specific “look for this” prompts while you explore.</p>
+        </article>
+        <article>
+          <span aria-hidden="true">3</span>
+          <h3>Go deeper</h3>
+          <p>Read the full history, source status, disputed details, and suggested books.</p>
+        </article>
       </div>
     </div>
   </section>
 
   <section class="section" style="background: var(--parchment);">
     <div class="container">
-      <h2 class="section-title">Featured locations</h2>
+      <div class="section-heading-row">
+        <div>
+          <p class="eyebrow">Worth a detour</p>
+          <h2 class="section-title">Featured places</h2>
+        </div>
+        <a href={href('/map')}>View all on the map →</a>
+      </div>
       <div class="location-grid">
         {featured.map((l) => <LocationCard location={{ ...l.data }} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section concierge-strip">
+    <div class="container concierge-strip-grid">
+      <div>
+        <p class="eyebrow light">A deeper local layer</p>
+        <h2>On Bainbridge Island, call a concierge—not another search box.</h2>
+        <p>{site.concierge.description}</p>
+      </div>
+      <div class="concierge-actions">
+        <a class="btn" href={href('/concierge')}>How the concierge works</a>
+        <small>Business hours are reviewed monthly. Live restaurant calls occur at the visitor’s request.</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Browse the collection</p>
+      <h2 class="section-title">Choose a kind of history</h2>
+      <div class="category-grid">
+        {CATEGORIES.map((c) => (
+          <a class="category-card" href={href(`/categories/${c.slug}`)}>
+            <span class="icon" aria-hidden="true">{c.icon}</span>
+            <h3>{c.name}</h3>
+            <span class="count">{counts[c.name]} locations</span>
+          </a>
+        ))}
       </div>
     </div>
   </section>
