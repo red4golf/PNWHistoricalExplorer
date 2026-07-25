@@ -6,7 +6,7 @@
   "concierge": {
     "enabled": true,
     "name": "Bainbridge Concierge",
-    "phone": "",
+    "phone": "(253) 466-7401",
     "description": "Call for personalized Bainbridge Island suggestions. The virtual concierge can text destination photos, location pages, directions, and current business information.",
     "serviceNote": "Restaurant availability checks and reservation requests are being added. Published business hours are reviewed monthly; time-sensitive plans should still be confirmed directly."
   }
