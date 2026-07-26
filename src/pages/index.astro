@@ -4,6 +4,7 @@ import LocationCard from '../components/LocationCard.astro';
 import { CATEGORIES } from '../lib/categories';
 import { href } from '../lib/url';
 import { publishedLocations } from '../lib/publish';
+import { BAINBRIDGE_GEOFENCE } from '../lib/bainbridge';
 import site from '../data/site.json';
 
 const locations = await publishedLocations();
@@ -22,7 +23,7 @@ const featured = locations
 const quickStarts = [
   { icon: '⏱️', title: 'Plan a short stop', text: 'Choose one memorable place when you only have an hour or two.', url: '/map?visit=short' },
   { icon: '🎧', title: 'Hear an audio story', text: `Browse ${audioCount} narrated places for the road or the site.`, url: '/search?q=audio' },
-  { icon: '☎', title: 'Plan a Bainbridge visit', text: 'Call for personalized suggestions and useful links by text.', url: '/concierge' },
+  { icon: '🏛️', title: 'Browse by interest', text: 'Explore towns, military sites, aviation, maritime history, and more.', url: '/categories' },
 ];
 ---
 
@@ -87,26 +88,28 @@ const quickStarts = [
     </div>
   </section>
 
+  <section class="section island-assist" id="home-bainbridge-assist" hidden>
+    <div class="container island-assist-grid">
+      <div>
+        <p class="eyebrow light">You’re on or near Bainbridge Island</p>
+        <h2>Need help deciding what to do next?</h2>
+        <p>Call for personalized suggestions, then receive photos, location pages, business information, and direction links by text.</p>
+      </div>
+      <div>
+        <a class="btn" href={`tel:${site.concierge.phone.replace(/[^+\d]/g, '')}`}>☎ Call the Bainbridge Concierge</a>
+        <a href={href('/concierge')}>See how the service works →</a>
+      </div>
+    </div>
+  </section>
+
   <section class="section visit-flow">
     <div class="container">
       <p class="eyebrow">Make the most of your visit</p>
       <h2 class="section-title">Use as much—or as little—of the guide as you need</h2>
       <div class="three-up">
-        <article>
-          <span aria-hidden="true">1</span>
-          <h3>Before you go</h3>
-          <p>See why the place is worth visiting, how long to allow, and how to get there.</p>
-        </article>
-        <article>
-          <span aria-hidden="true">2</span>
-          <h3>While you’re there</h3>
-          <p>Hear the short story and discover details many visitors might otherwise miss.</p>
-        </article>
-        <article>
-          <span aria-hidden="true">3</span>
-          <h3>Learn more</h3>
-          <p>Explore the full history, photographs, sources, and recommended reading.</p>
-        </article>
+        <article><span aria-hidden="true">1</span><h3>Before you go</h3><p>See why the place is worth visiting, how long to allow, and how to get there.</p></article>
+        <article><span aria-hidden="true">2</span><h3>While you’re there</h3><p>Hear the short story and discover details many visitors might otherwise miss.</p></article>
+        <article><span aria-hidden="true">3</span><h3>Learn more</h3><p>Explore the full history, photographs, sources, and recommended reading.</p></article>
       </div>
     </div>
   </section>
@@ -114,29 +117,10 @@ const quickStarts = [
   <section class="section" style="background: var(--parchment);">
     <div class="container">
       <div class="section-heading-row">
-        <div>
-          <p class="eyebrow">Worth a detour</p>
-          <h2 class="section-title">Featured places</h2>
-        </div>
+        <div><p class="eyebrow">Worth a detour</p><h2 class="section-title">Featured places</h2></div>
         <a href={href('/map')}>View all on the map →</a>
       </div>
-      <div class="location-grid">
-        {featured.map((l) => <LocationCard location={{ ...l.data }} />)}
-      </div>
-    </div>
-  </section>
-
-  <section class="section concierge-strip planning-strip">
-    <div class="container concierge-strip-grid">
-      <div>
-        <p class="eyebrow light">Planning a Bainbridge Island visit?</p>
-        <h2>Get personalized suggestions by phone.</h2>
-        <p>{site.concierge.description}</p>
-      </div>
-      <div class="concierge-actions">
-        <a class="btn" href={href('/concierge')}>Bainbridge visit help</a>
-        <small>Business hours are reviewed monthly. Time-sensitive details should still be confirmed directly.</small>
-      </div>
+      <div class="location-grid">{featured.map((l) => <LocationCard location={{ ...l.data }} />)}</div>
     </div>
   </section>
 
@@ -156,7 +140,7 @@ const quickStarts = [
     </div>
   </section>
 
-  <script define:vars={{ locationsUrl: href('/locations.json'), basePath: href(''), conciergePhone: site.concierge.phone }}>
+  <script define:vars={{ locationsUrl: href('/locations.json'), basePath: href(''), conciergePhone: site.concierge.phone, bainbridgeFence: BAINBRIDGE_GEOFENCE }}>
     (function () {
       const button = document.getElementById('home-locate');
       const status = document.getElementById('home-locate-status');
@@ -164,15 +148,11 @@ const quickStarts = [
       const grid = document.getElementById('home-nearby-grid');
       const manualForm = document.getElementById('manual-location');
       const manualInput = document.getElementById('manual-location-query');
+      const bainbridgeAssist = document.getElementById('home-bainbridge-assist');
       let locations = null;
 
       function escapeHtml(value) {
-        return String(value ?? '')
-          .replace(/&/g, '&amp;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;')
-          .replace(/'/g, '&#039;');
+        return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
       }
 
       function distMiles(aLat, aLng, bLat, bLng) {
@@ -184,6 +164,17 @@ const quickStarts = [
         return 2 * R * Math.asin(Math.sqrt(s));
       }
 
+      function inFence(lat, lng) {
+        let inside = false;
+        for (let i = 0, j = bainbridgeFence.length - 1; i < bainbridgeFence.length; j = i++) {
+          const [latI, lngI] = bainbridgeFence[i];
+          const [latJ, lngJ] = bainbridgeFence[j];
+          const crosses = (lngI > lng) !== (lngJ > lng) && lat < ((latJ - latI) * (lng - lngI)) / (lngJ - lngI) + latI;
+          if (crosses) inside = !inside;
+        }
+        return inside;
+      }
+
       async function loadLocations() {
         if (locations) return locations;
         const response = await fetch(locationsUrl);
@@ -192,10 +183,8 @@ const quickStarts = [
         return locations;
       }
 
-      function isBainbridge(l) {
-        const text = `${l.title || ''} ${l.description || ''}`;
-        const inIslandBounds = l.lat >= 47.58 && l.lat <= 47.74 && l.lng >= -122.62 && l.lng <= -122.44;
-        return inIslandBounds || /bainbridge island/i.test(text);
+      function isBainbridgeLocation(l) {
+        return inFence(l.lat, l.lng) || /bainbridge island/i.test(`${l.title || ''} ${l.description || ''}`);
       }
 
       function cardHtml(item) {
@@ -205,7 +194,7 @@ const quickStarts = [
           : `<div class="nearby-image-fallback" aria-hidden="true">📍</div>`;
         const directions = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(l.lat + ',' + l.lng)}`;
         const storyUrl = `${basePath}/locations/${encodeURIComponent(l.slug)}`;
-        const concierge = isBainbridge(l) && conciergePhone
+        const concierge = isBainbridgeLocation(l) && conciergePhone
           ? `<a class="nearby-action" href="tel:${escapeHtml(conciergePhone.replace(/[^+\d]/g, ''))}">☎ Bainbridge help</a>`
           : '';
         return `<article class="nearby-place-card">
@@ -230,6 +219,7 @@ const quickStarts = [
           .slice(0, 5);
         grid.innerHTML = nearest.map(cardHtml).join('');
         section.hidden = false;
+        bainbridgeAssist.hidden = !inFence(latitude, longitude);
         status.textContent = accuracy
           ? `Showing the five closest places · location accuracy ±${Math.round(accuracy)} m`
           : `Showing the five closest places to ${label}`;
@@ -279,9 +269,7 @@ const quickStarts = [
         status.textContent = `Looking for ${query}…`;
         try {
           await loadLocations();
-          const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us,ca&q=${encodeURIComponent(query)}`, {
-            headers: { 'Accept-Language': 'en' }
-          });
+          const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us,ca&q=${encodeURIComponent(query)}`, { headers: { 'Accept-Language': 'en' } });
           if (!response.ok) throw new Error('place search failed');
           const results = await response.json();
           if (!results.length) {
