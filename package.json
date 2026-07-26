@@ -5,12 +5,14 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/postbuild.mjs && pagefind --site dist",
     "preview": "astro preview",
     "migrate": "node scripts/migrate.mjs",
     "icons": "node scripts/generate-icons.mjs",
     "images": "node scripts/optimize-images.mjs",
-    "check:coords": "node scripts/check-coords.mjs"
+    "check:coords": "node scripts/check-coords.mjs",
+    "build:admin": "INCLUDE_ADMIN=1 astro build && node scripts/postbuild.mjs && pagefind --site dist",
+    "smoke": "node scripts/smoke.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
@@ -19,6 +21,7 @@
     "leaflet.markercluster": "^1.5.3"
   },
   "devDependencies": {
+    "pagefind": "^1.5.2",
     "sharp": "^0.33.5"
   }
 }

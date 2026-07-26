@@ -5,8 +5,9 @@
   --cream: #f5efe2;
   --parchment: #ece1cb;
   --sand: #dfd2b6;
-  --rust: #a14e2c;
-  --rust-dark: #84401f;
+  --rust: #a14e2c;        /* fills & large type only: 5.77:1 on white */
+  --rust-dark: #84401f;   /* text on light surfaces: 5.92:1 on parchment */
+  --rust-deep: #6d3417;   /* hover / small caps: 7.52:1 on parchment */
   --gold: #c9a227;
   --ink: #2b2620;
   --ink-soft: #5a5246;
@@ -38,8 +39,8 @@ h1, h2, h3, h4 {
   margin: 0 0 0.5em;
 }
 
-a { color: var(--rust); }
-a:hover { color: var(--rust-dark); }
+a { color: var(--rust-dark); }
+a:hover { color: var(--rust-deep); }
 
 img { max-width: 100%; height: auto; display: block; }
 

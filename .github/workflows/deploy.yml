@@ -25,6 +25,9 @@ jobs:
           # Amazon Associates tag — set as a repo *variable* (Settings →
           # Secrets and variables → Actions → Variables). Falls back to the
           # value in src/data/site.json if unset.
+          # `npm run build` warns loudly when this is empty. Once it is set,
+          # add AFFILIATE_REQUIRED: '1' below so an empty tag fails the build
+          # instead of silently shipping untagged book links.
           PUBLIC_AMAZON_TAG: ${{ vars.PUBLIC_AMAZON_TAG }}
           # GoatCounter site code (the subdomain of your goatcounter.com URL).
           PUBLIC_GOATCOUNTER_CODE: ${{ vars.PUBLIC_GOATCOUNTER_CODE }}
@@ -32,6 +35,8 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -39,3 +44,22 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
+  # Fails the run if the deployed site is missing something it must have.
+  # Two build-config failures reached production unnoticed before this existed
+  # (the search index was never generated; the affiliate tag was empty), which
+  # is what a post-deploy check is for.
+  smoke:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Wait for the CDN to pick up the new deploy
+        run: sleep 30
+      - name: Smoke test the live site
+        run: node scripts/smoke.mjs "${{ needs.deploy.outputs.page_url || 'https://red4golf.github.io/PNWHistoricalExplorer' }}"
