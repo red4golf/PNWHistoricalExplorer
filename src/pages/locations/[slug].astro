@@ -7,6 +7,7 @@ import { href } from '../../lib/url';
 import { withAffiliateTag } from '../../lib/amazon';
 import { deriveQuality, entryContentHash } from '../../lib/quality';
 import { publishedLocations } from '../../lib/publish';
+import { isBainbridgeLocation } from '../../lib/bainbridge';
 import site from '../../data/site.json';
 
 export async function getStaticPaths() {
@@ -24,8 +25,7 @@ const cat = categoryByName(d.category);
 const heroLarge = d.heroImage ? href(d.heroImage.replace(/\.(jpe?g|png)$/i, '-hero.webp')) : null;
 const heroFallback = d.heroImage ? href(d.heroImage) : null;
 const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${d.coordinates.lat},${d.coordinates.lng}`;
-const inBainbridgeBounds = d.coordinates.lat >= 47.58 && d.coordinates.lat <= 47.74 && d.coordinates.lng >= -122.62 && d.coordinates.lng <= -122.44;
-const isBainbridge = inBainbridgeBounds || /bainbridge island/i.test(`${d.address ?? ''} ${d.description ?? ''}`);
+const isBainbridge = isBainbridgeLocation(d);
 const callHref = site.concierge.phone ? `tel:${site.concierge.phone.replace(/[^+\d]/g, '')}` : href('/concierge');
 
 const noticeByCategory: Record<string, string[]> = {
@@ -108,9 +108,7 @@ const jsonLd = {
       <article class="experience-card">
         <p class="eyebrow">When you arrive</p>
         <h2>What to notice</h2>
-        <ol class="look-list">
-          {noticePrompts.map((prompt) => <li>{prompt}</li>)}
-        </ol>
+        <ol class="look-list">{noticePrompts.map((prompt) => <li>{prompt}</li>)}</ol>
       </article>
       <article class="experience-card practical-card">
         <p class="eyebrow">Before you go</p>
@@ -156,10 +154,7 @@ const jsonLd = {
           <a class="sidebar-link" href={href(`/map#${d.slug}`)}>View on the explorer map →</a>
           <a class="sidebar-link" href={href(`/categories/${slugForCategory(d.category)}`)}>More {d.category.toLowerCase()} →</a>
         </div>
-        <div class="sidebar-card source-card">
-          <h3>About this history</h3>
-          <p>{statusText}</p>
-        </div>
+        <div class="sidebar-card source-card"><h3>About this history</h3><p>{statusText}</p></div>
         {d.books.length > 0 && (
           <div class="sidebar-card"><h3>📚 Continue the story</h3><ul class="book-list">{d.books.map((b) => <li>{b.url ? <a href={withAffiliateTag(b.url)} rel="noopener nofollow sponsored" target="_blank" data-affiliate>{b.title}</a> : b.title}{b.author && <span class="author">{b.author}</span>}</li>)}</ul></div>
         )}
