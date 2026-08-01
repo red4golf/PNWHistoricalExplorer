@@ -8,7 +8,7 @@ address: "2189 Hwy 26, Warm Springs, OR 97761"
 coordinates:
   lat: 44.7630638
   lng: -121.2505094
-description: "This award-winning tribal museum demonstrates 10,000 years of history from the Confederated Tribes of Warm Springs. Featuring traditional songs, languages, and crafts, it preserves the heritage of the Wasco, Warm Springs, and Paiute peoples of central Oregon."
+description: "Opened in 1993 and owned and operated by the Confederated Tribes of Warm Springs, this tribal museum — Oregon's first — preserves the heritage of the Wasco, Warm Springs, and Paiute peoples of central Oregon through traditional songs, languages, and crafts."
 heroImage: null
 audio: null
 books:
@@ -19,21 +19,32 @@ books:
     author: "Brook Colley"
     url: "https://www.amazon.com/Power-Telling-Intertribal-Indigenous-Confluences/dp/0295743360"
 sourceId: 131
+factcheck:
+  status: "corrected"
+  lastChecked: "2026-07-12"
+  reviewer: "Cowork verification pass 2026-07-12"
+  sourceTier: "primary"
+  claimsTotal: 14
+  claimsCited: 14
+  openFlags: 0
+  neutrality: "pass"
+  checkedHash: "qwo8p6"
+  notes: "Corrected treaty history: 1855 Treaty with the Tribes of Middle Oregon covered Wasco and Warm Springs (Sahaptin) bands only; Paiute settlement began 1879 after the Bannock War (warmsprings-nsn.gov). Removed invented Ichishkíin etymology for 'Warm Springs.' Added verified museum facts (opened March 13, 1993; $7.6M; 25,000 sq ft; Oregon's first tribal museum, per the museum). Superlatives attributed or removed."
 ---
 
 # The Museum at Warm Springs: Preserving the Heritage of Three Peoples
 
-In the high desert of central Oregon, The Museum at Warm Springs shows the rich cultural heritage and enduring presence of the Confederated Tribes of Warm Springs. This award-winning institution preserves and interprets 10,000 years of history from the Wasco, Warm Springs (Ichishkíin), and Northern Paiute peoples, creating one of the most comprehensive and culturally authentic Native American museums in the Pacific Northwest.
+In the high desert of central Oregon, The Museum at Warm Springs shows the rich cultural heritage and enduring presence of the Confederated Tribes of Warm Springs. Opened in 1993, this tribally owned institution — the first tribal museum in Oregon, by the museum's own account — preserves and interprets what the tribes describe as 10,000 years of history from the Wasco, Warm Springs (Sahaptin-speaking), and Northern Paiute peoples.
 
 ## Three Peoples, One Confederation
 
-The Confederated Tribes of Warm Springs represent a unique alliance formed through the Treaty of 1855, bringing together three distinct peoples who had maintained separate identities while sharing the diverse ecosystems of central Oregon for thousands of years. Each group contributed distinct cultural traditions, languages, and territorial knowledge that enriched the confederation while preserving individual tribal identities.
+The confederation came together in stages, not all at once. In the 1855 Treaty with the Tribes of Middle Oregon, negotiated by Superintendent of Indian Affairs Joel Palmer, the Wasco and Warm Springs (Sahaptin-speaking) bands ceded roughly ten million acres of their homelands while reserving the Warm Springs Reservation for their exclusive use. The Northern Paiute were not part of that treaty. Their settlement at Warm Springs began in 1879, after the Bannock War, when the federal government moved a first group of 38 Paiutes to the reservation from the Yakama Reservation. In 1937, following the Indian Reorganization Act, the three tribes formally organized as the Confederated Tribes of the Warm Springs Reservation of Oregon — while each people has maintained its own identity, traditions, and language.
 
-The Warm Springs people, whose name derives from the Ichishkíin language meaning "people of the warm springs," traditionally occupied the area around the hot springs that gave the reservation its name. They developed sophisticated societies adapted to the high desert environment, creating seasonal rounds that took advantage of salmon runs, root harvests, and hunting opportunities throughout their extensive territories.
+The Warm Springs bands — Sahaptin-speaking peoples of the Columbia River plateau and its tributaries — developed sophisticated societies adapted to the high desert environment, creating seasonal rounds that took advantage of salmon runs, root harvests, and hunting opportunities throughout their extensive territories. The reservation, and eventually the bands themselves, took the "Warm Springs" name from the hot springs within its boundaries.
 
 The Wasco people were renowned traders whose villages along the Columbia River served as central marketplaces for indigenous peoples throughout the Pacific Northwest. Their strategic location at The Dalles, where the Columbia River narrows dramatically, made them intermediaries in trade networks that extended from the Pacific Coast to the Great Plains, bringing wealth and cultural influence that shaped regional development.
 
-The Northern Paiute bands who joined the confederation brought extensive knowledge of Great Basin environments and cultural practices adapted to the arid regions of southeastern Oregon. Their expertise in desert survival, seasonal plant gathering, and water management contributed essential skills that helped the confederation adapt to the challenges of reservation life.
+The Northern Paiute who came to the reservation beginning in 1879 brought extensive knowledge of Great Basin environments and cultural practices adapted to the arid regions of southeastern Oregon. Their language — a Numic (Uto-Aztecan) tongue entirely unrelated to Sahaptin or Chinookan — and their desert lifeways added a third distinct cultural tradition to the community.
 
 ## Traditional Lifeways and Seasonal Rounds
 
@@ -61,7 +72,7 @@ Storytelling traditions preserved at the museum serve multiple functions, entert
 
 ## Museum Development and Tribal Self-Determination
 
-The Museum at Warm Springs emerged from the self-determination movements of the late 20th century, when Native American communities began asserting greater control over how their histories and cultures were presented to both tribal members and the general public. The Confederated Tribes of Warm Springs recognized that a tribally controlled museum could serve multiple purposes, preserving traditional knowledge, educating young people about their heritage, and presenting accurate representations of tribal cultures to non-Native visitors.
+The Museum at Warm Springs emerged from the self-determination movements of the late 20th century, when Native American communities began asserting greater control over how their histories and cultures were presented to both tribal members and the general public. The Tribal Council established a museum board by resolution in 1974, tribal members approved construction funding by referendum in 1988, and the 25,000-square-foot museum opened on March 13, 1993 — a roughly $7.6 million project that the museum describes as the largest financial commitment a tribe had made to a museum at that time, and Oregon's first tribal museum. The Confederated Tribes recognized that a tribally controlled museum could serve multiple purposes: preserving traditional knowledge, educating young people about their heritage, and presenting accurate representations of tribal cultures to non-Native visitors.
 
 The museum's development required extensive collaboration between tribal elders, cultural specialists, and museum professionals to ensure that exhibits reflected authentic tribal perspectives rather than external interpretations of indigenous culture. This approach emphasized community involvement in all aspects of museum planning, from selecting artifacts and designing exhibits to developing educational programs and special events.
 
@@ -89,4 +100,4 @@ The Museum at Warm Springs represents an important expression of cultural sovere
 
 This approach to cultural preservation reflects broader efforts by the Confederated Tribes to exercise self-determination in all aspects of community life, from natural resource management and economic development to education and cultural revitalization. The museum serves as both symbol and instrument of these sovereignty efforts, demonstrating the tribes' commitment to preserving their heritage while adapting to contemporary circumstances.
 
-The museum's success has influenced similar projects throughout Indian Country, providing a model for how tribal communities can develop culturally appropriate institutions that serve both preservation and educational functions while maintaining community control over cultural representation.
+The museum has been described by Oregon Public Broadcasting as "a national model for how tribes control their own treasures, and share their own histories" — an example of how tribal communities can build institutions that serve both preservation and education while maintaining community control over cultural representation.

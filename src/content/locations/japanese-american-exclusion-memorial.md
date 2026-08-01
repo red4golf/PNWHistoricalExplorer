@@ -8,7 +8,7 @@ address: "4192 Eagle Harbor Dr NE, Bainbridge Island, WA"
 coordinates:
   lat: 47.6154
   lng: -122.5102
-description: "A powerful reminder of the forced removal of Japanese Americans during World War II. This memorial honors the 276 Japanese Americans who were forced to leave Bainbridge Island on March 30, 1942, the first community in the United States to be removed under Executive Order 9066."
+description: "A powerful reminder of the forced removal of Japanese Americans during World War II. On March 30, 1942, 227 Japanese Americans were forced from Bainbridge Island — the first community in the United States removed under Executive Order 9066. The memorial's wall bears the names of all 276 Japanese American islanders exiled during the war."
 heroImage: "/images/locations/japanese-american-exclusion-memorial-hero.jpg"
 audio: "/audio/japanese-american-exclusion-memorial.mp3"
 books:
@@ -19,35 +19,46 @@ books:
     author: "Jeanne Wakatsuki Houston"
     url: "https://www.amazon.com/Farewell-Manzanar-Jeanne-Wakatsuki-Houston/dp/0618216200"
 sourceId: 21
+factcheck:
+  status: "corrected"
+  lastChecked: "2026-07-12"
+  reviewer: "Cowork verification pass 2026-07-12"
+  sourceTier: "primary"
+  claimsTotal: 16
+  claimsCited: 16
+  openFlags: 0
+  neutrality: "pass"
+  checkedHash: "1oq23be"
+  notes: "Frontmatter corrected: 227 removed March 30, 1942 (first under EO 9066); 276 is the total islanders named on the wall (NPS, BIJAEMA, Densho). Removed speculative 'test public acceptance' rationale stated as fact; replaced with documented DeWitt naval-proximity rationale (Densho). Fixed incarceration trajectory: most islanders transferred from Manzanar to Minidoka in February 1943 (Densho). 'About half returned' corrected to 'more than half' (Densho). Unverifiable family-business specifics generalized. Wall opened to public July 30, 2011; Johnpaul Jones design; unit of Minidoka NHS (2008 legislation) verified."
 ---
 
 # Japanese American Exclusion Memorial: Nidoto Nai Yoni
 
-On the quiet shores of Eagle Harbor, where the ferry once carried Bainbridge Island residents to and from Seattle, stands a memorial that bears witness to one of the darkest chapters in American history. The Bainbridge Island Japanese American Exclusion Memorial marks the exact spot where, on March 30, 1942, 227 Japanese Americans, two-thirds of them American citizens, were forced to board a ferry under armed guard, beginning their journey to incarceration camps. The memorial's motto, "Nidoto Nai Yoni" (Let It Not Happen Again), carries both grief and determination, honoring those who suffered while challenging future generations to protect the civil rights of all Americans.
+On the quiet shores of Eagle Harbor, where the ferry once carried Bainbridge Island residents to and from Seattle, stands a memorial that bears witness to one of the darkest chapters in American history. The Bainbridge Island Japanese American Exclusion Memorial marks the exact spot where, on March 30, 1942, 227 Japanese Americans, most of them United States citizens by birth, were forced to board a ferry under armed guard, beginning their journey to incarceration camps. The memorial's motto, "Nidoto Nai Yoni" (Let It Not Happen Again), carries both grief and determination, honoring those who suffered while challenging future generations to protect the civil rights of all Americans.
 
 ## The First Exclusion
 
 Bainbridge Island holds the tragic distinction of being the first community targeted under Executive Order 9066, signed by President Franklin Roosevelt on February 19, 1942. Civilian Exclusion Order No. 1, posted on March 24, 1942, gave Japanese American residents just six days' notice to report for "evacuation." They could bring only what they could carry in their hands, forcing families to abandon homes, businesses, farms, and possessions accumulated over decades of hard work.
 
-The choice of Bainbridge Island as the first target was strategic, its small size and island geography made it easier to control, while its proximity to the Bremerton Naval Shipyard provided military justification for the exclusion. However, the real reason had nothing to do with military necessity and everything to do with testing whether the American public would accept the mass incarceration of their neighbors.
+Why Bainbridge first? According to the Densho Encyclopedia, the island's close proximity to U.S. Navy facilities — including the Bremerton Navy Yard across the water — prompted Lieutenant General John DeWitt to order the islanders' removal on March 24, 1942, the same day he issued Civilian Exclusion Order No. 1. The postwar Commission on Wartime Relocation and Internment of Civilians later concluded that the incarceration program as a whole was driven not by military necessity but by "race prejudice, war hysteria, and a failure of political leadership."
 
-Of the 276 Japanese Americans living on Bainbridge Island, 227 were present for the forced removal. The others, young people away at college or serving in the U.S. military, were forbidden from returning home. Families were torn apart, with some members trapped in camps while others remained free but unable to reunite with their loved ones.
+Of the 276 Japanese Americans who called Bainbridge Island home during the war years, 227 were removed that March morning. Others — including young people away at school or serving in the U.S. military — were barred from returning home. Families were torn apart, with some members held in camps while others remained free but unable to reunite with their loved ones.
 
 ## A Community Destroyed
 
-The Japanese American community on Bainbridge Island had deep roots, with some families living there for over four decades. They operated successful strawberry farms, ran grocery stores and restaurants, and contributed to the island's economic and social life. Many were leaders in community organizations, their children excelled in local schools, and they had built strong relationships with their non-Japanese neighbors.
+The Japanese American community on Bainbridge Island had deep roots reaching back to the 1880s. Families operated successful strawberry farms, ran stores and other businesses, and contributed to the island's economic and social life. Many were leaders in community organizations, their children excelled in local schools, and they had built strong relationships with their non-Japanese neighbors.
 
-The Koura family ran a hotel and restaurant that served ferry passengers and island residents. The Nakata family operated a successful truck farm that supplied produce throughout the region. The Akiyama family built one of the island's first greenhouses, pioneering agricultural techniques that other farmers adopted. These were not strangers or enemies, they were neighbors, friends, and fellow Americans.
+Japanese immigrants had been part of island life since the 1880s, when workers came to labor in the Port Blakely sawmill; by the 1920s and 1930s, island families had built thriving strawberry farms that became a mainstay of the local economy. These were not strangers or enemies — they were neighbors, friends, classmates, and fellow Americans.
 
-The economic impact of their removal was immediate and lasting. Japanese American farmers had been particularly innovative, developing superior growing techniques and maintaining some of the most productive farms on the island. Their forced departure left fields unharvested, businesses shuttered, and a hole in the local economy that would never be fully filled.
+The economic impact of their removal was immediate and lasting. The exclusion came just weeks before the strawberry harvest, leaving fields untended, businesses shuttered, and a hole in the island's economy and community life.
 
-## The Journey to Manzanar
+## From Manzanar to Minidoka
 
-On that gray March morning, families gathered at the Eagledale ferry dock carrying suitcases, duffel bags, and the uncertainty of not knowing when, or if, they would return home. Children who had been born on Bainbridge Island and knew no other home were labeled "enemy aliens" and forced to leave the only community they had ever known.
+On that gray March morning, families gathered at the Eagledale ferry dock carrying suitcases, duffel bags, and the uncertainty of not knowing when, or if, they would return home. Children who had been born on Bainbridge Island and knew no other home were forced to leave the only community they had ever known.
 
-The ferry carried them first to Seattle, then by train to Manzanar concentration camp in California's Owens Valley. There, in a desolate landscape of barbed wire, guard towers, and tar paper barracks, families lived for nearly four years under conditions that violated every principle of American justice and human dignity.
+The ferry carried them first to Seattle, then by train under armed guard to Manzanar in California's Owens Valley — a desolate landscape of barbed wire, guard towers, and tar paper barracks. According to the Densho Encyclopedia, most of the Bainbridge Islanders remained at Manzanar for just under a year: in February 1943, 177 of them transferred to the Minidoka camp in Idaho, where the bulk of Seattle-area Japanese Americans were held, while a handful of families stayed in California. Most spent roughly three years in confinement before the West Coast exclusion was lifted.
 
-At Manzanar, Bainbridge Island families were scattered among 10,000 other Japanese Americans from throughout the West Coast. They endured extreme temperatures, inadequate housing, poor food, limited medical care, and the constant surveillance of armed guards. Children attended school in barracks, adults worked for wages far below minimum standards, and everyone lived with the uncertainty of what would happen to them after the war.
+In the camps, islanders endured extreme temperatures, inadequate housing, poor food, limited medical care, and the constant surveillance of armed guards. Children attended school in barracks, adults worked for wages far below prevailing standards, and everyone lived with the uncertainty of what would happen to them after the war.
 
 ## A Community's Response
 
@@ -59,7 +70,7 @@ Some non-Japanese islanders stepped forward to protect their neighbors' property
 
 ## The Long Return
 
-When the war ended and the camps finally closed, only about half of the Bainbridge Island Japanese American community returned. Many had lost their property, their businesses, and their faith in American promises of justice and equality. Some had died in the camps, while others chose to start over in different communities rather than return to a place that held such painful memories.
+When the war ended and the camps finally closed, more than half of the island's prewar Japanese American community returned — an unusually high rate compared with many West Coast communities, according to the Densho Encyclopedia. Even so, many had lost property, businesses, and faith in American promises of justice and equality, and some chose to start over elsewhere rather than return to a place that held such painful memories.
 
 Those who did return faced continued discrimination and the challenge of rebuilding lives that had been shattered by four years of incarceration. Property had been lost or damaged, businesses had failed, and the tight-knit community that had existed before the war could never be fully restored.
 
@@ -69,9 +80,9 @@ However, the returning families also found genuine welcome from neighbors who ha
 
 The creation of the Exclusion Memorial represented a decades-long effort by survivors, their descendants, and community allies to ensure that this history would not be forgotten. In 2008, Congress designated the memorial as a unit of Minidoka National Historic Site, providing federal recognition of its historical significance.
 
-The memorial's design by architect Johnpaul Jones creates a powerful space for reflection and remembrance. A 276-foot curved cedar wall displays the names and ages of all 276 Japanese American residents in 1942, making each person visible and honored rather than reduced to statistics. The wall winds down to the exact departure point where families boarded the ferry, creating a physical connection to that traumatic moment.
+The memorial's story wall, designed by architect Johnpaul Jones and opened to the public on July 30, 2011, creates a powerful space for reflection and remembrance. The curving wall of old-growth red cedar, granite, and basalt bears the names of all 276 Japanese and Japanese American islanders exiled during the war, making each person visible and honored rather than reduced to a statistic. The path leads toward the site of the old Eagledale ferry dock where families were forced aboard, creating a physical connection to that traumatic moment.
 
-Five terracotta friezes represent the stages of the Japanese American experience: immigration, inclusion, exclusion, incarceration, and return. These artistic elements help visitors understand the full arc of this community's experience while emphasizing that the exclusion was just one chapter in a larger story of seeking and building American lives.
+Friezes along the wall chronicle the community's story — from immigration and island life through exclusion and incarceration to the return home after the war. These artistic elements help visitors understand the full arc of this community's experience while emphasizing that the exclusion was one chapter in a larger story of building American lives.
 
 ## Lessons for Democracy
 

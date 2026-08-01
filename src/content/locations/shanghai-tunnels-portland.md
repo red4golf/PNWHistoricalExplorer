@@ -8,7 +8,7 @@ address: "Old Town Portland, OR"
 coordinates:
   lat: 45.5236
   lng: -122.675
-description: "Underground tunnel system used for kidnapping sailors and workers for forced labor aboard ships, representing the dark maritime history of Pacific Coast ports"
+description: "Old Town basements at the heart of Portland's most durable legend — a supposed kidnappers' tunnel network historians say never existed, built atop the very real history of shanghaiing and the crimps who ruled the waterfront"
 heroImage: null
 audio: null
 books:
@@ -19,86 +19,57 @@ books:
     author: "Michael Jones"
     url: "https://www.amazon.com/Underground-Portland-Below-Rose-City/dp/1467136743"
 sourceId: 69
+factcheck:
+  status: "corrected"
+  lastChecked: "2026-07-12"
+  reviewer: "Cowork verification pass 2026-07-12"
+  sourceTier: "secondary"
+  claimsTotal: 16
+  claimsCited: 13
+  openFlags: 0
+  neutrality: "pass"
+  checkedHash: "192ozme"
+  notes: "Reframed from asserting a kidnapping-tunnel network as fact. Per Richard Engeman's Oregon Encyclopedia article 'Shanghaiing in Portland and the Shanghai Tunnels Myth' (editorially reviewed): shanghaiing/crimping was real in Portland, but historians have found no evidence of a tunnel network or of basement passages used for kidnapping; existing passages served merchandise movement and exits from gambling/prostitution houses; the tunnel legend arose in the 1970s (tours from 1979), seeded by Stewart Holbrook's romanticized 1933 newspaper series. Bunko Kelly facts vs. legends corrected per Finn J.D. John's Offbeat Oregon two-part investigation: real crimp, 1894 murder conviction (George Sayres), 13 years in prison, pardoned; cigar-store-Indian and formaldehyde-corpses tales trace to Spider Johnson via Holbrook and are unverified legend. Removed: 'archaeological evidence confirms tunnels used for moving people,' trapdoor-to-tunnel claims stated as fact, '3,000 men' figure stated as fact, and the claim that tunnels were sealed at WWII ending the practice."
 ---
 
-# Shanghai Tunnels: Portland's Underground Crime Network
+# Shanghai Tunnels: Portland's Greatest Underground Legend
 
-Beneath the cobblestone streets of Portland's Old Town lies a network of tunnels that witnessed one of the most notorious chapters in Pacific maritime history. These underground passages, connecting waterfront establishments to the Willamette River docks, facilitated the practice of "shanghaiing", the kidnapping and forced conscription of unwilling men into maritime service that made Portland infamous as one of the most dangerous ports on the Pacific Coast.
+Ask a Portland tour guide and you'll hear the story in delicious detail: beneath Old Town's streets runs a spiderweb of tunnels where victims — drugged in waterfront saloons, dropped through trapdoors — were dragged to the docks and sold to ship captains, waking up halfway to Shanghai. It's one of the best dark legends any American city owns. And here's the twist that makes it even better: the kidnapping happened, but the tunnels — historians are quite sure — did not.
 
-## The Maritime Labor Crisis
+## The Legend, As Told
 
-During the late 19th and early 20th centuries, Pacific Coast shipping faced a chronic labor shortage as economic opportunities on land offered better conditions than the harsh life aboard merchant vessels. Ship captains departing Portland often found themselves short-handed, unable to recruit enough sailors to safely operate their vessels on long voyages to Asia, South America, and other distant ports.
+The story goes that Portland's saloons, boarding houses, and brothels were linked by underground passages to the Willamette River docks. Deadfalls in barroom floors dropped the unwary into darkness below. Crimps hauled their unconscious cargo through the tunnels to waiting ships, out of sight of police and passersby. Tour operators have led visitors through Old Town basements since 1979 telling versions of this tale, and it has become as much a part of Portland's identity as roses and rain.
 
-This labor shortage created a lucrative criminal industry: the systematic kidnapping of men to serve as unwilling crew members. Portland's location at the confluence of the Willamette and Columbia Rivers made it a major shipping hub, while the city's rough waterfront district provided perfect cover for criminal operations that exploited both sailors and landsmen.
+Historians at the Oregon Encyclopedia, however, are blunt about it: they have found no evidence that any network of tunnels existed, and no evidence that basement passages were used for shanghaiing. What does exist under Old Town is more mundane — basements, sidewalk vaults, and some short passages that, per historian Richard Engeman, were built for purposes like moving merchandise between buildings and providing discreet exits from gambling dens and houses of prostitution. Discreet exits from a card game are not nothing — but they are not a kidnappers' subway system.
 
-## The Crimp System
+The tunnel legend itself is surprisingly young. Its roots lie in journalist Stewart Holbrook's romanticized 1933 newspaper series on Portland's rough waterfront days, but the full "tunnel network" narrative took shape in the 1970s, and commercial tunnel tours began in 1979. In other words, the tunnels are a modern ghost story built on a real Victorian crime.
 
-The practice of shanghaiing was facilitated by "crimps", boarding house operators who made money by supplying crews to ship captains. Legitimate crimps operated employment agencies for sailors, but many resorted to trickery, debt bondage, and outright kidnapping to fill their quotas and collect the fees paid by desperate ship captains.
+## The Real Crime: Shanghaiing in Portland
 
-Portland's crimps developed sophisticated operations that combined legitimate boarding houses with criminal enterprises. They would advance money to sailors between voyages, creating debts that could only be repaid through service on ships chosen by the crimp. When voluntary recruitment failed, crimps resorted to more direct methods of obtaining crews.
+Strip away the tunnels and you're left with history that needs no embellishment. Shanghaiing — coercing or tricking men into service aboard sailing ships — genuinely happened in Portland, as it did in San Francisco, Astoria, and Port Townsend. Historians note it was primarily a problem on ships in the trans-Pacific trade, where voyages were long, conditions brutal, and volunteers scarce.
 
-## Underground Infrastructure
+The machinery of the trade was the "crimp": a sailors' boardinghouse operator who supplied crews to captains for a fee. Crimps lodged sailors between voyages, advanced them money and drink, and collected the debt by delivering them — willing or otherwise — to outbound ships, pocketing the sailor's advance wages ("blood money"). The line between employment agency and trafficking operation could be very thin. Trickery, liquor, and debt did most of the work; the drugged drink of legend was the exception that made the newspapers, not the nightly routine. And victims were delivered to ships the boring way — across the street and over the dock, often in plain view of authorities who had been paid not to care.
 
-The tunnel system beneath Portland's waterfront developed gradually as businesses built connections between their basements and the river docks. Originally intended for legitimate purposes like moving cargo and avoiding street-level congestion, these passages were adapted by crimps and their associates for moving unconscious victims from saloons and boarding houses to waiting ships.
+Crimping thrived because it was woven into the port economy: captains needed crews, boardinghouse masters controlled the labor supply, and municipal corruption kept the machine oiled. It declined in the early twentieth century as sail gave way to steam, and federal reforms — most notably the Seamen's Act of 1915, which strengthened sailors' legal protections — helped finish it off.
 
-The tunnels connected establishments throughout the waterfront district, creating a hidden network that allowed criminals to operate largely unseen by law enforcement. The underground passages led directly to trapdoors near the docks, where victims could be loaded onto ships with minimal public exposure.
+## Bunko Kelly: The Man, The Myth
 
-## Methods of Shanghaiing
+No figure looms larger in the legend than Joseph "Bunco" Kelly, and he's a perfect case study in how Portland's history got tall.
 
-Portland's crimps employed various methods to obtain unwilling crew members. The most common involved drugging drinks in waterfront saloons with laudanum, chloral hydrate, or other substances that would render victims unconscious. Unconscious men would then be transported through the tunnels to ships where they would wake up already at sea.
+The documented Kelly was real enough: a crimp and boardinghouse operator on the 1880s–90s waterfront, his nickname reportedly cemented by an 1887 incident involving a British bark's unimpressed captain. In 1894 he was convicted of murdering an elderly former saloonkeeper named George Sayres, served thirteen years, and was pardoned — after which he attempted, with characteristic brass, a book tour.
 
-Other methods included trapdoors in saloon floors that would drop victims into the tunnels below, fake job interviews that ended in kidnapping, and the exploitation of debt and addiction to trap men in cycles of involuntary service. The variety of techniques demonstrated the criminal sophistication of Portland's shanghaiing operations.
+Then there are the stories. The most famous: that Kelly once wrapped a stolen cigar-store Indian in a blanket and sold it to a captain as an able-bodied (if sleepy) sailor. Or that he found two dozen men dead or dying in a funeral parlor's cellar — they'd broken into what they thought was liquor and drunk embalming fluid — and sold the lot as a full crew to a ship called the *Flying Prince*. Researchers who have gone looking find no contemporary record of either event: no newspaper accounts, no ship, no mention even at Kelly's own murder trial. Both tales trace to a former boardinghouse runner named Edward "Spider" Johnson, spinning yarns to writer Stewart Holbrook in the 1930s — and Johnson himself admitted he didn't know if they were true. Kelly's oft-quoted total of thousands of men shanghaied comes from the same braggadocio pipeline. Enjoy the stories; just file them under legend, where even their tellers left them.
 
-## Notable Crimps and Operations
+Larry Sullivan, another boardinghouse boss of the era, was likewise a real and politically connected figure in Portland's crimping trade — though here too, the colorful details in popular retellings outrun the documentation.
 
-Joseph "Bunko" Kelly became Portland's most notorious crimp, reportedly shanghaiing over 3,000 men during his career. Kelly operated from the Snug Harbor Saloon and developed a reputation for resourcefulness that included once delivering a ship's crew that included a wooden Indian statue when he ran short of actual sailors.
+## Why the Legend Stuck
 
-Larry Sullivan controlled much of Portland's shanghaiing trade through his network of saloons and boarding houses. Sullivan's political connections protected his operations while his criminal associates eliminated competition through violence and intimidation. His empire demonstrated how shanghaiing operations could corrupt local government and law enforcement.
+The Shanghai Tunnels legend works because it's built on truthful bones: Portland's waterfront really was rough, men really were coerced onto ships, and Old Town's buildings really do have atmospheric, brick-vaulted basements that feel like they're hiding something. A story that physicalizes a real historical crime — gives it a place you can stand, a darkness you can walk through — will always beat a footnote about maritime labor law.
 
-## Victims and Consequences
+Today's basement tours are best enjoyed for exactly what they are: theatrical storytelling in a genuinely historic setting. The chills are real. The tunnels-as-kidnapping-conveyor, historians agree, are not.
 
-Shanghaiing victims included not only sailors but also loggers, farm workers, and even businessmen who found themselves in the wrong place at the wrong time. Many victims endured years of forced labor under brutal conditions, while others died at sea or were permanently disabled by the harsh treatment they received aboard ships.
+## The History Worth Remembering
 
-The practice destroyed families and communities as breadwinners disappeared without warning. Some victims never returned home, dying in foreign ports or choosing to start new lives rather than face the shame and trauma of their experiences. The human cost of shanghaiing extended far beyond the immediate victims to include their families and communities.
+Behind the fun is a sobering truth: shanghaiing was labor trafficking, and its victims — sailors, loggers, drifters, the drunk and the unlucky — had almost no legal protection until reformers forced change. That story, fully documented and needing no trapdoors, is Portland's real underground history: a reminder of what happens when an economy quietly depends on coerced labor and everyone with power finds it convenient not to look.
 
-## Law Enforcement Challenges
-
-Portland's police force was often compromised by corruption, with many officers receiving payments from crimps in exchange for ignoring their activities. The waterfront's rough reputation and the transient nature of the sailor population made it difficult for authorities to investigate disappearances or prosecute crimes.
-
-Federal authorities occasionally intervened when shanghaiing operations affected interstate commerce or involved foreign nationals, but local corruption and the difficulty of gathering evidence in the underground criminal network made successful prosecutions rare. The tunnels provided both physical concealment and legal protection for criminal operations.
-
-## Economic Impact
-
-Despite its criminal nature, shanghaiing was deeply integrated into Portland's maritime economy. Ship captains relied on crimps to provide crews, while waterfront businesses profited from the sailors and workers who frequented their establishments. The criminal trade supported a significant underground economy that included saloons, boarding houses, and various support services.
-
-The practice also gave Portland a reputation that affected legitimate maritime business. Honest sailors often avoided the port when possible, while ship owners faced higher insurance costs and legal complications related to crew procurement. The city's economy benefited from maritime trade while suffering from the criminal reputation that shanghaiing created.
-
-## Decline and End
-
-The passage of the Seamen's Act of 1915 began the legal transformation that would eventually end shanghaiing by requiring that sailors sign shipping articles voluntarily and providing legal protections against forced labor. World War I's labor shortages reduced the need for coercive recruitment methods, while changing maritime technology required more skilled crews that couldn't be effectively supplied through kidnapping.
-
-The final end of Portland's shanghaiing came with the United States' entry into World War II, when wartime labor controls and military oversight made the practice impossible to continue. The tunnels were sealed or converted to other uses, ending a criminal tradition that had lasted nearly a century.
-
-## Historical Investigation
-
-Modern historical research has worked to separate fact from legend in the Shanghai tunnels story. While romanticized accounts have exaggerated some aspects of the tunnels' use, archaeological and documentary evidence confirms that shanghaiing was a real and significant part of Portland's maritime history.
-
-Archaeological investigations of the tunnel system have revealed evidence of their use for moving cargo and people, while historical records document numerous cases of forced crew recruitment and the criminal operations that supported it. The research demonstrates how criminal activities can become embedded in urban infrastructure and economic systems.
-
-## Cultural Legacy
-
-The Shanghai tunnels have become part of Portland's cultural mythology, inspiring books, films, and tours that explore the city's criminal past. While some popular accounts romanticize the criminal activities, the tunnels remind us of how economic pressures and weak governance can enable systematic exploitation and human trafficking.
-
-The story resonates with contemporary concerns about labor trafficking and forced labor, demonstrating how criminal enterprises adapt to economic opportunities and social vulnerabilities. The tunnels represent both historical curiosity and ongoing warning about the dangers of unregulated labor markets.
-
-## Preservation and Education
-
-Today, portions of the tunnel system are preserved and used for educational tours that explore Portland's maritime history and the realities of 19th-century labor exploitation. These programs help visitors understand how criminal enterprises operated while acknowledging the suffering of shanghaiing victims.
-
-The preservation efforts balance historical education with sensitivity to the human rights violations that occurred in these spaces. The tunnels serve as physical reminders of a criminal past while providing opportunities to discuss contemporary issues related to labor rights and human trafficking.
-
-## Modern Relevance
-
-The Shanghai tunnels story remains relevant to contemporary discussions about labor exploitation, human trafficking, and the role of law enforcement in protecting vulnerable populations. The historical example demonstrates how criminal enterprises can become embedded in legitimate economic systems when oversight and accountability are weak.
-
-As you explore the remnants of Portland's tunnel system, you're confronting a dark chapter in Pacific maritime history that illustrates both the vulnerability of working people and the importance of legal protections against forced labor. The tunnels stand as a monument to criminal enterprise and a reminder of the ongoing need to protect workers from exploitation and abuse.
+So take the tour, savor the legend of Bunko Kelly and his wooden sailor — and walk out knowing the truth is both smaller and darker than the myth.

@@ -19,23 +19,34 @@ books:
     author: "BJ Cummings"
     url: "https://www.amazon.com/River-That-Made-Seattle-Duwamish/dp/0295747439"
 sourceId: 67
+factcheck:
+  status: "corrected"
+  lastChecked: "2026-07-12"
+  reviewer: "Cowork verification pass 2026-07-12"
+  sourceTier: "primary"
+  claimsTotal: 15
+  claimsCited: 15
+  openFlags: 0
+  neutrality: "pass"
+  notes: "Corrected federal recognition section: replaced flat claim that the tribe 'met the criteria' with the documented sequence (Jan 2001 recognition in the Clinton administration's final days; suspended within days; Sept 2001 BIA final determination against, finding not all seven criteria met; 2013 court remand; 2015 final decision on remand upheld denial; litigation ongoing), with the tribe's disagreement stated as its position. Replaced 'Treaty and Betrayal' header and advocacy framing with plain statements of documented fact. Longhouse opening (Jan 2009), Cecile Hansen, Chief Seattle verified via HistoryLink and duwamishtribe.org; Superfund superlative removed."
+  checkedHash: "13g24v4"
 ---
 
-# Duwamish Longhouse: Keepers of the Original Fire
+# Duwamish Longhouse: Seattle's First People
 
 Standing beside the Duwamish River that bears their name, the Duwamish Longhouse serves as both cultural center and powerful statement of survival. This modern interpretation of traditional architecture represents the Duwamish people's determination to maintain their identity and presence in their ancestral homeland, despite not having federal recognition and facing over 150 years of displacement and cultural suppression.
 
 ## The Original People of Seattle
 
-The Duwamish people have lived in the region that became Seattle for over 4,000 years, developing a sophisticated culture centered on the rivers, forests, and saltwater resources of Puget Sound. Their territory extended from the Black River to the Sammamish River, encompassing what is now the greater Seattle metropolitan area.
+The Duwamish people have lived in the region that became Seattle for thousands of years, developing a sophisticated culture centered on the rivers, forests, and saltwater resources of Puget Sound. Their territory extended from the Black River to the Sammamish River, encompassing what is now the greater Seattle metropolitan area.
 
-Chief Seattle (Si'ahl), for whom the city was named, was a Duwamish and Suquamish leader who attempted to navigate the challenging relationship between his people and the incoming white settlers. His famous 1854 speech warned of the consequences of displacing indigenous peoples while advocating for peaceful coexistence with the newcomers.
+Chief Seattle (Si'ahl), for whom the city was named, was a leader of both the Duwamish and Suquamish peoples — his mother was Duwamish and his father Suquamish — and he was the first signer of the 1855 Treaty of Point Elliott. He navigated the difficult relationship between his people and the incoming settlers; a speech attributed to him from 1854 is widely quoted, though its wording survives only in versions written down years later.
 
-## Treaty and Betrayal
+## The Treaty of Point Elliott and Its Aftermath
 
-In 1855, the Duwamish signed the Point Elliott Treaty along with other Puget Sound tribes, ceding their traditional territory in exchange for a reservation and promises of protection. However, unlike other treaty tribes, the Duwamish were never granted a permanent reservation, forcing them to scatter among other reservations or remain as landless people in their ancestral territory.
+In 1855, the Duwamish signed the Treaty of Point Elliott along with other Puget Sound tribes, ceding their traditional territory in exchange for reservations, fishing rights, and other guarantees. No separate reservation was ever established for the Duwamish. Some Duwamish people moved to reservations established for other treaty signatories, such as Suquamish and Muckleshoot; others remained, without a land base, in their ancestral territory around Seattle.
 
-This betrayal established a pattern of broken promises that has characterized the Duwamish experience for over 150 years. Despite fulfilling their treaty obligations, the Duwamish found themselves without the federal recognition that other tribes received, creating a legal limbo that persists today.
+That outcome shaped everything that followed. Duwamish people who stayed in the Seattle area lived for generations without the reservation land and federal trust relationship that many other treaty signatories received — a status that remains unresolved today.
 
 ## Urban Development and Displacement
 
@@ -47,11 +58,11 @@ Urban development eliminated most physical traces of Duwamish presence, while di
 
 Despite these challenges, the Duwamish people never disappeared. Families maintained cultural traditions, oral histories, and connections to ancestral places even when it was dangerous or difficult to identify as Native American. The civil rights movement of the 1960s encouraged renewed pride in indigenous identity and activism for tribal rights.
 
-The formation of the Duwamish Tribal Council in the 1970s marked the beginning of organized efforts to achieve federal recognition and restore tribal status. This activism reflected broader Native American rights movements while addressing the specific challenges faced by urban indigenous communities.
+The Duwamish Tribal Organization was formed in 1925, and it successfully pursued a land-claims settlement that was finally paid out in 1971 — $64 per enrolled member. Cecile Hansen, a great-great-grandniece of Chief Seattle, was elected tribal chairwoman in 1975 and led the tribe's modern push for federal recognition, which began in the late 1970s. This activism reflected broader Native American rights movements while addressing the specific challenges faced by urban indigenous communities.
 
 ## Building the Longhouse
 
-The opening of the Duwamish Longhouse in January 2009, following years of planning and fundraising, represented a crucial step in reasserting Duwamish presence in their ancestral homeland. The building's design incorporates traditional architectural elements with modern construction techniques, creating a space that honors the past while serving contemporary community needs.
+The opening of the Duwamish Longhouse and Cultural Center in January 2009, following years of planning and fundraising, represented a crucial step in reasserting Duwamish presence in their ancestral homeland. According to HistoryLink, 94 traditional Duwamish longhouses were burned between 1855 and 1904 — making this roughly $4 million building, designed by Byron Barnes of Potlatch Architects in a form reminiscent of a traditional longhouse, the first Duwamish longhouse in Seattle in more than a century. It stands near the site of the historic Duwamish village of hah-AH-poos.
 
 The longhouse's location on the Duwamish River was carefully chosen to reconnect the community with their ancestral waterway, despite the river's industrial transformation. The building serves as a visible reminder that the Duwamish people remain in their traditional territory despite efforts to erase their presence.
 
@@ -61,15 +72,17 @@ The Duwamish Longhouse functions as a multipurpose cultural center offering trad
 
 The center's programs serve both enrolled tribal members and urban Native Americans from other tribes who have made Seattle their home. This inclusive approach reflects traditional values of hospitality while acknowledging the complex reality of contemporary urban indigenous life.
 
-## Fight for Federal Recognition
+## The Federal Recognition Question
 
-The Duwamish Tribe has been seeking federal recognition since 1975, submitting extensive documentation of their continuous existence and cultural identity. Despite meeting the criteria for recognition, political and legal obstacles have prevented official acknowledgment of their tribal status.
+The Duwamish Tribe has pursued federal recognition since the late 1970s, submitting extensive documentation of its history and membership. The story of that effort took a dramatic turn in January 2001, when, in the final days of the Clinton administration, the Bureau of Indian Affairs extended recognition to the tribe. Within days, the incoming Bush administration suspended that decision along with other last-minute actions. In September 2001, the BIA issued a final determination against acknowledgment, concluding that the Duwamish organization had not met all seven of the mandatory federal criteria — specifically the requirements for continuous identification as an Indian entity, a distinct community, and ongoing political authority.
 
-The struggle for federal recognition involves more than symbolic recognition, it affects access to federal funding for healthcare, education, and social services, as well as legal standing to protect ancestral sites and natural resources. The fight represents a broader issue of how the federal government determines which indigenous communities deserve official recognition.
+The tribe disputes those findings and has continued to press its case. A federal court ordered the government to reconsider in 2013, but the Department of the Interior's 2015 final decision on remand upheld the denial. The tribe filed a new lawsuit against the Interior Department in 2022, and litigation over its status has continued since.
+
+The stakes go beyond symbolism: federal recognition affects access to federal funding for healthcare, education, and social services, as well as legal standing to protect ancestral sites and natural resources. The Duwamish case has become a frequently cited example in debates over how the federal government determines which indigenous communities receive official acknowledgment.
 
 ## Environmental Justice
 
-The Duwamish Longhouse sits near the Duwamish River Superfund site, one of the most contaminated waterways in the United States. The river's pollution, caused by decades of industrial use, exemplifies the environmental injustices faced by indigenous communities whose traditional territories have been sacrificed for economic development.
+The Duwamish Longhouse sits near the Lower Duwamish Waterway, which the Environmental Protection Agency listed as a federal Superfund cleanup site in 2001 after decades of industrial pollution. The river's contamination is a stark example of how industrial development transformed waterways that indigenous communities had depended on for generations.
 
 The tribe's involvement in river cleanup efforts demonstrates how indigenous communities can lead environmental restoration while advocating for environmental justice. Their traditional ecological knowledge provides valuable insights for restoration efforts while asserting their continuing connection to ancestral waters.
 

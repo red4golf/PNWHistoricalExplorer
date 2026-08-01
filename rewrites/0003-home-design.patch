@@ -1,0 +1,171 @@
+From 85344ea3d6305c3727cfa84b4a84882704e3a380 Mon Sep 17 00:00:00 2001
+From: Cowork <cowork@local>
+Date: Mon, 27 Jul 2026 04:29:21 +0000
+Subject: [PATCH] Home page: design fixes from the 2026-07-26 critique (batch 1
+ + 2)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Batch 1 — typography and iconography
+* .hero h1 gets text-wrap: balance. At 1024px the headline was orphaning
+  "story." onto its own line; it now breaks at the sentence boundary
+  ("Find the place." / "Hear the story."). Unchanged at 1280 and 1440,
+  where it still sets on one line.
+* .btn now sets font-family: var(--font-sans). A <button> does not inherit
+  the body font, so the hero CTA was rendering in the UA default (Arial)
+  beside its <a> twin. Measured across the home, concierge and location
+  pages: every .btn now resolves to the same stack.
+* Dropped the leading pin emoji from "Find places near me". It rendered
+  pink against the rust fill and was the only emoji in the button row.
+* Added U+FE0F to the telephone glyph in the guide card and the mobile
+  bottom nav. Without it U+260E defaults to text presentation and rendered
+  monochrome next to two colour emoji.
+* Replaced the filled active-page pill in the main nav with a single gold
+  underline plus bold weight. The header previously carried two competing
+  highlight mechanisms — a pine pill on the current page and gold text on
+  Concierge. Gold is now the only accent in the header. The distinction is
+  still non-colour (weight + underline) and aria-current is untouched.
+
+Batch 2 — the stat row
+* Rebuilt .trust-line as three real stats with middot separators and one
+  consistent treatment: serif numerals at 1.45rem in white, lower-case
+  labels in sand. Previously three stats and a feature claim shared one
+  undifferentiated row.
+* Removed "2 reviewed entries". Two of ninety-five is not a number worth
+  advertising; it returns when the rewrite programme has run further.
+  Replaced with the category count, which is defensible today.
+* "Works offline in the field" moves to its own line below the stats,
+  since it is a capability claim and not a measurement.
+
+Also removes the "Start with the trip, not the database" eyebrow from the
+hero card, per Charles. This supersedes the contrast fix applied to that
+same element earlier today.
+
+Verified: astro build clean; axe-core 4.10 WCAG 2.0/2.1 A+AA returns 0
+violations at 1440 and 390; active-nav treatment checked on /map, /about
+and /concierge.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01E2dZohLdDotfbmfFaFNDKT
+---
+ src/layouts/Base.astro |  2 +-
+ src/pages/index.astro  | 10 ++++------
+ src/styles/global.css  | 16 ++++++++++++++--
+ src/styles/guide.css   |  2 +-
+ 4 files changed, 20 insertions(+), 10 deletions(-)
+
+diff --git a/src/layouts/Base.astro b/src/layouts/Base.astro
+index d73bb95..e656089 100644
+--- a/src/layouts/Base.astro
++++ b/src/layouts/Base.astro
+@@ -102,7 +102,7 @@ const current = (h: string) => (h === '/' ? (path === '/' ? 'page' : undefined)
+       <a href={href('/')} aria-current={current('/')}><span class="ico" aria-hidden="true">🏠</span>Home</a>
+       <a href={href('/map')} aria-current={current('/map')}><span class="ico" aria-hidden="true">🗺️</span>Map</a>
+       <a href={href('/categories')} aria-current={current('/categories')}><span class="ico" aria-hidden="true">🏛️</span>Browse</a>
+-      <a href={href('/concierge')} aria-current={current('/concierge')}><span class="ico" aria-hidden="true">☎</span>Concierge</a>
++      <a href={href('/concierge')} aria-current={current('/concierge')}><span class="ico" aria-hidden="true">☎️</span>Concierge</a>
+       <a href={href('/search')} aria-current={current('/search')}><span class="ico" aria-hidden="true">🔍</span>Search</a>
+     </nav>
+ 
+diff --git a/src/pages/index.astro b/src/pages/index.astro
+index bf22c4a..36acae0 100644
+--- a/src/pages/index.astro
++++ b/src/pages/index.astro
+@@ -9,7 +9,6 @@ import site from '../data/site.json';
+ const locations = await publishedLocations();
+ const total = locations.length;
+ const audioCount = locations.filter((l) => l.data.audio).length;
+-const verifiedCount = locations.filter((l) => ['verified', 'corrected'].includes(l.data.factcheck?.status ?? '')).length;
+ 
+ const counts = Object.fromEntries(
+   CATEGORIES.map((c) => [c.name, locations.filter((l) => l.data.category === c.name).length])
+@@ -23,7 +22,7 @@ const featured = locations
+ const quickStarts = [
+   { icon: '⏱️', title: 'I have an hour', text: 'Choose a focused stop instead of losing time comparing dozens.', url: '/map?visit=short' },
+   { icon: '🎧', title: 'Hear a story', text: `Browse ${audioCount} places with narration for the road or the site.`, url: '/search?q=audio' },
+-  { icon: '☎', title: 'Visiting Bainbridge', text: 'Call the concierge and receive personalized links by text.', url: '/concierge' },
++  { icon: '☎️', title: 'Visiting Bainbridge', text: 'Call the concierge and receive personalized links by text.', url: '/concierge' },
+ ];
+ ---
+ 
+@@ -40,19 +39,18 @@ const quickStarts = [
+           Discover historic places, natural landmarks, old towns, military sites, and cultural landscapes—then learn what matters before you arrive and what to notice when you get there.
+         </p>
+         <div class="actions">
+-          <button class="btn" id="home-locate" type="button">📍 Find places near me</button>
++          <button class="btn" id="home-locate" type="button">Find places near me</button>
+           <a class="btn secondary" href={href('/categories')}>Browse every location</a>
+         </div>
+         <p id="home-locate-status" class="home-locate-status" role="status" aria-live="polite"></p>
+         <div class="trust-line" aria-label="Site coverage">
+           <span><strong>{total}</strong> places</span>
+           <span><strong>{audioCount}</strong> audio stories</span>
+-          <span><strong>{verifiedCount}</strong> reviewed entries</span>
+-          <span>Works offline in the field</span>
++          <span><strong>{CATEGORIES.length}</strong> categories</span>
+         </div>
++        <p class="trust-note">Works offline in the field.</p>
+       </div>
+       <aside class="guide-card">
+-        <p class="eyebrow">Start with the trip, not the database</p>
+         <h2>What kind of day are you having?</h2>
+         <div class="guide-card-links">
+           {quickStarts.map((item) => (
+diff --git a/src/styles/global.css b/src/styles/global.css
+index aae69c6..95320be 100644
+--- a/src/styles/global.css
++++ b/src/styles/global.css
+@@ -103,12 +103,20 @@ img { max-width: 100%; height: auto; display: block; }
+   gap: 0.35rem;
+ }
+ 
+-.main-nav a:hover,
+-.main-nav a[aria-current='page'] {
++.main-nav a:hover {
+   background: var(--pine);
+   color: #fff;
+ }
+ 
++/* The current page is marked with a single gold rule, not a filled pill.
++   Gold is the one accent colour in the header, shared with the Concierge
++   link, so there is never more than one highlight mechanism competing. */
++.main-nav a[aria-current='page'] {
++  font-weight: 700;
++  box-shadow: inset 0 -2px 0 var(--gold);
++  border-radius: 6px 6px 0 0;
++}
++
+ /* ---------- hero ---------- */
+ .hero {
+   background: linear-gradient(rgba(31, 61, 43, 0.82), rgba(31, 61, 43, 0.82)),
+@@ -121,6 +129,7 @@ img { max-width: 100%; height: auto; display: block; }
+ .hero h1 {
+   color: #fff;
+   font-size: clamp(1.9rem, 5vw, 3rem);
++  text-wrap: balance;
+   margin-bottom: 0.4rem;
+ }
+ 
+@@ -142,6 +151,9 @@ img { max-width: 100%; height: auto; display: block; }
+   display: inline-flex;
+   align-items: center;
+   gap: 0.5rem;
++  /* <button class="btn"> does not inherit the body font, so without this the
++     hero CTA falls back to the UA default (Arial) beside its <a> twin. */
++  font-family: var(--font-sans);
+   background: var(--rust);
+   color: #fff;
+   text-decoration: none;
+diff --git a/src/styles/guide.css b/src/styles/guide.css
+index b8ae647..b9f6c88 100644
+--- a/src/styles/guide.css
++++ b/src/styles/guide.css
+@@ -1 +1 @@
+-.eyebrow{margin:0 0 .45rem;font-size:.76rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--rust-deep)}.eyebrow.light{color:var(--sand)}.hero .eyebrow:not(.light),.guide-card .eyebrow{color:var(--rust-deep)}.hero .eyebrow.light,.concierge-hero .eyebrow.light{color:var(--sand)}.guide-hero{text-align:left;padding:4rem 0}.guide-hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);gap:3rem;align-items:center}.guide-hero-copy>p:not(.eyebrow){margin-left:0}.guide-hero .actions{justify-content:flex-start}.trust-line{display:flex;flex-wrap:wrap;gap:.55rem 1rem;margin-top:1.3rem;font-size:.82rem;color:var(--sand)}.guide-card{background:rgba(245,239,226,.97);color:var(--ink);padding:1.4rem;border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.25)}.guide-card h2{font-size:1.45rem}.guide-card-links{display:grid;gap:.6rem}.guide-card-links a{display:grid;grid-template-columns:2.3rem 1fr;gap:.7rem;align-items:start;padding:.8rem;border-radius:10px;background:#fff;color:var(--ink);text-decoration:none;border:1px solid var(--sand)}.guide-card-links small{display:block;color:var(--ink-soft);line-height:1.35;margin-top:.15rem}.guide-icon{font-size:1.4rem}.three-up{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.three-up article,.experience-card,.concierge-panel{background:#fff;padding:1.3rem;border-radius:var(--radius);box-shadow:var(--card-shadow)}.three-up article>span{width:2rem;height:2rem;border-radius:50%;display:grid;place-items:center;background:var(--forest);color:#fff;font-weight:800}.three-up h3{margin-top:.8rem}.section-heading-row{display:flex;justify-content:space-between;align-items:end;gap:1rem}.concierge-strip,.island-assist,.listen-section{background:var(--forest);color:var(--cream)}.concierge-strip h2,.island-assist h2,.listen-section h2{color:#fff}.concierge-strip-grid,.island-assist-grid,.listen-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:2rem;align-items:center}.concierge-actions,.island-assist-grid>div:last-child{display:flex;flex-direction:column;gap:.65rem;align-items:flex-start}.concierge-actions small,.island-assist small{color:var(--sand)}.visit-decision{background:#fff;border-bottom:1px solid var(--sand);padding:1.5rem 0}.visit-decision-grid{display:grid;grid-template-columns:1fr 300px;gap:2rem;align-items:center}.visit-lead{font-family:var(--font-serif);font-size:clamp(1.12rem,2.2vw,1.4rem);line-height:1.45;margin:0 0 1rem}.visit-actions{display:flex;align-items:center;flex-wrap:wrap;gap:.7rem}.btn.secondary.dark{border-color:var(--forest);color:var(--forest)}.fact-status{padding:1rem;border:1px solid var(--sand);border-left:5px solid #b0710e;border-radius:10px;background:var(--cream)}.fact-status[data-status=verified],.fact-status[data-status=corrected]{border-left-color:#1a7f5a}.fact-status p{margin:.35rem 0;font-size:.87rem;color:var(--ink-soft)}.experience-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}.look-list{margin:1rem 0 0;padding-left:1.3rem}.look-list li{margin:.8rem 0}.practical-card dl{display:grid;grid-template-columns:145px 1fr;gap:.4rem .8rem;font-size:.9rem}.practical-card dt{font-weight:800;color:var(--pine)}.practical-card dd{margin:0}.listen-grid .audio-box{margin:0;background:var(--pine)}.island-assist{padding:2rem 0;border-top:1px solid var(--moss)}.article-heading{border-bottom:1px solid var(--sand);margin-bottom:1.5rem}.article-heading h2{font-size:1.7rem}.article-heading p:last-child{color:var(--ink-soft)}.btn.full{width:100%;justify-content:center}.sidebar-link{display:block;margin-top:.8rem;font-size:.88rem}.source-card{border-top:4px solid var(--gold)}.concierge-hero{background:linear-gradient(135deg,var(--forest),var(--pine));color:var(--cream);padding:4rem 0}.concierge-hero h1{color:#fff;font-size:clamp(2.2rem,5vw,3.7rem)}.concierge-hero .lead{max-width:42rem;font-size:1.15rem}.concierge-hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:center}.concierge-hero .actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.2rem}.phone-card{background:#fff;color:var(--ink);padding:1.5rem;border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.25)}.phone-card h2{font-size:1.4rem}.phone-icon{font-size:2rem}.phone-card li{margin:.65rem 0}.concierge-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:1.25rem}.prompt-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}.prompt-grid blockquote{margin:0;padding:1rem;background:var(--cream);border-left:4px solid var(--gold);font-family:var(--font-serif)}.check-list{padding-left:1.25rem}.check-list li{margin:.6rem 0}.island-callout{background:var(--parchment);text-align:center}.island-callout p{max-width:46rem;margin:0 auto 1rem}.btn.disabled{opacity:.65;cursor:not-allowed}.site-header .concierge-nav{color:var(--gold)}.home-locate-status{min-height:1.25rem;margin:.65rem 0 0;color:var(--sand);font-size:.86rem}.home-nearby{background:#fff;border-bottom:1px solid var(--sand)}.home-nearby-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:1rem}.nearby-place-card{background:var(--cream);border:1px solid var(--sand);border-radius:14px;overflow:hidden;box-shadow:var(--card-shadow);display:flex;flex-direction:column}.nearby-place-image{display:block;aspect-ratio:16/9;background:var(--parchment)}.nearby-place-image img,.nearby-image-fallback{width:100%;height:100%;object-fit:cover}.nearby-image-fallback{display:grid;place-items:center;font-size:2rem}.nearby-place-body{padding:1rem;display:flex;flex-direction:column;gap:.55rem;flex:1}.nearby-place-body h3{margin:0;font-size:1.12rem}.nearby-place-body h3 a{text-decoration:none;color:var(--forest)}.nearby-place-body p{margin:0;color:var(--ink-soft);font-size:.88rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.nearby-place-meta{display:flex;justify-content:space-between;gap:.6rem;flex-wrap:wrap;color:var(--ink-soft);font-size:.76rem}.nearby-place-actions{display:flex;gap:.45rem;flex-wrap:wrap;margin-top:auto;padding-top:.25rem}.nearby-action{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:.4rem .7rem;border:1px solid var(--pine);border-radius:999px;text-decoration:none;color:var(--pine);font-size:.78rem;font-weight:700}.nearby-action.primary{background:var(--pine);color:#fff}@media(max-width:860px){.guide-hero-grid,.visit-decision-grid,.experience-grid,.concierge-strip-grid,.island-assist-grid,.listen-grid,.concierge-hero-grid,.concierge-grid{grid-template-columns:1fr}.three-up{grid-template-columns:1fr}.guide-hero{padding:2.5rem 0}.prompt-grid{grid-template-columns:1fr}.fact-status{margin-top:.5rem}}@media(max-width:600px){.section-heading-row{align-items:start;flex-direction:column}.practical-card dl{grid-template-columns:1fr}.visit-actions .btn{width:100%;justify-content:center}.home-nearby-grid{grid-template-columns:1fr}.nearby-place-actions{display:grid;grid-template-columns:1fr 1fr}.nearby-action{width:100%}}
+\ No newline at end of file
++.eyebrow{margin:0 0 .45rem;font-size:.76rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--rust-deep)}.eyebrow.light{color:var(--sand)}.hero .eyebrow:not(.light),.guide-card .eyebrow{color:var(--rust-deep)}.hero .eyebrow.light,.concierge-hero .eyebrow.light{color:var(--sand)}.guide-hero{text-align:left;padding:4rem 0}.guide-hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);gap:3rem;align-items:center}.guide-hero-copy>p:not(.eyebrow){margin-left:0}.guide-hero .actions{justify-content:flex-start}.trust-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem .9rem;margin-top:1.4rem;font-size:.86rem;color:var(--sand)}.trust-line span{display:inline-flex;align-items:baseline;gap:.35rem}.trust-line span+span::before{content:"·";margin-right:.2rem;color:var(--sand);opacity:.55}.trust-line strong{font-family:var(--font-serif);font-size:1.45rem;font-weight:700;line-height:1;color:#fff}.trust-note{margin:.55rem 0 0;font-size:.82rem;color:var(--sand)}.guide-card{background:rgba(245,239,226,.97);color:var(--ink);padding:1.4rem;border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.25)}.guide-card h2{font-size:1.45rem}.guide-card>h2:first-child{margin-top:0}.guide-card-links{display:grid;gap:.6rem}.guide-card-links a{display:grid;grid-template-columns:2.3rem 1fr;gap:.7rem;align-items:start;padding:.8rem;border-radius:10px;background:#fff;color:var(--ink);text-decoration:none;border:1px solid var(--sand)}.guide-card-links small{display:block;color:var(--ink-soft);line-height:1.35;margin-top:.15rem}.guide-icon{font-size:1.4rem}.three-up{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.three-up article,.experience-card,.concierge-panel{background:#fff;padding:1.3rem;border-radius:var(--radius);box-shadow:var(--card-shadow)}.three-up article>span{width:2rem;height:2rem;border-radius:50%;display:grid;place-items:center;background:var(--forest);color:#fff;font-weight:800}.three-up h3{margin-top:.8rem}.section-heading-row{display:flex;justify-content:space-between;align-items:end;gap:1rem}.concierge-strip,.island-assist,.listen-section{background:var(--forest);color:var(--cream)}.concierge-strip h2,.island-assist h2,.listen-section h2{color:#fff}.concierge-strip-grid,.island-assist-grid,.listen-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:2rem;align-items:center}.concierge-actions,.island-assist-grid>div:last-child{display:flex;flex-direction:column;gap:.65rem;align-items:flex-start}.concierge-actions small,.island-assist small{color:var(--sand)}.visit-decision{background:#fff;border-bottom:1px solid var(--sand);padding:1.5rem 0}.visit-decision-grid{display:grid;grid-template-columns:1fr 300px;gap:2rem;align-items:center}.visit-lead{font-family:var(--font-serif);font-size:clamp(1.12rem,2.2vw,1.4rem);line-height:1.45;margin:0 0 1rem}.visit-actions{display:flex;align-items:center;flex-wrap:wrap;gap:.7rem}.btn.secondary.dark{border-color:var(--forest);color:var(--forest)}.fact-status{padding:1rem;border:1px solid var(--sand);border-left:5px solid #b0710e;border-radius:10px;background:var(--cream)}.fact-status[data-status=verified],.fact-status[data-status=corrected]{border-left-color:#1a7f5a}.fact-status p{margin:.35rem 0;font-size:.87rem;color:var(--ink-soft)}.experience-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}.look-list{margin:1rem 0 0;padding-left:1.3rem}.look-list li{margin:.8rem 0}.practical-card dl{display:grid;grid-template-columns:145px 1fr;gap:.4rem .8rem;font-size:.9rem}.practical-card dt{font-weight:800;color:var(--pine)}.practical-card dd{margin:0}.listen-grid .audio-box{margin:0;background:var(--pine)}.island-assist{padding:2rem 0;border-top:1px solid var(--moss)}.article-heading{border-bottom:1px solid var(--sand);margin-bottom:1.5rem}.article-heading h2{font-size:1.7rem}.article-heading p:last-child{color:var(--ink-soft)}.btn.full{width:100%;justify-content:center}.sidebar-link{display:block;margin-top:.8rem;font-size:.88rem}.source-card{border-top:4px solid var(--gold)}.concierge-hero{background:linear-gradient(135deg,var(--forest),var(--pine));color:var(--cream);padding:4rem 0}.concierge-hero h1{color:#fff;font-size:clamp(2.2rem,5vw,3.7rem)}.concierge-hero .lead{max-width:42rem;font-size:1.15rem}.concierge-hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:center}.concierge-hero .actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.2rem}.phone-card{background:#fff;color:var(--ink);padding:1.5rem;border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.25)}.phone-card h2{font-size:1.4rem}.phone-icon{font-size:2rem}.phone-card li{margin:.65rem 0}.concierge-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:1.25rem}.prompt-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}.prompt-grid blockquote{margin:0;padding:1rem;background:var(--cream);border-left:4px solid var(--gold);font-family:var(--font-serif)}.check-list{padding-left:1.25rem}.check-list li{margin:.6rem 0}.island-callout{background:var(--parchment);text-align:center}.island-callout p{max-width:46rem;margin:0 auto 1rem}.btn.disabled{opacity:.65;cursor:not-allowed}.site-header .concierge-nav{color:var(--gold)}.home-locate-status{min-height:1.25rem;margin:.65rem 0 0;color:var(--sand);font-size:.86rem}.home-nearby{background:#fff;border-bottom:1px solid var(--sand)}.home-nearby-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:1rem}.nearby-place-card{background:var(--cream);border:1px solid var(--sand);border-radius:14px;overflow:hidden;box-shadow:var(--card-shadow);display:flex;flex-direction:column}.nearby-place-image{display:block;aspect-ratio:16/9;background:var(--parchment)}.nearby-place-image img,.nearby-image-fallback{width:100%;height:100%;object-fit:cover}.nearby-image-fallback{display:grid;place-items:center;font-size:2rem}.nearby-place-body{padding:1rem;display:flex;flex-direction:column;gap:.55rem;flex:1}.nearby-place-body h3{margin:0;font-size:1.12rem}.nearby-place-body h3 a{text-decoration:none;color:var(--forest)}.nearby-place-body p{margin:0;color:var(--ink-soft);font-size:.88rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.nearby-place-meta{display:flex;justify-content:space-between;gap:.6rem;flex-wrap:wrap;color:var(--ink-soft);font-size:.76rem}.nearby-place-actions{display:flex;gap:.45rem;flex-wrap:wrap;margin-top:auto;padding-top:.25rem}.nearby-action{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:.4rem .7rem;border:1px solid var(--pine);border-radius:999px;text-decoration:none;color:var(--pine);font-size:.78rem;font-weight:700}.nearby-action.primary{background:var(--pine);color:#fff}@media(max-width:860px){.guide-hero-grid,.visit-decision-grid,.experience-grid,.concierge-strip-grid,.island-assist-grid,.listen-grid,.concierge-hero-grid,.concierge-grid{grid-template-columns:1fr}.three-up{grid-template-columns:1fr}.guide-hero{padding:2.5rem 0}.prompt-grid{grid-template-columns:1fr}.fact-status{margin-top:.5rem}}@media(max-width:600px){.section-heading-row{align-items:start;flex-direction:column}.practical-card dl{grid-template-columns:1fr}.visit-actions .btn{width:100%;justify-content:center}.home-nearby-grid{grid-template-columns:1fr}.nearby-place-actions{display:grid;grid-template-columns:1fr 1fr}.nearby-action{width:100%}}
+\ No newline at end of file
+-- 
+2.43.0
+
