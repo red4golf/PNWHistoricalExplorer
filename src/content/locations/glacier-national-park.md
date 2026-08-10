@@ -19,53 +19,62 @@ books:
     author: "Randi Minetor"
     url: "https://www.amazon.com/Historic-Glacier-National-Park-Treasures/dp/1493018078"
 sourceId: 41
+factcheck:
+  status: "corrected"
+  lastChecked: "2026-07-12"
+  reviewer: "Cowork verification pass 2026-07-12"
+  sourceTier: "primary"
+  claimsTotal: 15
+  claimsCited: 12
+  openFlags: 0
+  neutrality: "pass"
+  checkedHash: "1lwup2e"
+  notes: "Corrected Louis B. Hill to Louis W. Hill; fixed Blackfoot Confederacy enumeration (Siksika, Kainai, Piikani incl. Amskapi Piikani — was double-counting Piegan and Piikani); replaced 'Forced Sale'/'Legal Betrayal' framing with plain factual sections; updated glacier counts to USGS figures (80 at Little Ice Age peak, 26 of 37 named glaciers over 25 acres in 2015); removed unverified 1932/1973 court dates, poverty statistics, ad-image percentage, and 'billions' tourism figure; added Going-to-the-Sun Road (completed 1932, dedicated July 15, 1933, NPS)."
 ---
 
 # Glacier National Park: Crown of the Continent and the Blackfeet Legacy
 
-Stretching across one million acres of pristine wilderness along the Continental Divide, Glacier National Park preserves what conservationists call the "Crown of the Continent", a landscape of towering peaks, pristine lakes, and ancient glaciers. Yet beneath its stunning natural beauty lies a complex history of indigenous displacement, corporate exploitation, and ongoing struggles for justice that continues to shape the park today.
+Stretching across one million acres of wilderness along the Continental Divide, Glacier National Park preserves what conservationists call the "Crown of the Continent", a landscape of towering peaks, pristine lakes, and ancient glaciers. The park's history is also inseparable from the Blackfeet Nation, whose homeland includes these mountains and whose 1895 land cession made the park's eastern half possible.
 
 ## The Backbone of the World
 
-For over 10,000 years, the Blackfeet people lived in harmony with what is now Montana, with their traditional territory spanning from the Rocky Mountains, which they called the "backbone of the world", to the Great Plains. The Blackfeet Confederacy, consisting of four bands (Piegan Blackfeet, Siksika, Piikani, and Kainai), followed yearly cycles of hunting and gathering in the Rocky Mountains, with the area now known as Glacier National Park serving as central to their spiritual and cultural life.
+People have lived in and traveled through this region for more than 10,000 years, according to the National Park Service. For the Blackfeet, whose traditional territory spanned from the Rocky Mountains, which they called the "Backbone of the World", out onto the Great Plains, the area now within Glacier National Park was central to spiritual and cultural life. The Blackfoot Confederacy comprises the Siksika, the Kainai, and the Piikani, the last of these including both the Northern Piikani in present-day Alberta and the Amskapi Piikani, the Blackfeet Nation of Montana. Its people followed yearly cycles of hunting and gathering that carried them into these mountains.
 
-The mountains provided everything needed for survival: game for hunting, plants for medicine and food, materials for tools and shelter, and sacred sites for ceremonies. The high alpine meadows, pristine lakes, and glacier-fed streams formed an integrated ecosystem that sustained not just wildlife, but an entire civilization that had learned to live sustainably within natural limits.
+The mountains provided game for hunting, plants for medicine and food, materials for tools and shelter, and sacred sites for ceremonies. The high alpine meadows, lakes, and glacier-fed streams formed an integrated ecosystem woven into Blackfeet life for generations.
 
-## The Forced Sale
+## The 1895 Land Cession
 
-The Blackfeet's connection to their sacred mountains was severed through a combination of disease, starvation, and governmental pressure. The 1855 Lame Bull Treaty had established their reservation, which originally encompassed most of northern Montana. However, by the 1890s, smallpox epidemics, buffalo extermination, and government neglect had left the Blackfeet desperate.
+The 1855 Lame Bull Treaty had recognized Blackfeet territory encompassing much of what is now northern Montana, later reduced to a reservation along the mountain front. By the 1890s, smallpox epidemics, the extermination of the buffalo, and years of hunger had left the Blackfeet in desperate straits.
 
-In 1895, under these dire circumstances, the Blackfeet were forced to sell 800,000 acres of their mountainous reservation land to the federal government for $1.5 million. This land became the eastern portion of what would become Glacier National Park. The agreement stipulated that the Blackfeet would retain hunting, fishing, and wood gathering rights on this land as long as it remained publicly owned, rights that would later be stripped away.
+In 1895, under these circumstances, Blackfeet leaders agreed to sell roughly 800,000 acres of the mountainous western portion of their reservation to the federal government for $1.5 million; many Blackfeet have since maintained that the sale was made under duress. This land became the eastern portion of what would become Glacier National Park. The agreement stipulated that the Blackfeet would retain the rights to hunt, fish, and cut timber on the ceded land so long as it remained public land of the United States, terms whose meaning has been disputed ever since.
 
 ## The Great Northern Railway's Vision
 
-The creation of Glacier National Park in 1910 cannot be separated from the commercial interests of the Great Northern Railway. Louis B. Hill, president of the railway, became the primary advocate for park creation, seeing enormous profit potential in developing the area as a tourist destination.
+The creation of Glacier National Park on May 11, 1910, cannot be separated from the commercial interests of the Great Northern Railway. Louis W. Hill, president of the railway and son of its founder James J. Hill, became the primary advocate for park creation, seeing enormous potential in developing the area as a tourist destination.
 
-The Great Northern Railway transformed the park into a cross-continental tourist attraction, constructing lodges throughout the area and running rail lines directly through the Blackfeet reservation. Their marketing strategy extensively used Blackfeet imagery, the Blackfeet accounted for over one-third of their advertising images, more than scenic photographs. They marketed tourists to come see "Glacier's vanishing Indians."
+The Great Northern Railway promoted the park as a cross-continental attraction under the slogan "See America First," building grand lodges and backcountry chalets, with its main line skirting the park's southern boundary. Historians have documented how heavily the railway's marketing drew on Blackfeet imagery, hiring Blackfeet people to greet trains, camp in tipis outside the lodges, and appear in advertising, even as the tribe itself had little share in the tourist economy taking shape on its former lands.
 
-This exploitation extended to employment practices. Despite the railway running through their land, the Great Northern chose to hire European immigrants rather than Blackfeet for railroad construction. The Blackfeet were only offered menial positions, greeting passengers, setting up tipi camps outside lodges, and participating in advertising campaigns for minimal wages.
+Within the park itself, the National Park Service completed the Going-to-the-Sun Road across Logan Pass in 1932 and dedicated it on July 15, 1933, an engineering feat that opened the high country to automobile travelers and remains the park's most famous drive.
 
-## Legal Betrayal
+## Contested Rights
 
-When Glacier National Park was created in 1910, the courts ruled that Blackfeet hunting and gathering rights were obsolete. This legal interpretation ignored the clear terms of the 1895 agreement and violated the principle that the Blackfeet would retain subsistence rights as long as the land remained publicly owned.
-
-In 1932, a U.S. District Court definitively ruled that the Blackfeet had no hunting rights in the park. Limited victories came in 1973 when a judge ruled that Blackfeet could enter the park without paying entrance fees, small compensation for the loss of their ancestral homeland.
+When Glacier National Park was created in 1910, the federal government took the position that the park's establishment extinguished the hunting, fishing, and timber rights reserved in the 1895 agreement, reasoning that the land was no longer ordinary public land. The Blackfeet disagreed, arguing the agreement's plain terms preserved those rights, and federal courts in the twentieth century repeatedly sided with the government. The dispute over the 1895 agreement's meaning has never been fully resolved, and the tribe continues to assert its reserved rights.
 
 ## Cultural and Economic Impact
 
 The loss of access to sacred sites and traditional hunting grounds devastated Blackfeet culture. Ceremonies tied to specific mountain locations could no longer be performed. Traditional food sources became inaccessible. Knowledge systems based on intimate interaction with the high country began to fade.
 
-The economic impact continues today. While Glacier National Park generates billions in tourism revenue, the poverty rate on the Blackfeet reservation remains 39.5% compared to 10.5% nationally. The people who once stewarded this landscape now struggle economically while tourists enjoy their former homeland.
+The economic impact continues today. While visitors to Glacier National Park spend hundreds of millions of dollars each year by National Park Service estimates, poverty on the Blackfeet reservation remains far above the national rate according to U.S. Census Bureau figures. The people who once stewarded this landscape share little of the tourist economy built on their former homeland.
 
 ## Modern Efforts at Reconciliation
 
-Despite historical injustices, the Blackfeet maintain that "Glacier is the Blackfeet" and continue advocating for restoration of their subsistence rights and cultural access to their ancestral lands. The Blackfeet Nation is working to develop their own tourism economy, including plans for a tribal national park that would provide an indigenous perspective on the landscape.
+The Blackfeet continue to advocate for restoration of their subsistence rights and for cultural access to their ancestral lands. The Blackfeet Nation is also working to develop its own tourism economy, and tribal leaders have explored creating a tribal national park on reservation lands bordering Glacier that would present the landscape from a Blackfeet perspective.
 
 Sun Tours, operated by the Blackfeet, offers interpretive tours of Glacier National Park from a Native perspective, helping visitors understand the deep cultural connections that predate park boundaries. These efforts represent attempts to reclaim narrative control over their own history and homeland.
 
 ## Contemporary Challenges
 
-Today, Glacier National Park faces new challenges that echo historical themes of balancing preservation with access. Climate change threatens the park's remaining glaciers, down from about 150 in 1850 to about 25 today. Increased visitation strains infrastructure and wildlife habitat. The COVID-19 pandemic highlighted the park's dependence on tourism while revealing the vulnerability of gateway communities.
+Today, Glacier National Park faces new challenges that echo historical themes of balancing preservation with access. Climate change is shrinking the park's remaining glaciers: U.S. Geological Survey mapping shows about 80 glaciers larger than 25 acres at the peak of the Little Ice Age around 1850, and by 2015 only 26 of the park's 37 named glaciers still exceeded that size, with every named glacier retreating between 1966 and 2015. Increased visitation strains infrastructure and wildlife habitat. The COVID-19 pandemic highlighted the park's dependence on tourism while revealing the vulnerability of gateway communities.
 
 ## A Complex Legacy
 
@@ -73,4 +82,4 @@ Glacier National Park represents both the triumph of conservation and the traged
 
 The park's history challenges us to consider whose stories are told, whose rights are recognized, and how conservation can honor both natural and cultural heritage. As the Blackfeet Nation continues to assert their connection to their ancestral homeland, Glacier National Park reminds us that true conservation must address historical injustices while protecting irreplaceable landscapes for future generations.
 
-The Crown of the Continent remains one of North America's most spectacular wilderness areas, evidence of the power of preservation and a continuing call for justice for its original stewards.
+The Crown of the Continent remains one of North America's most spectacular wilderness areas, evidence of the power of preservation, and a reminder that this landscape's human story began long before 1910.

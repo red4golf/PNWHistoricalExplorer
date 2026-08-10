@@ -1,0 +1,63 @@
+From 1f88d921353dec14806e3900f48fccc18c15571b Mon Sep 17 00:00:00 2001
+From: "Claude (Cowork)" <noreply@anthropic.com>
+Date: Sun, 26 Jul 2026 16:23:24 +0000
+Subject: [PATCH] Add per-entry "What to notice" prompts
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+`noticePrompts` was a hardcoded lookup keyed on category, so every entry in a
+category showed the same two sentences — "Look for the surviving route, grade,
+runway, station..." appeared on every Aviation and Transportation entry, and the
+Maritime entries shared another pair.
+
+Adds an optional `notice: string[]` (max 4) to the location schema. The entry
+template prefers it and falls back to the existing per-category prompts when it
+is absent, so nothing changes for the 95 entries that do not yet have one.
+
+This is the field the rewrite pipeline fills with guide-voiced prompts written
+for the specific place — things a visitor can actually see and find.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01E2dZohLdDotfbmfFaFNDKT
+---
+ src/content.config.ts            | 7 +++++++
+ src/pages/locations/[slug].astro | 4 +++-
+ 2 files changed, 10 insertions(+), 1 deletion(-)
+
+diff --git a/src/content.config.ts b/src/content.config.ts
+index e6a16d4..c055af2 100644
+--- a/src/content.config.ts
++++ b/src/content.config.ts
+@@ -27,6 +27,13 @@ const locations = defineCollection({
+     description: z.string(),
+     heroImage: z.string().nullable(),
+     audio: z.string().nullable(),
++    /**
++     * Guide-voiced "what to notice" prompts, written for this specific place —
++     * things a visitor can actually see and find. 2-4 items.
++     * Absent → the entry template falls back to the generic per-category prompts,
++     * which say the same two sentences on every entry in that category.
++     */
++    notice: z.array(z.string()).max(4).optional(),
+     // Editorial pipeline. Absent == published now.
+     //  draft: true      → excluded from the public site build (still visible in /admin).
+     //  publishDate      → informational "go-live" date; shows as "scheduled" in the
+diff --git a/src/pages/locations/[slug].astro b/src/pages/locations/[slug].astro
+index cb27bfb..63aac7c 100644
+--- a/src/pages/locations/[slug].astro
++++ b/src/pages/locations/[slug].astro
+@@ -38,7 +38,9 @@ const noticeByCategory: Record<string, string[]> = {
+   'Natural Wonders': ['Look at the feature from more than one angle and notice how water, geology, weather, or vegetation shaped it.', 'Remember that a natural landmark can also be a cultural and historic place.'],
+   'Towns and Settlements': ['Walk the original street pattern and look for changes in building use over time.', 'Notice the relationship among work, transportation, housing, and public life.'],
+ };
+-const noticePrompts = noticeByCategory[d.category] ?? ['Look for the surviving physical details described in the story.', 'Compare the present landscape with the period described in the article.'];
++const noticePrompts = (d.notice && d.notice.length > 0)
++  ? d.notice
++  : noticeByCategory[d.category] ?? ['Look for the surviving physical details described in the story.', 'Compare the present landscape with the period described in the article.'];
+ 
+ const statusText = verified
+   ? `Reviewed against listed sources${verifiedDate ? ` on ${verifiedDate}` : ''}.`
+-- 
+2.43.0
+

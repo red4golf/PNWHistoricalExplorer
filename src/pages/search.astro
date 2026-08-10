@@ -8,6 +8,7 @@ import { href } from '../lib/url';
 const pagefindUiCss = href('/pagefind/pagefind-ui.css');
 const pagefindUiJs  = href('/pagefind/pagefind-ui.js');
 const bundlePath    = href('/pagefind/');
+const baseUrl       = href('/');
 ---
 
 <Base
@@ -50,7 +51,7 @@ const bundlePath    = href('/pagefind/');
   friendly message instead of a hard error, and so we can pass bundlePath
   computed from Astro's base URL at build time.
 -->
-<script is:inline define:vars={{ pagefindUiJs, bundlePath }}>
+<script is:inline define:vars={{ pagefindUiJs, bundlePath, baseUrl }}>
   (function () {
     var container = document.getElementById('pagefind-search');
 
@@ -85,13 +86,16 @@ const bundlePath    = href('/pagefind/');
     script.src = pagefindUiJs;
     script.onload = initUI;
     script.onerror = function () {
-      if (container) {
-        container.innerHTML =
-          '<p class="search-unavailable">' +
-          'Search index not found. Run <code>npm run build</code> to generate it, ' +
-          'then use <code>npm run preview</code> to test search locally.' +
-          '</p>';
-      }
+      if (!container) return;
+      // Visitor-facing fallback. The index only exists in a built site, so this
+      // is the normal state under `astro dev` — never show build instructions to
+      // the public. (Developers: run `npm run build && npm run preview`.)
+      container.innerHTML =
+        '<p class="search-unavailable">' +
+        'Search is unavailable right now. You can still browse ' +
+        '<a href="' + baseUrl + 'categories">every category</a> or open the ' +
+        '<a href="' + baseUrl + 'map">map</a>.' +
+        '</p>';
     };
     document.head.appendChild(script);
   })();

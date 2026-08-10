@@ -8,7 +8,7 @@ address: "The Dalles, OR"
 coordinates:
   lat: 45.65147
   lng: -120.96941
-description: "Once known as the 'Great Falls of the Columbia,' this was one of the most important salmon fishing sites in North America for over 10,000 years. Native American tribes gathered here for centuries until the falls were submerged by The Dalles Dam in 1957."
+description: "For at least 11,000 years, Native peoples fished and traded at this horseshoe-shaped cataract on the Columbia River — one of the most productive salmon fishing sites in North America. On March 10, 1957, the falls disappeared beneath the reservoir of The Dalles Dam."
 heroImage: null
 audio: "/audio/celilo-falls.mp3"
 books:
@@ -19,74 +19,63 @@ books:
     author: "Linda Meanus"
     url: "https://www.amazon.com/My-Name-LaMoosh-Linda-Meanus/dp/0870712314"
 sourceId: 36
+factcheck:
+  status: "corrected"
+  lastChecked: "2026-07-12"
+  reviewer: "Cowork verification pass 2026-07-12"
+  sourceTier: "primary"
+  claimsTotal: 18
+  claimsCited: 16
+  openFlags: 0
+  neutrality: "pass"
+  checkedHash: "1f80i0v"
+  notes: "Corrected falls height (was '~40 feet'; Oregon Encyclopedia documents the river dropping more than 80 feet over a half-mile of falls and rapids, with the main cataract commonly given as roughly 20 feet); corrected habitation span from '15,000 years' to the Oregon Encyclopedia's 'at least 11,000 years'; corrected settlement total to $26.9 million with tribe-by-tribe figures from the Northwest Power and Conservation Council and tied the $3,700 per-member figure to the Umatilla and Warm Springs settlements per the Oregon History Project; corrected sonar survey date (conducted 2007, released 2008, U.S. Army Corps of Engineers); removed unverified 'S'kin' village claim and 10 a.m. gate-closing time; replaced advocacy-flavored headers ('The Drowned Symphony,' 'The Day the Music Died') with plain ones; attributed 'Wall Street of the West' and 'great emporium' descriptions."
 ---
 
-# Celilo Falls: The Drowned Symphony
+# Celilo Falls: Echo of Falling Water
 
-At 10 a.m. on March 10, 1957, the steel gates of The Dalles Dam closed, and within 4.5 hours, the rising waters of Lake Celilo silenced forever what fur trader Alexander Ross had called "the great emporium" of the Pacific Northwest. Celilo Falls, known as "Wyam" in several Native languages, meaning "echo of falling water" or "sound of water upon the rocks", disappeared beneath the reservoir, taking with it 15,000 years of continuous Native American civilization and one of the continent's most significant cultural and economic centers.
+On March 10, 1957, the gates of The Dalles Dam closed, and within about four and a half hours the rising waters of the new reservoir covered Celilo Falls. A place where Native people had fished, traded, and lived for at least 11,000 years — known in the Sahaptin language as Wy-am, "echo of falling water" or "sound of water upon the rocks" — fell silent beneath what is now called Celilo Lake.
 
 ## The Ancient Falls
 
-Celilo Falls formed a spectacular horseshoe-shaped cascade about 40 feet high that extended across the entire Columbia River, constricting the mighty river's flow to as narrow as 40 feet in places. The thundering waters created a natural barrier that salmon could navigate during their spawning runs, while also serving as one of North America's most productive fishing grounds.
+Celilo Falls was a horseshoe-shaped cataract where the entire Columbia River squeezed through basalt channels as narrow as 40 feet across. The main falls dropped roughly 20 feet, the most dramatic moment in a half-mile stretch of falls and rapids where, as historian Katrine Barber notes in the Oregon Encyclopedia, the river fell more than 80 feet. During spring floods, far more water thundered over Celilo than passes over Niagara Falls today.
 
-Archaeological evidence reveals human habitation at Celilo for at least 10,000-15,000 years, making it one of the longest continuously occupied sites in North America. This ancient fishing village predated European contact by millennia and represented the epicenter of an indigenous economy that sustained thousands of people through sophisticated resource management and extensive trade networks.
+The churning water concentrated migrating salmon into narrow channels, creating one of the most productive fishing sites on the continent. Archaeological records date human occupation of village sites along the falls to at least 11,000 years ago, and Celilo Village, on the river's south shore, is described by the Oregon Encyclopedia as Oregon's oldest continuously occupied site. The Columbia River Inter-Tribal Fish Commission calls Wy-am one of the longest-occupied sites in North America.
 
-The falls' acoustic properties were as remarkable as their visual impact. The sound of cascading water could be heard for miles, creating a constant symphony that Native peoples understood as the voice of their ancestors and the heartbeat of their world. This natural music provided the soundtrack for ceremonies, trade negotiations, and daily life spanning countless generations.
+## A Continental Trading Center
 
-## The Wall Street of the West
+Celilo was as much marketplace as fishery. Lewis and Clark described the area as the "great mart" of the region, and the fur trader Alexander Ross, who passed through in 1811, called the narrows trading grounds a great "emporium." Modern historians have sometimes dubbed it the "Wall Street of the West" for its role as a hub of Indigenous trade.
 
-The fur trader Alexander Ross, who visited around 1811, described Celilo as a "great emporium" with unprecedented population density for the region. Historians later called it the "Wall Street of the West" due to its role as the continent's most important inland trading center west of the Rocky Mountains.
+During the fishing season, up to 5,000 people gathered at the falls, according to the Columbia River Inter-Tribal Fish Commission. Members of the Yakama, Warm Springs, Umatilla, and Nez Perce nations, along with many other groups, came to fish, trade, feast, arrange marriages, hold ceremonies, and settle diplomatic business. Goods moved through Celilo from across the continent — coastal shells, plains hides, and more — making the falls a crossroads of Native North America.
 
-During fishing season from April through October, up to 5,000 Native Americans from various reservations would gather at Celilo. Representatives from the Yakama, Warm Springs, Umatilla, and Nez Perce tribes, along with dozens of other groups, converged to trade not only salmon but goods from across the continent, shells from the Pacific Coast, buffalo hides from the Great Plains, copper from the Great Lakes, and countless other items.
+## Fishing the Falls
 
-The trading relationships extended far beyond commerce. Celilo served as a diplomatic center where tribal leaders negotiated agreements, settled disputes, and maintained the complex political relationships that kept peace across vast territories. Marriages between tribal groups were arranged, cultural knowledge was shared, and traditional ceremonies reinforced the spiritual connections that bound diverse peoples together.
+Fishermen worked from wooden platforms and scaffolds cantilevered over the rapids, sweeping long-handled dip nets through the roiling water for salmon, steelhead, lamprey, and sturgeon. It was skilled and dangerous work; men tied safety ropes around their waists, and falls into the river could be fatal.
 
-## Masters of the Waters
+Fishing stations were not open to all comers. Specific sites belonged to particular families and were passed down through generations — a system of hereditary rights and resource management that sustained the fishery across millennia. The catches were enormous: the Northwest Power and Conservation Council notes that during peak runs, several hundred fish per day per fisher were common.
 
-Native fishermen at Celilo developed sophisticated techniques for harvesting salmon, steelhead, sturgeon, and lamprey eels from the thundering waters. Using long-handled dip nets from wooden scaffolds built over the rushing river, they demonstrated extraordinary skill and courage. Spears and gaff hooks provided additional methods for catching fish, while safety ropes prevented fishermen from falling into the roiling waters, though falls were often fatal.
+## Treaty Rights and the Dam
 
-These fishing rights were not casual privileges but hereditary responsibilities passed down through generations. Specific fishing spots belonged to particular families, creating a complex system of resource management that ensured sustainable harvests while maintaining social order. The knowledge required for successful fishing, understanding water conditions, fish behavior, and safety techniques, took years to master and represented cultural wisdom accumulated over millennia.
+In the 1855 treaties negotiated at Walla Walla, the Yakama, Warm Springs, Umatilla, and Nez Perce ceded millions of acres while reserving the right to fish at their "usual and accustomed" places — including Celilo Falls.
 
-The abundance was extraordinary. During peak runs, the Columbia River turned silver with fish, and skilled fishermen could catch hundreds of salmon in a single day. Native peoples developed sophisticated methods for processing and preserving fish, creating a food security system that sustained not only local communities but trading partners throughout the region.
+A century later, those rights collided with the federal push to develop the Columbia for hydropower and navigation. The Army Corps of Engineers began building The Dalles Dam in 1952. Because the reservoir would flood Celilo Falls and nearby fishing sites at Fivemile and Tenmile rapids — described by the Oregon History Project as some of the most productive salmon fishing sites in all of North America — the federal government negotiated cash settlements with the four treaty tribes rather than halt the project. Many tribal members and leaders opposed the dam; the settlements compensated for the flooded fishery but did not extinguish treaty fishing rights.
 
-## Treaty Rights and Broken Promises
+## March 10, 1957
 
-The 1855 treaties signed at Walla Walla and the Dalles guaranteed Native Americans perpetual fishing rights at their "usual and accustomed places," specifically including Celilo Falls. These treaties represented solemn agreements between sovereign nations, with Native peoples ceding millions of acres of land in exchange for reserved rights to continue their traditional fishing practices.
+When the dam's gates closed, the reservoir backed up quickly. Within hours, the falls and a portion of Celilo Village were under water. Witnesses gathered on the banks; the last First Salmon ceremony at the falls had been held the previous spring, on April 20, 1956.
 
-However, as hydroelectric development accelerated in the 20th century, these treaty guarantees came under increasing pressure. The federal government's commitment to river development for electricity generation, navigation, and flood control began to conflict with Native American treaty rights, setting up a clash between industrial progress and indigenous sovereignty.
+The settlements, negotiated in the 1950s, totaled about $26.9 million: $15,019,640 to the Yakama Nation, $4,616,971 to the Confederated Tribes of the Umatilla, $4,451,784 to the Confederated Tribes of Warm Springs, and $2,800,000 to the Nez Perce Tribe, according to the Northwest Power and Conservation Council. The Oregon History Project records that enrolled Umatilla and Warm Springs members received roughly $3,700 each. Tribal members have said ever since that no payment could substitute for the falls themselves.
 
-The Army Corps of Engineers presented The Dalles Dam as essential for regional development, arguing that hydroelectric power was necessary for aluminum production, nuclear facilities at Hanford, and post-war economic growth. Native American protests were dismissed as obstacles to progress, despite the clear violation of treaty obligations.
+## Aftermath
 
-## The Day the Music Died
+The flooding of Celilo ended a fishery and an economy that had anchored Native life on the mid-Columbia for thousands of years. Families were displaced from homes along the river, longstanding trading and ceremonial gatherings lost their setting, and an entire body of knowledge — about channels, currents, platforms, and fish — lost the place it described. Historians such as Katrine Barber, author of "Death of Celilo Falls," have documented the inundation as one of the defining losses of twentieth-century Pacific Northwest history, and its memory remains a source of grief and grievance for river tribes today.
 
-As the dam gates closed on March 10, 1957, tribal members gathered to witness the destruction of their sacred site. Some sang traditional songs as they watched their ancestral fishing grounds disappear forever. Others couldn't bear to witness the flooding and turned away as the waters rose.
+## The Falls Beneath the Lake
 
-The rising reservoir submerged not only the falls but entire communities. The village of Celilo on the Oregon side and S'kin on the Washington side vanished beneath Lake Celilo, displacing families whose roots at the site extended back centuries. Ancient fishing platforms, ceremonial sites, and burial grounds disappeared, taking with them irreplaceable cultural heritage.
+The falls themselves still exist. In 2007, the Army Corps of Engineers mapped the river bottom with multibeam sonar, and the results, released in 2008, showed the main cataract intact beneath the reservoir — disproving persistent rumors that the falls had been dynamited or buried in silt. In 2019, Yakama Nation leaders publicly called for removing The Dalles Dam and the other lower Columbia dams and restoring the falls, a proposal that remains part of the wider debate over salmon recovery on the river.
 
-The federal government offered compensation of $26.8 million total to affected tribes, with individual enrolled members receiving $3,700 each (approximately $33,000 in today's dollars). This payment represented grossly inadequate compensation for the loss of a 15,000-year-old way of life and the foundation of regional Native economy.
+## Celilo Village Today
 
-## Cultural Devastation
+Celilo Village endures on the bluff above Interstate 84, home to a Native community that continues to fish the Columbia at remaining sites, hold First Salmon ceremonies, and commemorate the falls each March. The dam, for its part, generates hydropower (with a total capacity of about 1.8 million kilowatts, per the Oregon History Project) and opened the river to barge navigation.
 
-The destruction of Celilo Falls shattered more than fishing rights, it broke the heart of Pacific Northwest Native culture. The economic foundation of many tribal communities collapsed overnight. Traditional knowledge systems based on intimate understanding of river ecology became obsolete. Ceremonial practices tied to specific locations could no longer be performed. Young people lost connection to ancestral ways as the physical foundation of their culture disappeared.
-
-Survivors were relocated to substandard housing separated from the river by highways and railroads. The tight-knit fishing communities that had sustained Native peoples for millennia were scattered, breaking social bonds that had endured for generations. Elders who possessed irreplaceable knowledge about traditional fishing techniques, river ecology, and cultural practices found their wisdom suddenly irrelevant.
-
-The psychological trauma extended beyond immediate communities to affect all Pacific Northwest tribes. Celilo Falls had represented the permanence and power of Native culture in the face of ongoing colonization. Its destruction sent a devastating message that no indigenous sacred site, no matter how ancient or significant, was safe from industrial development.
-
-## Enduring Resistance
-
-Despite overwhelming loss, Native communities refused to accept the permanent destruction of their sacred site. A 2008 sonar survey revealed that the falls structure remains intact underwater, raising hopes for potential restoration. In 2019, tribal leaders called for removing The Dalles Dam and restoring Celilo Falls as part of broader efforts to restore salmon runs and honor treaty obligations.
-
-Modern tribal fishermen continue practicing traditional techniques at remaining fishing sites, maintaining cultural connections despite dramatically reduced opportunities. Annual ceremonies commemorate Celilo Falls and keep alive the memory of what was lost. Museums, murals, and educational programs ensure that younger generations understand the significance of their drowned cultural center.
-
-The fight for salmon restoration has become inseparable from the Celilo Falls legacy. As salmon populations collapse throughout the Columbia River system, tribal leaders argue that restoring the falls would provide crucial spawning habitat while healing historic wounds. The campaign represents both environmental restoration and cultural reclamation.
-
-## Legacy of Loss and Hope
-
-Today, The Dalles Dam generates electricity for aluminum smelters, cities, and industrial facilities throughout the Pacific Northwest. The reservoir provides navigation for barges and boats, enabling efficient transportation of agricultural products and manufactured goods. These benefits came at the cost of indigenous treaty rights and one of North America's most significant cultural sites.
-
-Celilo Falls' destruction stands as perhaps the starkest example of the price paid for 20th-century river development. The decision to flood the falls represented a choice between industrial progress and cultural preservation, a choice made without meaningful Native American input and in direct violation of treaty obligations.
-
-Yet the memory of Celilo Falls continues to inspire new generations of tribal leaders, environmental activists, and justice advocates. The site's name appears on schools, cultural centers, and restoration projects throughout the region. The story of its destruction serves as a cautionary tale about the true costs of development and the irreplaceable value of cultural heritage.
-
-Beneath the waters of Lake Celilo, the falls wait in silence. Their ancient music has been stilled but not forgotten. In tribal memories, in historical accounts, and in the ongoing fight for salmon restoration, the echo of falling water continues to resonate, carrying forward the voices of those who understood that some places are too sacred to sacrifice for progress.
+Wy-am is gone from sight but not from memory. Its name appears on schools, longhouses, and restoration campaigns across the region, and for the river tribes the echo of falling water remains — a place drowned, remembered, and still contested.

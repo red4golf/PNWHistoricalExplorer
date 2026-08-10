@@ -8,7 +8,7 @@ address: "Snoqualmie, WA"
 coordinates:
   lat: 47.5415
   lng: -121.8373
-description: "This 268-foot waterfall has been sacred to the Snoqualmie people since time immemorial. Known as the place where the first salmon was created, it later became the site of the world's first underground power plant in 1898, pioneering hydroelectric power in the Pacific Northwest."
+description: "This 268-foot waterfall is the sacred place of creation in Snoqualmie tribal tradition and is listed on the National Register of Historic Places as a traditional cultural property. In 1899 the Snoqualmie Falls Power Company completed a generating plant carved into the bedrock beneath it — described by its operator as the world's first completely underground power plant."
 heroImage: null
 audio: null
 books:
@@ -19,52 +19,43 @@ books:
     author: "Heidi Bohan"
     url: "https://www.amazon.com/People-Cascadia-Pacific-Northwest-American/dp/0978963601"
 sourceId: 37
+factcheck:
+  status: "corrected"
+  lastChecked: "2026-07-12"
+  reviewer: "Cowork verification pass 2026-07-12"
+  sourceTier: "primary"
+  claimsTotal: 17
+  claimsCited: 16
+  openFlags: 0
+  neutrality: "pass"
+  notes: "Corrected builder of the hydroelectric plant (was 'Puget Sound Energy'; built by the Snoqualmie Falls Power Company under engineer Charles H. Baker, financed by his father William T. Baker — HistoryLink 3533; company sold in 1908 to Seattle-Tacoma Power, a PSE forerunner); dated Plant 1 correctly (construction April 1898, first power July 31, 1899); attributed 'world's first completely underground power plant' to PSE and ASCE; replaced 'Sacred Waters Under Siege'/'Industrial Invasion' advocacy framing with plain headers while keeping documented tribal significance (NRHP traditional cultural property listing, June 22, 1992, ref. 92000784, confirms 268-foot height and creation-story significance); corrected 2019 purchase details (Salish Lodge plus 45 acres bought from the Muckleshoot Tribe for $125 million, halting an approved development); removed unverified claims ('90% of flow diverted,' '1% of PSE capacity,' 'Save Snoqualmie Falls 2015 campaign,' '20,000 homes')."
+  checkedHash: "1g2a657"
 ---
 
-# Snoqualmie Falls: Sacred Waters Under Siege
+# Snoqualmie Falls: Where the River Leaps
 
-Rising 268 feet above the Snoqualmie River just 30 miles east of Seattle, Snoqualmie Falls represents one of the most profound spiritual sites in the Pacific Northwest, and one of the most contested. For the Snoqualmie Tribe, these thundering waters mark the place where "First Woman and First Man were created by Moon the Transformer," making this their most sacred location. Yet for over 125 years, this sacred site has also been the location of the world's first completely underground hydroelectric plant, creating a conflict between spiritual values and industrial power that continues to this day.
+Thirty miles east of Seattle, the Snoqualmie River pours 268 feet over a rock ledge — roughly a hundred feet farther than Niagara's plunge — throwing up a curtain of mist you can feel from the observation deck. Snoqualmie Falls is one of Washington's most visited attractions, drawing well over 1.5 million people a year. It is also two remarkable things at once: the place of creation in Snoqualmie tribal tradition, and the site of a pioneering power plant hidden in the rock beneath the water.
 
-## Where Creation Began
+## A Sacred Place
 
-In Snoqualmie tradition, the falls serve as the spiritual center of their world, where "the mists of the plunging waters connect heaven and earth," carrying prayers to ancestors and maintaining the sacred connection between the living and the eternal. This is not just a beautiful waterfall, it is the birthplace of humanity itself, the place where Moon the Transformer brought forth the first people and established the natural order.
+For the Snoqualmie people, the falls are the center of the world. In tribal tradition recorded by HistoryLink, Snoqualm — Moon the Transformer — shaped the world and created the falls, and Snoqualmie tribal members describe the rising mist as carrying prayers upward to their ancestors and the Creator. Tribal leaders have called the falls "central to the tribe's history, culture, spiritual practice and identity"; one council member put it simply: "the Falls is like a church."
 
-The sacred significance extends beyond creation stories to encompass healing, prayer, and community gathering. For generations, Snoqualmie people came to the falls for spiritual renewal, using the power of the cascading water and rising mist to cleanse, heal, and communicate with the spirit world. The sound of the falls was considered the voice of their ancestors, a constant presence that connected the tribal community to their deepest cultural roots.
+That significance carries official recognition. On June 22, 1992, Snoqualmie Falls was listed on the National Register of Historic Places as a traditional cultural property associated with the Snoqualmie people — the nomination documents the falls' role in Snoqualmie creation tradition and spiritual practice, along with its 268-foot height.
 
-## Industrial Invasion
+## Harnessing the Falls
 
-In 1898, this sacred tranquility was shattered by the construction of Puget Sound Energy's hydroelectric facility, the world's first completely underground power plant. Built in a cavern 270 feet below the surface, Plant 1 began diverting up to 90% of the river's flow away from the falls, reducing the thundering cascade to a mere trickle for much of the year.
+In the 1890s, a civil engineer named Charles H. Baker saw the falls as an answer to the young region's hunger for electricity. With financing from his father, Chicago businessman William T. Baker, he organized the Snoqualmie Falls Power Company, bought land at the falls, and in April 1898 began blasting a powerhouse cavity into the bedrock. On July 31, 1899, Baker's 18-month-old daughter Dorothy pulled the switch, and generators spinning 270 feet below the surface began sending power to Seattle and Tacoma.
 
-Plant 2, added in 1910 and expanded in 1957, increased the facility's capacity to 54 megawatts, enough electricity for approximately 20,000 homes. While this may seem substantial, the power represents only about 1% of PSE's total generating capacity, raising profound questions about whether minimal electrical generation justifies the desecration of one of the region's most sacred sites.
+Puget Sound Energy — whose corporate forerunner, Seattle-Tacoma Power Company, bought the Snoqualmie Falls Power Company in 1908 — describes Plant 1 as the world's first completely underground power plant, and the American Society of Civil Engineers, which named the cavity generating station a historic civil engineering landmark, credits it as the first successful underground hydroelectric station. A second powerhouse, Plant 2, was built a quarter-mile downstream in 1910 and expanded in 1957. Together the plants generate about 54 megawatts today, operating under a 40-year federal license issued in 2004; much of the drama visitors see at the brink varies with season and with how much water is routed through the plants.
 
-## A Century of Resistance
+## The Tribe and the Falls
 
-The Snoqualmie Tribe has fought for over 120 years to restore natural flow to their sacred falls. This struggle represents one of the longest-running indigenous rights battles in the Pacific Northwest, spanning five generations of tribal leadership and countless legal challenges.
+The power project and the sacred site have coexisted uneasily from the beginning. Diverting river water through turbines means less water over the falls, and the Snoqualmie Tribe has long pressed federal regulators to protect the falls' natural flow and character — advocacy that helped win the 1992 National Register listing and shaped conditions of the plant's relicensing. More recently, the tribe's Ancestral Lands Movement has campaigned to protect the falls from disruptions such as unregulated helicopter tours, gathering tens of thousands of petition signatures and support from neighboring cities.
 
-In the 1990s, the tribe formed the Snoqualmie Falls Preservation Project (SFPP) to coordinate their restoration efforts. When PSE received a new 40-year federal operating license in 2004, the tribe launched the "Save Snoqualmie Falls" campaign in 2015, arguing that spiritual and cultural values should outweigh minimal power generation.
+## Reclaiming Ground at the Falls
 
-The conflict intensified when federal law began requiring "equal consideration" of power and non-power values in hydroelectric licensing. The tribe argued that the site's spiritual significance, combined with its attraction of 1.5-2 million visitors annually, far outweighed the plant's minimal contribution to regional power needs.
+In late 2019, the Snoqualmie Tribe purchased the Salish Lodge & Spa — the hotel perched at the lip of the falls, opened in 1919 as the Snoqualmie Falls Lodge — along with 45 acres of surrounding land, buying the property from the Muckleshoot Indian Tribe for $125 million. The purchase halted a previously approved development of nearly 200 residences and a 200-room hotel next to the falls, and returned the land around the tribe's most sacred site to Snoqualmie ownership. The hydroelectric plants remain owned and operated by Puget Sound Energy under their federal license.
 
-## Reclaiming Sacred Ground
+## Visiting
 
-In October 2019, the Snoqualmie Tribe achieved a significant victory by purchasing the Salish Lodge & Spa and 45 acres of surrounding land for $125 million. This acquisition prevented further commercial development by the previous owner and gave the tribe control over the immediate area surrounding their sacred falls.
-
-However, this victory came with limitations. While the tribe now controls the lodge and surrounding land, they do not own the power plant itself, which continues operating under its federal license. Water diversion continues, meaning visitors can only witness the falls at "full blast" during periods of flooding or when PSE briefly releases additional water for special occasions.
-
-## The Ongoing Battle
-
-The Snoqualmie Tribe's ultimate goal remains the complete decommissioning of the hydroelectric plant and restoration of natural flow to their sacred falls. This objective faces significant legal and economic challenges, as PSE's federal license extends for decades and the utility argues that even 1% of their power generation represents valuable renewable energy.
-
-The conflict highlights fundamental questions about environmental justice, indigenous rights, and the true value of sacred sites. Can a place where creation itself occurred be reduced to kilowatt-hours and economic calculations? Should federal law prioritize minimal power generation over indigenous spiritual practices that have sustained a people for thousands of years?
-
-## A Test of Values
-
-Snoqualmie Falls serves as a test case for how modern America balances industrial development with indigenous sacred sites. The waterfall's proximity to Seattle makes it one of the most visited natural attractions in Washington State, demonstrating public appreciation for its natural beauty. Yet most visitors remain unaware of the ongoing spiritual and legal battle surrounding the site.
-
-The tribe's purchase of the Salish Lodge represents a new chapter in this struggle, providing them with an economic base while they continue pursuing full restoration of their sacred waters. They seek not just the return of water flow, but recognition that some places transcend economic calculation and deserve protection based on their spiritual and cultural significance.
-
-## Sacred Waters, Enduring Hope
-
-Today, as the Snoqualmie Tribe continues their decades-long fight for their sacred falls, they carry forward the hopes and prayers of generations who understood these waters as the source of all life. The mists still rise, though diminished. The prayers still ascend, though challenged by industrial noise. The sacred connection endures, though tested by over a century of exploitation.
-
-Snoqualmie Falls remains a powerful reminder that the landscapes we see as resources or recreation areas may be sacred to others, and that true reconciliation requires not just acknowledgment of past wrongs, but active restoration of what has been taken. In the ongoing battle between sacred waters and industrial power, the Snoqualmie Tribe fights not just for their past, but for a future where spiritual values can triumph over corporate profit.
+Today a free park with viewing platforms overlooks the falls, and a trail descends to the river below. Interpretive displays tell both of the site's stories — the tribe's, reaching back to the beginning of the world, and the engineers', reaching back to 1899. Come after autumn rains or spring snowmelt, when the river runs high and the falls thunder at full width, and it is easy to understand why this place has drawn people for as long as anyone can remember.

@@ -3,12 +3,23 @@ title: "Bowerman Airport & Lana's Cafe"
 slug: "bowerman-airport-lanas-cafe"
 category: "Aviation and Transportation"
 legacyCategory: "Transportation Hub"
-period: "1940s-Present (Cafe: 1990s-2015)"
+period: "1940s-Present (Cafe: 1992-2014)"
 address: "Bowerman Airport, 2 miles west of Hoquiam, WA 98550"
 coordinates:
   lat: 46.9712
   lng: -123.937
-description: "A jet-capable airport on the Washington coast, Bowerman Field became famous among Pacific Northwest pilots for Lana's Cafe, the beloved on-field restaurant where Sunday morning fly-in breakfasts created lifelong friendships and \"$100 hamburger\" stories. Though the cafe closed in 2015, the memories of coastal flights, strong coffee, and hangar talk live on in the hearts of pilots across Oregon and Washington."
+description: "A Port of Grays Harbor airport on the Washington coast with a 5,000-foot runway, Bowerman Field began as a World War II military landing strip and was renamed in 1953 for a Hoquiam airman lost in the Korean War. For 22 years it was also home to Lana's Hangar Cafe, the on-field restaurant that made KHQM a favorite fly-in breakfast stop for Pacific Northwest pilots until it moved into downtown Hoquiam in 2014."
+factcheck:
+  status: "corrected"
+  lastChecked: "2026-07-12"
+  reviewer: "Cowork verification pass 2026-07-12"
+  sourceTier: "secondary"
+  claimsTotal: 12
+  claimsCited: 11
+  openFlags: 1
+  neutrality: "pass"
+  notes: "Lana's Cafe investigated as possible fabrication (flagged via Microsoft Flight Simulator scenery): it was REAL. Lana's Hangar Cafe operated at 1400 Airport Way on the field for 22 years; local news (KXRO, Jan. 2014) documents owner Shelly Dixon moving it to Simpson Avenue in downtown Hoquiam as Simpson Avenue Grill in early 2014 to get a bigger building. Corrected closure date (Jan. 2014, not Jan. 2015; cafe dates ~1992-2014), corrected 'reasons unclear' framing, removed unverifiable claims: building demolished by 2023, Bellevue Airfield traditions, MSFS recreation, EAA Chapter 367 lounge, fuel-service hours, and invented 'Personal Connections' anecdotes. Airfield history added from HistoryLink 10110: became an Army airfield (patrol base, two runways) in 1942 - not a naval air station; renamed 1953 for 1st Lt. Robert C. Bowerman (1921-1952), killed in a Korean War crash; transferred to Port of Grays Harbor in 1962 (also Port of Grays Harbor official history). Runway/ILS/ownership per FAA records (runway 6/24, 5,000 x 150 ft asphalt, ILS or LOC RWY 24). Open flag: pilot fly-in memories are framed as community recollection, not documented history. 'A Personal Connection' section is the site creator's own first-hand account (father's Bellevue Airfield lunch runs; first solo cross-country; hero photo from that flight) - personal testimony, labeled as such. Sources: HistoryLink.org, Port of Grays Harbor, FAA airport records, KXRO news."
+  checkedHash: "1pe4zo6"
 heroImage: "/images/locations/bowerman-airport-lanas-cafe-hero.jpg"
 audio: "/audio/bowerman-airport-lanas-cafe.mp3"
 books:
@@ -21,69 +32,36 @@ sourceId: 139
 
 ## The Airport: Gateway to the Washington Coast
 
-Bowerman Airport (KHQM) sits just two miles west of Hoquiam, Washington, serving as **a jet-capable airport on the Washington coast**. With its 5,000-foot asphalt runway and full ILS capability on Runway 24, Bowerman has served as a critical transportation hub for Grays Harbor County since the 1940s.
+Bowerman Airport (KHQM) sits on a low spit reaching into Grays Harbor, about two miles west of Hoquiam, Washington. Owned and operated by the Port of Grays Harbor, the field offers a 5,000-by-150-foot asphalt runway (6/24) with an ILS approach to Runway 24 — serious instrument capability for a small coastal airport, and a welcome sight when the marine layer rolls in off the Pacific.
 
-Owned and operated by the Port of Grays Harbor, the airport has maintained a unique place in Pacific Northwest aviation, too small for major commercial service, but perfectly suited for general aviation, corporate jets, and the occasional military operation.
+The airfield's story starts in wartime. According to HistoryLink, the free online encyclopedia of Washington state history, the site — then known as Moon Island Airport — was taken over by the U.S. Army in 1942, which built two runways and expanded the field to serve as a coastal patrol base during World War II. In 1953 the field was renamed to honor First Lieutenant Robert C. Bowerman (1921-1952), a co-pilot killed in a Korean War crash. In 1962 the airport was transferred to the Port of Grays Harbor, which has run it ever since.
 
-But for decades, Bowerman's true claim to fame wasn't its runway specs or instrument approaches. It was **Lana's Cafe**, the on-field restaurant that became a pilgrimage destination for pilots across the Pacific Northwest.
+Too small for major commercial service but well suited to general aviation and corporate aircraft, Bowerman has been Grays Harbor County's air link to the rest of the Northwest for more than 80 years. For a couple of decades, though, its best-known feature wasn't the runway. It was the restaurant.
 
-## Lana's Cafe: The Heart of Pacific Northwest Flying
+## Lana's Hangar Cafe: A Fly-In Institution
 
-Throughout the 1990s and into the 2010s, Lana's Cafe operated right on the airport property. Every **Sunday morning**, the skies above Grays Harbor filled with small aircraft, Cessnas, Pipers, Bonanzas, all converging on Bowerman for the same reason: breakfast at Lana's.
+For 22 years, Lana's Hangar Cafe operated right on the airport property at 1400 Airport Way. On good-weather weekends, small aircraft from around the region — Cessnas, Pipers, Bonanzas — would drop in at KHQM for breakfast or lunch, taxi to the ramp, and walk in for coffee.
 
 ### The "$100 Hamburger" Tradition
 
-Pilots called these recreational flights **"$100 hamburgers"**, the tongue-in-cheek term for flying somewhere just for the joy of it, where the total cost of aircraft rental and fuel far exceeded the price of the meal itself. But that was never the point.
+Pilots call these recreational flights "$100 hamburgers" — the tongue-in-cheek term for flying somewhere just for the joy of it, where the cost of aircraft and fuel far exceeds the price of the meal. Lana's was a classic $100-hamburger destination: close enough to Puget Sound airports for an easy cross-country, far enough to feel like a real trip, and rewarded at the end with a hot meal beside the ramp.
 
-The point was the flight. The point was the camaraderie. The point was sitting in a booth with other pilots, swapping stories about crosswind landings, weather diversions, and close calls with deer on remote airstrips.
+In pilot forums and hangar talk, Lana's is remembered fondly — "a great place to stop for lunch while flying to the beach," as one pilot put it when news of its departure broke, and "a big draw for pilots passing through." Those memories are community recollection rather than documented history, but they capture why an unassuming airport cafe mattered: on-field restaurants give flying a destination, and they were already growing scarce in the Northwest.
 
-Lana's Cafe became part of the fabric of Pacific Northwest general aviation. Flying clubs from **Seattle**, **Portland**, **Bellevue**, **Renton**, and dozens of smaller airfields made it a regular Sunday destination. You'd see fathers teaching sons the basics of flight planning over eggs and toast. You'd hear check-ride stories, hangar projects, and debates about the best floatplane lake in Washington.
+### A Personal Connection
 
-It wasn't just a restaurant. It was a **community hub** where aviation culture thrived.
+This field is part of this site's own story. The site's creator grew up hearing about lunch runs to the Grays Harbor coast: his father used to fly out from the now-vanished Bellevue Airfield with a pilot buddy from work, bound for the cafe on the field. Years later, Bowerman became the destination of his own first solo cross-country as a student pilot — and the photo at the top of this page was taken on that flight.
 
-## The Bellevue Connection
+## The Move to Town (2014)
 
-For pilots flying from **Bellevue Airfield** in the 1970s and early 1980s, KHQM was a favorite destination. The flight path took you west over Puget Sound, across the Olympic Peninsula's forested mountains, and down to the rugged Pacific coast, a scenic hour-long journey in a Cessna 172.
+In January 2014, after 22 years at the airport, owner Shelly Dixon announced that Lana's was leaving the field. As reported by Grays Harbor radio station KXRO, the reason was straightforward: the restaurant wanted a bigger building and room to expand its dinner service. The cafe reopened that winter on Simpson Avenue in downtown Hoquiam under a new name, Simpson Avenue Grill.
 
-The route required real piloting: mountain passes, coastal weather systems, and the ever-present marine layer that could close coastal airports without warning. But that challenge made it memorable.
-
-Many pilots who learned to fly at Bellevue Airfield had their first solo cross-country flight to KHQM. The tradition of coastal breakfast runs created bonds between generations, fathers who flew to Lana's in the 1970s brought their children in the 1990s, passing down not just flying skills, but the culture of aviation itself.
-
-## The End of an Era (January 2015)
-
-In **January 2015**, Lana's Cafe closed its on-field location. The exact reasons remain unclear, perhaps rising rents, perhaps changing economics, perhaps simply the natural lifecycle of small businesses. The cafe reopened in **downtown Hoquiam as Simpson Ave Grill**, about 2.5 miles from the airport.
-
-By **2023**, the original airport restaurant building had been demolished.
-
-For pilots who grew up flying to Lana's, the closure marked the end of an era. You can still fly to KHQM, still make the approach to Runway 24, still taxi to the parking area. But the smell of fresh coffee and bacon? The buzz of conversation about Cessna engine overhauls and upcoming fly-ins? That's gone.
+For pilots, the practical effect was the end of an era. You can still fly to KHQM, still shoot the ILS to Runway 24, still taxi to the parking area — but there's no longer a restaurant waiting on the field, and grabbing a meal now means a trip into town.
 
 ## Bowerman Today
 
-The airport continues to serve Grays Harbor County with:
-- **24/7 Jet-A fuel** via cardlock
-- **Full-service fuel** 8am-7pm daily
-- **Pilots lounge** hosted by Grays Harbor EAA Chapter 367 (free coffee, restrooms, flight planning area)
-- Corporate and general aviation operations
-- Occasional military exercises
-
-But there's **no on-field dining**. Modern pilots arriving at KHQM have to drive or walk into Hoquiam for food, losing the spontaneous community that made Lana's special.
+The airport continues to serve Grays Harbor County with general aviation and corporate operations under the Port of Grays Harbor, alongside the Port's marine terminals and marina. Its long, instrument-equipped runway remains one of the most capable on Washington's outer coast.
 
 ## The Legacy
 
-Lana's Cafe was so iconic that **flight simulator developers** included it in virtual recreations of KHQM for Microsoft Flight Simulator. Pilots who never had the chance to visit in real life can still taxi up to the virtual cafe, a digital ghost of Pacific Northwest aviation culture.
-
-For those who flew to Lana's in its heyday, the memories remain vivid: the sound of propellers winding down on the ramp, the smell of salt air mixing with avgas, the warmth of the cafe on a foggy morning, and the stories, always the stories.
-
-It represented a time when flying was accessible, when small airports had character, and when a Sunday breakfast run could create friendships that lasted a lifetime.
-
-## Personal Connections
-
-Many Pacific Northwest pilots have their own Lana's stories:
-- First cross-country solos that ended with celebratory pancakes
-- Proposal flights where nervous pilots popped the question over coffee
-- Father-son breakfast runs that became annual traditions
-- Emergency weather diversions that turned into unexpected reunions with old friends
-
-One pilot recalls flying from **Bellevue Airfield** with his father in the 1970s, making the run to KHQM dozens of times. Years later, that same pilot gave flight lessons to a young student, and their first cross-country? KHQM, of course. The student soloed to Bowerman, completing the circle.
-
-That's the legacy of Lana's Cafe and Bowerman Airport, not just runways and restaurants, but **stories passed from one generation to the next**, preserving the soul of general aviation in the Pacific Northwest.
+Bowerman Field packs a lot of Northwest aviation history into one windswept spit: a World War II Army patrol field, a memorial to a local airman lost in Korea, a working Port-owned airport — and, for a generation of pilots, the smell of coffee and bacon at the end of a coastal flight. The cafe has moved on, but the airport still welcomes anyone willing to make the trip west.
