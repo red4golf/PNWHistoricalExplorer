@@ -4,6 +4,8 @@ import LocationCard from '../components/LocationCard.astro';
 import { CATEGORIES } from '../lib/categories';
 import { href } from '../lib/url';
 import { publishedLocations } from '../lib/publish';
+import { BAINBRIDGE_GEOFENCE } from '../lib/bainbridge';
+import site from '../data/site.json';
 
 const locations = await publishedLocations();
 const total = locations.length;
@@ -13,54 +15,275 @@ const counts = Object.fromEntries(
   CATEGORIES.map((c) => [c.name, locations.filter((l) => l.data.category === c.name).length])
 );
 
-// Featured: locations with a real photo, audio first, alphabetical within
 const featured = locations
   .filter((l) => l.data.heroImage)
   .sort((a, b) => Number(Boolean(b.data.audio)) - Number(Boolean(a.data.audio)) || a.data.title.localeCompare(b.data.title))
   .slice(0, 6);
+
+const quickStarts = [
+  { icon: '⏱️', title: 'Plan a short stop', text: 'Choose one memorable place when you only have an hour or two.', url: '/map?visit=short' },
+  { icon: '🎧', title: 'Hear an audio story', text: `Browse ${audioCount} narrated places for the road or the site.`, url: '/search?q=audio' },
+  { icon: '🏛️', title: 'Browse by interest', text: 'Explore towns, military sites, aviation, maritime history, and more.', url: '/categories' },
+];
 ---
 
 <Base
-  title="PNW Historical Explorer — Historic Sites of the Pacific Northwest"
-  description={`Explore ${total} historical sites across the Pacific Northwest with in-depth stories, ${audioCount} audio narrations, and curated reading lists. Works offline in the field.`}
+  title="PNW Historical Explorer — Find a Place Worth Stopping For"
+  description={`Discover ${total} historic places, natural landmarks, old towns, military sites, and cultural landscapes across the Pacific Northwest.`}
 >
-  <section class="hero">
+  <section class="hero guide-hero">
+    <div class="container guide-hero-grid">
+      <div class="guide-hero-copy">
+        <p class="eyebrow light">A field guide for curious travelers</p>
+        <h1>Find a place worth stopping for.</h1>
+        <p>
+          Explore historic towns, military sites, cultural landscapes, old airfields, maritime landmarks, and natural wonders across the Pacific Northwest. Get the story, practical visit information, directions, and nearby suggestions.
+        </p>
+        <div class="actions">
+          <button class="btn" id="home-locate" type="button">📍 Find places near me</button>
+          <a class="btn secondary" href={href('/map')}>Explore the map</a>
+        </div>
+        <p class="location-privacy">Your location is used on this device to find nearby places. It is not required to browse the guide.</p>
+        <p id="home-locate-status" class="home-locate-status" role="status" aria-live="polite"></p>
+        <form id="manual-location" class="manual-location" hidden>
+          <label for="manual-location-query">Enter a city or ZIP code instead</label>
+          <div>
+            <input id="manual-location-query" name="location" autocomplete="postal-code" placeholder="Bainbridge Island or 98110" required />
+            <button class="btn" type="submit">Find nearby places</button>
+          </div>
+          <small>Place search is provided by OpenStreetMap.</small>
+        </form>
+        <div class="trust-line" aria-label="Site coverage">
+          <span><strong>{total}</strong> places</span>
+          <span><strong>{audioCount}</strong> audio stories</span>
+          <span>Sources and reading on every guide</span>
+          <span>Works offline after pages are saved</span>
+        </div>
+      </div>
+      <aside class="guide-card">
+        <p class="eyebrow">Choose your next stop</p>
+        <h2>What would you like to do?</h2>
+        <div class="guide-card-links">
+          {quickStarts.map((item) => (
+            <a href={href(item.url)}>
+              <span class="guide-icon" aria-hidden="true">{item.icon}</span>
+              <span><strong>{item.title}</strong><small>{item.text}</small></span>
+            </a>
+          ))}
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section home-nearby" id="nearby-places" hidden>
     <div class="container">
-      <h1>Discover the Pacific Northwest’s Past</h1>
-      <p>
-        {total} historic places — forts, lighthouses, ghost towns, and natural wonders — each with
-        the full story, {audioCount} audio narrations, and curated reading.
-      </p>
-      <div class="actions">
-        <a class="btn" href={href('/map')}>🗺️ Explore the map</a>
-        <a class="btn secondary" href={href('/categories')}>Browse by category</a>
+      <div class="section-heading-row">
+        <div>
+          <p class="eyebrow">Nearby suggestions</p>
+          <h2 class="section-title">Closest places worth exploring</h2>
+        </div>
+        <a href={href('/map?mode=nearby')}>Open the full map →</a>
+      </div>
+      <div id="home-nearby-grid" class="home-nearby-grid"></div>
+    </div>
+  </section>
+
+  <section class="section island-assist" id="home-bainbridge-assist" hidden>
+    <div class="container island-assist-grid">
+      <div>
+        <p class="eyebrow light">You’re on or near Bainbridge Island</p>
+        <h2>Need help deciding what to do next?</h2>
+        <p>Call for personalized suggestions, then receive photos, location pages, business information, and direction links by text.</p>
+      </div>
+      <div>
+        <a class="btn" href={`tel:${site.concierge.phone.replace(/[^+\d]/g, '')}`}>☎ Call the Bainbridge Concierge</a>
+        <a href={href('/concierge')}>See how the service works →</a>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section visit-flow">
     <div class="container">
-      <h2 class="section-title">Browse by category</h2>
-      <div class="category-grid">
-        {
-          CATEGORIES.map((c) => (
-            <a class="category-card" href={href(`/categories/${c.slug}`)}>
-              <span class="icon">{c.icon}</span>
-              <h3>{c.name}</h3>
-              <span class="count">{counts[c.name]} locations</span>
-            </a>
-          ))
-        }
+      <p class="eyebrow">Make the most of your visit</p>
+      <h2 class="section-title">Use as much—or as little—of the guide as you need</h2>
+      <div class="three-up">
+        <article><span aria-hidden="true">1</span><h3>Before you go</h3><p>See why the place is worth visiting, how long to allow, and how to get there.</p></article>
+        <article><span aria-hidden="true">2</span><h3>While you’re there</h3><p>Hear the short story and discover details many visitors might otherwise miss.</p></article>
+        <article><span aria-hidden="true">3</span><h3>Learn more</h3><p>Explore the full history, photographs, sources, and recommended reading.</p></article>
       </div>
     </div>
   </section>
 
   <section class="section" style="background: var(--parchment);">
     <div class="container">
-      <h2 class="section-title">Featured locations</h2>
-      <div class="location-grid">
-        {featured.map((l) => <LocationCard location={{ ...l.data }} />)}
+      <div class="section-heading-row">
+        <div><p class="eyebrow">Worth a detour</p><h2 class="section-title">Featured places</h2></div>
+        <a href={href('/map')}>View all on the map →</a>
+      </div>
+      <div class="location-grid">{featured.map((l) => <LocationCard location={{ ...l.data }} />)}</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Browse the collection</p>
+      <h2 class="section-title">Choose a kind of history</h2>
+      <div class="category-grid">
+        {CATEGORIES.map((c) => (
+          <a class="category-card" href={href(`/categories/${c.slug}`)}>
+            <span class="icon" aria-hidden="true">{c.icon}</span>
+            <h3>{c.name}</h3>
+            <span class="count">{counts[c.name]} locations</span>
+          </a>
+        ))}
       </div>
     </div>
   </section>
+
+  <script define:vars={{ locationsUrl: href('/locations.json'), basePath: href(''), conciergePhone: site.concierge.phone, bainbridgeFence: BAINBRIDGE_GEOFENCE }}>
+    (function () {
+      const button = document.getElementById('home-locate');
+      const status = document.getElementById('home-locate-status');
+      const section = document.getElementById('nearby-places');
+      const grid = document.getElementById('home-nearby-grid');
+      const manualForm = document.getElementById('manual-location');
+      const manualInput = document.getElementById('manual-location-query');
+      const bainbridgeAssist = document.getElementById('home-bainbridge-assist');
+      let locations = null;
+
+      function escapeHtml(value) {
+        return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+      }
+
+      function distMiles(aLat, aLng, bLat, bLng) {
+        const R = 3958.8;
+        const toRad = (d) => (d * Math.PI) / 180;
+        const dLat = toRad(bLat - aLat);
+        const dLng = toRad(bLng - aLng);
+        const s = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(aLat)) * Math.cos(toRad(bLat)) * Math.sin(dLng / 2) ** 2;
+        return 2 * R * Math.asin(Math.sqrt(s));
+      }
+
+      function inFence(lat, lng) {
+        let inside = false;
+        for (let i = 0, j = bainbridgeFence.length - 1; i < bainbridgeFence.length; j = i++) {
+          const [latI, lngI] = bainbridgeFence[i];
+          const [latJ, lngJ] = bainbridgeFence[j];
+          const crosses = (lngI > lng) !== (lngJ > lng) && lat < ((latJ - latI) * (lng - lngI)) / (lngJ - lngI) + latI;
+          if (crosses) inside = !inside;
+        }
+        return inside;
+      }
+
+      async function loadLocations() {
+        if (locations) return locations;
+        const response = await fetch(locationsUrl);
+        if (!response.ok) throw new Error('location data unavailable');
+        locations = await response.json();
+        return locations;
+      }
+
+      function isBainbridgeLocation(l) {
+        return inFence(l.lat, l.lng) || /bainbridge island/i.test(`${l.title || ''} ${l.description || ''}`);
+      }
+
+      function cardHtml(item) {
+        const l = item.location;
+        const image = l.heroImage
+          ? `<img src="${escapeHtml(l.heroImage.replace(/\.(jpe?g|png)$/i, '-card.webp'))}" onerror="this.onerror=null;this.src='${escapeHtml(l.heroImage)}'" alt="${escapeHtml(l.title)}">`
+          : `<div class="nearby-image-fallback" aria-hidden="true">📍</div>`;
+        const directions = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(l.lat + ',' + l.lng)}`;
+        const storyUrl = `${basePath}/locations/${encodeURIComponent(l.slug)}`;
+        const concierge = isBainbridgeLocation(l) && conciergePhone
+          ? `<a class="nearby-action" href="tel:${escapeHtml(conciergePhone.replace(/[^+\d]/g, ''))}">☎ Bainbridge help</a>`
+          : '';
+        return `<article class="nearby-place-card">
+          <a class="nearby-place-image" href="${storyUrl}">${image}</a>
+          <div class="nearby-place-body">
+            <div class="nearby-place-meta"><span>${item.distance.toFixed(1)} mi away</span><span>${escapeHtml(l.category)}</span></div>
+            <h3><a href="${storyUrl}">${escapeHtml(l.title)}</a></h3>
+            <p>${escapeHtml(l.description)}</p>
+            <div class="nearby-place-actions">
+              <a class="nearby-action primary" href="${directions}" target="_blank" rel="noopener">🧭 Directions</a>
+              <a class="nearby-action" href="${storyUrl}">${l.hasAudio ? '🎧 Hear the story' : '📖 Read the story'}</a>
+              ${concierge}
+            </div>
+          </div>
+        </article>`;
+      }
+
+      function showNearest(latitude, longitude, label, accuracy) {
+        const nearest = locations
+          .map((location) => ({ location, distance: distMiles(latitude, longitude, location.lat, location.lng) }))
+          .sort((a, b) => a.distance - b.distance)
+          .slice(0, 5);
+        grid.innerHTML = nearest.map(cardHtml).join('');
+        section.hidden = false;
+        bainbridgeAssist.hidden = !inFence(latitude, longitude);
+        status.textContent = accuracy
+          ? `Showing the five closest places · location accuracy ±${Math.round(accuracy)} m`
+          : `Showing the five closest places to ${label}`;
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function showManual(message) {
+        status.textContent = message;
+        manualForm.hidden = false;
+      }
+
+      async function locate() {
+        if (!('geolocation' in navigator)) {
+          showManual('Location is not supported by this device. Enter a city or ZIP code instead.');
+          return;
+        }
+        button.disabled = true;
+        status.textContent = 'Finding your location…';
+        if (window.pnwTrack) window.pnwTrack('home-find-near-me');
+        try {
+          await loadLocations();
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              const { latitude, longitude, accuracy } = position.coords;
+              showNearest(latitude, longitude, 'your location', accuracy);
+              manualForm.hidden = true;
+              button.disabled = false;
+            },
+            (error) => {
+              showManual(error.code === 1
+                ? 'Location permission was denied. Enter a city or ZIP code, or browse the map manually.'
+                : 'Your location could not be determined. Enter a city or ZIP code, or try again.');
+              button.disabled = false;
+            },
+            { enableHighAccuracy: true, timeout: 10000, maximumAge: 30000 }
+          );
+        } catch (error) {
+          showManual('Nearby places could not be loaded automatically. Enter a city or ZIP code, or open the map.');
+          button.disabled = false;
+        }
+      }
+
+      manualForm?.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const query = manualInput.value.trim();
+        if (!query) return;
+        status.textContent = `Looking for ${query}…`;
+        try {
+          await loadLocations();
+          const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us,ca&q=${encodeURIComponent(query)}`, { headers: { 'Accept-Language': 'en' } });
+          if (!response.ok) throw new Error('place search failed');
+          const results = await response.json();
+          if (!results.length) {
+            status.textContent = 'That place could not be found. Try a nearby city, ZIP code, or the full map.';
+            return;
+          }
+          showNearest(Number(results[0].lat), Number(results[0].lon), results[0].display_name || query);
+          if (window.pnwTrack) window.pnwTrack('home-manual-location');
+        } catch (error) {
+          status.textContent = 'Place search is temporarily unavailable. Open the full map to browse manually.';
+        }
+      });
+
+      button?.addEventListener('click', locate);
+    })();
+  </script>
 </Base>

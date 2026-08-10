@@ -7,6 +7,8 @@ import { href } from '../../lib/url';
 import { withAffiliateTag } from '../../lib/amazon';
 import { deriveQuality, entryContentHash } from '../../lib/quality';
 import { publishedLocations } from '../../lib/publish';
+import { isBainbridgeLocation } from '../../lib/bainbridge';
+import site from '../../data/site.json';
 
 export async function getStaticPaths() {
   const locations = await publishedLocations();
@@ -23,6 +25,29 @@ const cat = categoryByName(d.category);
 const heroLarge = d.heroImage ? href(d.heroImage.replace(/\.(jpe?g|png)$/i, '-hero.webp')) : null;
 const heroFallback = d.heroImage ? href(d.heroImage) : null;
 const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${d.coordinates.lat},${d.coordinates.lng}`;
+const isBainbridge = isBainbridgeLocation(d);
+const callHref = site.concierge.phone ? `tel:${site.concierge.phone.replace(/[^+\d]/g, '')}` : href('/concierge');
+
+const noticeByCategory: Record<string, string[]> = {
+  'Aviation and Transportation': ['Look for the surviving route, grade, runway, station, or engineering features.', 'Notice how terrain and distance shaped the transportation story.'],
+  'Culture and Community': ['Look for details that reveal who gathered here and how the place was used.', 'Consider which parts of the community story are visible—and which survive mainly in records and memory.'],
+  'Indigenous Heritage': ['Begin with the living cultural landscape, not only the later historic marker.', 'Use tribal names and interpretations where they are provided, and treat sacred or sensitive places respectfully.'],
+  'Industry and Agriculture': ['Look for foundations, altered shorelines, machinery, worker housing, or landscape changes.', 'Imagine the noise, labor, transportation, and scale required when the site was active.'],
+  'Landmarks and Memorials': ['Read the marker, then look beyond it for the landscape or event the memorial interprets.', 'Notice what the memorial emphasizes and what questions it leaves open.'],
+  'Maritime': ['Study the relationship between the structure, shoreline, channels, and hazards.', 'Look for changes in elevation, sightlines, and weather that explain why the site mattered.'],
+  'Military and Conflict': ['Look for defensive geography, surviving structures, and fields of view.', 'Separate the site’s documented operational role from later legend or commemoration.'],
+  'Natural Wonders': ['Look at the feature from more than one angle and notice how water, geology, weather, or vegetation shaped it.', 'Remember that a natural landmark can also be a cultural and historic place.'],
+  'Towns and Settlements': ['Walk the original street pattern and look for changes in building use over time.', 'Notice the relationship among work, transportation, housing, and public life.'],
+};
+const noticePrompts = noticeByCategory[d.category] ?? ['Look for the surviving physical details described in the story.', 'Compare the present landscape with the period described in the article.'];
+
+const statusText = verified
+  ? `Researched and compared with the listed sources${verifiedDate ? `; last reviewed ${verifiedDate}` : ''}.`
+  : quality.status === 'stale'
+    ? 'This guide has changed since its last source review. The supporting material is being checked again.'
+    : quality.status === 'flagged'
+      ? 'Some details remain disputed or need stronger documentation. They should be treated with appropriate caution.'
+      : 'Research is still in progress. This guide is a useful introduction, but some details may change as better sources are added.';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -38,120 +63,110 @@ const jsonLd = {
 <Base title={`${d.title} — PNW Historical Explorer`} description={d.description.slice(0, 158)} ogImage={d.heroImage} ogType="article">
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} slot="head" />
 
-  {
-    d.heroImage ? (
-      <div class="detail-hero">
-        <img
-          src={heroLarge}
-          alt={d.title}
-          width="1600"
-          height="900"
-          onerror={`this.onerror=null;this.src='${heroFallback}'`}
-        />
-        <div class="overlay">
-          <div class="container">
-            <h1>{d.title}</h1>
-            <div class="meta">
-              <span>{cat?.icon} {d.category}</span>
-              {d.period && <span>📅 {d.period}</span>}
-              {d.address && <span>📍 {d.address}</span>}
-              {verified && <span class="fc-badge" title={verifiedDate ? `Sources verified ${verifiedDate}` : 'Sources verified'}>✓ Sources verified</span>}
-            </div>
-          </div>
+  {d.heroImage ? (
+    <div class="detail-hero">
+      <img src={heroLarge} alt={`View of ${d.title}`} width="1600" height="900" onerror={`this.onerror=null;this.src='${heroFallback}'`} />
+      <div class="overlay"><div class="container">
+        <p class="eyebrow light">Visit, listen, and explore</p>
+        <h1>{d.title}</h1>
+        <div class="meta">
+          <span>{cat?.icon} {d.category}</span>
+          {d.period && <span>📅 {d.period}</span>}
+          {d.address && <span>📍 {d.address}</span>}
+        </div>
+      </div></div>
+    </div>
+  ) : (
+    <div class="detail-hero no-image"><div class="container">
+      <p class="eyebrow light">Visit, listen, and explore</p>
+      <h1>{d.title}</h1>
+      <div class="meta"><span>{cat?.icon} {d.category}</span>{d.period && <span>📅 {d.period}</span>}{d.address && <span>📍 {d.address}</span>}</div>
+    </div></div>
+  )}
+
+  <section class="visit-decision">
+    <div class="container visit-decision-grid">
+      <div class="why-stop">
+        <p class="eyebrow">Why stop here</p>
+        <p class="visit-lead">{d.description}</p>
+        <div class="visit-actions">
+          <a class="btn" href={mapsUrl} rel="noopener" target="_blank">🧭 Get directions</a>
+          {d.audio && <a class="btn secondary dark" href="#listen">🎧 Play the story</a>}
+          <a class="text-action" href={href(`/map#${d.slug}`)}>View nearby places →</a>
         </div>
       </div>
-    ) : (
-      <div class="detail-hero no-image">
-        <div class="container">
-          <h1>{d.title}</h1>
-          <div class="meta">
-            <span>{cat?.icon} {d.category}</span>
-            {d.period && <span>📅 {d.period}</span>}
-            {d.address && <span>📍 {d.address}</span>}
-            {verified && <span class="fc-badge" title={verifiedDate ? `Sources verified ${verifiedDate}` : 'Sources verified'}>✓ Sources verified</span>}
-          </div>
-        </div>
+      <aside class="fact-status" data-status={quality.status}>
+        <strong>{verified ? '✓ Researched and sourced' : 'About this history'}</strong>
+        <p>{statusText}</p>
+        <a href="#deeper-history">Read the full story and sources</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section on-site-section">
+    <div class="container experience-grid">
+      <article class="experience-card">
+        <p class="eyebrow">When you arrive</p>
+        <h2>What to notice</h2>
+        <ol class="look-list">{noticePrompts.map((prompt) => <li>{prompt}</li>)}</ol>
+      </article>
+      <article class="experience-card practical-card">
+        <p class="eyebrow">Before you go</p>
+        <h2>Confirm the changing details</h2>
+        <p>Hours, fees, access, closures, parking, reservations, and trail conditions can change. Use the directions link to identify the managing agency and confirm time-sensitive information before making a special trip.</p>
+        <dl>
+          {d.address && <><dt>Listed address</dt><dd>{d.address}</dd></>}
+          <dt>Map coordinates</dt><dd>{d.coordinates.lat.toFixed(4)}, {d.coordinates.lng.toFixed(4)}</dd>
+          <dt>Historic period</dt><dd>{d.period ?? 'Multiple periods'}</dd>
+        </dl>
+      </article>
+    </div>
+  </section>
+
+  {d.audio && (
+    <section class="section listen-section" id="listen">
+      <div class="container listen-grid">
+        <div><p class="eyebrow light">The short tour</p><h2>Hear the story before or during your visit</h2><p>Use headphones on site, or listen in the car before you arrive. The longer history and sources remain below.</p></div>
+        <AudioPlayer src={href(d.audio)} title={d.title} />
       </div>
-    )
-  }
+    </section>
+  )}
 
-  <style>
-    .fc-badge {
-      background: #1a7f5a;
-      color: #fff;
-      font-weight: 700;
-      font-size: 0.8em;
-      padding: 2px 10px;
-      border-radius: 20px;
-      white-space: nowrap;
-    }
-  </style>
+  {isBainbridge && site.concierge.enabled && (
+    <section class="island-assist">
+      <div class="container island-assist-grid">
+        <div><p class="eyebrow light">Need help with the rest of the day?</p><h2>Call the Bainbridge Concierge</h2><p>Get suggestions for nearby places, restaurants, and businesses, followed by a text with photos, location pages, and direction links.</p></div>
+        <div><a class="btn" href={callHref}>☎ {site.concierge.phone ? 'Call now' : 'See how it works'}</a><small>Published business hours are reviewed monthly. Restaurant calls and reservation requests are planned additions.</small></div>
+      </div>
+    </section>
+  )}
 
-  <section class="section">
+  <section class="section" id="deeper-history">
     <div class="container detail-layout">
       <article>
-        {d.audio && <AudioPlayer src={href(d.audio)} title={d.title} />}
-        <div class="prose">
-          <Content />
-        </div>
+        <div class="article-heading"><p class="eyebrow">Learn more</p><h2>The full story</h2><p>Continue with the longer history, context, sources, and reading recommendations.</p></div>
+        <div class="prose"><Content /></div>
       </article>
-
       <aside>
         <div class="sidebar-card">
-          <h3>Visit</h3>
-          <dl>
-            {d.address && (
-              <>
-                <dt>Address</dt>
-                <dd>{d.address}</dd>
-              </>
-            )}
-            <dt>Coordinates</dt>
-            <dd>{d.coordinates.lat.toFixed(4)}, {d.coordinates.lng.toFixed(4)}</dd>
-            {d.period && (
-              <>
-                <dt>Period</dt>
-                <dd>{d.period}</dd>
-              </>
-            )}
-            <dt>Category</dt>
-            <dd><a href={href(`/categories/${slugForCategory(d.category)}`)}>{d.category}</a></dd>
-          </dl>
-          <p style="margin:1rem 0 0;">
-            <a class="btn" style="width:100%; justify-content:center;" href={mapsUrl} rel="noopener" target="_blank">🧭 Directions</a>
-          </p>
-          <p style="margin:0.6rem 0 0;">
-            <a href={href(`/map#${d.slug}`)} style="font-size:0.88rem;">View on the explorer map →</a>
-          </p>
+          <h3>Visit and explore</h3>
+          <a class="btn full" href={mapsUrl} rel="noopener" target="_blank">🧭 Directions</a>
+          <a class="sidebar-link" href={href(`/map#${d.slug}`)}>View on the explorer map →</a>
+          <a class="sidebar-link" href={href(`/categories/${slugForCategory(d.category)}`)}>More {d.category.toLowerCase()} →</a>
         </div>
-
+        <div class="sidebar-card source-card"><h3>About this history</h3><p>{statusText}</p></div>
         {d.books.length > 0 && (
-          <div class="sidebar-card">
-            <h3>📚 Further reading</h3>
-            <ul class="book-list">
-              {d.books.map((b) => (
-                <li>
-                  {b.url ? <a href={withAffiliateTag(b.url)} rel="noopener nofollow sponsored" target="_blank" data-affiliate>{b.title}</a> : b.title}
-                  {b.author && <span class="author">{b.author}</span>}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <div class="sidebar-card"><h3>📚 Continue the story</h3><ul class="book-list">{d.books.map((b) => <li>{b.url ? <a href={withAffiliateTag(b.url)} rel="noopener nofollow sponsored" target="_blank" data-affiliate>{b.title}</a> : b.title}{b.author && <span class="author">{b.author}</span>}</li>)}</ul></div>
         )}
       </aside>
     </div>
   </section>
 
   <script is:inline>
-    // Engagement: count clicks on "Further reading" (affiliate) links.
-    document.addEventListener(
-      'click',
-      function (e) {
-        var t = e.target;
-        var a = t && t.closest ? t.closest('a[data-affiliate]') : null;
-        if (a && window.pnwTrack) window.pnwTrack('affiliate-click');
-      },
-      { passive: true }
-    );
+    document.addEventListener('click', function (e) {
+      var t = e.target;
+      var a = t && t.closest ? t.closest('a[data-affiliate]') : null;
+      if (a && window.pnwTrack) window.pnwTrack('affiliate-click');
+    }, { passive: true });
   </script>
 </Base>
