@@ -25,6 +25,10 @@ const locations = defineCollection({
       lng: z.number(),
     }),
     description: z.string(),
+    // "What to notice" — guide-voice prompts, spoken, second person, pointing at
+    // things a visitor can see at this specific place. Optional; absent entries
+    // fall back to the generic per-category prompts in [slug].astro.
+    notice: z.array(z.string()).optional(),
     heroImage: z.string().nullable(),
     audio: z.string().nullable(),
     // Editorial pipeline. Absent == published now.

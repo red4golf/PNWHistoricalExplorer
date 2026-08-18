@@ -39,7 +39,9 @@ const noticeByCategory: Record<string, string[]> = {
   'Natural Wonders': ['Look at the feature from more than one angle and notice how water, geology, weather, or vegetation shaped it.', 'Remember that a natural landmark can also be a cultural and historic place.'],
   'Towns and Settlements': ['Walk the original street pattern and look for changes in building use over time.', 'Notice the relationship among work, transportation, housing, and public life.'],
 };
-const noticePrompts = noticeByCategory[d.category] ?? ['Look for the surviving physical details described in the story.', 'Compare the present landscape with the period described in the article.'];
+const noticePrompts = d.notice?.length
+  ? d.notice
+  : noticeByCategory[d.category] ?? ['Look for the surviving physical details described in the story.', 'Compare the present landscape with the period described in the article.'];
 
 const statusText = verified
   ? `Researched and compared with the listed sources${verifiedDate ? `; last reviewed ${verifiedDate}` : ''}.`

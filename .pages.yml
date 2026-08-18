@@ -55,6 +55,7 @@ content:
           - { name: lat, label: Latitude, type: number, required: true }
           - { name: lng, label: Longitude, type: number, required: true }
       - { name: description, label: Short description (meta + cards), type: text, required: true }
+      - { name: notice, label: What to notice (visitor prompts, 2-4 items), type: string, list: true }
       - { name: heroImage, label: Hero image, type: image, options: { media: location-images } }
       - { name: audio, label: Audio narration, type: file, options: { media: audio } }
       - { name: draft, label: Draft (hidden from the public site until unchecked), type: boolean }
