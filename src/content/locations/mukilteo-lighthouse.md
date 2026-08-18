@@ -12,12 +12,9 @@ description: "Congress appropriated $22,000 for a light at Mukilteo Point in 190
 heroImage: null
 audio: null
 books:
-  - title: "Puget Sound: A Narrative of Early Tacoma and the Southern Sound"
+  - title: "Puget's Sound: A Narrative of Early Tacoma and the Southern Sound"
     author: "Murray Morgan"
-    url: "https://www.amazon.com/Puget-Sound-Narrative-Tacoma-Southern/dp/0295953993"
-  - title: "Ferry Tales: A Celebration of Puget Sound Ferries"
-    author: "Brad Matsen & Dorie Cox"
-    url: "https://www.amazon.com/Ferry-Tales-Celebration-Puget-Ferries/dp/0870043951"
+    url: "https://www.amazon.com/Pugets-Sound-Narrative-Tacoma-Southern/dp/0295744456"
 sourceId: 129
 factcheck:
   status: "verified"

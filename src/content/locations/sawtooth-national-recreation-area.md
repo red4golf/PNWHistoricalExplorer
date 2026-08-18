@@ -11,12 +11,9 @@ coordinates:
 heroImage: null
 audio: null
 books:
-  - title: "Sawtooth Wilderness: A Guide to Idahos Premier Mountain Range"
-    author: "Tom Lopez"
-    url: "https://www.amazon.com/Sawtooth-Wilderness-Guide-Premier-Mountain/dp/0871087405"
-  - title: "Idaho Mountain Ranges: Sawtooths, Boulders, and White Clouds"
-    author: "Tom Klokke"
-    url: "https://www.amazon.com/Idaho-Mountain-Ranges-Sawtooths-Boulders/dp/0870713418"
+  - title: "Idaho Mountain Ranges"
+    author: "George Wuerthner"
+    url: "https://www.amazon.com/Idaho-Mountain-Ranges-geographic/dp/0938314262"
 sourceId: 82
 description: "A 1968 proposal for an open-pit mine in the White Clouds helped push Congress to protect this range in 1972 — today cited at 756,000 acres."
 notice:

@@ -14,9 +14,6 @@ books:
   - title: "Barkerville and the Cariboo Goldfields"
     author: "Richard Thomas Wright"
     url: "https://www.amazon.com/Barkerville-Cariboo-Goldfields-Richard-Thomas/dp/1927527066"
-  - title: "The Fraser River Gold Rush"
-    author: "Daniel Francis"
-    url: "https://www.amazon.com/Fraser-River-Gold-Rush-Daniel/dp/1894974654"
 sourceId: 77
 description: "An 1862 shaft sunk below Richfield Canyon on Williams Creek struck gold deeper than any dug before it, and the camp that grew up around the strike is now a preserved 1860s gold-rush town."
 notice:
