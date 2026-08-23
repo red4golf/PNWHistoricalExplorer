@@ -10,66 +10,67 @@ coordinates:
   lng: -122.7736
 heroImage: null
 audio: null
-books:
-  - title: "Port Townsend"
-    author: "Jefferson County Historical Society"
-    url: "https://www.amazon.com/Port-Townsend-Images-America-Washington/dp/073855622X"
-  - title: "Lighthouses of Washington: A Guidebook and Keepsake"
-    author: "Ray Jones & Bruce Roberts"
-    url: "https://www.amazon.com/Lighthouses-Washington-Guidebook-Keepsake-Lighthouse/dp/0762739681"
 sourceId: 84
 mergedFrom:
   - { id: 133, name: "Point Wilson Lighthouse", legacyCategory: "Maritime Heritage" }
-description: "A 350-foot 1908 gun battery at Fort Worden, once part of the Triangle of Fire defending the entrance to Puget Sound."
+books:
+  - title: "Port Townsend (Images of America)"
+    author: "Jefferson County Historical Society"
+    url: "https://www.amazon.com/dp/073855622X"
+  - title: "Lighthouses of Washington: A Guidebook and Keepsake"
+    author: "Ray Jones"
+    url: "https://www.amazon.com/dp/0762739681"
+description: "A coast-artillery fort at Point Wilson whose 12-inch guns never fired a shot in anger, later the set for An Officer and a Gentleman."
 notice:
-  - "Find the long concrete wall at the north tip of the park before you do anything else — that's Battery Kinzie, poured in 1908 to be 350 feet long and 25 feet high."
-  - "Look for the two gun positions along its top: they once carried 12-inch guns on disappearing carriages, the largest single battery ever built at the fort."
-  - "Walk out toward the point to the octagonal lighthouse tower, first lit in 1914; its keeper telephoned Port Townsend at 12:04 a.m. on April 1, 1921, after two steamships collided offshore."
-  - "Stand on the parade ground: this is where the cast and crew of An Officer and a Gentleman filmed in late April 1981."
+  - "From the bluff at Battery Kinzie you're looking out over Admiralty Inlet; in the two concrete pits below, crews once raised 12-inch guns on disappearing carriages to fire and then drop them out of sight, and both guns are gone now."
+  - "Follow the road out to the octagonal concrete tower at Point Wilson: a light first shone here in 1879, more than twenty years before the fort's guns arrived, and the tower you see went up in 1914."
+  - "Look across the water toward Whidbey and Marrowstone islands, where Fort Casey and Fort Flagler held the other two corners of what HistoryLink's account calls the 'Triangle of Fire.'"
 factcheck:
   status: "verified"
-  reviewer: "Cowork pnw-explorer-board pipeline (research/write/verify/repair/re-verify)"
+  lastChecked: "2026-07-26"
+  reviewer: "Cowork research pipeline"
   sourceTier: "primary"
   claimsTotal: 23
   claimsCited: 23
   openFlags: 0
   neutrality: "pass"
-  notes: "Full rewrite via pnw-explorer-board pipeline. Verdict after repair + re-verify: publishable."
+  notes: "Re-researched and rewritten 2026-07-26. Verifier verdict: publishable. Hand-fixed 2026-08-23 (separate session, during cross-session consolidation diff-check): dropped an unattributed David H. Kinzie death date that a graded-source pass had found sourced only to non-graded specialist sites (Coast Defense Study Group / Antietam on the Web), not to any primary or peer-reviewed source, and had explicitly flagged for deletion rather than softening. See catalogue/fort-worden-battery-kinzie.md for detail."
 ---
 
-# Fort Worden & Battery Kinzie
+# Fort Worden & Battery Kinzie: The Fort That Never Fired
 
-Battery Kinzie runs along the north edge of Fort Worden State Park, a slab of concrete facing the strait. It is 350 feet long and 25 feet high. The Army finished it in 1908 to mount two 12-inch guns on disappearing carriages, and the 1976 National Register nomination calls it the largest single battery at the fort and the largest coastal battery on Puget Sound, the last Endicott-period battery built in Washington State. The concrete is still there.
+You stand on the bluff at Point Wilson, at the mouth of Admiralty Inlet. The guns are gone now. What's left is concrete: the empty pits of Battery Kinzie, where crews ran up two 12-inch guns on disappearing carriages, sent thousand-pound shells about ten miles across the inlet, and let them drop back behind the walls. The Army activated the fort on May 14, 1902.
 
-## Land Set Aside in 1866, Fort Activated in 1902
+## Named for the Man Who Commanded the Monitor
 
-President Andrew Johnson withdrew the ground on September 22, 1866, one of 23 sites set aside around Puget Sound for military use. That was decades before a single wall went up. Congress authorized a three-fort defense system for the Sound in 1896. Construction at Fort Worden began the next year, but the post did not open for business until May 14, 1902, when it took the name of Admiral John Lorimer Worden, who had commanded the ironclad USS Monitor and died in 1897. Its first garrison arrived days earlier. On May 3, 1902, 87 soldiers of the 126th Coast Artillery Company came ashore under Captain Manus McCloskey.
+The Army named the post for Admiral John L. Worden, who commanded the USS Monitor. It broke ground in July 1897, five years before the fort was ready. It built Fort Worden as one of three posts guarding the entrance to Puget Sound at Admiralty Inlet. The other two sat across the water: Fort Casey on Whidbey Island and Fort Flagler on Marrowstone Island. HistoryLink's "Triangle of Fire" account describes the three forts throwing overlapping fire across the shipping channel, so no fleet could pass without crossing several lines of guns at once. On September 4, 1904, the Army moved the headquarters of the Harbor Defenses of Puget Sound here from Fort Flagler.
 
-## The Triangle of Fire
+## Battery Kinzie, Added Between 1905 and 1910
 
-Fort Worden did not stand alone. Together with Fort Casey on Whidbey Island and Fort Flagler on Marrowstone Island, it formed what HistoryLink calls the Triangle of Fire: three sets of guns covering the entrance to Puget Sound from three directions. Engineers linked the three posts with a communication system in 1903. Command of the whole system moved from Fort Flagler to Fort Worden on September 4, 1904. By 1910 the fort carried 41 guns spread across 12 finished batteries: Ash, Benson, Brannan, Kinzie, Powell, Putnam, Quarles, Randol, Stoddard, Tolles, Vicars, and Walker. Kinzie, poured two years earlier, was the biggest of them.
+Battery Kinzie was one of six gun emplacements the Army added at Fort Worden between 1905 and 1910. It held two 12-inch guns on disappearing carriages, the heaviest emplacement at the fort by the Coast Defense Study Group's reckoning. Battery Ash carried its own 12-inch guns on fixed barbette mounts. The disappearing carriage gave Kinzie its drama. Gunners raised the barrel to fire, then let the recoil drop it back behind the concrete. They could reload out of an enemy's line of sight. The battery honors Brigadier General David H. Kinzie. Beyond his name and battery-naming convention, Kinzie's own biography — including his death date — is documented only by non-graded specialist military-history sites, not by any primary or peer-reviewed source, so it is left out here. The reliable sources give little more than that name and the two guns; the detailed record of the battery's rooms is thin.
 
-## Point Wilson Light, Building Since 1879
+## Half the Guns Left in 1918, the Last in 1946
 
-Walk to the tip of the point, where the fort's field of fire meets a working lighthouse. A light has marked Point Wilson since December 15, 1879, when a fixed fourth-order Fresnel lens was mounted on the roof of the keeper's house. David M. Littlefield, a Civil War veteran, took the job that year at $800 a year and kept it four years. He later became Jefferson County sheriff, Port Townsend mayor, a city councilman, and Collector of Customs, and married Maria Hastings, daughter of town founder Loren B. Hastings. In 1894 the lighthouse tender Manzanita swapped in a revolving fourth-order lens.
+The guns never fired in anger. According to the Washington State Parks Foundation, the Army pulled about half of Fort Worden's guns in 1918 to send to the fighting in Europe. The last guns were decommissioned in 1945 and removed in 1946. No enemy fleet ever tested the Triangle of Fire. The Army kept the post itself until it deactivated the Harbor Defense Command on June 30, 1953.
 
-The tower standing today is an octagonal shaft of concrete and masonry 46 feet tall, and it replaced the old keeper's-house light. Reconstruction started in 1913, and the new light first shone in 1914. Just after midnight on April 1, 1921 — 12:04 a.m., to be exact — keeper William J. Thomas heard the SS Governor collide with the SS West Hartland offshore and telephoned Port Townsend for help. The Governor was 417 feet long and carried 240 people, and it sank within half an hour in 240 feet of water. Eight people died. During World War II, per HistoryLink, the light was blacked out as a defensive measure protecting Fort Worden and the wider Puget Sound.
+## A Light at Point Wilson Since 1879
 
-The station made the Washington Heritage Register on March 24, 1971, and the National Register of Historic Places that same year. Automation ended resident keeping in November 1976, according to HistoryLink; the Coast Guard's own history places it a year later, in 1977.
+Walk out to the point and you meet an older story. A light has marked Point Wilson since keepers first lit it on December 15, 1879, more than twenty years before the fort's guns arrived. The light came first; the fort grew up around it. The Lighthouse Service put up the tower you see now in 1914, a 46-foot octagonal structure of concrete and masonry, and it replaced that first station. It was a civilian navigation aid, not a gun position. The lamp used a fourth-order Fresnel lens. HistoryLink puts its beam at about 16 miles. The Coast Guard automated the light in November 1976.
 
-## Hollywood Arrives, April 1981
+## Filmed Here in the Spring of 1981
 
-Filming for An Officer and a Gentleman began in Port Townsend in late April 1981, using the fort's parade ground and historic buildings alongside the Port Townsend Paper Mill, the Town Tavern, and the Tides Inn. The film opened in theaters in 1982. Over the roughly two-month shoot, the production put about $3 million into the local economy.
+A film crew came in the spring of 1981. Between late April and June, they shot "An Officer and a Gentleman" at Fort Worden, and the movie reached theaters in 1982. The sources place the filming on the parade ground and among the historic buildings; which corners of the fort appear on screen, they do not pin down.
 
-## Closed in 1953, Now a Park
+## From Fort to State Park in 1973
 
-None of it lasted as an active post. Fort Worden was deactivated on June 30, 1953, after 51 years of service that began with McCloskey's 87 soldiers back in 1902. Battery Kinzie still runs its 350 feet along the bluff. The guns are gone, but the concrete remains, the largest battery the Army ever built at Fort Worden.
+The state bought 209 acres here on November 5, 1965. Washington State Parks dedicated Fort Worden as a state park on August 18, 1973. Today the grounds run as a conference center, and the Puget Sound Coast Artillery Museum keeps the fort's story on site. The parade ground where the film crew worked still opens below the batteries. You can walk the empty gun pits of Battery Kinzie and look out over the inlet its guns once covered and never once fired across in anger.
 
 ## Sources
 
-- **National Register of Historic Places Inventory-Nomination Form, Fort Worden Historic District, Port Townsend, WA (1976), National Park Service** — *primary/official* — Battery Kinzie dimensions (350 ft x 25 ft), 1908 completion, disappearing-carriage 12-inch guns, largest-battery superlatives, 41 guns/12 batteries by 1910, full battery names
-- **Washington State Parks, "Fort Worden Historical State Park History" (parks.wa.gov field guide blog)** — *primary/official* — 1866 executive order withdrawing the site, May 14, 1902 activation, naming for Admiral John Lorimer Worden
-- **HistoryLink.org, "Triangle of Fire - The Harbor Defenses of Puget Sound (1897-1953)," File 7524** — *editorial/secondary* — 1896 authorization, Triangle of Fire coordination with Forts Casey and Flagler, 1903 telephone link, 1904 HQ transfer, first-garrison arrival May 3 1902, June 30 1953 deactivation
-- **HistoryLink.org, "Point Wilson Lighthouse," File 5680** — *editorial/secondary* — 1879 light installation, keeper David M. Littlefield biography, 1894 Manzanita lens swap, 1913-1914 tower construction, 46-foot tower height, SS Governor/West Hartland collision details, WWII blackout, NRHP/state register listing March 24 1971, 1976 automation date
-- **U.S. Coast Guard Historian's Office, "Point Wilson Lighthouse" asset page** — *primary/official* — 1977 automation date, noted as a discrepancy against HistoryLink's 1976
-- **HistoryLink.org, essay on the 1981 filming of An Officer and a Gentleman in Port Townsend, File 8237** — *editorial/secondary* — Filming start late April 1981, 1982 release, locations used (parade ground, historic buildings, paper mill, Town Tavern, Tides Inn), ~$3 million local economic impact over two-month shoot
+- **Washington State Parks, 'Fort Worden Historical State Park History' (parks.wa.gov)** — *primary/official* — Construction began July 1897; activated May 14, 1902; named for Admiral John L. Worden; HQ transferred from Fort Flagler Sept 4, 1904; deactivated June 30, 1953; one of three forts at Admiralty Inlet; state bought 209 acres Nov 5, 1965; park dedicated Aug 18, 1973; conference center and Coast Artillery Museum.
+- **Washington State Parks Foundation, 'Fort Worden Artillery Hill' self-guided tour (waparks.org)** — *primary/official* — About half the guns pulled in 1918 for WWI; last guns decommissioned 1945 and removed 1946.
+- **Library of Congress, HABS/HAER 'Point Wilson Light Station' (loc.gov item wa0724)** — *primary/official* — The 1914 tower as a 46-foot octagonal concrete-and-masonry structure.
+- **HistoryLink.org, File 7524, 'Triangle of Fire - The Harbor Defenses of Puget Sound (1897-1953)'** — *editorial/secondary* — Attributed 'Triangle of Fire' composition; Battery Kinzie one of six emplacements added 1905-1910; 12-inch guns firing ~1,000-lb shells about ten miles.
+- **HistoryLink.org, File 5680, 'Point Wilson Lighthouse'** — *editorial/secondary* — Light commissioned Dec 15, 1879; 1914 tower; fourth-order Fresnel lens; beam about 16 miles (attributed); automated November 1976.
+- **HistoryLink.org, File 8237, filming of 'An Officer and a Gentleman' (1981)** — *editorial/secondary* — Filmed at Fort Worden late April-June 1981, released 1982; parade ground and historic buildings.
+- **Coast Defense Study Group (cdsg.org), Fort Worden battery list and Battery Kinzie page** — *specialist/non-graded, not cited as an authority for facts stated as settled* — Battery Kinzie's two 12-inch disappearing guns and status as heaviest emplacement (attributed to CDSG's reckoning, not stated as flat fact); Battery Ash's barbette guns; named for Brig. Gen. David H. Kinzie (his biographical specifics, including a death date found only here, are not carried into the entry — see hand-fix note).

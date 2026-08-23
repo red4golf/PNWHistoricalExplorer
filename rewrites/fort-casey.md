@@ -12,14 +12,9 @@ description: "Thirty-four guns, or thirty-five — the published counts disagree
 heroImage: "/images/locations/fort-casey-hero.jpg"
 audio: "/audio/fort-casey.mp3"
 books:
-  - title: "Whidbey Island: Images of America"
-    author: "Langley Centennial Committee"
-    url: "https://www.amazon.com/Whidbey-Island-Images-America-Centennial/dp/0738500917"
-  - title: "Forts of Washington: Historical and Archaeological Perspectives"
-    author: "Dennis E. Lewarch"
-  - title: "Lighthouses of Washington: A Guide to Pacific Northwest Beacons"
-    author: "Sharlene Nelson"
-    url: "https://www.amazon.com/Lighthouses-Washington-Pacific-Northwest-Beacons/dp/0762740531"
+  - title: "Umbrella Guide to Washington Lighthouses"
+    author: "Sharlene Nelson & Ted Nelson"
+    url: "https://www.amazon.com/Washington-Lighthouses-Umbrella-Guides-Sharlene/dp/0945092547"
 sourceId: 128
 factcheck:
   status: "corrected"

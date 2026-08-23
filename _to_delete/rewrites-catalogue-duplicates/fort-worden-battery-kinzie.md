@@ -108,11 +108,3 @@ _None._
 ## Writer's self-check
 
 Every sentence traces to fw.research.json; description 132 chars; notice three see-it-now prompts; body ~654 words, 39% of sentences <=12 words, none over 45; lens has no maker; light (1879) predates fort (1902); books are the two verified titles.
-
-## Hand-fix pass (2026-08-23, cross-session consolidation diff-check)
-
-While consolidating this entry's staging alongside a parallel earlier research pass on the same slug (archived at `catalogue/_superseded/fort-worden-battery-kinzie.2026-08-18-superseded.md`), a factual discrepancy surfaced: that earlier pass had specifically investigated Brig. Gen. David H. Kinzie's biography and found his death date (July 5, 1904) corroborated only by non-graded specialist military-history sites (Coast Defense Study Group, "Antietam on the Web") — not by any NPS, NRHP, or HistoryLink document — and explicitly recommended the date be dropped or heavily hedged rather than carried as confirmed fact.
-
-This entry's body stated the death date as flat, unattributed fact, sourced only to Coast Defense Study Group (a source the earlier pass had explicitly found does not meet any of the project's graded tiers). Per the project's standing accuracy rule — unconfirmed claims are deleted, not softened — the death date was removed from both the body paragraph and the matching sources-list entry. The sentence now states only that Kinzie's biography beyond his name and the naming convention is undocumented by a graded source. No other claim in this entry was affected; the two-guns, disappearing-carriage, and "heaviest emplacement" claims were already properly attributed to CDSG's own reckoning rather than stated as settled fact, so those were left as-is.
-
-`openFlags` remains 0 — this was a sourcing-standard correction, not a newly discovered unsupported claim requiring a re-verify round.
