@@ -24,8 +24,9 @@ notice:
   - "Look toward Johnston Ridge, named for USGS volcanologist David Johnston, who was monitoring from the Coldwater II observation post 5.7 miles north-northwest of the summit when the blast killed him that same morning."
   - "Scan the nearby slopes for patches of lupine and young trees — pocket gophers and prairie lupine were among the first life to return to this blast zone after 1980."
 factcheck:
-  status: "in-review"
-  reviewer: "Cowork pnw-explorer-board pipeline (research/write/verify/repair/re-verify)"
+  status: "verified"
+  lastChecked: "2026-09-24"
+  reviewer: "Cowork pnw-explorer-board pipeline (research/write/verify/repair/re-verify); post-repair hand-fixes signed off by Charles Einarson 2026-09-24"
   sourceTier: "primary"
   claimsTotal: 22
   claimsCited: 22

@@ -26,8 +26,9 @@ notice:
   - "Watch the river below you — it has been backed up behind Bonneville Dam since June 6, 1938, when the dam went into service and flooded the Cascades Rapids."
   - "Scan the ridgelines to the east for wind turbines — the Goodnoe Hills and White Creek projects, approved for Klickitat County in November 2005, were authorized for as many as 183 turbines combined."
 factcheck:
-  status: "in-review"
-  reviewer: "Cowork pnw-explorer-board pipeline (research/write/verify/repair/re-verify)"
+  status: "verified"
+  lastChecked: "2026-09-24"
+  reviewer: "Cowork pnw-explorer-board pipeline (research/write/verify/repair/re-verify); post-repair hand-fixes signed off by Charles Einarson 2026-09-24"
   sourceTier: "primary"
   claimsTotal: 27
   claimsCited: 27

@@ -24,8 +24,9 @@ notice:
   - "Watch which boat is docking — Tacoma or Wenatchee, both 460 feet 2 inches long and rated for up to 202 vehicles and 1,791 passengers."
   - "Look out at Eagle Harbor — steamer service to Seattle began here in 1887 aboard the Tolo, half a century before the first car ever drove aboard a ferry at this dock."
 factcheck:
-  status: "in-review"
-  reviewer: "Cowork pnw-explorer-board pipeline (research/write/verify/repair/re-verify)"
+  status: "verified"
+  lastChecked: "2026-09-24"
+  reviewer: "Cowork pnw-explorer-board pipeline (research/write/verify/repair/re-verify); post-repair hand-fixes signed off by Charles Einarson 2026-09-24"
   sourceTier: "primary"
   claimsTotal: 8
   claimsCited: 8

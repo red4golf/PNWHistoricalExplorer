@@ -1,5 +1,7 @@
 # PNW Historical Explorer
 
+> **Audio narration:** status of all 36 location narrations lives in `AUDIO-TRACKER.md`. The audio is a full tour-guide script, not a reading of the text. Read the tracker before touching `public/audio/` or any entry that has audio.
+
 Static Astro rebuild of the Pacific Northwest Historical Explorer — 93 historic locations with full narratives, 36 audio narrations, curated book lists, an interactive map, and offline (PWA) support.
 
 ## Quick start

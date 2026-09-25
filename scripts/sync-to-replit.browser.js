@@ -10,6 +10,7 @@
 // Matches entries by slug. Updates only: description, content, address, period, latitude,
 // longitude, recommendedBooks. Leaves Replit's category, images, audio, status, photos alone.
 // Replit-only entries (merged duplicates) and Astro-only entries are reported, not touched.
+// Audio is NOT synced. New narration goes to Replit separately; record it in AUDIO-TRACKER.md (Live (Replit)).
 async function syncToReplit({ dryRun = false, branch = 'main' } = {}) {
   const REPO = 'red4golf/PNWHistoricalExplorer';
   if (!window.jsyaml) {
