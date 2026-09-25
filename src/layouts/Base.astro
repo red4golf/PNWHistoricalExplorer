@@ -3,6 +3,7 @@ import '../styles/global.css';
 import '../styles/guide.css';
 import '../styles/accessibility.css';
 import { base, href } from '../lib/url';
+import site from '../data/site.json';
 import { GOATCOUNTER_CODE, GOOGLE_SITE_VERIFICATION } from '../config';
 
 const analyticsEnabled = import.meta.env.PROD && !!GOATCOUNTER_CODE;
@@ -94,8 +95,15 @@ const current = (h: string) => (h === '/' ? (path === '/' ? 'page' : undefined) 
       <div class="container">
         <div><strong>PNW Historical Explorer</strong><br />Visitor guides, audio stories, and sourced history for the Pacific Northwest’s remarkable places.</div>
         <div><a href={href('/map')}>Explore the map</a> · <a href={href('/categories')}>Browse categories</a> · <a href={href('/about')}>About</a></div>
+        {site.supportUrl && <div>Free to use. If a story here made a trip better, you can <a href={site.supportUrl} target="_blank" rel="noopener" data-support>support the research on Ko-fi</a>.</div>}
       </div>
     </footer>
+    <script is:inline>
+      document.addEventListener('click', function (e) {
+        var a = e.target && e.target.closest ? e.target.closest('a[data-support]') : null;
+        if (a && window.pnwTrack) window.pnwTrack('support-click');
+      });
+    </script>
 
     <nav class="bottom-nav" aria-label="Mobile" data-pagefind-ignore>
       <a href={href('/')} aria-current={current('/')}><span class="ico" aria-hidden="true">🏠</span>Home</a>
